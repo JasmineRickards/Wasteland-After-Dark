@@ -221,7 +221,7 @@
 	. = ..()
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target
-		H.reagents.add_reagent(/datum/reagent/toxin, 5)
+		H.reagents.add_reagent(/datum/reagent/toxin, 2.5)
 
 /mob/living/simple_animal/hostile/radscorpion/Initialize()
 	. = ..()
@@ -314,8 +314,8 @@
 	. = ..()
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target
-		H.reagents.add_reagent(/datum/reagent/toxin/cazador_venom, 5)
-		H.reagents.add_reagent(/datum/reagent/toxin/staminatoxin, 15)//5 passes real quick. 15 makes one sting a gamble.
+		H.reagents.add_reagent(/datum/reagent/toxin/cazador_venom, 1)
+		H.reagents.add_reagent(/datum/reagent/toxin/staminatoxin, 2.5)//5 passes real quick. 15 makes one sting a gamble.
 
 /mob/living/simple_animal/hostile/cazador/death(gibbed)
 	icon_dead = "cazador_dead[rand(1,5)]"
