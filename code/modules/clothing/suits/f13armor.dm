@@ -623,7 +623,7 @@
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer."
 	icon_state = "t51bpowerarmor"
 	item_state = "t51bpowerarmor"
-	slowdown = 0.25 //+0.05 from helmet = total 0.255
+	slowdown = 0.20 //+0.05 from helmet = total 0.255
 	armor = list("melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 25)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t51b
@@ -633,7 +633,7 @@
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer. It's plates have been chemially treated to be stronger."
 	icon_state = "t51green"
 	item_state = "t51green"
-	slowdown = 0.25 //+0.05 from helmet = total 0.255
+	slowdown = 0.20 //+0.05 from helmet = total 0.255
 	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 32, "bomb" = 64, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
 
 /obj/item/clothing/suit/armor/f13/power_armor/midwest
@@ -641,7 +641,7 @@
 	desc = "This set of power armor belongs to the Midwestern branch of the Brotherhood of Steel."
 	icon_state = "midwestgrey_pa"
 	item_state = "midwestgrey_pa"
-	slowdown = 0.25 //+0.05 from helmet = total 0.255
+	slowdown = 0.20 //+0.05 from helmet = total 0.255
 	armor = list("melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/midwest
 
@@ -650,7 +650,7 @@
 	desc = "This set of power armor belongs to the Midwestern branch of the Brotherhood of Steel. This particular one has gone through a chemical hardening process, increasing its armor capabilities."
 	icon_state = "midwestpa"
 	item_state = "midwestpa"
-	slowdown = 0.25 //+0.05 from helmet = total 0.255
+	slowdown = 0.20 //+0.05 from helmet = total 0.255
 	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 32, "bomb" = 64, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/midwest/hardened
 
@@ -668,7 +668,7 @@
 	slowdown = 0.2
 	armor = list("melee" = 80, "bullet" = 70, "laser" = 80, "energy" = 30, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 50, "wound" = 50)
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 30)
-	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t60
+	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t60	
 
 /obj/item/clothing/suit/armor/f13/power_armor/t60/pineapple
 	name = "degraded T-60a power armor"
@@ -706,7 +706,7 @@
 	desc = "Upgraded pre-war power armor used by the Enclave, rigged with heavy electronics."
 	icon_state = "tesla"
 	item_state = "tesla"
-	slowdown = 0.3//Worst slowdown of all combat sets.
+	slowdown = 0.25//Worst slowdown of all combat sets.
 	armor = list("melee" = 75, "bullet" = 75, "laser" = 95, "energy" = 95, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 50)
 	var/hit_reflect_chance = 35
 
@@ -1340,3 +1340,13 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
 	slowdown = 0.05
+
+/obj/item/clothing/suit/armor/f13/power_armor/t60/bosBaron
+	name = "T-60a Baron Ceremonial Power Armor"
+	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51b as the pinnacle of powered armor technology in the U.S. military arsenal. This one was modified by the Brotherhood to glorify their combat worthy Barons."
+	icon_state = "t60powerarmor"
+	item_state = "t60powerarmor"
+	slowdown = 0.1
+	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 30, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 50, "wound" = 50)
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 30)
+	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t60
