@@ -25367,6 +25367,12 @@
 	},
 /turf/open/indestructible/ground/outside/savannah/topleftcorner,
 /area/f13/wasteland/warren)
+"xVz" = (
+/obj/machinery/mineral/wasteland_vendor/weapons/ncr,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontaltopbordertop0"
+	},
+/area/f13/wasteland/ncr)
 "xWb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/stool{
@@ -25391,6 +25397,12 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/city)
+"xWJ" = (
+/obj/machinery/mineral/wasteland_trader,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontaltopbordertop0"
+	},
+/area/f13/wasteland/ncr)
 "xWL" = (
 /turf/open/floor/plating/f13/outside/road{
 	icon_state = "horizontaloutermain2right"
@@ -62704,7 +62716,7 @@ jRA
 jRA
 mVW
 uAm
-hgd
+xWJ
 bYc
 jXh
 jXh
@@ -62961,7 +62973,7 @@ jRA
 jRA
 jRA
 jjr
-hgd
+xVz
 bYc
 jXh
 jXh

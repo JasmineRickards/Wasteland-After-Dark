@@ -14871,6 +14871,10 @@
 	icon_state = "greenrusty"
 	},
 /area/f13/building)
+"oTs" = (
+/obj/machinery/mineral/wasteland_trader,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legion)
 "oTI" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/snacks/grown/pungafruit,
@@ -24532,6 +24536,7 @@
 /obj/structure/destructible/tribal_torch/wall/lit{
 	light_color = "#f4e3b0"
 	},
+/obj/machinery/mineral/wasteland_vendor/weapons/Legion,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legion)
 "yko" = (
@@ -41611,7 +41616,7 @@ jLa
 amM
 gtX
 amM
-wcH
+oTs
 otN
 jLa
 jLa
