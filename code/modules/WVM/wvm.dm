@@ -1209,8 +1209,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Rangemaster blueprint",		/obj/item/book/granter/crafting_recipe/blueprint/rangemaster,		2000),
 		new /datum/data/wasteland_equipment("Bozar blueprint",				/obj/item/book/granter/crafting_recipe/blueprint/bozar,				3000),
 		new /datum/data/wasteland_equipment("Power armor pamphlet",			/obj/item/book/granter/trait/pa_wear,								1500),
-		new /datum/data/wasteland_equipment("T-51b Power Armor",			/obj/item/clothing/suit/armor/f13/power_armor/t51b,					2000),
-		new /datum/data/wasteland_equipment("T-51b Helmet",					/obj/item/clothing/head/helmet/f13/power_armor/t51b,				500),
+		new /datum/data/wasteland_equipment("T-51b Power Armor",			/obj/item/clothing/suit/armor/f13/power_armor/midwest,					2000),
+		new /datum/data/wasteland_equipment("T-51b Helmet",					/obj/item/clothing/head/helmet/f13/power_armor/midwest,				500),
 		new /datum/data/wasteland_equipment("Laser RCW",					/obj/item/gun/energy/laser/rcw,										1500)
 		)
 	highpop_list = list(
@@ -1248,7 +1248,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Rangemaster blueprint",		/obj/item/book/granter/crafting_recipe/blueprint/rangemaster,		2000),
 		new /datum/data/wasteland_equipment("Bozar blueprint",				/obj/item/book/granter/crafting_recipe/blueprint/bozar,				3000),
 		new /datum/data/wasteland_equipment("Power armor pamphlet",			/obj/item/book/granter/trait/pa_wear,								1500),
-		new /datum/data/wasteland_equipment("T-51b Power Armor",			/obj/item/clothing/suit/armor/f13/power_armor/t51b,					2000),
-		new /datum/data/wasteland_equipment("T-51b Helmet",					/obj/item/clothing/head/helmet/f13/power_armor/t51b,				500),
+		new /datum/data/wasteland_equipment("T-51b Power Armor",			/obj/item/clothing/suit/armor/f13/power_armor/midwest,					2000),
+		new /datum/data/wasteland_equipment("T-51b Helmet",					/obj/item/clothing/head/helmet/f13/power_armor/midwest,				500),
 		new /datum/data/wasteland_equipment("Laser RCW",					/obj/item/gun/energy/laser/rcw,										1500)
 		)
