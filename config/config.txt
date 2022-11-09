@@ -21,16 +21,16 @@ $include policy.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-# SERVERNAME Sunset Wasteland
+SERVERNAME Wasteland After Dark
 
 ## Server tagline: This will appear right below the server's title.
-SERVERTAGLINE [18+] The first furry-friendly Fallout server! MRP/HRP
+SERVERTAGLINE [18+] An MRP-HRP server focused on HRP interactions and unique playstyles.
 
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
 # SERVERSQLNAME fo13sql
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-STATIONNAME Sunset Wasteland
+STATIONNAME Wasteland After Dark
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
 HUB
@@ -60,7 +60,7 @@ ROUND_END_COUNTDOWN 60
 #BAN_LEGACY_SYSTEM
 
 ## Comment this out to stop locally connected clients from being given the almost full access !localhost! admin rank
-ENABLE_LOCALHOST_RANK
+#ENABLE_LOCALHOST_RANK
 
 ## Comment this out if you want to use the SQL based mentor system, the legacy system uses mentors.txt.
 ## You need to set up your database to use the SQL based system.
@@ -269,13 +269,13 @@ CHECK_RANDOMIZER
 # WIKIURL https://f13wiki.herma.moe/index.php/Main_Page
 
 ## Rules address
-RULESURL https://discord.gg/xCgEwJTppx
+RULESURL https://transcendentenemy.mistforums.com/thread/fallout-13-rules-707551
 
 ## Github address
-# GITHUBURL https://github.com/Citadel-Station-13/Citadel-Station-13
+ GITHUBURL https://github.com/JasmineRickards/Wasteland-After-Dark
 
 ## Discord Link
-DISCORDURL https://discord.gg/F5Z2tVXVyt
+DISCORDURL https://discord.gg/Bc2qfuD
 
 ## Round specific stats address
 ## Link to round specific parsed logs; IE statbus. It is appended with the RoundID automatically by ticker/Reboot()

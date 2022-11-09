@@ -121,6 +121,24 @@
 	category = CAT_MEDICAL
 	always_available = FALSE
 
+/datum/crafting_recipe/imitation
+	name = "Imitation stimpak"
+	result = /obj/item/reagent_containers/hypospray/medipen/stimpak/imitation
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 2,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 2,
+				/obj/item/reagent_containers/syringe = 1)
+	time = 15
+	category = CAT_MEDICAL
+
+/datum/crafting_recipe/imitation5
+	name = "Stimpak x5"
+	result = /obj/item/storage/box/medicine/stimpaks/imitation_stimpaks5
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 10,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 10,
+				/obj/item/reagent_containers/syringe = 5)
+	time = 20
+	category = CAT_MEDICAL
+
 /datum/crafting_recipe/stimpak
 	name = "Stimpak"
 	result = /obj/item/reagent_containers/hypospray/medipen/stimpak

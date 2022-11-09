@@ -30,7 +30,7 @@
 								/obj/item/reagent_containers/food/snacks/grown/agave = 5,
 								/obj/item/reagent_containers/pill/patch/jet = 10,
 								/obj/item/reagent_containers/pill/patch/healingpowder = 30,
-								/obj/item/storage/box/medicine/stimpaks/stimpaks5 = 30,
+								/obj/item/reagent_containers/hypospray/medipen/stimpak/imitation = 30,
 								/obj/item/reagent_containers/hypospray/medipen/stimpak = 35,
 								/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 75,
 								/obj/item/reagent_containers/hypospray/medipen/psycho = 20,
