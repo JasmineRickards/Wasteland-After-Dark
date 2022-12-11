@@ -11,14 +11,11 @@ GLOBAL_LIST(topic_status_cache)
 //So subsystems globals exist, but are not initialised
 
 /world/New()
-//	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
-/*	if (debug_server)
+	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
+	if (debug_server)
 		call(debug_server, "auxtools_init")()
 		enable_debugging()
 	AUXTOOLS_CHECK(AUXMOS)
-#ifdef EXTOOLS_REFERENCE_TRACKING
-	enable_reference_tracking()
-#endif*/
 	world.Profile(PROFILE_START)
 	log_world("World loaded at [TIME_STAMP("hh:mm:ss", FALSE)]!")
 
