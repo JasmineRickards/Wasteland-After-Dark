@@ -72,6 +72,10 @@ GLOBAL_LIST_EMPTY(gateway_destinations)
 	if(target_gateway.target == deactivated.destination)
 		target_gateway.deactivate()
 
+/datum/gateway_destination/gateway/Destroy(force, ...)
+	target_gateway = null
+	return ..()
+
 /datum/gateway_destination/gateway/is_available()
 	return ..() && target_gateway.calibrated && !target_gateway.target && target_gateway.powered()
 
@@ -177,6 +181,14 @@ GLOBAL_LIST_EMPTY(gateway_destinations)
 	update_icon()
 	return ..()
 
+/obj/machinery/gateway/Destroy()
+	deactivate()
+	if(destination && destination.target_gateway)
+		destination.target_gateway.deactivate()
+	GLOB.gateway_destinations -= destination
+	QDEL_NULL(destination)
+	return ..()
+
 /obj/machinery/gateway/proc/generate_destination()
 	destination = new destination_type
 	destination.name = destination_name
@@ -186,7 +198,7 @@ GLOBAL_LIST_EMPTY(gateway_destinations)
 /obj/machinery/gateway/proc/deactivate()
 	var/datum/gateway_destination/dest = target
 	target = null
-	dest.deactivate(src)
+	dest?.deactivate(src)
 	QDEL_NULL(portal)
 	if(use_power == ACTIVE_POWER_USE)
 		use_power = IDLE_POWER_USE
