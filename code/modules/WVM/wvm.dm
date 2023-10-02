@@ -1068,6 +1068,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment(".223 pistol blueprint",		/obj/item/book/granter/crafting_recipe/blueprint/thatgun,			800),
 		new /datum/data/wasteland_equipment("LSW blueprint",				/obj/item/book/granter/crafting_recipe/blueprint/lsw,				2000),
 		new /datum/data/wasteland_equipment("R84 blueprint",				/obj/item/book/granter/crafting_recipe/blueprint/r84,				2000),
+		new /datum/data/wasteland_equipment("NCR salvaged T-45d",					/obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b/ncr,				1500),
+		new /datum/data/wasteland_equipment("NCR salvaged T-45d helmet",					/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr,				500),
 		new /datum/data/wasteland_equipment("Desert Eagle blueprint",		/obj/item/book/granter/crafting_recipe/blueprint/deagle,			1500),
 		new /datum/data/wasteland_equipment("AMR Blueprint",				/obj/item/book/granter/crafting_recipe/blueprint/am_rifle,			3200),
 		new /datum/data/wasteland_equipment("Citykiller blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/citykiller,		1800),
@@ -1103,6 +1105,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("LSW blueprint",				/obj/item/book/granter/crafting_recipe/blueprint/lsw,				2000),
 		new /datum/data/wasteland_equipment("R84 blueprint",				/obj/item/book/granter/crafting_recipe/blueprint/r84,				2000),
 		new /datum/data/wasteland_equipment("Desert Eagle blueprint",		/obj/item/book/granter/crafting_recipe/blueprint/deagle,			1500),
+				new /datum/data/wasteland_equipment("NCR salvaged T-45d",					/obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b/ncr,				1500),
+		new /datum/data/wasteland_equipment("NCR salvaged T-45d helmet",					/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr,				500),
 		new /datum/data/wasteland_equipment("AMR Blueprint",				/obj/item/book/granter/crafting_recipe/blueprint/am_rifle,			3200),
 		new /datum/data/wasteland_equipment("Citykiller blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/citykiller,		1800),
 		new /datum/data/wasteland_equipment("Rangemaster blueprint",		/obj/item/book/granter/crafting_recipe/blueprint/rangemaster,		2000),
@@ -1209,8 +1213,10 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Rangemaster blueprint",		/obj/item/book/granter/crafting_recipe/blueprint/rangemaster,		2000),
 		new /datum/data/wasteland_equipment("Bozar blueprint",				/obj/item/book/granter/crafting_recipe/blueprint/bozar,				3000),
 		new /datum/data/wasteland_equipment("Power armor pamphlet",			/obj/item/book/granter/trait/pa_wear,								1500),
-		new /datum/data/wasteland_equipment("T-51b Power Armor",			/obj/item/clothing/suit/armor/f13/power_armor/midwest,					2000),
-		new /datum/data/wasteland_equipment("T-51b Helmet",					/obj/item/clothing/head/helmet/f13/power_armor/midwest,				500),
+		new /datum/data/wasteland_equipment("T-51b Power Armor",			/obj/item/clothing/suit/armor/f13/power_armor/midwest,					15000),
+		new /datum/data/wasteland_equipment("T-51b Helmet",					/obj/item/clothing/head/helmet/f13/power_armor/midwest,				1500),
+		new /datum/data/wasteland_equipment("Refurbished T-45d",			/obj/item/clothing/suit/armor/f13/power_armor/t45d/refurb,				1500),
+		new /datum/data/wasteland_equipment("Refurbished T-45d helmet",		/obj/item/clothing/head/helmet/f13/power_armor/t45d/refurb,				1500),
 		new /datum/data/wasteland_equipment("Laser RCW",					/obj/item/gun/energy/laser/rcw,										1500)
 		)
 	highpop_list = list(
@@ -1248,7 +1254,9 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Rangemaster blueprint",		/obj/item/book/granter/crafting_recipe/blueprint/rangemaster,		2000),
 		new /datum/data/wasteland_equipment("Bozar blueprint",				/obj/item/book/granter/crafting_recipe/blueprint/bozar,				3000),
 		new /datum/data/wasteland_equipment("Power armor pamphlet",			/obj/item/book/granter/trait/pa_wear,								1500),
-		new /datum/data/wasteland_equipment("T-51b Power Armor",			/obj/item/clothing/suit/armor/f13/power_armor/midwest,					2000),
-		new /datum/data/wasteland_equipment("T-51b Helmet",					/obj/item/clothing/head/helmet/f13/power_armor/midwest,				500),
+		new /datum/data/wasteland_equipment("T-51b Power Armor",			/obj/item/clothing/suit/armor/f13/power_armor/midwest,					15000),
+		new /datum/data/wasteland_equipment("T-51b Helmet",					/obj/item/clothing/head/helmet/f13/power_armor/midwest,				1500),
+new /datum/data/wasteland_equipment("Refurbished T-45d",					/obj/item/clothing/suit/armor/f13/power_armor/t45d/refurb,				3000),
+		new /datum/data/wasteland_equipment("Refurbished T-45d helmet",		/obj/item/clothing/head/helmet/f13/power_armor/t45d/refurb,				500),
 		new /datum/data/wasteland_equipment("Laser RCW",					/obj/item/gun/energy/laser/rcw,										1500)
 		)
