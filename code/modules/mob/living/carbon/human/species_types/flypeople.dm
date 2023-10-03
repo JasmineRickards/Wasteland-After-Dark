@@ -3,6 +3,7 @@
 	id = "fly"
 	say_mod = "buzzes"
 	species_traits = list(NOEYES,HAS_FLESH,HAS_BONE)
+	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_NOBREATH)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_BUG
 	mutanttongue = /obj/item/organ/tongue/fly
 	mutantliver = /obj/item/organ/liver/fly

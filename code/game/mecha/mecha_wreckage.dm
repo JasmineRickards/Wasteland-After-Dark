@@ -102,7 +102,7 @@
 
 
 /obj/structure/mecha_wreckage/gygax
-	name = "\improper Gygax wreckage"
+	name = "\improper MW t-102mss wreck"
 	icon_state = "gygax-broken"
 
 /obj/structure/mecha_wreckage/gygax/Initialize()
@@ -198,7 +198,7 @@
 	icon_state = "deathripley-broken"
 
 /obj/structure/mecha_wreckage/durand
-	name = "\improper Durand wreckage"
+	name = "\improper MW t-110mds wreckage"
 	icon_state = "durand-broken"
 
 /obj/structure/mecha_wreckage/durand/Initialize()

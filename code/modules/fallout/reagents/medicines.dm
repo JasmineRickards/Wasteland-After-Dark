@@ -43,6 +43,7 @@
 		M.adjustFireLoss(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.AdjustStun(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.AdjustKnockdown(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustOxyLoss(-5*REAGENTS_EFFECT_MULTIPLIER,	0)
 		M.adjustStaminaLoss(-2*REAGENTS_EFFECT_MULTIPLIER)//This will probably be horribly unbalanced because of multipliers, but we will see.
 	if(M.oxyloss > 35)
 		M.setOxyLoss(35, 0)
@@ -59,6 +60,7 @@
 		M.adjustBruteLoss(-3*REAGENTS_EFFECT_MULTIPLIER)
 		M.adjustFireLoss(-3*REAGENTS_EFFECT_MULTIPLIER)
 		M.AdjustStun(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustOxyLoss(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.AdjustKnockdown(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.adjustStaminaLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
 		M.adjustToxLoss(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
@@ -322,6 +324,7 @@
 	var/heal_rate = (is_tribal ? heal_factor_perk : heal_factor) * REAGENTS_EFFECT_MULTIPLIER
 	M.adjustFireLoss(heal_rate)
 	M.adjustBruteLoss(heal_rate)
+	M.adjustOxyLoss(heal_rate)
 	M.adjustToxLoss(heal_rate)
 	M.hallucination = max(M.hallucination, is_tribal ? 0 : 5)
 	. = TRUE

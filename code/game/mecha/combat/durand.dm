@@ -4,8 +4,8 @@
 */
 
 /obj/mecha/combat/durand
-	name = "\improper Durand"
-	desc = "An aging combat exosuit utilized by the Vault-Tec corporation. A pre-War design, developed by Vault-Tec to combat post-War threats. It seems to have an experimental shield projector installed to minimize damage to the exosuit."
+	name = "\improper MW t-110mds"
+	desc = "A heavy duty defensive suit developed by the midwestern brotherhood, designed to ensure locations and patrols can be properly defended."
 	icon_state = "durand"
 	step_in = 4
 	dir_in = 1 //Facing North.

@@ -4,12 +4,12 @@
 */
 
 /obj/mecha/combat/gygax
-	name = "\improper Gygax"
-	desc = "A pre-War security exosuit developed by Vault-Tec to minimize casulties among security staff during violent uprisings. It's painted in a bright orange scheme to ensure recognizability."
+	name = "\improper MW t-102mss"
+	desc = "A midwestern powered armor designed for higher mobility than the 110 variant. Capable of scouting operations and lesser escorts."
 	icon_state = "gygax"
 	step_in = 3
 	dir_in = 1 //Facing North.
-	max_integrity = 450
+	max_integrity = 300
 	armor = list("melee" = 30, "bullet" = 25, "laser" = 30, "energy" = 25, "bomb" = 15, "bio" = 0, "rad" = 75, "fire" = 100, "acid" = 100)
 	max_temperature = 25000
 	infra_luminosity = 6
