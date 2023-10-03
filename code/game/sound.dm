@@ -26,10 +26,10 @@
 		if(get_dist(M, turf_source) <= maxdistance)
 			M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, channel, pressure_affected, S, soundenvwet, soundenvdry)
 
-/mob/proc/playsound_local(turf/turf_source, soundin, vol as num, vary, frequency, falloff, channel = 0, pressure_affected = TRUE, sound/S, envwet = -10000, envdry = 0, manual_x, manual_y, distance_multiplier = 1)
+/mob/proc/playsound_local(turf/turf_source, soundin, vol as num, vary, frequency, falloff, channel = 0, pressure_affected = FALSE, sound/S, envwet = -10000, envdry = 0, manual_x, manual_y, distance_multiplier = 1)
 	if(audiovisual_redirect)
 		var/turf/T = get_turf(src)
-		audiovisual_redirect.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, channel, pressure_affected, S, 0, -1000, turf_source.x - T.x, turf_source.y - T.y, distance_multiplier)
+		audiovisual_redirect.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, channel, S, 0, -1000, turf_source.x - T.x, turf_source.y - T.y, distance_multiplier)
 	if(!client || !can_hear())
 		return
 
@@ -61,7 +61,7 @@
 
 		if(pressure_affected)
 			//Atmosphere affects sound
-			var/pressure_factor = 1
+			var/pressure_factor = 0
 			var/datum/gas_mixture/hearer_env = T.return_air()
 			var/datum/gas_mixture/source_env = turf_source.return_air()
 
