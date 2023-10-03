@@ -10,11 +10,11 @@
 
 	var/deletion_time = 30 MINUTES
 
-/obj/structure/timeddoor/sixtyminute
-	deletion_time = 60 MINUTES
+/obj/structure/timeddoor/fortyfiveminutes
+	deletion_time = 45 MINUTES
 
-/obj/structure/timeddoor/onetwozerominutes
-	deletion_time = 120 MINUTES
+/obj/structure/timeddoor/sixtyminutes
+	deletion_time = 60 MINUTES
 
 /obj/structure/timeddoor/Initialize()
 	. = ..()

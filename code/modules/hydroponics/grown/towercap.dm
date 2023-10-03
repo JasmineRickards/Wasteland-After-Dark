@@ -276,9 +276,9 @@
 			new /obj/item/stack/sheet/mineral/coal(loc, 1)
 
 /obj/structure/bonfire/process()
-	if(!CheckOxygen())
+/*	if(!CheckOxygen())
 		extinguish()
-		return
+		return*/ //Should allow bonfires to burn.
 	if(!grill)
 		Burn()
 	else
