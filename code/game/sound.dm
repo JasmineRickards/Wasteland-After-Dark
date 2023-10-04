@@ -61,16 +61,16 @@
 
 		if(pressure_affected)
 			//Atmosphere affects sound
-			var/pressure_factor = 0
+			var/pressure_factor = 1
 			var/datum/gas_mixture/hearer_env = T.return_air()
 			var/datum/gas_mixture/source_env = turf_source.return_air()
 
 			if(hearer_env && source_env)
 				var/pressure = min(hearer_env.return_pressure(), source_env.return_pressure())
-				if(pressure < ONE_ATMOSPHERE)
+				if(pressure > ONE_ATMOSPHERE)
 					pressure_factor = max((pressure - SOUND_MINIMUM_PRESSURE)/(ONE_ATMOSPHERE - SOUND_MINIMUM_PRESSURE), 0)
 			else //space
-				pressure_factor = 0
+				pressure_factor = 1
 
 			S.echo = list(envdry, null, envwet, null, null, null, null, null, null, null, null, null, null, 1, 1, 1, null, null)
 

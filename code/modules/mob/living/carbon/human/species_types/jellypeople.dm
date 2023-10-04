@@ -460,6 +460,7 @@
 	name = "Xenobiological Slime Hybrid"
 	id = "slimeperson"
 	limbs_id = "slime"
+	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE)
 	default_color = "00FFFF"
 	species_traits = list(MUTCOLORS,EYECOLOR,HAIR,FACEHAIR)
 	inherent_traits = list(TRAIT_TOXINLOVER)

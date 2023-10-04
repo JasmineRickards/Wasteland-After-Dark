@@ -480,7 +480,7 @@
 	min_val = 0
 
 /datum/config_entry/number/penis_max_inches_prefs
-	config_entry_value = 10
+	config_entry_value = 14
 	min_val = 0
 
 /datum/config_entry/keyed_list/safe_visibility_toggles

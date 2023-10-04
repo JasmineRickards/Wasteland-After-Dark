@@ -246,3 +246,46 @@
 	)
 	result = /obj/item/reagent_containers/food/snacks/burger/rat
 	subcategory = CAT_WASTEFOOD
+
+/datum/crafting_recipe/food/crackerration
+	name = "C-ration crackers"
+	tools = list(TOOL_WORKBENCH)
+	reqs = list(
+			/obj/item/reagent_containers/food/snacks/pastrybase = 3,
+			/datum/reagent/consumable/sodiumchloride = 2
+	)
+	result = /obj/item/reagent_containers/food/snacks/f13/canned/ncr/crackers
+	subcategory = CAT_WASTEFOOD
+
+/datum/crafting_recipe/food/mutration
+	name = "C-ration candied mutfruit"
+	tools = list(TOOL_WORKBENCH)
+	reqs = list(
+			/obj/item/reagent_containers/food/snacks/grown/mutfruit = 2,
+			/datum/reagent/consumable/sugar = 2
+	)
+	result = /obj/item/reagent_containers/food/snacks/f13/canned/ncr/candied_mutfruit
+	subcategory = CAT_WASTEFOOD
+
+/datum/crafting_recipe/food/iguanaration
+	name = "C-ration iguana tacos"
+	tools = list(TOOL_WORKBENCH)
+	reqs = list(
+			/obj/item/reagent_containers/food/snacks/meat/cutlet = 2,
+			/datum/reagent/consumable/sodiumchloride = 2,
+			/obj/item/reagent_containers/food/snacks/tortilla = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/f13/canned/ncr/igauna_bits
+	subcategory = CAT_WASTEFOOD
+
+/datum/crafting_recipe/food/bighornfranksration
+	name = "C-ration Bighorn franks"
+	tools = list(TOOL_WORKBENCH)
+	reqs = list(
+			/obj/item/reagent_containers/food/snacks/sausage = 2,
+			/datum/reagent/consumable/sodiumchloride = 2,
+			/obj/item/reagent_containers/food/snacks/grown/tato = 1,
+			/datum/reagent/water = 5
+	)
+	result = /obj/item/reagent_containers/food/snacks/f13/canned/ncr/bighorner_sausage
+	subcategory = CAT_WASTEFOOD
