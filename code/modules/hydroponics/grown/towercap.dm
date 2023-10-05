@@ -222,12 +222,12 @@
 
 /obj/structure/bonfire/proc/CheckOxygen()
 	if(isopenturf(loc))
-		var/turf/open/O = loc
-		if(O.air)
-			var/datum/gas_mixture/loc_air = O.air
-			if(loc_air.get_moles(GAS_O2) > 13)
-				return TRUE
-	return FALSE
+//		var/turf/openO= = loc
+	//	if(O.air)
+	//		var/datum/gas_mixture/loc_air = O.air
+	//		if(loc_air.get_moles(GAS_O2) > 13)
+		return TRUE
+//	return FALSE
 
 /obj/structure/bonfire/proc/StartBurning()
 	if(!burning && CheckOxygen())

@@ -131,7 +131,7 @@
 	category = CAT_MEDICAL
 
 /datum/crafting_recipe/imitation5
-	name = "Stimpak x5"
+	name = "Imitation Stimpak x5"
 	result = /obj/item/storage/box/medicine/stimpaks/imitation_stimpaks5
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 10,
 				/obj/item/reagent_containers/food/snacks/grown/xander = 10,
