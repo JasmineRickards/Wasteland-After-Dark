@@ -150,6 +150,7 @@
 /datum/species/jelly/slime
 	name = "Xenobiological Slime Entity"
 	id = "slime"
+	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_NOBREATH,TRAIT_RESISTLOWPRESSURE)
 	default_color = "00FFFF"
 	species_traits = list(MUTCOLORS,EYECOLOR,HAIR,FACEHAIR)
 	say_mod = "says"

@@ -582,7 +582,7 @@
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/refurb
 	name = "Refurbished T-45d power armor"
 	desc = "An old, beat up suit of T-45d. This appears to have been refurbished time and again, with pockmarks all over the chasis."
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 25, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
+	armor = list("melee" = 65, "bullet" = 65, "laser" = 65, "energy" = 25, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
 	salvaged_type = null
 
 //////
@@ -668,7 +668,7 @@
 	slowdown = 0.2
 	armor = list("melee" = 80, "bullet" = 70, "laser" = 80, "energy" = 30, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 50, "wound" = 50)
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 30)
-	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t60	
+	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t60
 
 /obj/item/clothing/suit/armor/f13/power_armor/t60/pineapple
 	name = "degraded T-60a power armor"
