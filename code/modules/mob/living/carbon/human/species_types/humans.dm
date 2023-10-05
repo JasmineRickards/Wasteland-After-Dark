@@ -7,6 +7,7 @@
 	mutant_bodyparts = list("mcolor" = "FFFFFF", "mcolor2" = "FFFFFF","mcolor3" = "FFFFFF","tail_human" = "None", "ears" = "None", "taur" = "None", "deco_wings" = "None", "legs" = "Plantigrade", "mam_body_markings" = list())
 	use_skintones = USE_SKINTONES_GRAYSCALE_CUSTOM
 	skinned_type = /obj/item/stack/sheet/animalhide/human
+	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_NOBREATH)
 	disliked_food = GROSS | RAW | LONGPORK
 	liked_food = JUNKFOOD | FRIED
 

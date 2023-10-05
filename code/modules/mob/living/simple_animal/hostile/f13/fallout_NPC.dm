@@ -27,7 +27,7 @@
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/vault)
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
-	unsuitable_atmos_damage = 15
+	unsuitable_atmos_damage = 0
 	faction = list("vault", "city")
 	check_friendly_fire = 1
 	status_flags = CANPUSH
@@ -147,7 +147,7 @@
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = INTENT_HARM
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
-	unsuitable_atmos_damage = 15
+	unsuitable_atmos_damage = 0
 	faction = list("enclave")
 	check_friendly_fire = 1
 	status_flags = CANPUSH
@@ -250,7 +250,7 @@
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/bs)
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
-	unsuitable_atmos_damage = 15
+	unsuitable_atmos_damage = 0
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = TRUE
@@ -339,7 +339,7 @@
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/ncr)
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
-	unsuitable_atmos_damage = 15
+	unsuitable_atmos_damage = 0
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = TRUE
@@ -425,7 +425,7 @@
 	a_intent = INTENT_HARM
 	loot = list(/obj/effect/mob_spawn/human/corpse/legion)
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
-	unsuitable_atmos_damage = 15
+	unsuitable_atmos_damage = 0
 	check_friendly_fire = 1
 	status_flags = CANPUSH
 	del_on_death = TRUE
@@ -511,7 +511,7 @@
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	a_intent = INTENT_HARM
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
-	unsuitable_atmos_damage = 15
+	unsuitable_atmos_damage = 0
 	status_flags = CANPUSH
 	speak = list("For our kin!", "This will be a good hunt.", "The gods look upon me today.")
 	speak_emote = list("says")

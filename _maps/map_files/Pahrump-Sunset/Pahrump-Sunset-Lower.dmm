@@ -11055,6 +11055,10 @@
 /obj/effect/spawner/lootdrop/f13/cash_random_low,
 /turf/open/floor/f13/wood,
 /area/f13/tunnel/bighorn)
+"jwv" = (
+/obj/machinery/mineral/wasteland_trader,
+/turf/open/floor/plasteel/dark,
+/area/f13/brotherhood)
 "jxe" = (
 /obj/structure/table/reinforced,
 /obj/machinery/computer/terminal{
@@ -20044,6 +20048,10 @@
 	},
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
+"vZh" = (
+/obj/machinery/mineral/wasteland_vendor/weapons/BoS,
+/turf/open/floor/plasteel/dark,
+/area/f13/brotherhood)
 "vZV" = (
 /obj/structure/table/wood/settler,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
@@ -74784,7 +74792,7 @@ aae
 oVq
 oVq
 oVq
-onW
+vZh
 onW
 onW
 onW
@@ -75041,7 +75049,7 @@ aJq
 aJq
 aJq
 oVq
-onW
+jwv
 oNP
 onW
 onW

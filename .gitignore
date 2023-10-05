@@ -198,4 +198,8 @@ Temporary Items
 start_server.sh
 tgui/public/tgui.bundle.css
 tgui/public/tgui.bundle.js
+<<<<<<< Supply-lines-branch
+config/dbconfig.txt
+=======
 config/config.txt
+>>>>>>> master

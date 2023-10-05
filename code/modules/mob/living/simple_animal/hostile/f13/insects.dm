@@ -4,7 +4,6 @@
 ///////////////
 // GIANT ANT //
 ///////////////
-
 /mob/living/simple_animal/hostile/giantant
 	name = "giant ant"
 	desc = "A large mutated insect that finds its way everywhere."

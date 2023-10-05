@@ -8,7 +8,7 @@
 	mutantlungs = /obj/item/organ/lungs/slime
 	mutant_heart = /obj/item/organ/heart/slime
 	mutant_bodyparts = list("mcolor" = "FFFFFF", "mam_tail" = "None", "mam_ears" = "None", "mam_snouts" = "None", "taur" = "None", "deco_wings" = "None", "legs" = "Plantigrade")
-	inherent_traits = list(TRAIT_TOXINLOVER)
+	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_NOBREATH,TRAIT_TOXINLOVER)
 	meat = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/slime
 	gib_types = list(/obj/effect/gibspawner/slime, /obj/effect/gibspawner/slime/bodypartless)
 	exotic_blood = /datum/reagent/blood/jellyblood
@@ -150,6 +150,7 @@
 /datum/species/jelly/slime
 	name = "Xenobiological Slime Entity"
 	id = "slime"
+	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_NOBREATH,TRAIT_RESISTLOWPRESSURE)
 	default_color = "00FFFF"
 	species_traits = list(MUTCOLORS,EYECOLOR,HAIR,FACEHAIR)
 	say_mod = "says"
@@ -460,6 +461,7 @@
 	name = "Xenobiological Slime Hybrid"
 	id = "slimeperson"
 	limbs_id = "slime"
+	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_NOBREATH,TRAIT_RESISTLOWPRESSURE)
 	default_color = "00FFFF"
 	species_traits = list(MUTCOLORS,EYECOLOR,HAIR,FACEHAIR)
 	inherent_traits = list(TRAIT_TOXINLOVER)
@@ -689,6 +691,7 @@
 	id = "lum"
 	say_mod = "says"
 	var/glow_intensity = LUMINESCENT_DEFAULT_GLOW
+	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_NOBREATH,TRAIT_RESISTLOWPRESSURE)
 	var/obj/effect/dummy/luminescent_glow/glow
 	var/obj/item/slime_extract/current_extract
 	var/datum/action/innate/integrate_extract/integrate_extract
@@ -854,6 +857,7 @@
 /datum/species/jelly/stargazer
 	name = "Stargazer Slime Entity"
 	id = "stargazer"
+	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_NOBREATH,TRAIT_RESISTLOWPRESSURE)
 	var/datum/action/innate/project_thought/project_thought
 	var/datum/action/innate/link_minds/link_minds
 	var/list/mob/living/linked_mobs = list()

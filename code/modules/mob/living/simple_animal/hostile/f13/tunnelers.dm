@@ -23,7 +23,7 @@
 	attack_verb_simple = "lunges at"
 	attack_sound = 'sound/hallucinations/growl1.ogg'
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
-	unsuitable_atmos_damage = 20
+	unsuitable_atmos_damage = 0
 	stat_attack = UNCONSCIOUS
 	gold_core_spawnable = HOSTILE_SPAWN
 	faction = list("trog")
@@ -66,7 +66,7 @@
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = -1, CLONE = 0, STAMINA = 0, OXY = 0)
-	unsuitable_atmos_damage = 5
+	unsuitable_atmos_damage = 0
 	faction = list("tunneler")
 	guaranteed_butcher_results = list(/obj/item/stack/sheet/bone = 1)
 	death_sound = 'sound/f13npc/ghoul/ghoul_death.ogg'

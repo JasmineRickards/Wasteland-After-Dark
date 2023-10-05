@@ -31,10 +31,20 @@
 					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "betrayed caesar", /datum/mood_event/betrayed_caesar, name)
 
 /datum/reagent/medicine/stimpak/on_mob_life(mob/living/carbon/M)
+	for(var/thing in M.all_wounds)
+		var/datum/wound/W = thing
+		var/obj/item/bodypart/wounded_part = W.limb
+		if(wounded_part)
+			wounded_part.heal_damage(10, 10)//Does this even work? AAAAAAAAAAAAAAAAA Original .heal_damage(125, 125)
+	..()
 	if(M.health < 0)					//Functions as epinephrine.
-		M.adjustToxLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, 0)
-		M.adjustBruteLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, 0)
-		M.adjustFireLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustToxLoss(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustBruteLoss(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustFireLoss(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.AdjustStun(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.AdjustKnockdown(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustOxyLoss(-5*REAGENTS_EFFECT_MULTIPLIER,	0)
+		M.adjustStaminaLoss(-2*REAGENTS_EFFECT_MULTIPLIER)//This will probably be horribly unbalanced because of multipliers, but we will see.
 	if(M.oxyloss > 35)
 		M.setOxyLoss(35, 0)
 	if(M.losebreath >= 4)
@@ -50,8 +60,10 @@
 		M.adjustBruteLoss(-3*REAGENTS_EFFECT_MULTIPLIER)
 		M.adjustFireLoss(-3*REAGENTS_EFFECT_MULTIPLIER)
 		M.AdjustStun(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustOxyLoss(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.AdjustKnockdown(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.adjustStaminaLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustToxLoss(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
 		. = TRUE
 	..()
 
@@ -74,10 +86,17 @@
 	ghoulfriendly = TRUE
 
 /datum/reagent/medicine/stimpakimitation/on_mob_life(mob/living/carbon/M)
+	for(var/thing in M.all_wounds)
+		var/datum/wound/W = thing
+		var/obj/item/bodypart/wounded_part = W.limb
+		if(wounded_part)
+			wounded_part.heal_damage(10, 10)//Does this even work? AAAAAAAAAAAAAAAAA Original .heal_damage(125, 125)
+	..()
 	M.adjustBruteLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
-	M.adjustFireLoss(-1.5*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustFireLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+	M.AdjustStun(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 	M.AdjustKnockdown(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
-	M.adjustStaminaLoss(-1.7*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustStaminaLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
 	..()
 
 // ---------------------------
@@ -106,9 +125,13 @@
 
 /datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	if(M.health < 0)					//Functions as epinephrine.
-		M.adjustToxLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, 0)
-		M.adjustBruteLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, 0)
-		M.adjustFireLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustToxLoss(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustBruteLoss(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustFireLoss(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.AdjustStun(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.AdjustKnockdown(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustStaminaLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustToxLoss(-3*REAGENTS_EFFECT_MULTIPLIER, 0)//Same vars as stimpaks, but reagent effect multiplier <?>
 	if(M.oxyloss > 35)
 		M.setOxyLoss(35, 0)
 	if(M.losebreath >= 4)
@@ -253,6 +276,12 @@
 	ghoulfriendly = TRUE
 
 /datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/carbon/M)
+	for(var/thing in M.all_wounds)
+		var/datum/wound/W = thing
+		var/obj/item/bodypart/wounded_part = W.limb
+		if(wounded_part)
+			wounded_part.heal_damage(10, 10)//Does this even work? AAAAAAAAAAAAAAAAA Original .heal_damage(125, 125)
+	..()
 	var/is_tribal = FALSE
 	if(HAS_TRAIT(M, TRAIT_TRIBAL))
 		is_tribal = TRUE
@@ -284,7 +313,7 @@
 	taste_description = "bitterness"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 30
-	var/heal_factor = -1.5 //Subtractive multiplier if you do not have the perk.
+	var/heal_factor = -2 //Subtractive multiplier if you do not have the perk.
 	var/heal_factor_perk = -2.2 //Multiplier if you have the right perk.
 	ghoulfriendly = TRUE
 
@@ -295,6 +324,7 @@
 	var/heal_rate = (is_tribal ? heal_factor_perk : heal_factor) * REAGENTS_EFFECT_MULTIPLIER
 	M.adjustFireLoss(heal_rate)
 	M.adjustBruteLoss(heal_rate)
+	M.adjustOxyLoss(heal_rate)
 	M.adjustToxLoss(heal_rate)
 	M.hallucination = max(M.hallucination, is_tribal ? 0 : 5)
 	. = TRUE
