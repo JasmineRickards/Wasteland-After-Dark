@@ -8,14 +8,15 @@
 	righthand_file = 'icons/mob/inhands/misc/devices_righthand.dmi'
 	force = 5
 	throwforce = 5
+	rating = 3
 	throw_speed = 2
 	throw_range = 5
 	w_class = WEIGHT_CLASS_SMALL
 	var/charge = 0	// note %age converted to actual charge in New
-	var/maxcharge = 40000
-	custom_materials = list(/datum/material/iron=700, /datum/material/glass=50)
+	var/maxcharge = 50000
+	custom_materials = list(/datum/material/iron=10000, /datum/material/glass=200, /datum/material/uranium=5000)
 	var/start_charged = TRUE
-	grind_results = list(/datum/reagent/lithium = 15, /datum/reagent/iron = 5, /datum/reagent/silicon = 5)
+	grind_results = list(/datum/reagent/uranium = 100, /datum/reagent/iron = 25, /datum/reagent/silicon = 25)
 	var/rigged = FALSE	// true if rigged to explode
 	var/chargerate = 10 //how much power is given every tick in a recharger
 	var/cancharge = 1 //set to 0 if you do not want this battery to be able to charge
@@ -186,19 +187,9 @@
 /obj/item/stock_parts/fc/get_part_rating()
 	return rating * maxcharge
 
-// stuff so ipcs and synthlizards can eat power cells, taken from how moths can eat clothing
-/obj/item/reagent_containers/food/snacks/cell
-	name = "oops"
-	desc = "If you're reading this it means I messed up. This is related to ipcs/synths eating cells and I didn't know a better way to do it than making a new food object."
-	list_reagents = list(/datum/reagent/consumable/nutriment = 0.5)
-	tastes = list("electricity" = 1, "metal" = 1)
-
-/obj/item/stock_parts/fc/attack(mob/M, mob/user, def_zone)
-	if(user.a_intent != INTENT_HARM && isrobotic(M))
-		var/obj/item/reagent_containers/food/snacks/cell/cell_as_food = new
-		cell_as_food.name = name
-		if(cell_as_food.attack(M, user, def_zone))
-			take_damage(40, sound_effect=FALSE)
-		qdel(cell_as_food)
-	else
-		return ..()
+/obj/item/stock_parts/fc/high
+	name = "Expanded Fusion Core"
+	icon_state = "hcell"
+	maxcharge = 70000
+	custom_materials = list(/datum/material/iron=10000, /datum/material/glass=200, /datum/material/uranium=5000)
+	chargerate = 1500

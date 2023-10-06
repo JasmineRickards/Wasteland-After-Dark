@@ -156,6 +156,12 @@
 	req_components = list(/obj/item/stock_parts/capacitor = 1)
 	needs_anchored = FALSE
 
+/obj/item/circuitboard/machine/fc_charger
+	name = "Fusion core Charger (Machine Board)"
+	build_path = /obj/machinery/fc_charger
+	req_components = list(/obj/item/stock_parts/capacitor = 2,/obj/item/stack/sheet/mineral/uranium = 10)
+	needs_anchored = FALSE
+
 /obj/item/circuitboard/machine/cyborgrecharger
 	name = "Cyborg Recharger (Machine Board)"
 	build_path = /obj/machinery/recharge_station
