@@ -475,13 +475,14 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/outfit/loadout/decprimboom
 	name = "Loud Prime Decanus"
-	suit_store = /obj/item/gun/ballistic/revolver/grenadelauncher
+	suit_store = null
 	backpack_contents = list(
-		/obj/item/ammo_box/a40mm = 2,
+		/obj/item/grenade/syndieminibomb/concussion = 5,
 		/obj/item/gun/ballistic/revolver/m29 = 1,
 		/obj/item/ammo_box/m44 = 3,
 		/obj/item/grenade/f13/frag = 2,
 		/obj/item/grenade/homemade/coffeepotbomb = 1,
+		/obj/item/rockitlauncher_pack = 1,
 		)
 
 
