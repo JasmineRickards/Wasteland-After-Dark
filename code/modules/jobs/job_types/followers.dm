@@ -97,8 +97,7 @@ Administrator
 		/obj/item/book/granter/trait/chemistry = 1,
 		/obj/item/book/granter/trait/techno = 1,
 		/obj/item/pda,
-		/obj/item/card/id/selfassign,
-	)
+		)
 
 /*
 Practitioner
