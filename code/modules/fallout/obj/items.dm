@@ -26,7 +26,7 @@
 		var/mob/living/carbon/M = loc
 		if(src == M.back)
 			if(M.health < M.maxHealth)
-				M.adjustBruteLoss(-2) //Heal that poor bastard
-				M.adjustFireLoss(-2)
-				M.adjustToxLoss(-2)
-				M.adjustOxyLoss(-2)
+				M.adjustBruteLoss(-5) //Heal that poor bastard
+				M.adjustFireLoss(-3)
+				M.adjustToxLoss(-2) 
+				M.adjustOxyLoss(-1) //Why do we need oxy healing?
