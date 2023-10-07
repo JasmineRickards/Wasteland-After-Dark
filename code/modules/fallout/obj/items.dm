@@ -29,4 +29,4 @@
 				M.adjustBruteLoss(-5) //Heal that poor bastard
 				M.adjustFireLoss(-3)
 				M.adjustToxLoss(-2) 
-				M.adjustOxyLoss(-1) //Why do we need oxy healing?
+				M.adjustOxyLoss(-2) //Why do we need oxy healing?
