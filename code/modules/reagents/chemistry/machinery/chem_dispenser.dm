@@ -674,7 +674,7 @@
 	name = "Industrial botanical chemical dispenser"
 	desc = "Creates and dispenses chemicals useful for botany."
 	circuit = /obj/item/circuitboard/machine/indusmutagensaltpeter
-	powerefficiency = 0.01
+	powerefficiency = 0.03
 //	cell_type = /obj/item/stock_parts/fc
 //	flags_1 = NODECONSTRUCT_1
 
@@ -789,7 +789,7 @@
 	nopower_state = "minidispenser_nopower"
 	circuit = /obj/item/circuitboard/machine/induschem
 //	cell_type = /obj/item/stock_parts/fc
-	powerefficiency = 0.01
+	powerefficiency = 0.02
 	dispensable_reagents = list(
 		/datum/reagent/medicine/spaceacillin,
 		/datum/reagent/medicine/oxandrolone,
