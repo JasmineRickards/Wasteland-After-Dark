@@ -96,6 +96,14 @@
 	force = 37
 	block_chance = 15
 
+/obj/item/melee/onehanded/machete/scrapsabre/khan
+	name = "honed scrap sabre"
+	desc = "Made from materials found in the wastes, a skilled blacksmith has turned it into a thing of deadly beauty. This appears to have the unique Khan emblem on the hilt."
+	icon_state = "scrapsabre"
+	item_state = "scrapsabre"
+	force = 35
+	block_chance = 25
+
 /obj/item/throwing_star/spear
 	name = "throwing spear"
 	desc = "An heavy hefty ancient weapon used to this day, due to its ease of lodging itself into its victim's body parts."

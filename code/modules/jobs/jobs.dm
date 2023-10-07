@@ -228,8 +228,10 @@ GLOBAL_LIST_INIT(khan_positions, list(
 ))
 */
 GLOBAL_LIST_INIT(khan_positions, list(
+	"Khan Senior Enforcer",
 	"Khan Enforcer",
 	"Khan Chemist",
+	"Khan Smith",
 ))
 
 GLOBAL_LIST_INIT(enclave_positions, list(
