@@ -880,6 +880,7 @@
 /area/f13/caves)
 "aex" = (
 /obj/item/reagent_containers/glass/bucket,
+/obj/machinery/chem_dispenser/indusmutagensaltpeter,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -2337,6 +2338,15 @@
 	smooth = 1
 	},
 /area/f13/city/bighorn)
+"dwd" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/machinery/chem_dispenser/indusmutagensaltpeter,
+/turf/open/floor/f13{
+	icon_state = "whitegreenrustychess"
+	},
+/area/f13/building/mall)
 "dxe" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -4363,6 +4373,13 @@
 /obj/structure/wreck/trash/three_barrels,
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/building/mall)
+"itK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/chem_dispenser/indusmutagensaltpeter,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid"
+	},
+/area/f13/brotherhood)
 "iuk" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -15712,7 +15729,7 @@ gfI
 pJR
 wLG
 hpr
-tsB
+dwd
 rha
 wLG
 tsB
@@ -72704,7 +72721,7 @@ xHZ
 mTY
 xHZ
 kGv
-oSJ
+itK
 cjT
 cjT
 vBC

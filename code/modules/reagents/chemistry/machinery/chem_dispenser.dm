@@ -817,7 +817,7 @@
 	working_state = "minidispenser_working"
 	nopower_state = "minidispenser_nopower"
 	circuit = /obj/item/circuitboard/machine/chem_dispenser/apothecary
-	powerefficiency = 0.03
+	powerefficiency = 0.09
 	dispensable_reagents = list( //radium and stable plasma moved to upgrade tier 1 and 2, they've little to do with most medicines anyway.
 		/datum/reagent/hydrogen,
 		/datum/reagent/lithium,

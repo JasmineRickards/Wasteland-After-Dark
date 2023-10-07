@@ -52341,10 +52341,9 @@
 	},
 /area/f13/wasteland/west)
 "uxq" = (
-/obj/structure/barricade/wooden,
-/obj/structure/timeddoor/onetwozerominutes,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
+/obj/machinery/chem_dispenser/induschem,
+/turf/open/floor/plasteel/f13/vault_floor/white,
+/area/f13/building/hospital)
 "uxE" = (
 /obj/structure/rack,
 /obj/item/clothing/under/suit/black,
@@ -56014,6 +56013,8 @@
 /obj/structure/table,
 /obj/item/paper_bin,
 /obj/item/pen,
+/obj/machinery/fc_charger,
+/obj/item/stock_parts/fc/empty,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/hospital)
 "wID" = (
@@ -90650,7 +90651,7 @@ ksO
 aae
 aae
 aaa
-uxq
+abV
 aaa
 aaa
 aaa
@@ -107207,7 +107208,7 @@ mvY
 ijr
 wIs
 lzp
-tFm
+uxq
 ijr
 aEs
 aGq
