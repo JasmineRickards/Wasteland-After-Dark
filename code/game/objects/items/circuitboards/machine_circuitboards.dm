@@ -742,19 +742,19 @@
 		/obj/item/stock_parts/capacitor = 1,
 		/obj/item/stock_parts/manipulator = 1,
 		/obj/item/stack/sheet/glass = 1,
-		/obj/item/stock_parts/fc = 1)
+		/obj/item/stock_parts/cell = 1)
 	def_components = list(/obj/item/stock_parts/fc = /obj/item/stock_parts/fc/high)
 	needs_anchored = FALSE
 
 /obj/item/circuitboard/machine/induschem
-	name = "Industrial botanical dispenser (Machine Board)"
+	name = "Industrial medical dispenser (Machine Board)"
 	build_path = /obj/machinery/chem_dispenser/induschem
 	req_components = list(
 		/obj/item/stock_parts/matter_bin = 2,
 		/obj/item/stock_parts/capacitor = 1,
 		/obj/item/stock_parts/manipulator = 1,
 		/obj/item/stack/sheet/glass = 1,
-		/obj/item/stock_parts/fc = 1)
+		/obj/item/stock_parts/cell = 1)
 	def_components = list(/obj/item/stock_parts/fc = /obj/item/stock_parts/fc/high)
 	needs_anchored = FALSE
 

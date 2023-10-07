@@ -37,7 +37,7 @@
 	display_name = "Pre-War Industrials"
 	description = "Even more powerful.. power!"
 	prereq_ids = list("bluespace_power", "medicalindus")
-	design_ids = list("botanicalindus", "quadratic_capacitor")
+	design_ids = list("botanicalindus", "medicalindus")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 15000)
 
 /*8

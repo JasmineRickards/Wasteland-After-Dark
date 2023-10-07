@@ -673,6 +673,9 @@
 /obj/machinery/chem_dispenser/indusmutagensaltpeter
 	name = "Industrial botanical chemical dispenser"
 	desc = "Creates and dispenses chemicals useful for botany."
+	circuit = /obj/item/circuitboard/machine/indusmutagensaltpeter
+	powerefficiency = 0.01
+//	cell_type = /obj/item/stock_parts/fc
 //	flags_1 = NODECONSTRUCT_1
 
 	dispensable_reagents = list(
@@ -784,8 +787,9 @@
 	icon_state = "minidispenser"
 	working_state = "minidispenser_working"
 	nopower_state = "minidispenser_nopower"
-	circuit = /obj/item/circuitboard/machine/chem_dispenser/apothecary
-	powerefficiency = 0.04
+	circuit = /obj/item/circuitboard/machine/induschem
+//	cell_type = /obj/item/stock_parts/fc
+	powerefficiency = 0.01
 	dispensable_reagents = list(
 		/datum/reagent/medicine/spaceacillin,
 		/datum/reagent/medicine/oxandrolone,
@@ -809,6 +813,7 @@
 
 	upgrade_reagents =	/datum/reagent/medicine/synthflesh
 
+
 ///An unique, less efficient model found in the medbay apothecary room.
 /obj/machinery/chem_dispenser/apothecary
 	name = "apothecary chem dispenser"
@@ -817,7 +822,7 @@
 	working_state = "minidispenser_working"
 	nopower_state = "minidispenser_nopower"
 	circuit = /obj/item/circuitboard/machine/chem_dispenser/apothecary
-	powerefficiency = 0.09
+	powerefficiency = 0.03
 	dispensable_reagents = list( //radium and stable plasma moved to upgrade tier 1 and 2, they've little to do with most medicines anyway.
 		/datum/reagent/hydrogen,
 		/datum/reagent/lithium,
