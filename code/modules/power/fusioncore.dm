@@ -187,9 +187,15 @@
 /obj/item/stock_parts/fc/get_part_rating()
 	return rating * maxcharge
 
+/obj/item/stock_parts/fc/empty
+	start_charged = FALSE
+
 /obj/item/stock_parts/fc/high
 	name = "Expanded Fusion Core"
 	icon_state = "hcell"
 	maxcharge = 70000
 	custom_materials = list(/datum/material/iron=10000, /datum/material/glass=200, /datum/material/uranium=5000)
 	chargerate = 1500
+
+/obj/item/stock_parts/fc/high/empty
+	start_charged = FALSE
