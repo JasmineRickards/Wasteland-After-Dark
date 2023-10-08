@@ -6481,6 +6481,15 @@
 	},
 /turf/open/floor/carpet/black,
 /area/f13/brotherhood/offices1st)
+"cUj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/cash_random_low,
+/obj/item/circuitboard/machine/fc_charger,
+/obj/item/circuitboard/machine/fc_charger,
+/obj/item/circuitboard/machine/fc_charger,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel/bighorn)
 "cWd" = (
 /obj/structure/railing{
 	dir = 4
@@ -8184,6 +8193,8 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/machinery/fc_charger,
+/obj/item/stock_parts/fc/empty,
 /turf/open/floor/plasteel/dark,
 /area/f13/brotherhood/archives)
 "fpU" = (
@@ -9003,6 +9014,8 @@
 /obj/effect/spawner/lootdrop/f13/advcrafting,
 /obj/item/stock_parts/cell/ammo/mfc,
 /obj/effect/spawner/lootdrop/ammo/military,
+/obj/item/circuitboard/machine/fc_charger,
+/obj/item/circuitboard/machine/fc_charger,
 /turf/open/floor/plasteel/f13{
 	icon_state = "darkrustysolid"
 	},
@@ -11132,6 +11145,7 @@
 /area/f13/tunnel)
 "jCI" = (
 /obj/structure/table,
+/obj/machinery/fc_charger,
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},
@@ -12171,6 +12185,10 @@
 /obj/item/stack/f13Cash/random/ncr/high,
 /obj/item/stack/f13Cash/random/ncr/high,
 /obj/item/stack/f13Cash/random/ncr/high,
+/obj/item/stock_parts/fc/high/empty,
+/obj/item/stock_parts/fc/high/empty,
+/obj/item/stock_parts/fc/high/empty,
+/obj/item/stock_parts/fc/high/empty,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel/bighorn)
 "lii" = (
@@ -14620,6 +14638,7 @@
 /area/f13/tunnel/bighorn)
 "oDj" = (
 /obj/machinery/light,
+/obj/machinery/chem_dispenser/induschem,
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},
@@ -21382,6 +21401,19 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 1
 	},
+/turf/open/floor/plasteel/f13{
+	icon_state = "darkrustysolid"
+	},
+/area/f13/building/massfusion)
+"xWJ" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/medical/vault/meds,
+/obj/effect/spawner/lootdrop/f13/medical/vault/meds,
+/obj/item/stock_parts/fc/high/empty,
+/obj/item/stock_parts/fc/high/empty,
+/obj/item/stock_parts/fc/high/empty,
+/obj/item/circuitboard/machine/induschem,
+/obj/item/circuitboard/machine/indusmutagensaltpeter,
 /turf/open/floor/plasteel/f13{
 	icon_state = "darkrustysolid"
 	},
@@ -40879,7 +40911,7 @@ rVs
 uXv
 dFQ
 tso
-tso
+cUj
 uXv
 eJs
 eJs
@@ -74350,7 +74382,7 @@ aaa
 xHi
 msT
 pDI
-jRz
+xWJ
 niW
 xZu
 nej

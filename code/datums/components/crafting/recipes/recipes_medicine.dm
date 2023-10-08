@@ -34,16 +34,16 @@
 /datum/crafting_recipe/healpowder
 	name = "Healing powder"
 	result = /obj/item/reagent_containers/pill/patch/healingpowder
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 3,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 3)
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 1,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 1)
 	time = 15
 	category = CAT_MEDICAL
 
 /datum/crafting_recipe/healpowder5
 	name = "Batch of healing powders (x5)"
 	result = /obj/item/storage/box/medicine/powder5
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 15,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 15)
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 5,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 5)
 	time = 20
 	category = CAT_MEDICAL
 
@@ -64,8 +64,8 @@
 /datum/crafting_recipe/berserker_powder
 	name = "Berserker powder"
 	result = /obj/item/reagent_containers/pill/patch/healingpowder/berserker
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/mushroom/angel = 2,
-				/obj/item/reagent_containers/food/snacks/grown/agave = 2,
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/agave = 2,
+				/obj/item/reagent_containers/food/snacks/grown/pungafruit = 1,
 				/datum/reagent/blood = 30)
 	time = 40
 	category = CAT_MEDICAL
@@ -74,22 +74,22 @@
 /datum/crafting_recipe/healpoultice
 	name = "Healing poultice"
 	result = /obj/item/reagent_containers/pill/patch/healpoultice
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 2,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 2,
-				/obj/item/reagent_containers/food/snacks/grown/feracactus = 2,
-				/obj/item/reagent_containers/food/snacks/grown/fungus = 2,
-				/obj/item/reagent_containers/food/snacks/grown/pungafruit = 2)
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 1,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 1,
+				/obj/item/reagent_containers/food/snacks/grown/feracactus = 1,
+				/obj/item/reagent_containers/food/snacks/grown/fungus = 1,
+				/obj/item/reagent_containers/food/snacks/grown/pungafruit = 1)
 	time = 15
 	category = CAT_MEDICAL
 
 /datum/crafting_recipe/healpoultice5
 	name = "Batch of healing poultice (x5)"
 	result = /obj/item/storage/box/medicine/poultice5
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 10,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 10,
-				/obj/item/reagent_containers/food/snacks/grown/feracactus = 10,
-				/obj/item/reagent_containers/food/snacks/grown/fungus = 10,
-				/obj/item/reagent_containers/food/snacks/grown/pungafruit = 10)
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 5,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 5,
+				/obj/item/reagent_containers/food/snacks/grown/feracactus = 5,
+				/obj/item/reagent_containers/food/snacks/grown/fungus = 5,
+				/obj/item/reagent_containers/food/snacks/grown/pungafruit = 5)
 	time = 20
 	category = CAT_MEDICAL
 
