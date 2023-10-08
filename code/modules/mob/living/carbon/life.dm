@@ -430,6 +430,9 @@
 	//radiation -= min(radiation, RAD_LOSS_PER_TICK) nope, you need radx or radaway. small change to make rads *more*
 	if(radiation > RAD_MOB_SAFE)
 		adjustToxLoss(log(radiation-RAD_MOB_SAFE)*RAD_TOX_COEFFICIENT)
+		throw_alert("irradiated", /obj/screen/alert/irradiated)
+	else
+		clear_alert("irradiated")
 
 /mob/living/carbon/handle_stomach()
 	set waitfor = 0

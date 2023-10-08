@@ -360,8 +360,9 @@ GENETICS SCANNER
 
 
 		if(M.radiation)
-			msg += "\t<span class='alert'>Subject is irradiated.</span>\n"
-			msg += "\t<span class='info'>Radiation Level: [M.radiation] rad</span>\n"
+			msg += "\n\t<span class='alert'>Subject has [M.radiation > 250 ? "dangerous" : "low"] levels of radiation.</span>\n"
+			msg += "\t<span class='info'>Radiation Level: [M.radiation] R/h</span>\n"
+			msg += "\t<font color='grey'>(INFO: Safe Radiation Levels are Below 250 R/h)</font>\n"
 
 
 
@@ -397,7 +398,8 @@ GENETICS SCANNER
 		msg += "\t<span class='info'>Base Species: [S.name]</span>\n"
 		if(mutant)
 			msg += "\t<span class='info'>Subject has mutations present.</span>\n"
-	msg += "\t<span class='info'>Body temperature: [round(M.bodytemperature-T0C,0.1)] &deg;C ([round(M.bodytemperature*1.8-459.67,0.1)] &deg;F)</span>\n"
+	//wasteland edit. remove body temp on analyzers
+	//msg += "\t<span class='info'>Body temperature: [round(M.bodytemperature-T0C,0.1)] &deg;C ([round(M.bodytemperature*1.8-459.67,0.1)] &deg;F)</span>\n"
 
 	// Time of death
 	if(M.tod && (M.stat == DEAD || ((HAS_TRAIT(M, TRAIT_FAKEDEATH)) && !advanced)))
