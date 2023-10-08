@@ -44535,9 +44535,9 @@
 	},
 /area/f13/wasteland/bighorn)
 "pzs" = (
-/obj/structure/anvil,
 /obj/item/twohanded/sledgehammer/simple,
 /obj/item/clothing/gloves/f13/blacksmith,
+/obj/structure/anvil/obtainable/basic,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/building)
 "pzT" = (
