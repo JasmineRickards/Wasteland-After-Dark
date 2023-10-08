@@ -727,6 +727,8 @@
 					to_send += "<span class='info'>You're completely exhausted.</span>\n"
 				else
 					to_send += "<span class='info'>You feel fatigued.</span>\n"
+			if(M.radiation > RAD_MOB_SAFE)
+				to_send += "<span class='info'>Your skin feels uncomfortably warm from being irradiated.</span>\n"
 			if(HAS_TRAIT(src, TRAIT_SELF_AWARE))
 				if(toxloss)
 					if(toxloss > 10)
