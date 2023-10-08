@@ -433,6 +433,7 @@
 	new /obj/item/stack/sticky_tape/surgical(src)
 	new /obj/item/stack/medical/bone_gel(src)
 	new /obj/item/stack/medical/bone_gel(src)
+	new /obj/item/defibrillator/loaded(src)
 
 /obj/item/storage/backpack/duffelbag/sec
 	name = "security duffel bag"
