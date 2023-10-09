@@ -80,7 +80,7 @@
 			return
 		if(default_deconstruction_crowbar(I))
 			return
-		if(tooadvanced == TRUE && HAS_TRAIT(user, TRAIT_TECHNOPHOBE))
+		if(tooadvanced == TRUE && HAS_TRAIT(user, TRAIT_TECHNOPHOBE) && !HAS_TRAIT(user, TRAIT_TECHNOPHREAK))//If you happen to get Dean's Electronics as a tribal it is supposed to let you use this.
 			to_chat(user, "<span class='warning'>The array of simplistic button pressing confuses you. Besides, did you really want to spend all day staring at a screen?</span>")
 			return
 
