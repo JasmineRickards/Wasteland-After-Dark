@@ -93,7 +93,6 @@
 			return
 
 	blood_flow = min(blood_flow, WOUND_SLASH_MAX_BLOODFLOW)
-
 	if(victim.reagents?.has_reagent(/datum/reagent/toxin/heparin))
 		blood_flow += 0.5 // old herapin used to just add +2 bleed stacks per tick, this adds 0.5 bleed flow to all open cuts which is probably even stronger as long as you can cut them first
 
@@ -104,6 +103,17 @@
 		limb.seep_gauze(limb.current_gauze.absorption_rate)
 	else
 		blood_flow -= clot_rate
+		victim.blood_volume = clamp(victim.blood_volume - blood_flow, 0, BLOOD_VOLUME_MAXIMUM)
+		if(prob(50)) //chance to create blood drips or blood splatter per untreated wound cycle
+			victim.bleed(blood_flow / 2)
+		else
+			var/turf/location = get_turf(src)
+			victim.add_splatter_floor(location)
+		if(prob(5) && victim.blood_volume <= (BLOOD_VOLUME_MAXIMUM / 1.25)) //they have around 400CL blood or less
+			victim.adjustStaminaLoss(10)
+			victim.DefaultCombatKnockdown(10, override_stamdmg = 0)
+			victim.visible_message("<span class='danger'>[victim] briefly collapses from bloodloss!</span>", "<span class='danger'>You feel light headed and lose your balance...</span>")
+		
 
 	if(blood_flow > highest_flow)
 		highest_flow = blood_flow
@@ -114,7 +124,6 @@
 		else
 			to_chat(victim, "<span class='green'>The cut on your [limb.name] has stopped bleeding!</span>")
 			qdel(src)
-
 
 /datum/wound/slash/on_stasis()
 	if(blood_flow >= minimum_flow)
@@ -254,9 +263,9 @@
 	sound_effect = 'sound/effects/wounds/blood1.ogg'
 	severity = WOUND_SEVERITY_MODERATE
 	initial_flow = 1.5
-	minimum_flow = 0.375
+	minimum_flow = 1.375
 	max_per_type = 3
-	clot_rate = 0.12
+	clot_rate = -0.01
 	threshold_minimum = 30
 	threshold_penalty = 10
 	status_effect_type = /datum/status_effect/wound/slash/moderate
@@ -272,7 +281,7 @@
 	severity = WOUND_SEVERITY_SEVERE
 	initial_flow = 2.4375
 	minimum_flow = 2.0625
-	clot_rate = 0.07
+	clot_rate = -0.05
 	max_per_type = 4
 	threshold_minimum = 60
 	threshold_penalty = 25
