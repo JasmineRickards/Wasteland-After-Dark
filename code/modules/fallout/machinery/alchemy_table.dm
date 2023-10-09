@@ -3,6 +3,7 @@
 	desc = "A wooden table with various bone mortars and pistles, as well as other tools."
 	icon_state = "alchemy_table"
 	use_power = FALSE
+	var/primitivetech = TRUE
 	idle_power_usage = 0
 	circuit = null // don't create or drop a circuit
 
@@ -17,7 +18,7 @@
 /obj/machinery/chem_master/primitive/attackby(obj/item/I, mob/user, params)
 	if(default_deconstruction_crowbar(I, ignore_panel = TRUE)) // we have no panel
 		return TRUE // no afterattack
-	
+
 	return ..() // do base stuff
 
 /obj/machinery/chem_master/primitive/on_deconstruction()
@@ -27,7 +28,7 @@
 /obj/machinery/chem_master/primitive/ui_interact(mob/living/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	var/can_use = istype(user, /mob/dead/observer)
-	if(!can_use && !HAS_TRAIT(user, TRAIT_MACHINE_SPIRITS) && !HAS_TRAIT(user, TRAIT_MARS_TEACH))
+	if(primitivetech == TRUE && !HAS_TRAIT(user, TRAIT_MACHINE_SPIRITS) && !HAS_TRAIT(user, TRAIT_MARS_TEACH) && !HAS_TRAIT(user, TRAIT_TECHNOPHOBE))
 		to_chat(user, span_warning("Try as you might, you have no clue how to work this thing."))
 	else
 		can_use = TRUE
