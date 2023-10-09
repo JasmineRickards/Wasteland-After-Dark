@@ -12,6 +12,7 @@
 	new /obj/item/flashlight/seclite(src)
 	new /obj/item/reagent_containers/pill/radx(src)
 	new /obj/item/reagent_containers/food/drinks/flask/survival(src)
+	new /obj/item/stack/medical/suture(src)
 
 /obj/item/storage/survivalkit_khan
 	name = "survival kit"
@@ -28,6 +29,7 @@
 	new /obj/item/stack/medical/gauze(src)
 	new /obj/item/reagent_containers/pill/radx(src)
 	new /obj/item/reagent_containers/food/drinks/flask/survival(src)
+	new /obj/item/stack/medical/suture(src)
 
 /obj/item/storage/survivalkit_tribal
 	name = "legion survival kit"
@@ -44,6 +46,7 @@
 	new /obj/item/flashlight/flare/torch(src)
 	new /obj/item/tank/internals/emergency_oxygen(src)
 	new /obj/item/reagent_containers/food/drinks/flask/survival(src)
+	new /obj/item/stack/medical/suture(src)
 
 /obj/item/storage/survivalkit_outlaw
 	name = "survival kit"
@@ -60,6 +63,7 @@
 	new /obj/item/flashlight/flare(src)
 	new /obj/item/reagent_containers/pill/radx(src)
 	new /obj/item/reagent_containers/food/drinks/flask/survival(src)
+	new /obj/item/stack/medical/suture(src)
 
 /obj/item/storage/survivalkit_tribal/chief
 
@@ -71,6 +75,7 @@
 	new /obj/item/stack/medical/gauze(src)
 	new /obj/item/flashlight/flare/torch(src)
 	new /obj/item/reagent_containers/food/drinks/flask/survival(src)
+	new /obj/item/stack/medical/suture(src)
 
 /obj/item/storage/survivalkit_adv
 	name = "survival kit"
