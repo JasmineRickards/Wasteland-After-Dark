@@ -402,11 +402,11 @@
 
 /obj/item/card/id/proc/update_label(newname, newjob)
 	if(newname || newjob)
-		name = "[(!newname)	? "identification card"	: "[newname]'s idenitfication"][(!newjob) ? "" : " ([newjob])"]"
+		name = "[(!newname)	? "identification card"	: "[newname]'s identification"][(!newjob) ? "" : " ([newjob])"]"
 		update_icon()
 		return
 
-	name = "[(!registered_name)	? "identification card"	: "[registered_name]'s idenitfication"][(!assignment) ? "" : " ([assignment])"]"
+	name = "[(!registered_name)	? "identification card"	: "[registered_name]'s identification"][(!assignment) ? "" : " ([assignment])"]"
 	update_icon()
 
 /obj/item/card/id/silver
