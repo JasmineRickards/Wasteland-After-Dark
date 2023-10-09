@@ -546,22 +546,18 @@
 
 	var/primetimer
 	var/primetimer2
-	var/deathtimer
 	if(req_defib)
 		primetimer = 30 - defib.primetime //I swear to god if I find shit like this elsewhere
 		primetimer2 = 20 - defib.primetime
-		deathtimer = DEFIB_TIME_LOSS * defib.timedeath
 	else
 		primetimer = 30
 		primetimer2 = 20
-		deathtimer = DEFIB_TIME_LOSS * 10
 
 	if(do_after(user, primetimer, target = H)) //beginning to place the paddles on patient's chest to allow some time for people to move away to stop the process
 		user.visible_message("<span class='notice'>[user] places [src] on [H]'s chest.</span>", "<span class='warning'>You place [src] on [H]'s chest.</span>")
 		playsound(src, 'sound/machines/defib_charge.ogg', 75, 0)
 		// patients rot when they are killed, and die when they are dead
 		var/tplus = world.time - H.timeofdeath	//length of time spent dead
-		var/tloss = deathtimer
 		var/total_burn	= 0
 		var/total_brute	= 0
 		var/obj/item/organ/heart = H.getorgan(/obj/item/organ/heart)
