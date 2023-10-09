@@ -105,15 +105,12 @@
 		blood_flow -= clot_rate
 		victim.blood_volume = clamp(victim.blood_volume - blood_flow, 0, BLOOD_VOLUME_MAXIMUM)
 		if(prob(50)) //chance to create blood drips or blood splatter per untreated wound cycle
-			victim.bleed(blood_flow / 2)
+			victim.bleed(blood_flow / 4)
 		else
 			var/turf/location = get_turf(src)
 			victim.add_splatter_floor(location)
 		if(prob(5) && victim.blood_volume <= (BLOOD_VOLUME_MAXIMUM / 1.25)) //they have around 400CL blood or less
 			victim.adjustStaminaLoss(10)
-			victim.DefaultCombatKnockdown(10, override_stamdmg = 0)
-			victim.visible_message("<span class='danger'>[victim] briefly collapses from bloodloss!</span>", "<span class='danger'>You feel light headed and lose your balance...</span>")
-		
 
 	if(blood_flow > highest_flow)
 		highest_flow = blood_flow
