@@ -30,6 +30,12 @@
 	results = list(/datum/reagent/consumable/nuka_cola = 6)
 	required_reagents = list(/datum/reagent/uranium = 1, /datum/reagent/consumable/space_cola = 6)
 
+/datum/chemical_reaction/sunset
+	name = "Sunset Sarsaparilla"
+	id = /datum/reagent/consumable/sunset
+	results = list(/datum/reagent/consumable/sunset = 3)
+	required_reagents = list(/datum/reagent/consumable/vanilla = 1, /datum/reagent/consumable/xanderjuice = 1, /datum/reagent/consumable/caramel = 1)//Recipe based on flavor description
+
 /datum/chemical_reaction/moonshine
 	name = "Moonshine"
 	id = /datum/reagent/consumable/ethanol/moonshine
