@@ -269,7 +269,7 @@
 	reagent_state = LIQUID
 	color ="#A9FBFB"
 	taste_description = "bitterness"
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM //in between powder/stimpaks and poultice/superstims?
+	metabolization_rate = 0.1 * REAGENTS_METABOLISM //in between powder/stimpaks and poultice/superstims?
 	overdose_threshold = 31
 	var/heal_factor = -0.8 //Subtractive multiplier if you do not have the perk.
 	var/heal_factor_perk = -1 //Multiplier if you have the right perk.
@@ -311,7 +311,7 @@
 	reagent_state = SOLID
 	color = "#A9FBFB"
 	taste_description = "bitterness"
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	metabolization_rate = 0.2 * REAGENTS_METABOLISM
 	overdose_threshold = 30
 	var/heal_factor = -0.8 //Subtractive multiplier if you do not have the perk.
 	var/heal_factor_perk = -1 //Multiplier if you have the right perk.
@@ -352,8 +352,8 @@
 	description = "Restores limb condition and heals rapidly."
 	color = "#C8A5DC"
 	overdose_threshold = 20
-	heal_factor = -1
-	heal_factor_perk = -1.2
+	heal_factor = -1.2
+	heal_factor_perk = -1.4
 
 // ---------------------------
 // RAD-X REAGENT
