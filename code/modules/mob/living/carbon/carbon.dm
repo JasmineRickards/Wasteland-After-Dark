@@ -1,6 +1,5 @@
 /mob/living/carbon
 	blood_volume = BLOOD_VOLUME_NORMAL
-	var/bleed_rate = 0
 
 /mob/living/carbon/Initialize()
 	. = ..()
