@@ -407,6 +407,7 @@
 /obj/item/clothing/head/helmet/f13/power_armor/t45d/Knightcommander
 	name = "Knight-Commander's Midwestern power armor helmet"
 	desc = "This decorated helmet belongs to the Midwestern branch of the Brotherhood of Steel."
+	icon_state = "midwestpakc_helm"
 
 /obj/item/clothing/head/helmet/f13/power_armor/t45d/bos/update_icon_state()
 	icon_state = "t45dhelmet[light_on]"
