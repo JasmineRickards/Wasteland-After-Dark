@@ -110,8 +110,6 @@
 		else
 			var/turf/location = get_turf(src)
 			victim.add_splatter_floor(location)
-		if(prob(5) && victim.blood_volume <= (BLOOD_VOLUME_MAXIMUM / 1.25)) //they have around 400CL blood or less
-			victim.adjustStaminaLoss(10)
 
 
 	if(blood_flow > highest_flow)
