@@ -127,8 +127,6 @@
 		air_update_turf()
 
 /mob/living/carbon/proc/has_smoke_protection()
-	if(HAS_TRAIT(src, TRAIT_NOBREATH))
-		return TRUE
 	return FALSE
 
 
