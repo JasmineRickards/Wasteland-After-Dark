@@ -111,7 +111,6 @@
 			var/turf/location = get_turf(src)
 			victim.add_splatter_floor(location)
 
-
 	if(blood_flow > highest_flow)
 		highest_flow = blood_flow
 
