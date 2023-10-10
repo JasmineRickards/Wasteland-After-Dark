@@ -405,8 +405,8 @@
 	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
 
 /obj/item/clothing/head/helmet/f13/power_armor/t45d/Knightcommander
-	name = "Knight-Commander's T-45d Power Armour"
-	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it. But, this helmet was made with a bit of comfort in mind."
+	name = "Knight-Commander's Midwestern power armor helmet"
+	desc = "This decorated helmet belongs to the Midwestern branch of the Brotherhood of Steel."
 
 /obj/item/clothing/head/helmet/f13/power_armor/t45d/bos/update_icon_state()
 	icon_state = "t45dhelmet[light_on]"
@@ -453,7 +453,7 @@
 	salvaged_type = null
 
 /obj/item/clothing/head/helmet/f13/power_armor/midwest
-	name = "Midwestern T-51b power helmet"
+	name = "Midwestern power armor helmet"
 	desc = "This helmet belongs to the Midwestern branch of the Brotherhood of Steel."
 	icon_state = "midwestgrey_helm"
 	item_state = "midwestgrey_helm"
@@ -462,7 +462,7 @@
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/midwest
 
 /obj/item/clothing/head/helmet/f13/power_armor/midwest/hardened
-	name = "Hardened midwestern T-51b power helmet"
+	name = "Midwestern advanced power armor helmet"
 	desc = "This helmet belongs to the Midwestern branch of the Brotherhood of Steel. This particular one has gone through a chemical hardening process, increasing its armor capabilities."
 	icon_state = "midwestpa_helm"
 	item_state = "midwestpa_helm"
