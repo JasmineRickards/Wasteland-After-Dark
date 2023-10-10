@@ -269,10 +269,10 @@
 	reagent_state = LIQUID
 	color ="#A9FBFB"
 	taste_description = "bitterness"
-	metabolization_rate = 0.1 * REAGENTS_METABOLISM //in between powder/stimpaks and poultice/superstims?
+	metabolization_rate = 0.21 * REAGENTS_METABOLISM //in between powder/stimpaks and poultice/superstims?
 	overdose_threshold = 31
-	var/heal_factor = -0.8 //Subtractive multiplier if you do not have the perk.
-	var/heal_factor_perk = -1 //Multiplier if you have the right perk.
+	var/heal_factor = -1.4 //Subtractive multiplier if you do not have the perk.
+	var/heal_factor_perk = -1.6 //Multiplier if you have the right perk.
 	ghoulfriendly = TRUE
 
 /datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/carbon/M)
@@ -313,8 +313,8 @@
 	taste_description = "bitterness"
 	metabolization_rate = 0.2 * REAGENTS_METABOLISM
 	overdose_threshold = 30
-	var/heal_factor = -1 //Subtractive multiplier if you do not have the perk.
-	var/heal_factor_perk = -1.2 //Multiplier if you have the right perk.
+	var/heal_factor = -1.6 //Subtractive multiplier if you do not have the perk.
+	var/heal_factor_perk = -1.8 //Multiplier if you have the right perk.
 	ghoulfriendly = TRUE
 
 /datum/reagent/medicine/healing_powder/on_mob_life(mob/living/carbon/M)
