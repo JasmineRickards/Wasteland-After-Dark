@@ -206,7 +206,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 
 	var/should_have_brain = TRUE
 	var/should_have_heart = TRUE
-	var/should_have_lungs = !(TRAIT_NOBREATH in inherent_traits)
+	//var/should_have_lungs = !(TRAIT_NOBREATH in inherent_traits)
 	var/should_have_appendix = !(TRAIT_NOHUNGER in inherent_traits)
 	var/should_have_eyes = TRUE
 	var/should_have_ears = TRUE
@@ -230,10 +230,10 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		heart = new mutant_heart()
 		heart.Insert(C)
 
-	if(lungs && (!should_have_lungs || replace_current))
+	if(lungs && replace_current)
 		lungs.Remove(TRUE)
 		QDEL_NULL(lungs)
-	if(should_have_lungs && !lungs)
+	if(!lungs)
 		if(mutantlungs)
 			lungs = new mutantlungs()
 		else
@@ -1010,13 +1010,13 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		return move_trail */
 
 /datum/species/proc/spec_life(mob/living/carbon/human/H)
-	if(HAS_TRAIT(H, TRAIT_NOBREATH))
+	/*if(HAS_TRAIT(H, TRAIT_NOBREATH))
 		H.setOxyLoss(0)
 		H.losebreath = 0
 
 		var/takes_crit_damage = !HAS_TRAIT(H, TRAIT_NOCRITDAMAGE)
 		if((H.health < H.crit_threshold) && takes_crit_damage)
-			H.adjustBruteLoss(1)
+			H.adjustBruteLoss(1)*/
 
 /datum/species/proc/spec_death(gibbed, mob/living/carbon/human/H)
 	if(H)
@@ -1455,15 +1455,17 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			log_combat(user, target, "shaked")
 		return 1
 	else
-		var/we_breathe = !HAS_TRAIT(user, TRAIT_NOBREATH)
+		//var/we_breathe = !HAS_TRAIT(user, TRAIT_NOBREATH)
 		var/we_lung = user.getorganslot(ORGAN_SLOT_LUNGS)
 
-		if(we_breathe && we_lung)
+		if(we_lung)
 			user.do_cpr(target)
+		/*
 		else if(we_breathe && !we_lung)
 			to_chat(user, "<span class='warning'>You have no lungs to breathe with, so you cannot peform CPR.</span>")
+		*/
 		else
-			to_chat(user, "<span class='notice'>You do not breathe, so you cannot perform CPR.</span>")
+			to_chat(user, "<span class='notice'>You need lungs to give CPR!</span>")
 
 /datum/species/proc/grab(mob/living/carbon/human/user, mob/living/carbon/human/target, datum/martial_art/attacker_style)
 	if(target.check_martial_melee_block())

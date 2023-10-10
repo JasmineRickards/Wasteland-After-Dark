@@ -195,8 +195,9 @@
 /datum/reagent/toxin/lexorin/on_mob_life(mob/living/carbon/C)
 	. = TRUE
 
-	if(HAS_TRAIT(C, TRAIT_NOBREATH))
+	/*if(HAS_TRAIT(C, TRAIT_NOBREATH))
 		. = FALSE
+	*/
 
 	if(.)
 		C.adjustOxyLoss(5, 0)
