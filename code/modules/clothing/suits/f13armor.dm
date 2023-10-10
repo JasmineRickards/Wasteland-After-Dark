@@ -600,8 +600,8 @@
 //////
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/Knightcommander
-	name = "Knight-Commander's T-45d Power Armour"
-	desc = "A classic set of T-45d Power Armour only to be used in armed combat, it signifies the Knight-Commander and their place in the Brotherhood. A leader, and a beacon of structure in a place where chaos reigns. All must rally to his call, for he is the Knight-Commander  and your safety is his duty."
+	name = "Knight-Commander's Midwestern power armor"
+	desc = "A lightly decorated set of Midwestern power armor, it signifies the Knight-Commander and their place in the Brotherhood. A leader, and a beacon of structure in a place where chaos reigns. All must rally to their call, for they are the Knight-Commander and your safety is their duty."
 	icon_state = "t45dkc"
 	item_state = "t45dkc"
 	slowdown = 0.16
@@ -637,7 +637,7 @@
 	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 32, "bomb" = 64, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
 
 /obj/item/clothing/suit/armor/f13/power_armor/midwest
-	name = "Midwestern T-51b power armor"
+	name = "Midwestern power armor"
 	desc = "This set of power armor belongs to the Midwestern branch of the Brotherhood of Steel."
 	icon_state = "midwestgrey_pa"
 	item_state = "midwestgrey_pa"
@@ -646,7 +646,7 @@
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/midwest
 
 /obj/item/clothing/suit/armor/f13/power_armor/midwest/hardened
-	name = "Hardened midwestern  T-51b power armor"
+	name = "Midwestern advanced power armor"
 	desc = "This set of power armor belongs to the Midwestern branch of the Brotherhood of Steel. This particular one has gone through a chemical hardening process, increasing its armor capabilities."
 	icon_state = "midwestpa"
 	item_state = "midwestpa"
