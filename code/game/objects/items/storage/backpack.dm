@@ -113,6 +113,12 @@
 	item_state = "holdingsat"
 	species_exception = list(/datum/species/angel)
 
+/obj/item/storage/backpack/holding/satchel/stranger
+	name = "satchel of holding"
+	desc = "A satchel that opens into a localized pocket of Blue Space."
+	icon_state = "satchel-trekker"
+	item_state = "satchel-trekker"
+
 /obj/item/storage/backpack/holding/duffel
 	name = "duffel bag of holding"
 	desc = "A duffel bag that opens into a localized pocket of Blue Space."
