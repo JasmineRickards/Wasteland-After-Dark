@@ -108,3 +108,22 @@
 		return
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_LIGHT_STEP, src)
+
+// Stranger for administration/helping goobers
+
+/datum/outfit/loadout/wasteland/malstranger
+	name =	"Mal-0 Stranger"
+	uniform = /obj/item/clothing/under/syndicate/combat
+	id =	/obj/item/card/id/gold
+	head =	/obj/item/clothing/head/caphat/formal/fedcover/black/stranger
+	suit =	/obj/item/clothing/suit/storage/fluff/modernfedcoat/stranger
+	gloves =	/obj/item/clothing/gloves/combat
+//	backpack =	/obj/item/storage/backpack/holding/satchel/stranger
+	shoes =	/obj/item/clothing/shoes/combat
+	backpack_contents = list(
+		/obj/item/healthanalyzer/advanced = 1,
+		/obj/item/gun/energy/pulse/pistol/m1911/stranger = 1,
+		/obj/item/gun/energy/beam_rifle/debug = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 3
+	)
