@@ -64,7 +64,7 @@
 	log_combat(user, target, "attacked", src)
 
 	//The reagents in the bottle splash all over the target, thanks for the idea Nodrak
-	SplashReagents(target)
+	//SplashReagents(target)
 
 	//Finally, smash the bottle. This kills (del) the bottle.
 	smash(target, user)
