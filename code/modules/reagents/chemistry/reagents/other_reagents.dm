@@ -1286,7 +1286,7 @@
 	reagent_state = SOLID
 	taste_description = "iron"
 	pH = 6
-	overdose_threshold = 30
+	overdose_threshold = 100
 	color = "#c2391d"
 	material = /datum/material/iron
 	ghoulfriendly = TRUE
@@ -1294,7 +1294,7 @@
 /datum/reagent/iron/on_mob_life(mob/living/carbon/C)
 	if((HAS_TRAIT(C, TRAIT_NOMARROW)))
 		return
-	if(C.blood_volume < (BLOOD_VOLUME_NORMAL*C.blood_ratio))
+	if(C.blood_volume < BLOOD_VOLUME_NORMAL)
 		C.blood_volume += 0.25
 	..()
 
@@ -1309,7 +1309,7 @@
 	SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "[type]_overdose", /datum/mood_event/overdose, name)
 
 /datum/reagent/iron/overdose_process(mob/living/M)
-	if(prob(20))
+	if(prob(5))
 		var/obj/item/organ/liver/L = M.getorganslot(ORGAN_SLOT_LIVER)
 		if(L)
 			L.applyOrganDamage(2)

@@ -119,6 +119,8 @@
 		return
 
 	if(ismob(target) && target.reagents)
+		return //no splashies
+		/*
 		if(thrown)
 			reagents.total_volume *= rand(5,10) * 0.1 //Not all of it makes contact with the target
 		var/mob/M = target
@@ -134,6 +136,7 @@
 		log_reagent("SPLASH: [src] mob SplashReagents() onto [key_name(target)] at [TT] ([AREACOORD(TT)])[throwerstring] - [R]")
 		reagents.reaction(target, TOUCH)
 		reagents.clear_reagents()
+		*/
 
 	else if(bartender_check(target) && thrown)
 		visible_message("<span class='notice'>[src] lands without spilling a single drop.</span>")
