@@ -23,3 +23,34 @@
 /datum/sprite_accessory/frills/short
 	name = "Short"
 	icon_state = "short"
+
+/datum/sprite_accessory/frills/drake
+	name = "Drake"
+	icon_state = "drake"
+
+/datum/sprite_accessory/frills/axolotl
+	name = "Axolotl"
+	icon_state = "axolotl"
+
+/datum/sprite_accessory/frills/marauder
+	name = "Marauder"
+	icon_state = "murauder"
+
+/datum/sprite_accessory/frills/faceguard
+	name = "Faceguard"
+	icon_state = "faceguard"
+
+/datum/sprite_accessory/frills/cobrahoodears
+	name = "Cobra Hood with Ears"
+	icon = 'modular_citadel/icons/mob/frills.dmi'
+	icon_state = "cobraears"
+	color_src = MATRIXED
+	matrixed_sections = MATRIX_RED_GREEN
+
+/datum/sprite_accessory/frills/cobrahood
+	name = "Cobra Hood"
+	icon = 'modular_citadel/icons/mob/frills.dmi'
+	icon_state = "cobrahood"
+	color_src = MATRIXED
+	matrixed_sections = MATRIX_RED_GREEN
+
