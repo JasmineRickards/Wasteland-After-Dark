@@ -274,13 +274,10 @@
 	taste_description = "bitterness"
 	metabolization_rate = 0.21 * REAGENTS_METABOLISM //in between powder/stimpaks and poultice/superstims?
 	overdose_threshold = 31
-<<<<<<< HEAD
 	var/heal_factor = -1.4 //Subtractive multiplier if you do not have the perk.
 	var/heal_factor_perk = -1.6 //Multiplier if you have the right perk.
-=======
 	var/heal_factor = -5 //Subtractive multiplier if you do not have the perk.
 	var/heal_factor_perk = -5.5 //Multiplier if you have the right perk.
->>>>>>> parent of 1cc1ddcfd3 (balance tweak, may need adjustment.)
 	ghoulfriendly = TRUE
 
 /datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/carbon/M)
@@ -321,13 +318,10 @@
 	taste_description = "bitterness"
 	metabolization_rate = 0.2 * REAGENTS_METABOLISM
 	overdose_threshold = 30
-<<<<<<< HEAD
 	var/heal_factor = -1.6 //Subtractive multiplier if you do not have the perk.
 	var/heal_factor_perk = -1.8 //Multiplier if you have the right perk.
-=======
 	var/heal_factor = -2 //Subtractive multiplier if you do not have the perk.
 	var/heal_factor_perk = -2.2 //Multiplier if you have the right perk.
->>>>>>> parent of 1cc1ddcfd3 (balance tweak, may need adjustment.)
 	ghoulfriendly = TRUE
 
 /datum/reagent/medicine/healing_powder/on_mob_life(mob/living/carbon/M)
@@ -365,13 +359,10 @@
 	description = "Restores limb condition and heals rapidly."
 	color = "#C8A5DC"
 	overdose_threshold = 20
-<<<<<<< HEAD
 	heal_factor = -2
 	heal_factor_perk = -2.2
-=======
 	heal_factor = -3.0
 	heal_factor_perk = -3.5
->>>>>>> parent of 1cc1ddcfd3 (balance tweak, may need adjustment.)
 
 // ---------------------------
 // RAD-X REAGENT
