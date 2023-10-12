@@ -209,6 +209,20 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+/datum/crafting_recipe/shotgunammops
+	name = "12g Pulse box"
+	result = /obj/item/ammo_box/shotgun/pulse
+	reqs = list(/obj/item/stack/crafting/metalparts = 2,
+	/obj/item/stack/cable_coil = 10,
+	/obj/item/stack/crafting/electronicparts = 2,
+	/obj/item/stack/ore/blackpowder = 1
+	)
+	tools = list(TOOL_AWORKBENCH)
+	time = 5
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+
 
 /datum/crafting_recipe/m22
 	name = ".22 Long Rifle ammo box"
