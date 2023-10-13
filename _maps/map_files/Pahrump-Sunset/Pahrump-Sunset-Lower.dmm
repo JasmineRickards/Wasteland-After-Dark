@@ -517,14 +517,11 @@
 /obj/structure/barricade/wooden,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
-<<<<<<< Updated upstream
 "acU" = (
 /obj/item/circuitboard/machine/ore_redemption,
 /obj/structure/frame/machine,
 /turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
-=======
->>>>>>> Stashed changes
 "aei" = (
 /obj/machinery/door/window/left/directional/north,
 /obj/machinery/shower{
@@ -1121,7 +1118,6 @@
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
-<<<<<<< Updated upstream
 	},
 /obj/machinery/conveyor_switch/oneway{
 	id = "QMUnload"
@@ -1131,17 +1127,6 @@
 "aAk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-=======
-	},
-/obj/machinery/conveyor_switch/oneway{
-	id = "QMUnload"
-	},
-/turf/open/floor/plasteel/dark,
-/area/f13/brotherhood)
-"aAk" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
->>>>>>> Stashed changes
 /obj/machinery/camera/autoname{
 	dir = 10;
 	name = "North Facing Camera";
@@ -1337,21 +1322,12 @@
 	},
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
-<<<<<<< Updated upstream
 	},
 /area/f13/brotherhood)
 "aJI" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 8
 	},
-=======
-	},
-/area/f13/brotherhood)
-"aJI" = (
-/obj/effect/turf_decal/stripes/white/line{
-	dir = 8
-	},
->>>>>>> Stashed changes
 /obj/item/stack/sheet/prewar/five,
 /obj/effect/spawner/lootdrop/f13/advcrafting,
 /obj/effect/spawner/lootdrop/f13/advcrafting,
@@ -1479,7 +1455,6 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "aQB" = (
-<<<<<<< Updated upstream
 /turf/open/floor/pod/light,
 /area/f13/brotherhood)
 "aRp" = (
@@ -1494,26 +1469,6 @@
 	layer = 3
 	},
 /obj/structure/window/reinforced{
-=======
-/obj/machinery/light,
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/turf/closed/wall/r_wall/f13/vault,
-/area/f13/brotherhood)
-"aRp" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/window/reinforced{
-	color = "#3e3d42";
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	color = "#3e3d42";
-	dir = 1;
-	layer = 3
-	},
-/obj/structure/window/reinforced{
->>>>>>> Stashed changes
 	color = "#3e3d42"
 	},
 /obj/structure/flora/ausbushes/fullgrass,
@@ -1802,13 +1757,6 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
-<<<<<<< Updated upstream
-=======
-"blY" = (
-/obj/effect/turf_decal/box,
-/turf/open/floor/plasteel/dark,
-/area/f13/brotherhood)
->>>>>>> Stashed changes
 "bma" = (
 /obj/structure/closet/fridge,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
@@ -11020,7 +10968,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria{
 	icon_state = "tealwhrusty_chess2"
-<<<<<<< Updated upstream
 	},
 /area/f13/brotherhood)
 "hRv" = (
@@ -11031,18 +10978,6 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-=======
-	},
-/area/f13/brotherhood)
-"hRv" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
->>>>>>> Stashed changes
 /turf/open/floor/plasteel/f13/stone,
 /area/f13/brotherhood)
 "hSI" = (
@@ -11079,20 +11014,6 @@
 	},
 /turf/open/floor/plasteel/grimy,
 /area/f13/brotherhood)
-<<<<<<< Updated upstream
-=======
-"hUK" = (
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 5;
-	height = 7;
-	id = "supply_home";
-	name = "Cargo Bay";
-	width = 12
-	},
-/turf/open/floor/pod/light,
-/area/f13/brotherhood)
->>>>>>> Stashed changes
 "hUY" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -11212,7 +11133,6 @@
 /obj/structure/flora/junglebush/b,
 /obj/structure/flora/ausbushes/ppflowers{
 	pixel_x = -6
-<<<<<<< Updated upstream
 	},
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/structure/window/reinforced{
@@ -11224,19 +11144,6 @@
 	dir = 1;
 	layer = 3
 	},
-=======
-	},
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/window/reinforced{
-	color = "#3e3d42";
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	color = "#3e3d42";
-	dir = 1;
-	layer = 3
-	},
->>>>>>> Stashed changes
 /turf/open/water,
 /area/f13/brotherhood)
 "idJ" = (
@@ -11507,11 +11414,7 @@
 	},
 /area/f13/followers)
 "iqA" = (
-<<<<<<< Updated upstream
 /turf/open/floor/pod/dark,
-=======
-/turf/open/floor/pod/light,
->>>>>>> Stashed changes
 /area/f13/brotherhood)
 "irs" = (
 /obj/effect/decal/cleanable/dirt,
@@ -16223,7 +16126,6 @@
 	},
 /area/f13/bunker)
 "omy" = (
-<<<<<<< Updated upstream
 /obj/docking_port/stationary{
 	dir = 8;
 	dwidth = 5;
@@ -16233,9 +16135,6 @@
 	width = 12
 	},
 /turf/open/floor/pod/light,
-=======
-/turf/open/floor/pod/dark,
->>>>>>> Stashed changes
 /area/f13/brotherhood)
 "omE" = (
 /obj/structure/ore_box,
@@ -16697,17 +16596,10 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
 	icon_state = "4-8"
-<<<<<<< Updated upstream
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "neutralrustyfull"
 	},
-=======
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "neutralrustyfull"
-	},
->>>>>>> Stashed changes
 /area/f13/brotherhood)
 "oJK" = (
 /obj/structure/railing{
@@ -19093,19 +18985,11 @@
 /obj/structure/curtain{
 	color = "#5c131b";
 	pixel_y = -32
-<<<<<<< Updated upstream
 	},
 /obj/item/kirbyplants/photosynthetic,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "casino"
 	},
-=======
-	},
-/obj/item/kirbyplants/photosynthetic,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "casino"
-	},
->>>>>>> Stashed changes
 /area/f13/brotherhood)
 "rAu" = (
 /obj/machinery/autolathe,
@@ -19902,7 +19786,6 @@
 	},
 /obj/structure/chair/bench{
 	pixel_y = 15
-<<<<<<< Updated upstream
 	},
 /turf/open/floor/plasteel/f13/stone,
 /area/f13/brotherhood)
@@ -19911,16 +19794,6 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-=======
-	},
-/turf/open/floor/plasteel/f13/stone,
-/area/f13/brotherhood)
-"stH" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
->>>>>>> Stashed changes
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/brotherhood)
 "stX" = (
@@ -22356,17 +22229,10 @@
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
-<<<<<<< Updated upstream
 	},
 /turf/open/floor/f13{
 	icon_state = "redrustyfull"
 	},
-=======
-	},
-/turf/open/floor/f13{
-	icon_state = "redrustyfull"
-	},
->>>>>>> Stashed changes
 /area/f13/brotherhood)
 "vwJ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -23512,7 +23378,6 @@
 	},
 /turf/open/floor/f13{
 	icon_state = "redrustyfull"
-<<<<<<< Updated upstream
 	},
 /area/f13/brotherhood)
 "wNJ" = (
@@ -23521,9 +23386,6 @@
 	dir = 1
 	},
 /turf/closed/wall/r_wall/f13/vault,
-=======
-	},
->>>>>>> Stashed changes
 /area/f13/brotherhood)
 "wNV" = (
 /obj/structure/rack/shelf_metal,
@@ -24620,13 +24482,8 @@
 	},
 /area/f13/brotherhood)
 "yfD" = (
-<<<<<<< Updated upstream
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-=======
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
->>>>>>> Stashed changes
 /turf/open/floor/plasteel/darkpurple,
 /area/f13/brotherhood)
 "yfV" = (
@@ -73289,7 +73146,6 @@ ryF
 ryF
 oVq
 uQM
-<<<<<<< Updated upstream
 aQB
 aQB
 aQB
@@ -73302,20 +73158,6 @@ aQB
 aQB
 aQB
 aQB
-=======
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
->>>>>>> Stashed changes
 oVq
 icO
 fFB
@@ -73561,7 +73403,6 @@ ryF
 ryF
 oVq
 uQM
-<<<<<<< Updated upstream
 iqA
 iqA
 iqA
@@ -73574,20 +73415,6 @@ iqA
 iqA
 iqA
 iqA
-=======
-omy
-omy
-omy
-omy
-omy
-omy
-omy
-omy
-omy
-omy
-omy
-omy
->>>>>>> Stashed changes
 oVq
 cTh
 onW
@@ -73833,7 +73660,6 @@ lBb
 ryF
 oVq
 uQM
-<<<<<<< Updated upstream
 aQB
 aQB
 aQB
@@ -73846,20 +73672,6 @@ aQB
 aQB
 aQB
 aQB
-=======
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
->>>>>>> Stashed changes
 oVq
 sXj
 ajc
@@ -74105,7 +73917,6 @@ lBb
 ryF
 oVq
 uQM
-<<<<<<< Updated upstream
 aQB
 aQB
 aQB
@@ -74118,20 +73929,6 @@ aQB
 aQB
 aQB
 aQB
-=======
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
->>>>>>> Stashed changes
 oVq
 saZ
 ajc
@@ -74377,7 +74174,6 @@ lBb
 ryF
 oVq
 uQM
-<<<<<<< Updated upstream
 aQB
 aQB
 aQB
@@ -74390,20 +74186,6 @@ aQB
 aQB
 aQB
 aQB
-=======
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
->>>>>>> Stashed changes
 oVq
 tWa
 ajc
@@ -74649,7 +74431,6 @@ ryF
 ryF
 oVq
 uQM
-<<<<<<< Updated upstream
 iqA
 iqA
 iqA
@@ -74662,20 +74443,6 @@ iqA
 iqA
 iqA
 iqA
-=======
-omy
-omy
-omy
-omy
-omy
-omy
-omy
-omy
-omy
-omy
-omy
-omy
->>>>>>> Stashed changes
 oVq
 bhS
 ajc
@@ -74921,7 +74688,6 @@ ryF
 ryF
 oVq
 uQM
-<<<<<<< Updated upstream
 aQB
 aQB
 aQB
@@ -74934,20 +74700,6 @@ aQB
 aQB
 aQB
 aQB
-=======
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-hUK
-iqA
-iqA
-iqA
-iqA
-iqA
->>>>>>> Stashed changes
 oVq
 wwI
 ajc
@@ -75461,11 +75213,7 @@ pAo
 pAo
 pAo
 xPK
-<<<<<<< Updated upstream
 wNJ
-=======
-aQB
->>>>>>> Stashed changes
 oVq
 onW
 onW
@@ -75717,19 +75465,11 @@ onW
 pvA
 pvA
 onW
-<<<<<<< Updated upstream
 svq
 pvA
 onW
 onW
 svq
-=======
-blY
-pvA
-onW
-onW
-blY
->>>>>>> Stashed changes
 oVq
 onW
 onW
@@ -75979,22 +75719,14 @@ oVq
 equ
 onW
 onW
-<<<<<<< Updated upstream
 svq
-=======
-blY
->>>>>>> Stashed changes
 nfe
 onW
 nnk
 pvA
 onW
 onW
-<<<<<<< Updated upstream
 svq
-=======
-blY
->>>>>>> Stashed changes
 oVq
 onW
 qQK
@@ -76244,22 +75976,14 @@ oVq
 pmx
 onW
 onW
-<<<<<<< Updated upstream
 acU
-=======
->>>>>>> Stashed changes
 onW
 onW
 onW
 onW
 onW
 onW
-<<<<<<< Updated upstream
 svq
-=======
-onW
-blY
->>>>>>> Stashed changes
 oVq
 onW
 ljv
@@ -87543,20 +87267,12 @@ aak
 aak
 aae
 aae
-<<<<<<< Updated upstream
-=======
-aae
-aae
->>>>>>> Stashed changes
 aae
 aae
 aae
 aae
-<<<<<<< Updated upstream
 aae
 aae
-=======
->>>>>>> Stashed changes
 ryF
 jUU
 jUU
