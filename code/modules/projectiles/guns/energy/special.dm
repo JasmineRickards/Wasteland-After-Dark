@@ -1,8 +1,14 @@
 /obj/item/gun/energy/ionrifle
 	name = "YK-42b Pulse Rifle"
 	desc = "The YK42B rifle is an electrical pulse weapon that was developed by the Yuma Flats Energy Consortium. It excels in damage against heavily armored opponents, especially power armor."
-	icon_state = "ionrifle"
-	item_state = "ionrifle"	//so the human update icon uses the icon_state instead.
+	icon = 'icons/fallout/objects/guns/energy.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon_state = "yk42"
+	item_state = "yk42"	//so the human update icon uses the icon_state instead.
+	shaded_charge = 1
+	weapon_weight = WEAPON_HEAVY
+	slowdown = 0.2
 	can_flashlight = 1
 	w_class = WEIGHT_CLASS_BULKY
 	flags_1 =  CONDUCT_1
@@ -11,6 +17,33 @@
 	ammo_x_offset = 3
 	flight_x_offset = 17
 	flight_y_offset = 9
+	equipsound = 'sound/f13weapons/equipsounds/yk42equip.ogg'
+
+/obj/item/gun/energy/ionrifle/attackby(obj/item/A, mob/user, params)
+	. = ..()
+	if(.)
+		return
+	if(istype(A, /obj/item/stock_parts/cell/ammo))
+		var/obj/item/stock_parts/cell/ammo/AM = A
+		if(istype(AM, cell_type))
+			var/obj/item/stock_parts/cell/ammo/oldcell = cell
+			if(user.transferItemToLoc(AM, src))
+				cell = AM
+				if(oldcell)
+					to_chat(user, "<span class='notice'>You perform a tactical reload on \the [src], replacing the cell.</span>")
+					oldcell.dropped()
+					oldcell.forceMove(get_turf(src.loc))
+					oldcell.update_icon()
+				//else
+				//	to_chat(user, "<span class='notice'>You insert the cell into \the [src].</span>")
+
+				playsound(src, 'sound/f13weapons/yk42reload.ogg', 60, TRUE)
+				//chamber_round()
+				A.update_icon()
+				update_icon()
+				return 1
+			else
+				to_chat(user, "<span class='warning'>You cannot seem to get \the [src] out of your hands!</span>")
 
 /obj/item/gun/energy/ionrifle/emp_act(severity)
 	return
