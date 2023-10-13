@@ -85,7 +85,7 @@ Elder
 	suit =	/obj/item/clothing/suit/f13/elder
 	glasses =	/obj/item/clothing/glasses/night
 	accessory =	/obj/item/clothing/accessory/bos/elder
-	suit_store =	/obj/item/gun/energy/laser/aer14
+	suit_store = /obj/item/gun/energy/laser/laer
 	neck =	/obj/item/clothing/neck/mantle/bos/right
 	ears = /obj/item/radio/headset/headset_bos/command
 	backpack_contents = list(

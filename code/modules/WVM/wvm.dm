@@ -1056,9 +1056,14 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmith_two,				300),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmith_three, 				600),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmith_four, 				1200),
+		new /datum/data/wasteland_equipment("Russian primer book", 			/obj/item/book/granter/trait/rifleman, 								800),
 		new /datum/data/wasteland_equipment("Reinforced combat helmet",		/obj/item/clothing/head/helmet/f13/combat/mk2/ncr,					200),
 		new /datum/data/wasteland_equipment("Reinforced combat armor",		/obj/item/clothing/suit/armor/f13/combat/mk2/ncr,					600),
-		new /datum/data/wasteland_equipment("R82 rifle blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/r82,				500)
+		new /datum/data/wasteland_equipment("10mm SMG blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,			400),
+		new /datum/data/wasteland_equipment("R82 rifle blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/r82,				500),
+		new /datum/data/wasteland_equipment("10mm SMG blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,			400),
+		new /datum/data/wasteland_equipment("DKS-501 sniper rifle",			/obj/item/gun/ballistic/automatic/marksman/sniper,					400),
+		new /datum/data/wasteland_equipment("R91 assault rifle",			/obj/item/gun/ballistic/automatic/assault_rifle,					700)
 		)
 	highpop_list = list(
 		new /datum/data/wasteland_equipment("Basic salvage",				/obj/item/salvage/low,												25),
@@ -1076,9 +1081,13 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmith_two,				300),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmith_three, 				600),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmith_four, 				1200),
+		new /datum/data/wasteland_equipment("Russian primer book", 			/obj/item/book/granter/trait/rifleman, 								800),
 		new /datum/data/wasteland_equipment("Reinforced combat helmet",		/obj/item/clothing/head/helmet/f13/combat/mk2/ncr,					200),
 		new /datum/data/wasteland_equipment("Reinforced combat armor",		/obj/item/clothing/suit/armor/f13/combat/mk2/ncr,					600),
-		new /datum/data/wasteland_equipment("R82 rifle blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/r82,				500)
+		new /datum/data/wasteland_equipment("R82 rifle blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/r82,				500),
+		new /datum/data/wasteland_equipment("10mm SMG blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,			400),
+		new /datum/data/wasteland_equipment("DKS-501 sniper rifle",			/obj/item/gun/ballistic/automatic/marksman/sniper,					400),
+		new /datum/data/wasteland_equipment("R91 assault rifle",			/obj/item/gun/ballistic/automatic/assault_rifle,					700)
 		)
 
 /obj/machinery/mineral/wasteland_vendor/weapons/Legion
@@ -1100,12 +1109,18 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmith_two,				300),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmith_three, 				600),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmith_four, 				1200),
+		new /datum/data/wasteland_equipment("Russian primer book", 			/obj/item/book/granter/trait/rifleman, 								800),
 		new /datum/data/wasteland_equipment("Reinforced combat helmet",		/obj/item/clothing/head/helmet/f13/combat/mk2 ,						200),
 		new /datum/data/wasteland_equipment("Reinforced combat armor",		/obj/item/clothing/suit/armor/f13/combat/mk2,						600),
 		new /datum/data/wasteland_equipment("Scavenger pt.1",				/obj/item/book/granter/crafting_recipe/scav_one,					650),
 		new /datum/data/wasteland_equipment("Scavenger pt.2",				/obj/item/book/granter/crafting_recipe/scav_two,					750),
 		new /datum/data/wasteland_equipment("Scavenger pt.3",				/obj/item/book/granter/crafting_recipe/scav_three,					850),
-		new /datum/data/wasteland_equipment("Lever-action shotgun",			/obj/item/book/granter/crafting_recipe/blueprint/leveraction,		500)
+		new /datum/data/wasteland_equipment("10mm SMG blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,			400),
+		new /datum/data/wasteland_equipment("Lever-action shotgun",			/obj/item/book/granter/crafting_recipe/blueprint/leveraction,		500),
+		new /datum/data/wasteland_equipment("10mm SMG blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,			400),
+		new /datum/data/wasteland_equipment("Lever-action shotgun",			/obj/item/book/granter/crafting_recipe/blueprint/leveraction,		500),
+		new /datum/data/wasteland_equipment("Trail Carbine",				/obj/item/gun/ballistic/rifle/repeater/trail,						300),
+		new /datum/data/wasteland_equipment("Brush gun", 					/obj/item/gun/ballistic/rifle/repeater/brush, 						700)
 		)
 	highpop_list = list(
 		new /datum/data/wasteland_equipment("Basic salvage",				/obj/item/salvage/low,												25),
@@ -1123,19 +1138,23 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmith_two,				300),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmith_three, 				600),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmith_four, 				1200),
+		new /datum/data/wasteland_equipment("Russian primer book", 			/obj/item/book/granter/trait/rifleman, 								800),
 		new /datum/data/wasteland_equipment("Reinforced combat helmet",		/obj/item/clothing/head/helmet/f13/combat/mk2 ,						200),
 		new /datum/data/wasteland_equipment("Reinforced combat armor",		/obj/item/clothing/suit/armor/f13/combat/mk2,						600),
 		new /datum/data/wasteland_equipment("Scavenger pt.1",				/obj/item/book/granter/crafting_recipe/scav_one,					650),
 		new /datum/data/wasteland_equipment("Scavenger pt.2",				/obj/item/book/granter/crafting_recipe/scav_two,					750),
 		new /datum/data/wasteland_equipment("Scavenger pt.3",				/obj/item/book/granter/crafting_recipe/scav_three,					850),
-		new /datum/data/wasteland_equipment("Lever-action shotgun",			/obj/item/book/granter/crafting_recipe/blueprint/leveraction,		500)
+		new /datum/data/wasteland_equipment("10mm SMG blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,			400),
+		new /datum/data/wasteland_equipment("Lever-action shotgun",			/obj/item/book/granter/crafting_recipe/blueprint/leveraction,		500),
+		new /datum/data/wasteland_equipment("Trail Carbine",				/obj/item/gun/ballistic/rifle/repeater/trail,						300),
+		new /datum/data/wasteland_equipment("Brush gun", 					/obj/item/gun/ballistic/rifle/repeater/brush, 						700),
 		)
 
 /obj/machinery/mineral/wasteland_vendor/weapons/BoS
 	name = "BoS Vending Machine - Tram transit"
 	icon_state = "weapon_idle"
 	prize_list = list(
-	new /datum/data/wasteland_equipment("Basic salvage",					/obj/item/salvage/low,												25),
+		new /datum/data/wasteland_equipment("Basic salvage",					/obj/item/salvage/low,											25),
 		new /datum/data/wasteland_equipment("Advanced salvage",				/obj/item/salvage/high,												300),
 		new /datum/data/wasteland_equipment("Tool salvage",					/obj/item/salvage/tool,												1500),
 		new /datum/data/wasteland_equipment("Salvaging book",				/obj/item/book/granter/trait/techno,								600),
@@ -1149,10 +1168,15 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmith_two,				300),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmith_three, 				600),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmith_four, 				1200),
+		new /datum/data/wasteland_equipment("Russian primer book", 			/obj/item/book/granter/trait/rifleman, 								800),
 		new /datum/data/wasteland_equipment("Wattz laser pistol",			/obj/item/gun/energy/laser/wattz,									150),
 		new /datum/data/wasteland_equipment("Reinforced combat helmet",		/obj/item/clothing/head/helmet/f13/combat/mk2 ,						200),
 		new /datum/data/wasteland_equipment("Reinforced combat armor",		/obj/item/clothing/suit/armor/f13/combat/mk2,						600),
-		new /datum/data/wasteland_equipment("Wattz2k blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/wattz2k,			500)
+		new /datum/data/wasteland_equipment("Wattz2k blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/wattz2k,			500),
+		new /datum/data/wasteland_equipment("Wattz 2000e", 					/obj/item/gun/energy/laser/wattz2k/extended, 						700),
+		new /datum/data/wasteland_equipment("Laser RCW", 					/obj/item/gun/energy/laser/rcw,										2000),
+		new /datum/data/wasteland_equipment("T-45d armor", 						/obj/item/clothing/suit/armor/f13/power_armor/t45d,		, 		2500),
+		new /datum/data/wasteland_equipment("T-45d helmet", 				/obj/item/clothing/head/helmet/f13/power_armor/t45d, 				500)
 		)
 
 	highpop_list = list(
@@ -1170,8 +1194,14 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmith_two,				300),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmith_three, 				600),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmith_four, 				1200),
+		new /datum/data/wasteland_equipment("Russian primer book", 			/obj/item/book/granter/trait/rifleman, 								800),
 		new /datum/data/wasteland_equipment("Wattz laser pistol",			/obj/item/gun/energy/laser/wattz,									150),
 		new /datum/data/wasteland_equipment("Reinforced combat helmet",		/obj/item/clothing/head/helmet/f13/combat/mk2 ,						200),
 		new /datum/data/wasteland_equipment("Reinforced combat armor",		/obj/item/clothing/suit/armor/f13/combat/mk2,						600),
-		new /datum/data/wasteland_equipment("Wattz2k blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/wattz2k,			500)
+		new /datum/data/wasteland_equipment("10mm SMG blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,			400),
+		new /datum/data/wasteland_equipment("Wattz2k blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/wattz2k,			500),
+		new /datum/data/wasteland_equipment("Wattz 2000e", 					/obj/item/gun/energy/laser/wattz2k/extended, 						700),
+		new /datum/data/wasteland_equipment("Laser RCW", 					/obj/item/gun/energy/laser/rcw,										2000),
+		new /datum/data/wasteland_equipment("T-45d armor", 			/obj/item/clothing/suit/armor/f13/power_armor/t45d,		 					2500),
+		new /datum/data/wasteland_equipment("T-45d helmet", 	/obj/item/clothing/head/helmet/f13/power_armor/t45d, 							500)
 		)
