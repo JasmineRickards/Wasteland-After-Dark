@@ -274,8 +274,6 @@
 	taste_description = "bitterness"
 	metabolization_rate = 0.21 * REAGENTS_METABOLISM //in between powder/stimpaks and poultice/superstims?
 	overdose_threshold = 31
-	var/heal_factor = -1.4 //Subtractive multiplier if you do not have the perk.
-	var/heal_factor_perk = -1.6 //Multiplier if you have the right perk.
 	var/heal_factor = -5 //Subtractive multiplier if you do not have the perk.
 	var/heal_factor_perk = -5.5 //Multiplier if you have the right perk.
 	ghoulfriendly = TRUE
@@ -318,8 +316,6 @@
 	taste_description = "bitterness"
 	metabolization_rate = 0.2 * REAGENTS_METABOLISM
 	overdose_threshold = 30
-	var/heal_factor = -1.6 //Subtractive multiplier if you do not have the perk.
-	var/heal_factor_perk = -1.8 //Multiplier if you have the right perk.
 	var/heal_factor = -2 //Subtractive multiplier if you do not have the perk.
 	var/heal_factor_perk = -2.2 //Multiplier if you have the right perk.
 	ghoulfriendly = TRUE
