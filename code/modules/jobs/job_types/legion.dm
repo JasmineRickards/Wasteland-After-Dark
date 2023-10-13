@@ -144,25 +144,30 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	roleplay_exclusive_notify = 1
 	exp_requirements = 750
 
+	loadout_options = list(
+		/datum/outfit/loadout/oratorm,		// Armor and money
+		/datum/outfit/loadout/priestess, // Priestess robes, medical training
+		)
+
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator	// .357 Revolver, Spatha
 	name = "Orator"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13orator
 	neck = /obj/item/storage/belt/holster
-	shoes = /obj/item/clothing/shoes/f13/military/plated
-	suit = /obj/item/clothing/suit/armor/f13/legion/orator
-	head = /obj/item/clothing/head/helmet/f13/legion/orator
+	shoes = null
+	suit = null
+	head = null
 	id = /obj/item/card/id/dogtag/legorator
 	gloves = null
 	backpack = /obj/item/storage/backpack/legionr
-	suit_store = /obj/item/gun/ballistic/revolver/colt357
+	suit_store = null
 	r_pocket = /obj/item/storage/bag/money/small/legofficers
 	l_pocket = /obj/item/flashlight/lantern
-	l_hand = /obj/item/melee/onehanded/machete/spatha
+	l_hand = null
 	backpack_contents = list(
 		/obj/item/binoculars = 1,
-		/obj/item/ammo_box/a357 = 2,
 		/obj/item/reagent_containers/pill/patch/bitterdrink = 2,
+		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -171,10 +176,35 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		return
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 	if(H.mind)
 		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
 		H.mind.AddSpell(S)
+
+/datum/outfit/loadout/oratorm
+	name = "Orator"
+	suit = /obj/item/clothing/suit/armor/f13/legion/orator
+	head = /obj/item/clothing/head/helmet/f13/legion/orator
+	shoes = /obj/item/clothing/shoes/f13/military/plated
+	backpack_contents = list(
+		/obj/item/book/granter/trait/iron_fist = 1,
+		/obj/item/book/granter/trait/bigleagues = 1,
+		/obj/item/stack/f13Cash/random/denarius/high = 3,
+		/obj/item/stack/f13Cash/random/aureus/high = 2,
+
+		)
+
+/datum/outfit/loadout/priestess
+	name = "Priestess of Mars"
+	uniform = /obj/item/clothing/under/f13/pmarsrobe
+	head = /obj/item/clothing/head/helmet/f13/legion/orator
+	shoes = /obj/item/clothing/shoes/roman
+	backpack_contents = list(
+		/obj/item/book/granter/trait/midsurgery = 1,
+		/obj/item/book/granter/trait/chemistry = 1,
+		/obj/item/book/granter/trait/legionalchemy = 1,
+		/obj/item/stack/f13Cash/random/aureus/high = 2,
+
+		)
 
 /////////////////
 //// Officers ///
