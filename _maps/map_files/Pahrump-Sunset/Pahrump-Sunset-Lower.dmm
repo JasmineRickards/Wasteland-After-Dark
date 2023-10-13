@@ -520,7 +520,7 @@
 "acU" = (
 /obj/item/circuitboard/machine/ore_redemption,
 /obj/structure/frame/machine,
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "aei" = (
 /obj/machinery/door/window/left/directional/north,
@@ -1119,7 +1119,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
+/obj/machinery/conveyor_switch/oneway{
+	id = "QMUnload"
+	},
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "aAk" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1452,14 +1455,7 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "aQB" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "QMLoad"
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/turf/open/floor/pod/light,
 /area/f13/brotherhood)
 "aRp" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1761,10 +1757,6 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
-"blY" = (
-/obj/effect/turf_decal/box,
-/turf/open/floor/plasteel/f13/vault_floor/floor,
-/area/f13/brotherhood)
 "bma" = (
 /obj/structure/closet/fridge,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
@@ -2167,11 +2159,10 @@
 	dir = 1;
 	id = "QMLoad"
 	},
-/obj/structure/fence/handrail{
-	dir = 4;
-	pixel_x = -15
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
 	},
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "bCG" = (
 /obj/effect/decal/cleanable/blood/old,
@@ -7926,7 +7917,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "ebV" = (
 /obj/item/storage/box/lights/tubes,
@@ -8003,7 +7997,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "egP" = (
 /obj/structure/billboard/cola/pristine,
@@ -8371,7 +8365,7 @@
 "eBa" = (
 /obj/effect/turf_decal/box,
 /obj/structure/cable,
-/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "eBc" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8889,7 +8883,7 @@
 /area/f13/brotherhood)
 "flq" = (
 /obj/machinery/mineral/wasteland_vendor,
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "fml" = (
 /obj/structure/chair/bench{
@@ -9801,7 +9795,7 @@
 /obj/effect/turf_decal/caution/stand_clear{
 	dir = 4
 	},
-/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "gxc" = (
 /obj/structure/simple_door/bunker{
@@ -10194,10 +10188,13 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
 "gXg" = (
+/obj/machinery/computer/cargo{
+	dir = 4
+	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "gXR" = (
 /obj/structure/table{
@@ -11017,20 +11014,6 @@
 	},
 /turf/open/floor/plasteel/grimy,
 /area/f13/brotherhood)
-"hUK" = (
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "QMLoad"
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/structure/fence/handrail{
-	dir = 4;
-	pixel_x = -15
-	},
-/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
-/area/f13/brotherhood)
 "hUY" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -11431,7 +11414,7 @@
 	},
 /area/f13/followers)
 "iqA" = (
-/turf/open/floor/plasteel/elevatorshaft,
+/turf/open/floor/pod/dark,
 /area/f13/brotherhood)
 "irs" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11751,15 +11734,14 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel/bighorn)
 "iLK" = (
-/obj/machinery/conveyor/inverted,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/structure/fence/handrail{
-	dir = 4;
-	pixel_x = -15
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "QMUnload"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "iLR" = (
 /obj/structure/sink{
@@ -12774,7 +12756,7 @@
 /obj/effect/turf_decal/caution{
 	dir = 4
 	},
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "jWy" = (
 /obj/structure/decoration/warning,
@@ -13033,12 +13015,6 @@
 	name = "reactor cooling pool"
 	},
 /area/f13/building/massfusion)
-"krl" = (
-/obj/effect/turf_decal/caution{
-	dir = 4
-	},
-/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
-/area/f13/brotherhood)
 "krv" = (
 /obj/machinery/vending/wardrobe/engi_wardrobe,
 /obj/effect/decal/cleanable/dirt,
@@ -13528,7 +13504,7 @@
 	dir = 4
 	},
 /obj/machinery/mineral/wasteland_vendor/weapons/BoS,
-/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "laf" = (
 /obj/effect/turf_decal/stripes/red/line{
@@ -14823,7 +14799,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "msk" = (
 /obj/machinery/door/airlock/hatch{
@@ -15379,13 +15355,7 @@
 "nfe" = (
 /obj/effect/turf_decal/box,
 /obj/structure/closet/crate,
-/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
-/area/f13/brotherhood)
-"nfk" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "nho" = (
 /obj/effect/decal/cleanable/dirt,
@@ -15459,7 +15429,7 @@
 "nnk" = (
 /obj/effect/turf_decal/box,
 /obj/machinery/recycler,
-/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "nnA" = (
 /obj/machinery/door/airlock/medical{
@@ -16156,10 +16126,15 @@
 	},
 /area/f13/bunker)
 "omy" = (
-/obj/structure/cable{
-	icon_state = "2-4"
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 5;
+	height = 7;
+	id = "supply_home";
+	name = "Cargo Bay";
+	width = 12
 	},
-/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
+/turf/open/floor/pod/light,
 /area/f13/brotherhood)
 "omE" = (
 /obj/structure/ore_box,
@@ -16697,7 +16672,7 @@
 /obj/machinery/status_display/supply{
 	pixel_y = 32
 	},
-/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "oOp" = (
 /obj/effect/decal/cleanable/dirt,
@@ -17241,7 +17216,7 @@
 /obj/structure/closet/crate/wooden,
 /obj/effect/spawner/lootdrop/maintenance,
 /obj/effect/turf_decal/box,
-/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "pvC" = (
 /obj/structure/table/reinforced,
@@ -17330,7 +17305,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "pAE" = (
 /obj/item/multitool,
@@ -17344,18 +17319,14 @@
 /turf/open/floor/plating,
 /area/f13/building/museum)
 "pAW" = (
-/obj/machinery/conveyor{
-	dir = 5;
-	id = "QMLoad2"
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/structure/fence/handrail{
-	dir = 4;
-	pixel_x = -15
+/obj/machinery/conveyor{
+	dir = 5;
+	id = "QMUnload"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "pBq" = (
 /obj/machinery/sleeper{
@@ -18055,21 +18026,6 @@
 	icon_state = "darkrustysolid"
 	},
 /area/f13/building/massfusion)
-"qmH" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "QMLoad"
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/machinery/camera/autoname{
-	dir = 10;
-	name = "North Facing Camera";
-	network = list("BoS")
-	},
-/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
-/area/f13/brotherhood)
 "qnu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/red/line{
@@ -18275,20 +18231,6 @@
 	specialfunctions = 4
 	},
 /turf/open/floor/carpet/black,
-/area/f13/brotherhood)
-"qyY" = (
-/obj/machinery/conveyor{
-	dir = 9;
-	id = "garbage"
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/structure/fence/handrail{
-	dir = 4;
-	pixel_x = -15
-	},
-/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/brotherhood)
 "qzp" = (
 /obj/effect/turf_decal/stripes/white/line{
@@ -18550,9 +18492,6 @@
 "qMG" = (
 /obj/structure/simple_door/metal/fence,
 /turf/open/floor/plasteel/f13/stone,
-/area/f13/brotherhood)
-"qNe" = (
-/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
 /area/f13/brotherhood)
 "qNj" = (
 /obj/item/twohanded/required/kirbyplants/random,
@@ -19874,15 +19813,8 @@
 	},
 /area/f13/building/massfusion)
 "svq" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "QMLoad"
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/structure/closet/crate/science,
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/obj/effect/turf_decal/box,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "svy" = (
 /obj/effect/decal/cleanable/generic,
@@ -20301,16 +20233,16 @@
 	},
 /area/f13/tunnel)
 "sQF" = (
-/obj/machinery/conveyor/inverted{
-	dir = 8;
-	id = "garbage"
-	},
 /obj/machinery/light{
 	dir = 1;
 	light_color = "#706891"
 	},
 /obj/effect/turf_decal/stripes/line,
-/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "QMUnload"
+	},
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "sRk" = (
 /obj/structure/rack,
@@ -21446,15 +21378,15 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel/bighorn)
 "umJ" = (
-/obj/machinery/conveyor/inverted{
-	dir = 10;
-	id = "garbage"
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
 /obj/effect/turf_decal/stripes/line,
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/obj/machinery/conveyor/inverted{
+	dir = 10;
+	id = "QMUnload"
+	},
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "unv" = (
 /turf/open/floor/plasteel/f13/vault_floor/misc/vault1{
@@ -22242,7 +22174,7 @@
 "vqM" = (
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/lootdrop/crate_spawner,
-/turf/open/floor/plasteel/f13/vault_floor/floor,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "vsR" = (
 /obj/machinery/light/small{
@@ -22876,12 +22808,6 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
-"weG" = (
-/obj/structure/closet/crate/wooden,
-/obj/effect/spawner/lootdrop/maintenance,
-/obj/effect/turf_decal/box,
-/turf/open/floor/plasteel/f13/vault_floor/floor,
-/area/f13/brotherhood)
 "weO" = (
 /obj/structure/sign/poster/contraband/pinup_topless{
 	pixel_x = 32
@@ -23455,8 +23381,11 @@
 	},
 /area/f13/brotherhood)
 "wNJ" = (
-/obj/machinery/conveyor/inverted,
-/turf/open/indestructible/ground/outside/desert,
+/obj/machinery/light,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/closed/wall/r_wall/f13/vault,
 /area/f13/brotherhood)
 "wNV" = (
 /obj/structure/rack/shelf_metal,
@@ -24127,12 +24056,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
 /area/f13/building/museum)
-"xMh" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
-/area/f13/brotherhood)
 "xMo" = (
 /obj/structure/fence/handrail{
 	density = 0;
@@ -24192,15 +24115,16 @@
 	},
 /area/f13/brotherhood)
 "xPK" = (
-/obj/machinery/conveyor{
-	dir = 8;
+/obj/effect/turf_decal/caution{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/machinery/conveyor_switch/oneway{
 	id = "QMLoad"
 	},
-/obj/machinery/light,
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "xPV" = (
 /obj/structure/table/reinforced,
@@ -72963,7 +72887,7 @@ ryF
 ryF
 ryF
 ryF
-ryF
+oVq
 oVq
 oVq
 oVq
@@ -73220,20 +73144,20 @@ ryF
 ryF
 ryF
 ryF
-ryF
 oVq
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
+uQM
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
 oVq
 icO
 fFB
@@ -73477,8 +73401,8 @@ ryF
 ryF
 ryF
 ryF
-ryF
 oVq
+uQM
 iqA
 iqA
 iqA
@@ -73734,20 +73658,20 @@ ryF
 ryF
 lBb
 ryF
-ryF
 oVq
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
+uQM
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
 oVq
 sXj
 ajc
@@ -73991,20 +73915,20 @@ ryF
 lBb
 lBb
 ryF
-ryF
 oVq
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
+uQM
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
 oVq
 saZ
 ajc
@@ -74248,20 +74172,20 @@ lBb
 lBb
 lBb
 ryF
-ryF
 oVq
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
+uQM
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
 oVq
 tWa
 ajc
@@ -74505,8 +74429,8 @@ ryF
 lBb
 ryF
 ryF
-ryF
 oVq
+uQM
 iqA
 iqA
 iqA
@@ -74762,20 +74686,20 @@ ryF
 ryF
 ryF
 ryF
-ryF
 oVq
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
-iqA
+uQM
+aQB
+aQB
+aQB
+aQB
+aQB
+aQB
+omy
+aQB
+aQB
+aQB
+aQB
+aQB
 oVq
 wwI
 ajc
@@ -75019,10 +74943,10 @@ ryF
 ryF
 ryF
 ryF
-ryF
+oVq
 oVq
 pAW
-wNJ
+iLK
 iLK
 umJ
 gwL
@@ -75030,8 +74954,8 @@ gXg
 gwL
 ebG
 bCy
-hUK
-qyY
+bCy
+bCy
 oVq
 oVq
 onW
@@ -75276,21 +75200,21 @@ lBb
 ryF
 ryF
 ryF
-ryF
+oVq
 oVq
 sQF
 aAb
-aAb
 pAo
-krl
+pAo
 jWs
-krl
+jWs
+jWs
 pAo
-aAb
+pAo
 pAo
 xPK
+wNJ
 oVq
-wwI
 onW
 onW
 onW
@@ -75533,18 +75457,18 @@ lBb
 ryF
 ryF
 ryF
-ryF
+oVq
 oVq
 pYk
-qNe
-qZg
+onW
+onW
 pvA
-weG
-qNe
-blY
-weG
-qZg
-qNe
+pvA
+onW
+svq
+pvA
+onW
+onW
 svq
 oVq
 onW
@@ -75790,19 +75714,19 @@ ryF
 ryF
 ryF
 ryF
-ryF
+oVq
 oVq
 equ
-qNe
-qNe
-blY
+onW
+onW
+svq
 nfe
-qZg
+onW
 nnk
-weG
-qNe
-qZg
-qmH
+pvA
+onW
+onW
+svq
 oVq
 onW
 qQK
@@ -76047,19 +75971,19 @@ ryF
 ryF
 ryF
 ryF
-ryF
+oVq
 oVq
 pmx
-qNe
-qZg
+onW
+onW
 acU
-qZg
-qZg
-qZg
-qZg
-qZg
-qNe
-aQB
+onW
+onW
+onW
+onW
+onW
+onW
+svq
 oVq
 onW
 ljv
@@ -76304,18 +76228,18 @@ ryF
 ryF
 ryF
 ryF
-ryF
+oVq
 oVq
 eQw
-qZg
-qNe
-qZg
-omy
-nfk
-xMh
-nfk
-xMh
-nfk
+onW
+onW
+onW
+hbN
+wSs
+wSs
+wSs
+wSs
+wSs
 eBa
 oVq
 onW
@@ -76561,18 +76485,18 @@ ryF
 ryF
 ryF
 ryF
-ryF
+oVq
 oVq
 oVq
 oNP
 flq
 kZu
 egw
-qNe
-qZg
-qNe
+onW
+onW
+onW
 msi
-qNe
+onW
 vqM
 oVq
 onW
