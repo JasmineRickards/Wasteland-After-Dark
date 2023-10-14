@@ -106,8 +106,8 @@
 		return
 
 /datum/reagent/toxin/mutagen
-	name = "Unstable mutagen"
-	description = "Might cause unpredictable mutations. Keep away from children."
+	name = "Diluted Forced Evolutionary Virus"
+	description = "Causes unpredictable mutations in plants, animals and people."
 	color = "#00FF00"
 	toxpwr = 0
 	taste_description = "slime"
