@@ -10,6 +10,55 @@
 	lose_text = "<span class='notice'>You can taste again!</span>"
 	medical_record_text = "Patient suffers from ageusia and is incapable of tasting food or reagents."
 
+/datum/quirk/fev //DOOM - Used in character creation && A secondary version for FEV-II exposure.
+	name = "Unstable FEV Exposure"
+	desc = "Be it accidental; the work of a mad scientist roaming the waste-land, or pre-war experiments that left an individual unable to die, this one has been exposed to an FEV Variation."
+	value = 4
+	gain_text = span_notice("You feel a burning pain as your DNA is ripped apart, and sewn back together.")
+	lose_text = span_notice("The dull metronome of pain that defined your existence has faded.")
+	medical_record_text = "Patient appears to have 'perfect' DNA - if 'perfect' was a Wastelanders idea of beauty." 
+	mob_trait = TRAIT_FEV
+
+/datum/quirk/fev/add()
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.dna.species.punchdamagelow += 6 //Larger Muscle-mass
+	mob_tar.dna.species.punchdamagehigh += 8 //But not too large. Reserved for FEV-II
+	quirk_holder.become_mega_nearsighted(ROUNDSTART_TRAIT) //Custom proc to make essentially welder-blindness.
+	mob_tar.maxHealth += 30 //These guys are tanky. Almost blind, and slower.
+	mob_tar.health += 30
+
+/datum/quirk/fev/remove()
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.remove_mega_nearsighted()
+	mob_tar.maxHealth -= 30 //Mutie rage.
+	mob_tar.health -= 30
+	mob_tar.dna.species.punchdamagelow -= 6
+	mob_tar.dna.species.punchdamagehigh -= 8 
+
+/datum/quirk/fevII //FRANK FUCKING HORRIGAAAN
+	name = "FEV-II Exposure"
+	desc = "Direct exposure to FEV-II has caused unpredictable mutations to existing DNA."
+	value = 10 //Never unlockable naturally.
+	gain_text = span_notice("You feel a burning pain as your DNA is ripped apart, and sewn back together.")
+	lose_text = span_notice("The dull metronome of pain that defined your existence has faded.")
+	medical_record_text = "Patient has been exposed to FEV-II, with clear signs of triple-helix DNA present." 
+	mob_trait = TRAIT_FEVII
+	locked = TRUE
+
+/datum/quirk/fevII/add()
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.dna.species.punchdamagelow += 10 //Fear.
+	mob_tar.dna.species.punchdamagehigh += 20  //Your head is exploding.
+	mob_tar.maxHealth += 70 //Mutie rage.
+	mob_tar.health += 70
+
+/datum/quirk/fevII/remove()
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.dna.species.punchdamagelow -= 10
+	mob_tar.dna.species.punchdamagehigh -= 20 //Prevents stacking
+	mob_tar.maxHealth -= 70 //Mutie rage.
+	mob_tar.health -= 70
+
 /datum/quirk/snob
 	name = "Snob"
 	desc = "You care about the finer things, if a room doesn't look nice its just not really worth it, is it?"

@@ -93,6 +93,8 @@
 	var/buffout = force*0.25
 	var/smutant = force*0.25
 	var/ghoulmelee = force*0.25 //negative trait, this will cut 25% of the damage done by melee
+	var/traitfev = force*0.25 //FEV trait
+	var/traitfevII = force*0.35 //FEVII Trait
 
 	//var/regular = force*(user.special_s/100)//SPECIAL integration
 
@@ -106,6 +108,12 @@
 
 	if (force >= 5 && HAS_TRAIT(user, TRAIT_SMUTANT))
 		force += smutant
+
+	if (force >= 5 && HAS_TRAIT(user, TRAIT_FEV))
+		force += traitfev
+
+	if (force >= 5 && HAS_TRAIT(user, TRAIT_FEVII))
+		force += traitfevII
 
 	if (force >= 5 && HAS_TRAIT(user, TRAIT_GHOULMELEE)) //negative trait
 		force -= ghoulmelee
@@ -134,6 +142,12 @@
 
 	if (force >= 5 && HAS_TRAIT(user, TRAIT_SMUTANT))
 		force -= smutant
+
+	if (force >= 5 && HAS_TRAIT(user, TRAIT_FEV))
+		force -= traitfev
+
+	if (force >= 5 && HAS_TRAIT(user, TRAIT_FEVII))
+		force -= traitfevII
 
 	if (force >= 5 && HAS_TRAIT(user, TRAIT_GHOULMELEE))
 		force += ghoulmelee

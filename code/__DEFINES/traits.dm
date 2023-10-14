@@ -82,6 +82,7 @@
 #define TRAIT_AOOC_MUTE			"aooc_mute" //Same as above but for AOOC.
 #define TRAIT_DEAF				"deaf"
 #define TRAIT_NEARSIGHT			"nearsighted"
+#define TRAIT_NEARSIGHT_MEGA    "nearsight_mega"
 #define TRAIT_FAT				"fat"
 #define TRAIT_HUSK				"husk"
 #define TRAIT_NOCLONE			"noclone"
@@ -221,6 +222,8 @@
 #define TRAIT_NO_ALCOHOL		"alcohol_intolerance"
 #define TRAIT_MUTATION_STASIS	"mutation_stasis" //Prevents processed genetics mutations from processing.
 #define TRAIT_FAST_PUMP			"fast_pump"
+#define TRAIT_FEV				"trait_fev"
+#define TRAIT_FEVII				"trait_fevii" //FEV perks
 #define TRAIT_AUTO_DRAW			"auto_draw" //can use bows good
 #define TRAIT_NO_PROCESS_FOOD	"no-process-food" // You don't get benefits from nutriment, nor nutrition from reagent consumables
 #define TRAIT_NICE_SHOT			"nice_shot" //hnnnnnnnggggg..... you're pretty good...
