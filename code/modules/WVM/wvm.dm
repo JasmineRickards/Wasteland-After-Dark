@@ -1066,7 +1066,9 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("10mm SMG blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,			400),
 		new /datum/data/wasteland_equipment("DKS-501 sniper rifle",			/obj/item/gun/ballistic/automatic/marksman/sniper,					400),
 		new /datum/data/wasteland_equipment("R91 assault rifle",			/obj/item/gun/ballistic/automatic/assault_rifle,					700),
-		new /datum/data/wasteland_equipment("Marksman Carbine", 			/obj/item/gun/ballistic/automatic/marksman, 						600)
+		new /datum/data/wasteland_equipment("Marksman Carbine", 			/obj/item/gun/ballistic/automatic/marksman, 						600),
+		new /datum/data/wasteland_equipment("NCR salvaged T-45d", 			/obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b/ncr,			1500),
+		new /datum/data/wasteland_equipment("NCR salvaged T-45d helmet", 	/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr, 		500)
 		)
 	highpop_list = list(
 		new /datum/data/wasteland_equipment("Basic salvage",				/obj/item/salvage/low,												25),
@@ -1091,7 +1093,9 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("10mm SMG blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,			400),
 		new /datum/data/wasteland_equipment("DKS-501 sniper rifle",			/obj/item/gun/ballistic/automatic/marksman/sniper,					400),
 		new /datum/data/wasteland_equipment("R91 assault rifle",			/obj/item/gun/ballistic/automatic/assault_rifle,					700),
-		new /datum/data/wasteland_equipment("Marksman Carbine", 			/obj/item/gun/ballistic/automatic/marksman, 						600)
+		new /datum/data/wasteland_equipment("Marksman Carbine", 			/obj/item/gun/ballistic/automatic/marksman, 						600),
+		new /datum/data/wasteland_equipment("NCR salvaged T-45d", 			/obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b/ncr,			1500),
+		new /datum/data/wasteland_equipment("NCR salvaged T-45d helmet", 	/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr, 		500)
 		)
 
 /obj/machinery/mineral/wasteland_vendor/weapons/Legion
