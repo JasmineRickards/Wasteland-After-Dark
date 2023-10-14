@@ -1184,7 +1184,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Reinforced combat armor",		/obj/item/clothing/suit/armor/f13/combat/mk2,						600),
 		new /datum/data/wasteland_equipment("Wattz2k blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/wattz2k,			500),
 		new /datum/data/wasteland_equipment("Wattz 2000e", 					/obj/item/gun/energy/laser/wattz2k/extended, 						700),
-		new /datum/data/wasteland_equipment("Laser RCW", 					/obj/item/gun/energy/laser/rcw,										2000),
+		new /datum/data/wasteland_equipment("Laser RCW", 					/obj/item/gun/energy/laser/rcw,										500),
+		new /datum/data/wasteland_equipment("Power armor pamphlet",			/obj/item/book/granter/trait/pa_wear,								2000),
 		new /datum/data/wasteland_equipment("T-45d armor", 					/obj/item/clothing/suit/armor/f13/power_armor/t45d,		, 			2500),
 		new /datum/data/wasteland_equipment("T-45d helmet", 				/obj/item/clothing/head/helmet/f13/power_armor/t45d, 				500)
 		)
@@ -1212,6 +1213,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Wattz2k blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/wattz2k,			500),
 		new /datum/data/wasteland_equipment("Wattz 2000e", 					/obj/item/gun/energy/laser/wattz2k/extended, 						700),
 		new /datum/data/wasteland_equipment("Laser RCW", 					/obj/item/gun/energy/laser/rcw,										2000),
+		new /datum/data/wasteland_equipment("Power armor pamphlet",			/obj/item/book/granter/trait/pa_wear,								2000),
 		new /datum/data/wasteland_equipment("T-45d armor", 					/obj/item/clothing/suit/armor/f13/power_armor/t45d,		 			2500),
 		new /datum/data/wasteland_equipment("T-45d helmet", 				/obj/item/clothing/head/helmet/f13/power_armor/t45d, 				500),
 		new /datum/data/wasteland_equipment("LSW",							/obj/item/gun/ballistic/automatic/lsw, 								700)
