@@ -10,7 +10,7 @@
 	lose_text = "<span class='notice'>You can taste again!</span>"
 	medical_record_text = "Patient suffers from ageusia and is incapable of tasting food or reagents."
 
-/datum/quirk/fev //DOOM - Used in character creation && A secondary version for FEV-II exposure.
+/datum/quirk/fev //DOOM - Used in mob_tar creation && A secondary version for FEV-II exposure.
 	name = "Unstable FEV Exposure"
 	desc = "Be it accidental; the work of a mad scientist roaming the waste-land, or pre-war experiments that left an individual unable to die, this one has been exposed to an FEV Variation."
 	value = 4
@@ -26,7 +26,8 @@
 	quirk_holder.become_mega_nearsighted(ROUNDSTART_TRAIT) //Custom proc to make essentially welder-blindness.
 	mob_tar.maxHealth += 30 //These guys are tanky. Almost blind, and slower.
 	mob_tar.health += 30
-	mob_tar.dna.update_body_size(mob_tar.dna.features["body_size"] += 0.1)
+	mob_tar.dna.features["body_size"] = (mob_tar.dna.features["body_size"]+0.2)
+	to_chat(mob_tar, "<span class='notice'>You feel far stronger, and a tad dumber...</span>")
 
 /datum/quirk/fev/remove()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
@@ -35,7 +36,7 @@
 	mob_tar.health -= 30
 	mob_tar.dna.species.punchdamagelow -= 6
 	mob_tar.dna.species.punchdamagehigh -= 8 
-	mob_tar.dna.update_body_size(mob_tar.dna.features["body_size"] -= 0.1)
+	mob_tar.dna.features["body_size"] = (mob_tar.dna.features["body_size"]-0.2)
 
 /datum/quirk/fevII //FRANK FUCKING HORRIGAAAN
 	name = "FEV-II Exposure"
@@ -53,7 +54,8 @@
 	mob_tar.dna.species.punchdamagehigh += 20  //Your head is exploding.
 	mob_tar.maxHealth += 70 //Mutie rage.
 	mob_tar.health += 70
-	mob_tar.dna.update_body_size(mob_tar.dna.features["body_size"] += 0.2)
+	mob_tar.dna.features["body_size"] = (mob_tar.dna.features["body_size"]+0.3)
+	to_chat(mob_tar, "<span class='danger'>You feel extremely strong!</span>")
 
 /datum/quirk/fevII/remove()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
@@ -61,7 +63,7 @@
 	mob_tar.dna.species.punchdamagehigh -= 20 //Prevents stacking
 	mob_tar.maxHealth -= 70 //Mutie rage.
 	mob_tar.health -= 70
-	mob_tar.dna.update_body_size(mob_tar.dna.features["body_size"] -= 0.2)
+	mob_tar.dna.features["body_size"] = (mob_tar.dna.features["body_size"]-0.3)
 
 /datum/quirk/snob
 	name = "Snob"
