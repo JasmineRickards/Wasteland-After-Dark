@@ -31,8 +31,6 @@
 	var/working_state = "dispenser_working"
 	var/nopower_state = "dispenser_nopower"
 	var/cell_type = /obj/item/stock_parts/cell/high
-	var/fusioncore
-	var/needsfusion = FALSE
 	var/has_panel_overlay = TRUE
 	var/obj/item/reagent_containers/beaker = null
 	var/list/dispensable_reagents = list(
@@ -116,9 +114,6 @@
 	. = ..()
 	if(panel_open)
 		. += "<span class='notice'>[src]'s maintenance hatch is open!</span>"
-		if(needsfusion)
-			if(fusioncore != null)
-				. += "<span class='notice'>[src]'s !</span>"
 	if(in_range(user, src) || isobserver(user))
 		. += "<span class='notice'>The status display reads:\n\
 		Recharging <b>[recharge_amount]</b> power units per interval.\n\
@@ -642,7 +637,7 @@
 /obj/machinery/chem_dispenser/mutagensaltpeter
 	name = "botanical chemical dispenser"
 	desc = "Creates and dispenses chemicals useful for botany."
-//	flags_1 = NODECONSTRUCT_1
+	flags_1 = NODECONSTRUCT_1
 
 	dispensable_reagents = list(
 		/datum/reagent/toxin/mutagen,
@@ -674,35 +669,6 @@
 	component_parts += new /obj/item/stack/sheet/glass(null)
 	component_parts += new /obj/item/stock_parts/cell/bluespace(null)
 	RefreshParts()
-
-/obj/machinery/chem_dispenser/indusmutagensaltpeter
-	name = "Industrial botanical chemical dispenser"
-	desc = "Creates and dispenses chemicals useful for botany."
-	circuit = /obj/item/circuitboard/machine/indusmutagensaltpeter
-	powerefficiency = 0.03
-//	cell_type = /obj/item/stock_parts/fc
-//	flags_1 = NODECONSTRUCT_1
-
-	dispensable_reagents = list(
-		/datum/reagent/toxin/mutagen,
-		/datum/reagent/saltpetre,
-		/datum/reagent/plantnutriment/eznutriment,
-		/datum/reagent/plantnutriment/left4zednutriment,
-		/datum/reagent/plantnutriment/robustharvestnutriment,
-		/datum/reagent/water,
-		/datum/reagent/toxin/plantbgone,
-		/datum/reagent/toxin/plantbgone/weedkiller,
-		/datum/reagent/toxin/pestkiller,
-//		/datum/reagent/medicine/cryoxadone,
-		/datum/reagent/ammonia,
-		/datum/reagent/ash,
-		/datum/reagent/diethylamine)
-		//same as above.
-	upgrade_reagents = null
-	upgrade_reagents2 = /datum/reagent/medicine/cryoxadone
-	upgrade_reagents3 = null
-
-
 
 /obj/machinery/chem_dispenser/fullupgrade //fully ugpraded stock parts, emagged
 	desc = "Creates and dispenses chemicals. This model has had its safeties shorted out."
@@ -786,39 +752,6 @@
 	component_parts += new /obj/item/stock_parts/cell/bluespace(null)
 	RefreshParts()
 
-/obj/machinery/chem_dispenser/induschem
-	name = "Industrial medicine dispenser"
-	desc = "A heavier duty industrial machine meant for chemical synthesis."
-	icon_state = "minidispenser"
-	working_state = "minidispenser_working"
-	nopower_state = "minidispenser_nopower"
-	circuit = /obj/item/circuitboard/machine/induschem
-//	cell_type = /obj/item/stock_parts/fc
-	powerefficiency = 0.02
-	dispensable_reagents = list(
-		/datum/reagent/medicine/spaceacillin,
-		/datum/reagent/medicine/oxandrolone,
-		/datum/reagent/medicine/styptic_powder,
-		/datum/reagent/medicine/silver_sulfadiazine,
-		/datum/reagent/medicine/salglu_solution,
-		/datum/reagent/medicine/charcoal,
-		/datum/reagent/medicine/omnizine,
-		/datum/reagent/medicine/potass_iodide,
-		/datum/reagent/medicine/prussian_blue,
-		/datum/reagent/medicine/oculine,
-		/datum/reagent/medicine/atropine,
-		/datum/reagent/medicine/epinephrine,
-		/datum/reagent/medicine/bicaridine,
-		/datum/reagent/medicine/kelotane,
-		/datum/reagent/medicine/antitoxin,
-		/datum/reagent/medicine/tricordrazine,
-		/datum/reagent/medicine/neo_jelly,
-		/datum/reagent/medicine/psicodine,
-		/datum/reagent/medicine/silibinin)
-
-	upgrade_reagents =	/datum/reagent/medicine/synthflesh
-
-
 ///An unique, less efficient model found in the medbay apothecary room.
 /obj/machinery/chem_dispenser/apothecary
 	name = "apothecary chem dispenser"
@@ -827,7 +760,7 @@
 	working_state = "minidispenser_working"
 	nopower_state = "minidispenser_nopower"
 	circuit = /obj/item/circuitboard/machine/chem_dispenser/apothecary
-	powerefficiency = 0.03
+	powerefficiency = 0.0833333
 	dispensable_reagents = list( //radium and stable plasma moved to upgrade tier 1 and 2, they've little to do with most medicines anyway.
 		/datum/reagent/hydrogen,
 		/datum/reagent/lithium,
