@@ -25738,6 +25738,13 @@
 /obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/floor/plating,
 /area/f13/city/bighorn)
+"dOZ" = (
+/obj/structure/table,
+/obj/machinery/chem_dispenser/induschem,
+/turf/open/floor/f13{
+	icon_state = "bluerustysolid"
+	},
+/area/f13/followers)
 "dPr" = (
 /obj/structure/closet/crate/bin/trashbin,
 /turf/open/floor/f13/wood,
@@ -77098,7 +77105,7 @@ bzd
 yjm
 dFh
 qpv
-rky
+dOZ
 rky
 yjm
 lsP
