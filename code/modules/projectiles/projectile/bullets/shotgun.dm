@@ -11,6 +11,22 @@
 	supereffective_damage = 50
 	supereffective_faction = list("supermutant", "deathclaw", "raider", "wastebot", "radscorpion") //Slugs HATE armor.
 
+/obj/item/projectile/bullet/shotgun_pusleslug
+	name = "12g shotgun pulse slug"
+	damage = 30
+	stamina = 15
+	sharpness = SHARP_POINTY
+	wound_bonus = 45
+	bare_wound_bonus = 30
+	armour_penetration = 0.3
+	spread = 2
+	wound_falloff_tile = -7.5
+
+/obj/item/projectile/bullet/shotgun_pusleslug/on_hit(atom/target, blocked = FALSE)
+	..()
+	target.emp_act(50)//5 severity is very, very low
+
+
 /obj/item/projectile/bullet/shotgun_slug/executioner
 	name = "executioner slug" // admin only, can dismember limbs
 	sharpness = SHARP_EDGED
