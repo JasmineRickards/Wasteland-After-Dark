@@ -36,7 +36,7 @@
 	mob_tar.health -= 30
 	mob_tar.dna.species.punchdamagelow -= 6
 	mob_tar.dna.species.punchdamagehigh -= 8 
-	mob_tar.dna.features["body_size"] = (mob_tar.dna.features["body_size"]+0.2)
+	mob_tar.dna.features["body_size"] = (mob_tar.dna.features["body_size"]-0.2)
 
 /datum/quirk/fevII //FRANK FUCKING HORRIGAAAN
 	name = "FEV-II Exposure"
