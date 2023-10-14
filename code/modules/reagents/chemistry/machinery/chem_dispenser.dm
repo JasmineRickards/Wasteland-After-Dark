@@ -408,10 +408,11 @@
 				fusioncore.forceMove(drop_location())
 				if(user && Adjacent(user) && user.can_hold_items())
 					user.put_in_hands(fusioncore)
+					to_chat(user, "<span class='notice'>You take the fusion core from [src].</span>")
 			else
 				to_chat(user, "<span class='notice'>There is no fusion core in [src].</span>")
-		if(istype(I,/obj/item/stock_parts/fc/fusioncore) && needfusion)
-			var/obj/item/stock_parts/fc/fusioncore/FC = I
+		if(istype(I,/obj/item/stock_parts/fc) && needsfusion)
+			var/obj/item/stock_parts/fc/FC = I
 			. = TRUE //no afterattack
 			if(!user.transferItemToLoc(FC, src))
 				return
@@ -835,7 +836,7 @@
 	working_state = "minidispenser_working"
 	nopower_state = "minidispenser_nopower"
 	circuit = /obj/item/circuitboard/machine/induschem
-	needfusion = TRUE
+	needsfusion = TRUE
 	fusioncoreuse = 1600
 //	cell_type = /obj/item/stock_parts/fc
 	powerefficiency = 0.02
