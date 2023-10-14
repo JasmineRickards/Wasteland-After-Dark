@@ -414,16 +414,24 @@
 	path = /obj/item/clothing/head/helmet/f13/khan/bandana
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
 	cost = 2
-	restricted_desc = "KHAN"
-	restricted_roles = list("Great Khan")
+	restricted_roles = list("Great Khan",
+							"Khan Senior Enforcer",
+							"Khan Enforcer",
+							"Khan Chemist",
+							"Khan Smith"
+						)
 
 /datum/gear/head/khan_furtrimmed
 	name = "Great Khan fur-trimmed helmet"
 	path = /obj/item/clothing/head/helmet/f13/khan/pelt
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
 	cost = 2
-	restricted_desc = "KHAN"
-	restricted_roles = list("Great Khan")
+	restricted_roles = list("Great Khan",
+							"Khan Senior Enforcer",
+							"Khan Enforcer",
+							"Khan Chemist",
+							"Khan Smith"
+						)
 
 /datum/gear/head/oasishelmet
 	name = "light security helmet"
