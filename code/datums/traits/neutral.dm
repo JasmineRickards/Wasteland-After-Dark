@@ -26,7 +26,7 @@
 	quirk_holder.become_mega_nearsighted(ROUNDSTART_TRAIT) //Custom proc to make essentially welder-blindness.
 	mob_tar.maxHealth += 30 //These guys are tanky. Almost blind, and slower.
 	mob_tar.health += 30
-	mob_tar.dna.features["body_size"] = (mob_tar.dna.features["body_size"]+0.2)
+	mob_tar.dna.features["body_size"] = (mob_tar.dna.features["body_size"]+0.1)
 	to_chat(mob_tar, "<span class='notice'>You feel far stronger, and a tad dumber...</span>")
 
 /datum/quirk/fev/remove()
@@ -36,7 +36,7 @@
 	mob_tar.health -= 30
 	mob_tar.dna.species.punchdamagelow -= 6
 	mob_tar.dna.species.punchdamagehigh -= 8 
-	mob_tar.dna.features["body_size"] = (mob_tar.dna.features["body_size"]-0.2)
+	mob_tar.dna.features["body_size"] = (mob_tar.dna.features["body_size"]-0.1)
 
 /datum/quirk/fevII //FRANK FUCKING HORRIGAAAN
 	name = "FEV-II Exposure"
@@ -54,7 +54,7 @@
 	mob_tar.dna.species.punchdamagehigh += 20  //Your head is exploding.
 	mob_tar.maxHealth += 70 //Mutie rage.
 	mob_tar.health += 70
-	mob_tar.dna.features["body_size"] = (mob_tar.dna.features["body_size"]+0.3)
+	mob_tar.dna.features["body_size"] = (mob_tar.dna.features["body_size"]+0.2)
 	to_chat(mob_tar, "<span class='danger'>You feel extremely strong!</span>")
 
 /datum/quirk/fevII/remove()
@@ -63,7 +63,7 @@
 	mob_tar.dna.species.punchdamagehigh -= 20 //Prevents stacking
 	mob_tar.maxHealth -= 70 //Mutie rage.
 	mob_tar.health -= 70
-	mob_tar.dna.features["body_size"] = (mob_tar.dna.features["body_size"]-0.3)
+	mob_tar.dna.features["body_size"] = (mob_tar.dna.features["body_size"]-0.2)
 
 /datum/quirk/snob
 	name = "Snob"
