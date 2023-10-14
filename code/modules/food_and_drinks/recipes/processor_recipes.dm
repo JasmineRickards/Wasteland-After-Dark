@@ -12,6 +12,10 @@
 	input = /obj/item/reagent_containers/food/snacks/meat/rawcutlet
 	output = /obj/item/reagent_containers/food/snacks/meat/rawbacon
 
+/datum/food_processor_process/meatwheat
+	input = /obj/item/reagent_containers/food/snacks/grown/meatwheat
+	output = /obj/item/reagent_containers/food/snacks/meat/slab/meatwheat
+
 /datum/food_processor_process/potatowedges
 	input = /obj/item/reagent_containers/food/snacks/grown/potato/wedges
 	output = /obj/item/reagent_containers/food/snacks/fries
