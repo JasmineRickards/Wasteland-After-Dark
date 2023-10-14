@@ -4,6 +4,12 @@
 	ready_proj(target, user, quiet, zone_override, extra_damage, extra_penetration, fired_from)
 	if(pellets == 1)
 		if(distro) //We have to spread a pixel-precision bullet. throw_proj was called before so angles should exist by now...
+			if(HAS_TRAIT(user,TRAIT_FEV) || HAS_TRAIT(user,TRAIT_FEVII)) //You really shouldn't try this at home.
+				spread += 3 //RIP Ranged Supermutie
+			if(HAS_TRAIT(user,TRAIT_NEARSIGHT)) //Yes.
+				spread += 0.1 //You're slightly less accurate because you can't see well - as an upside, lasers don't suffer these penalties!
+			if(HAS_TRAIT(user,TRAIT_POOR_AIM)) //You really shouldn't try this at home.
+				spread += 1.5 //This is cripplingly bad. Trust me.
 			if(randomspread)
 				spread = round((rand() - 0.5) * distro)
 			else //Smart spread
