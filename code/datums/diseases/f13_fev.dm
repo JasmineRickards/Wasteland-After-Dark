@@ -4,7 +4,7 @@
 	name = "Forced Evolutionary Virus"
 	cure_text = "mutadone."
 	cures = list(/datum/reagent/medicine/mutadone)
-	cure_chance = 5 // Good luck
+	cure_chance = 90 // Yeah.
 	stage_prob = 10
 	agent = "FEV-I toxin strain" // The unstable one.
 	desc = "A megavirus, with a protein sheath reinforced by ionized hydrogen. This virus is capable of mutating the affected into something horrifying..."
@@ -38,6 +38,7 @@
 		if(2)
 			if (prob(8))
 				to_chat(affected_mob, "<span class='danger'>You feel weird...</span>")
+				ADD_TRAIT(affected_mob, TRAIT_FEV, "FEV-I Exposure") //So you can dose FEV, and then take mutadone. Still deadly and dangerous
 		if(3)
 			if (prob(12))
 				to_chat(affected_mob, "<span class='danger'>Your skin twitches...</span>")
@@ -55,12 +56,9 @@
 				affected_mob.Unconscious(10)
 
 // FEV - II
-/datum/disease/transformation/mutant/super
+/datum/disease/supermutant
 	agent = "FEV-II toxin strain" // The unstable one.
 	desc = "A megavirus, with a protein sheath reinforced by ionized hydrogen. This variant has been mutated by radiation and will turn the affected person into something less horrifying."
-	new_form = /mob/living/carbon/human/species/smutant
-	possible_forms = list(/mob/living/carbon/human/species/smutant = 1)
-	stage5 = list("<span class='reallybig hypnophrase'>Simple! Efficient! Glorious!</span>")
 
 /datum/disease/transformation/mutant/super/stage_act()
 	..()
@@ -81,9 +79,10 @@
 				to_chat(affected_mob, "<span class='warning'>Your skin begins to shift, it hurts, but only for a moment..?</span>")
 				affected_mob.emote("cry")
 			if (prob(5))
-				to_chat(affected_mob, "<span class='notice'>Simple, efficient, glorious...</span>")
+				to_chat(affected_mob, "<span class='reallybig hypnophrase'>Simple! Efficient! Glorious!</span>")
 				var/datum/component/mood/mood = affected_mob.GetComponent(/datum/component/mood)
 				mood.setSanity(SANITY_INSANE) // You're happy, aren't you?
+				ADD_TRAIT(affected_mob, TRAIT_FEVII, "FEV-II Exposure")
 
 // FEV - Curling 13
 /datum/disease/curling_thirteen
@@ -97,7 +96,7 @@
 	viable_mobtypes = list(/mob/living/carbon/human)
 	cure_text = "Mutadone, Haloperidol and Penicillin"
 	cures = list(/datum/reagent/medicine/mutadone, /datum/reagent/medicine/haloperidol, /datum/reagent/medicine/spaceacillin)
-	cure_chance = 8 // If you can gather all three - you deserve a somewhat of a good chance.
+	cure_chance = 40 // If you can gather all three - you deserve a somewhat of a good chance.
 	severity = DISEASE_SEVERITY_BIOHAZARD
 
 /datum/disease/curling_thirteen/update_stage(new_stage)
