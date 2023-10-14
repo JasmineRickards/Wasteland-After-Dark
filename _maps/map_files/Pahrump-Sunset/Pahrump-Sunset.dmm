@@ -21043,6 +21043,7 @@
 /obj/machinery/door/window/brigdoor{
 	dir = 1
 	},
+/obj/machinery/light,
 /turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "bKH" = (
@@ -54788,6 +54789,7 @@
 /obj/machinery/door/window/brigdoor{
 	dir = 1
 	},
+/obj/machinery/light,
 /turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "vUy" = (
