@@ -27,6 +27,7 @@
 	mob_tar.maxHealth += 30 //These guys are tanky. Almost blind, and slower.
 	mob_tar.health += 30
 	mob_tar.dna.features["body_size"] = (mob_tar.dna.features["body_size"]+0.2)
+	to_chat(mob_tar, "<span class='notice'>You feel far stronger, and a tad dumber...</span>")
 
 /datum/quirk/fev/remove()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
@@ -54,6 +55,7 @@
 	mob_tar.maxHealth += 70 //Mutie rage.
 	mob_tar.health += 70
 	mob_tar.dna.features["body_size"] = (mob_tar.dna.features["body_size"]+0.3)
+	to_chat(mob_tar, "<span class='danger'>You feel extremely strong!</span>")
 
 /datum/quirk/fevII/remove()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
