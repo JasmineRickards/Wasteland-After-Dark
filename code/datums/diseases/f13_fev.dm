@@ -99,7 +99,6 @@
 	cures = list(/datum/reagent/medicine/mutadone)
 	cure_text = "Mutadone."
 	cure_chance = 40 // Yeah.
-	stage_prob = 30
 	agent = "DNA"
 	desc = "A megavirus, with a protein sheath reinforced by ionized hydrogen. This virus is capable of mutating the affected into something horrifying..."
 	viable_mobtypes = list(/mob/living/carbon/human)
@@ -147,7 +146,6 @@
 	cures = list(/datum/reagent/medicine/mutadone, /datum/reagent/medicine/haloperidol)
 	cure_text = "Mutadone."
 	cure_chance = 5 // Nonlethal.
-	stage_prob = 30
 	agent = "DNA"
 	desc = "A megavirus, with a protein sheath reinforced by ionized hydrogen, which has been however, affected by radiation. This will mutate the host into something less... Horrifying."
 	viable_mobtypes = list(/mob/living/carbon/human)
@@ -178,6 +176,7 @@
 				ADD_TRAIT(affected_mob, TRAIT_FEVII, "FEV-II Exposure")
 				FEV2trait = TRUE //Stops spam
 				affected_mob.emote("screams")
-			to_chat(affected_mob, "<span class='danger'>You feel the lingering effects of the virus in your blood...</span>") //Warning that you're still able to infect others via blood to blood transmission
+			if(prob(0.1))
+				to_chat(affected_mob, "<span class='danger'>You feel the lingering effects of the virus in your blood...</span>") //Warning that you're still able to infect others via blood to blood transmission
 
 
