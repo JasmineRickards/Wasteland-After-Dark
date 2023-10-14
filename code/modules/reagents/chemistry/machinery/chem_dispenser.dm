@@ -31,9 +31,8 @@
 	var/working_state = "dispenser_working"
 	var/nopower_state = "dispenser_nopower"
 	var/cell_type = /obj/item/stock_parts/cell/high
-	var/obj/item/stock_parts/fc/fusioncore = null
+	var/fusioncore
 	var/needsfusion = FALSE
-	var/fusioncoreuse = 650 //Default usage
 	var/has_panel_overlay = TRUE
 	var/obj/item/reagent_containers/beaker = null
 	var/list/dispensable_reagents = list(
@@ -113,33 +112,17 @@
 	QDEL_NULL(cell)
 	return ..()
 
-/obj/machinery/chem_dispenser/is_operational()
-	..()
-	if(needsfusion && fusioncore != null)
-		if(fusioncore.charge >= fusioncoreuse) //650 energy from the core to use even once
-			return TRUE //can literally run itself
-		else
-			return FALSE //Needs a fusion core at all times.
-	if(needsfusion && fusioncore == null)
-		return FALSE
-
 /obj/machinery/chem_dispenser/examine(mob/user)
 	. = ..()
 	if(panel_open)
 		. += "<span class='notice'>[src]'s maintenance hatch is open!</span>"
 		if(needsfusion)
 			if(fusioncore != null)
-				. += "<span class='notice'>[src] has a fusion core inside! You can pry it out with wirecutters!</span>"
-			else
-				. += "<span class='danger'>[src] lacks a fusion core within!</span>"
+				. += "<span class='notice'>[src]'s !</span>"
 	if(in_range(user, src) || isobserver(user))
 		. += "<span class='notice'>The status display reads:\n\
 		Recharging <b>[recharge_amount]</b> power units per interval.\n\
 		Power efficiency increased by <b>[round((powerefficiency*1000)-100, 1)]%</b>.</span>"
-		if(needsfusion && fusioncore != null)
-			. += "<span class='notice'>[src]'s fusion core is at [fusioncore.charge]!</span>"
-		if(needsfusion && fusioncore == null)
-			. += "<span class='danger'>[src] does not have a fusion core and will not operate!</span>"
 
 /obj/machinery/chem_dispenser/process()
 	if (recharge_counter >= 4)
@@ -295,9 +278,6 @@
 					if(!cell.use(actual / powerefficiency))
 						say("Not enough energy to complete operation!")
 						return
-					if(needsfusion && fusioncore)
-						if(!fusioncore.use(fusioncoreuse))
-							say("Not enough fusion core energy to complete operation!")
 					R.add_reagent(reagent, actual)
 					log_reagent("DISPENSER: ([COORD(src)]) ([REF(src)]) [key_name(usr)] dispensed [actual] of [reagent] to [beaker] ([REF(beaker)]).")
 
@@ -338,15 +318,9 @@
 					var/actual = min(dispense_amount, (cell.charge * powerefficiency)*10, free)
 					if(actual)
 						if(!cell.use(actual / powerefficiency))
-							if(needsfusion && fusioncore)
-								if(!fusioncore || !fusioncore.use(fusioncoreuse))
-									say("Not enough fusion core energy to complete operation!")
-									earlyabort = TRUE
-									break
-							else
-								say("Not enough energy to complete operation!")
-								earlyabort = TRUE
-								break
+							say("Not enough energy to complete operation!")
+							earlyabort = TRUE
+							break
 						R.add_reagent(reagent, actual)
 						work_animation()
 				else
@@ -402,22 +376,6 @@
 	if(default_deconstruction_screwdriver(user, icon_state, icon_state, I))
 		update_icon()
 		return
-	if(panel_open)
-		if(istype(I, /obj/item/wirecutters) && needsfusion)
-			if(fusioncore != null)
-				fusioncore.forceMove(drop_location())
-				if(user && Adjacent(user) && user.can_hold_items())
-					user.put_in_hands(fusioncore)
-					to_chat(user, "<span class='notice'>You take the fusion core from [src].</span>")
-			else
-				to_chat(user, "<span class='notice'>There is no fusion core in [src].</span>")
-		if(istype(I,/obj/item/stock_parts/fc) && needsfusion)
-			var/obj/item/stock_parts/fc/FC = I
-			. = TRUE //no afterattack
-			if(!user.transferItemToLoc(FC, src))
-				return
-			fusioncore = FC
-			to_chat(user, "<span class='notice'>You add a fusion core to [src].</span>")			
 	if(default_deconstruction_crowbar(I))
 		return
 	if(istype(I, /obj/item/reagent_containers) && !(I.item_flags & ABSTRACT) && I.is_open_container())
@@ -722,7 +680,6 @@
 	desc = "Creates and dispenses chemicals useful for botany."
 	circuit = /obj/item/circuitboard/machine/indusmutagensaltpeter
 	powerefficiency = 0.03
-	needsfusion = TRUE
 //	cell_type = /obj/item/stock_parts/fc
 //	flags_1 = NODECONSTRUCT_1
 
@@ -836,8 +793,6 @@
 	working_state = "minidispenser_working"
 	nopower_state = "minidispenser_nopower"
 	circuit = /obj/item/circuitboard/machine/induschem
-	needsfusion = TRUE
-	fusioncoreuse = 1600
 //	cell_type = /obj/item/stock_parts/fc
 	powerefficiency = 0.02
 	dispensable_reagents = list(
