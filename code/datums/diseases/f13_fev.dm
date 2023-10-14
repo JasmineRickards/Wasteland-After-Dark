@@ -116,15 +116,8 @@
 				to_chat(affected_mob, "<span class='danger'>You feel weird...</span>")
 				affected_mob.easy_randmut(NEGATIVE+MINOR_NEGATIVE)
 		if(3)
-			if (prob(100))
-				if(!FEV1trait)
-					to_chat(affected_mob, "<span class='danger'>Your skin twitches and swells...</span>")
-					affected_mob.Jitter(3)
-					ADD_TRAIT(affected_mob, TRAIT_FEV, "FEV-I Exposure") //So you can dose FEV, and then take mutadone. Still deadly and dangerous
-					affected_mob.easy_randmut(NEGATIVE+MINOR_NEGATIVE)
-					FEV1trait = TRUE
-				if(prob(2))
-					affected_mob.easy_randmut(NEGATIVE+MINOR_NEGATIVE)
+			if(prob(2))
+				affected_mob.easy_randmut(NEGATIVE+MINOR_NEGATIVE)
 		if(4)
 			if (prob(20))
 				to_chat(affected_mob, "<span class='danger'>The pain is unbearable!</span>")
@@ -133,11 +126,16 @@
 				to_chat(affected_mob, "<span class='danger'>Your skin begins to shift, hurting like hell!</span>")
 				affected_mob.emote("scream")
 				affected_mob.Jitter(4)
+				affected_mob.add_quirk(/datum/quirk/fev)
 				affected_mob.easy_randmut(NEGATIVE+NEGATIVE)
 			if (prob(6))
 				to_chat(affected_mob, "<span class='danger'>Your body shuts down for a moment!</span>")
 				affected_mob.Unconscious(10)
-
+			if(!FEV1trait)
+				to_chat(affected_mob, "<span class='danger'>Your skin twitches and swells...</span>")
+				affected_mob.Jitter(3)
+				affected_mob.easy_randmut(NEGATIVE+MINOR_NEGATIVE)
+				FEV1trait = TRUE
 
 /datum/disease/fev2 //You die from mutations.
 	form = "Forced Evolutionary Virus"
@@ -173,10 +171,8 @@
 				to_chat(affected_mob, "<span class='reallybig hypnophrase'>Simple! Efficient! Glorious!</span>")
 				var/datum/component/mood/mood = affected_mob.GetComponent(/datum/component/mood)
 				mood.setSanity(SANITY_INSANE) // You're happy, aren't you?
-				ADD_TRAIT(affected_mob, TRAIT_FEVII, "FEV-II Exposure")
+				affected_mob.add_quirk(/datum/quirk/fevII)
 				FEV2trait = TRUE //Stops spam
 				affected_mob.emote("screams")
 			if(prob(0.1))
 				to_chat(affected_mob, "<span class='danger'>You feel the lingering effects of the virus in your blood...</span>") //Warning that you're still able to infect others via blood to blood transmission
-
-
