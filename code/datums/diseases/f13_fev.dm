@@ -38,11 +38,11 @@
 		if(2)
 			if (prob(8))
 				to_chat(affected_mob, "<span class='danger'>You feel weird...</span>")
-				ADD_TRAIT(affected_mob, TRAIT_FEV, "FEV-I Exposure") //So you can dose FEV, and then take mutadone. Still deadly and dangerous
 		if(3)
 			if (prob(12))
 				to_chat(affected_mob, "<span class='danger'>Your skin twitches...</span>")
 				affected_mob.Jitter(3)
+				ADD_TRAIT(affected_mob, TRAIT_FEV, "FEV-I Exposure") //So you can dose FEV, and then take mutadone. Still deadly and dangerous
 		if(4)
 			if (prob(20))
 				to_chat(affected_mob, "<span class='danger'>The pain is unbearable!</span>")
