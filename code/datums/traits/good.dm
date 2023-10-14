@@ -165,7 +165,7 @@
 	lose_text = "<span class='danger'>You forget how musical instruments work.</span>"
 	medical_record_text = "Patient brain scans show a highly-developed auditory pathway."
 
-/datum/quirk/musician/on_spawn()
+/datum/quirk/musician/add()
 	var/mob/living/carbon/human/H = quirk_holder
 	var/obj/item/choice_beacon/music/B = new(get_turf(H))
 	H.put_in_hands(B)
@@ -184,7 +184,7 @@
 	lose_text = "<span class='danger'>You forget how photo cameras work.</span>"
 	medical_record_text = "Patient mentions photography as a stress-relieving hobby."
 
-/datum/quirk/photographer/on_spawn()
+/datum/quirk/photographer/add()
 	var/mob/living/carbon/human/H = quirk_holder
 	var/obj/item/camera/camera = new(get_turf(H))
 	H.put_in_hands(camera)
@@ -223,7 +223,7 @@
 	lose_text = "<span class='danger'>You forget how to tag walls properly.</span>"
 	medical_record_text = "Patient was recently seen for possible paint huffing incident."
 
-/datum/quirk/tagger/on_spawn()
+/datum/quirk/tagger/add()
 	var/mob/living/carbon/human/H = quirk_holder
 	var/obj/item/toy/crayon/spraycan/spraycan = new(get_turf(H))
 	H.put_in_hands(spraycan)
@@ -274,7 +274,7 @@
 	lose_text = "<span class='danger'>Everything seems a little darker.</span>"
 	locked = TRUE
 
-/datum/quirk/night_vision/on_spawn()
+/datum/quirk/night_vision/add()
 	var/mob/living/carbon/human/H = quirk_holder
 	H.update_sight()
 
@@ -354,7 +354,7 @@
 	lose_text = "<span class='danger'>You feel less healthy than usual.</span>"
 	locked = TRUE
 
-/datum/quirk/lifegiver/on_spawn()
+/datum/quirk/lifegiver/add()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
 	mob_tar.maxHealth += 10
 	mob_tar.health += 10
@@ -368,10 +368,10 @@
 	lose_text = "<span class='danger'>Your fists feel calm again.</span>"
 	locked = TRUE
 
-/datum/quirk/iron_fist/on_spawn()
+/datum/quirk/iron_fist/add()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.dna.species.punchdamagelow = 4
-	mob_tar.dna.species.punchdamagehigh = 11
+	mob_tar.dna.species.punchdamagelow += 3 //I HATE FALLOUT CODERS
+	mob_tar.dna.species.punchdamagehigh += 7
 
 /datum/quirk/light_step
 	name = "Light Step"
