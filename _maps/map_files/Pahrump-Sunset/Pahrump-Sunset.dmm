@@ -20583,12 +20583,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/building/mall)
-"bAd" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
-/area/f13/brotherhood)
 "bAe" = (
 /obj/structure/barricade/sandbags,
 /obj/effect/decal/cleanable/dirt,
@@ -21021,12 +21015,6 @@
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/mall)
-"bKB" = (
-/obj/structure/railing/corner{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
-/area/f13/brotherhood)
 "bKH" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/desert,
@@ -24139,10 +24127,6 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/building/museum)
-"cOc" = (
-/obj/structure/railing/corner,
-/turf/open/floor/plasteel/dark,
-/area/f13/brotherhood)
 "cOs" = (
 /obj/structure/chair,
 /obj/effect/decal/cleanable/dirt,
@@ -38747,13 +38731,10 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/building/massfusion)
 "lVW" = (
-/obj/structure/flora/rock/pile/largejungle{
-	icon_state = "bush3"
-	},
 /obj/effect/turf_decal/weather/dirt{
 	dir = 8
 	},
-/turf/open/indestructible/ground/outside/dirt,
+/turf/open/transparent/openspace,
 /area/f13/wasteland/valley)
 "lWe" = (
 /obj/item/chair,
@@ -46320,12 +46301,6 @@
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/building)
-"qJb" = (
-/obj/structure/railing{
-	layer = 4.1
-	},
-/turf/open/floor/plasteel/dark,
-/area/f13/brotherhood)
 "qJm" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 8
@@ -49478,13 +49453,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/followers)
-"sFw" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/dark,
-/area/f13/brotherhood)
 "sFz" = (
 /obj/structure/table/wood,
 /obj/item/storage/box/drinkingglasses,
@@ -55918,15 +55886,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/mall)
 "wAK" = (
-/obj/structure/railing{
-	layer = 4.1
+/obj/effect/turf_decal/weather/dirt{
+	dir = 10
 	},
-/obj/machinery/light{
-	dir = 1;
-	light_color = "#706891"
-	},
-/turf/open/floor/plasteel/dark,
-/area/f13/brotherhood)
+/turf/open/transparent/openspace,
+/area/f13/wasteland/valley)
 "wBe" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 8;
@@ -56895,9 +56859,6 @@
 	},
 /area/f13/wasteland/bighorn)
 "xdC" = (
-/obj/structure/railing{
-	dir = 1
-	},
 /obj/machinery/light,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
@@ -117032,10 +116993,10 @@ uSA
 oMJ
 omg
 omg
-cOc
-bAd
-bAd
-bKB
+htR
+htR
+htR
+htR
 rcg
 bEB
 hFo
@@ -117289,9 +117250,9 @@ uSA
 vpy
 rcg
 rcg
-wAK
-dvS
-dvS
+sDb
+htR
+htR
 xdC
 rcg
 lDN
@@ -117546,10 +117507,10 @@ uSA
 nUE
 rcg
 rcg
-qJb
-oQI
-oQI
-sFw
+htR
+htR
+htR
+iOv
 rcg
 pgV
 pgV
@@ -118317,7 +118278,7 @@ rcg
 rcg
 rcg
 rcg
-rcg
+uzh
 rcg
 rcg
 rcg
@@ -118336,7 +118297,7 @@ jPh
 bvG
 mQj
 lVW
-jqU
+wAK
 jVJ
 jVJ
 sTF
