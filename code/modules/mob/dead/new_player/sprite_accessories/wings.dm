@@ -277,12 +277,10 @@
 	icon_state = "sepulchre"
 
 /datum/sprite_accessory/deco_wings/sepulchre
-	name = "Sepulchre - AltDragon"
-	icon_state = "dragon2"
+	name = "Sepulchre Alt"
+	icon_state = "sepulchrealt"
 	color_src = MATRIXED
-	matrixed_sections = MATRIX_RED_BLUE
-	extra = TRUE // I hate doing this, but this gives the most amount of customisation for the least pain.
-	extra_color_src = MUTCOLORS3
+	matrixed_sections = MATRIX_RED
 
 /datum/sprite_accessory/deco_wings/succubus
 	name = "Succubus"
