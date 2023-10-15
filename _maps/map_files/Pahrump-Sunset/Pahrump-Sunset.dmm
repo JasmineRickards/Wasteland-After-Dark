@@ -40506,6 +40506,11 @@
 "nbZ" = (
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/building/massfusion)
+"ncb" = (
+/obj/structure/bed/old,
+/obj/item/book/granter/crafting_recipe/gunsmith_two,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "nco" = (
 /obj/structure/barricade/wooden,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -42962,6 +42967,7 @@
 /area/f13/caves)
 "oDX" = (
 /obj/structure/table/wood,
+/obj/item/book/granter/crafting_recipe/gunsmith_one,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "oFn" = (
@@ -111378,7 +111384,7 @@ aaa
 aae
 aae
 afn
-woA
+ncb
 aae
 aae
 aae
