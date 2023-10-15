@@ -227,6 +227,11 @@
 	desc = "The air around you is hazardously thin. A space suit would protect you."
 	icon_state = "lowpressure"
 
+/obj/screen/alert/irradiated // wasteland edit. show the player they are irradiated
+	name = "Irradiated"
+	desc = "You feel weak from radiation sickness. Seek treatment."
+	icon_state = "too_much_tox"
+
 /obj/screen/alert/highpressure
 	name = "High Pressure"
 	desc = "The air around you is hazardously thick. A fire suit would protect you."

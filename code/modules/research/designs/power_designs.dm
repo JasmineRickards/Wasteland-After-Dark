@@ -98,3 +98,14 @@
 	id = "mrspacman"
 	build_path = /obj/item/circuitboard/machine/pacman/mrs
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
+
+/datum/design/fc_basic
+	name = "Portable Fusion Core"
+	desc = "A fusion cell that holds 50 MJ of energy."
+	id = "fc_b"
+	build_type = PROTOLATHE | MECHFAB
+	materials = list(/datum/material/iron = 15000, /datum/material/uranium = 5000, /datum/material/silver = 150, /datum/material/glass = 300)
+	construction_time=100
+	build_path = /obj/item/stock_parts/cell/hyper/empty
+	category = list("Misc","Power Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING

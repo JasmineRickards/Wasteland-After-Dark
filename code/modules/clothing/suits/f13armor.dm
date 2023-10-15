@@ -272,7 +272,7 @@
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 20)
 	salvage_tool_behavior = TOOL_WELDER
 	/// Cell that is currently installed in the suit
-	var/obj/item/stock_parts/cell/cell = /obj/item/stock_parts/cell/high
+	var/obj/item/stock_parts/fc = /obj/item/stock_parts/fc
 	/// How much power the cell consumes each process tick
 	var/usage_cost = 5 // With high-capacity cell it'd run out of charge in ~33 minutes
 	/// If TRUE - suit has ran out of charge and is currently affected by slowdown from it
@@ -294,8 +294,8 @@
 
 /obj/item/clothing/suit/armor/f13/power_armor/Initialize()
 	. = ..()
-	if(ispath(cell))
-		cell = new cell(src)
+	if(ispath(fc))
+		fc = new fc(src)
 
 /obj/item/clothing/suit/armor/f13/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
 	var/mob/living/carbon/human/H = user
@@ -342,7 +342,7 @@
 	var/mob/living/carbon/human/user = src.loc
 	if(!user || !ishuman(user) || (user.wear_suit != src))
 		return
-	if((!cell || !cell?.use(usage_cost) || (salvage_step > 1))) // No cell, ran out of charge or we're in the process of being salvaged
+	if((!fc|| !fc?.use(usage_cost) || (salvage_step > 1))) // No cell, ran out of charge or we're in the process of being salvaged
 		if(!no_power)
 			remove_power(user)
 		return
@@ -368,13 +368,13 @@
 	user.update_equipment_speed_mods()
 
 /obj/item/clothing/suit/armor/f13/power_armor/attackby(obj/item/I, mob/living/carbon/human/user, params)
-	if(powered && istype(I, /obj/item/stock_parts/cell))
-		if(cell)
-			to_chat(user, "<span class='warning'>\The [src] already has a cell installed.</span>")
+	if(powered && istype(I, /obj/item/stock_parts/fc))
+		if(fc)
+			to_chat(user, "<span class='warning'>\The [src] already has a core installed.</span>")
 			return
 		if(user.transferItemToLoc(I, src))
-			cell = I
-			to_chat(user, "<span class='notice'>You successfully install \the [cell] into [src].</span>")
+			fc = I
+			to_chat(user, "<span class='notice'>You successfully install \the [fc] into [src].</span>")
 		return
 
 	if(ispath(salvaged_type))
@@ -480,33 +480,33 @@
 
 /obj/item/clothing/suit/armor/f13/power_armor/attack_self(mob/living/user)
 	if(powered)
-		toggle_cell(user)
+		toggle_fc(user)
 	return ..()
 
 /obj/item/clothing/suit/armor/f13/power_armor/AltClick(mob/living/user)
 	if(!user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		return ..()
 	if(powered)
-		toggle_cell(user)
+		toggle_fc(user)
 	return
 
-/obj/item/clothing/suit/armor/f13/power_armor/proc/toggle_cell(mob/living/user)
-	if(cell)
-		user.visible_message("<span class='notice'>[user] removes \the [cell] from [src]!</span>", \
-			"<span class='notice'>You remove [cell].</span>")
-		cell.add_fingerprint(user)
-		user.put_in_hands(cell)
-		cell = null
+/obj/item/clothing/suit/armor/f13/power_armor/proc/toggle_fc(mob/living/user)
+	if(fc)
+		user.visible_message("<span class='notice'>[user] removes \the [fc] from [src]!</span>", \
+			"<span class='notice'>You remove [fc].</span>")
+		fc.add_fingerprint(user)
+		user.put_in_hands(fc)
+		fc = null
 	else
-		to_chat(user, "<span class='warning'>[src] has no cell installed.</span>")
+		to_chat(user, "<span class='warning'>[src] has no core installed.</span>")
 
 /obj/item/clothing/suit/armor/f13/power_armor/examine(mob/user)
 	. = ..()
 	if(powered && (in_range(src, user) || isobserver(user)))
-		if(cell)
-			. += "The power meter shows [round(cell.percent(), 0.1)]% charge remaining."
+		if(fc)
+//			. += "The power meter shows [round(fc.percent(), 0.1)]% charge remaining."
 		else
-			. += "The power cell slot is currently empty."
+			. += "The power core slot is currently empty."
 	if(ispath(salvaged_type))
 		. += salvage_hint()
 
@@ -529,8 +529,8 @@
 		return
 	if(!powered)
 		return
-	if(cell)
-		cell.emp_act(severity)
+	if(fc)
+		fc.emp_act(severity)
 	if(!emped)
 		if(isliving(loc))
 			var/mob/living/L = loc
@@ -600,8 +600,8 @@
 //////
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/Knightcommander
-	name = "Knight-Commander's T-45d Power Armour"
-	desc = "A classic set of T-45d Power Armour only to be used in armed combat, it signifies the Knight-Commander and their place in the Brotherhood. A leader, and a beacon of structure in a place where chaos reigns. All must rally to his call, for he is the Knight-Commander  and your safety is his duty."
+	name = "Knight-Commander's Midwestern power armor"
+	desc = "A lightly decorated set of Midwestern power armor, it signifies the Knight-Commander and their place in the Brotherhood. A leader, and a beacon of structure in a place where chaos reigns. All must rally to their call, for they are the Knight-Commander and your safety is their duty."
 	icon_state = "t45dkc"
 	item_state = "t45dkc"
 	slowdown = 0.16
@@ -637,7 +637,7 @@
 	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 32, "bomb" = 64, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
 
 /obj/item/clothing/suit/armor/f13/power_armor/midwest
-	name = "Midwestern T-51b power armor"
+	name = "Midwestern power armor"
 	desc = "This set of power armor belongs to the Midwestern branch of the Brotherhood of Steel."
 	icon_state = "midwestgrey_pa"
 	item_state = "midwestgrey_pa"
@@ -646,7 +646,7 @@
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/midwest
 
 /obj/item/clothing/suit/armor/f13/power_armor/midwest/hardened
-	name = "Hardened midwestern  T-51b power armor"
+	name = "Midwestern advanced power armor"
 	desc = "This set of power armor belongs to the Midwestern branch of the Brotherhood of Steel. This particular one has gone through a chemical hardening process, increasing its armor capabilities."
 	icon_state = "midwestpa"
 	item_state = "midwestpa"

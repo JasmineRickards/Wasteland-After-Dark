@@ -38,7 +38,7 @@
 			wounded_part.heal_damage(10, 10)//Does this even work? AAAAAAAAAAAAAAAAA Original .heal_damage(125, 125)
 	..()
 	if(M.health < 0)					//Functions as epinephrine.
-		M.adjustToxLoss(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
+//		M.adjustToxLoss(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.adjustBruteLoss(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.adjustFireLoss(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.AdjustStun(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
@@ -97,6 +97,7 @@
 	M.AdjustStun(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 	M.AdjustKnockdown(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 	M.adjustStaminaLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustOxyLoss(-1*REAGENTS_EFFECT_MULTIPLIER, 0)
 	..()
 
 // ---------------------------
@@ -124,8 +125,11 @@
 					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "betrayed caesar", /datum/mood_event/betrayed_caesar, name)
 
 /datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
+	if(M.reagents.has_reagent(/datum/reagent/medicine/medx))
+		M.reagents.remove_reagent(/datum/reagent/medicine/medx, 15) //Removes 15u of Med-X if processing Superstims.
+		to_chat(M, "<span class='warning'>The Med-X And Superstim Fluid in your blood reacts violently!</span>")
 	if(M.health < 0)					//Functions as epinephrine.
-		M.adjustToxLoss(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
+//		M.adjustToxLoss(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.adjustBruteLoss(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.adjustFireLoss(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.AdjustStun(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
@@ -269,7 +273,7 @@
 	reagent_state = LIQUID
 	color ="#A9FBFB"
 	taste_description = "bitterness"
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM //in between powder/stimpaks and poultice/superstims?
+	metabolization_rate = 0.21 * REAGENTS_METABOLISM //in between powder/stimpaks and poultice/superstims?
 	overdose_threshold = 31
 	var/heal_factor = -5 //Subtractive multiplier if you do not have the perk.
 	var/heal_factor_perk = -5.5 //Multiplier if you have the right perk.
@@ -311,7 +315,7 @@
 	reagent_state = SOLID
 	color = "#A9FBFB"
 	taste_description = "bitterness"
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	metabolization_rate = 0.2 * REAGENTS_METABOLISM
 	overdose_threshold = 30
 	var/heal_factor = -2 //Subtractive multiplier if you do not have the perk.
 	var/heal_factor_perk = -2.2 //Multiplier if you have the right perk.
@@ -352,6 +356,8 @@
 	description = "Restores limb condition and heals rapidly."
 	color = "#C8A5DC"
 	overdose_threshold = 20
+	heal_factor = -2
+	heal_factor_perk = -2.2
 	heal_factor = -3.0
 	heal_factor_perk = -3.5
 

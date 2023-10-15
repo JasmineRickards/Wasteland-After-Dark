@@ -1,89 +1,5 @@
 /* FEV diseases */
 // Main code
-/datum/disease/transformation/mutant
-	name = "Forced Evolutionary Virus"
-	cure_text = "mutadone."
-	cures = list(/datum/reagent/medicine/mutadone)
-	cure_chance = 5 // Good luck
-	stage_prob = 10
-	agent = "FEV-I toxin strain" // The unstable one.
-	desc = "A megavirus, with a protein sheath reinforced by ionized hydrogen. This virus is capable of mutating the affected into something horrifying..."
-	severity = DISEASE_SEVERITY_BIOHAZARD
-	visibility_flags = NONE
-	stage1 = list()
-	stage2 = list()
-	stage3 = list()
-	stage4 = list()
-	stage5 = list("<span class='danger'>You don't feel like yourself anymore!</span>")
-	viable_mobtypes = list(/mob/living/carbon/human)
-	new_form = /mob/living/simple_animal/hostile/centaur
-	var/list/possible_forms = list(\
-		/mob/living/simple_animal/hostile/centaur/strong = 4,
-		/mob/living/simple_animal/hostile/abomination/weak = 3,
-		/mob/living/simple_animal/hostile/ghoul/glowing/strong = 2,
-		)
-
-/datum/disease/transformation/mutant/do_disease_transformation(mob/living/affected_mob)
-	new_form = pickweight(possible_forms)
-	if(!ispath(new_form, /mob/living/carbon)) // If you've become simple_mob - you can't go and be all friendly to those around you!
-		to_chat(affected_mob, "<big><span class='warning'><b>You've become something entirely different! You are being controlled only by your hunger and desire to kill!</b></span></big>")
-	. = ..()
-
-// FEV - I
-/datum/disease/transformation/mutant/unstable/stage_act()
-	..()
-
-	affected_mob.adjustCloneLoss(-4,0) // Don't die while you are mutating.
-	switch(stage)
-		if(2)
-			if (prob(8))
-				to_chat(affected_mob, "<span class='danger'>You feel weird...</span>")
-		if(3)
-			if (prob(12))
-				to_chat(affected_mob, "<span class='danger'>Your skin twitches...</span>")
-				affected_mob.Jitter(3)
-		if(4)
-			if (prob(20))
-				to_chat(affected_mob, "<span class='danger'>The pain is unbearable!</span>")
-				affected_mob.emote("cry")
-			if (prob(15))
-				to_chat(affected_mob, "<span class='danger'>Your skin begins to shift, hurting like hell!</span>")
-				affected_mob.emote("scream")
-				affected_mob.Jitter(4)
-			if (prob(6))
-				to_chat(affected_mob, "<span class='danger'>Your body shuts down for a moment!</span>")
-				affected_mob.Unconscious(10)
-
-// FEV - II
-/datum/disease/transformation/mutant/super
-	agent = "FEV-II toxin strain" // The unstable one.
-	desc = "A megavirus, with a protein sheath reinforced by ionized hydrogen. This variant has been mutated by radiation and will turn the affected person into something less horrifying."
-	new_form = /mob/living/carbon/human/species/smutant
-	possible_forms = list(/mob/living/carbon/human/species/smutant = 1)
-	stage5 = list("<span class='reallybig hypnophrase'>Simple! Efficient! Glorious!</span>")
-
-/datum/disease/transformation/mutant/super/stage_act()
-	..()
-
-	switch(stage)
-		if(2)
-			if (prob(8))
-				to_chat(affected_mob, "<span class='danger'>You feel weird...</span>")
-		if(3)
-			if (prob(12))
-				to_chat(affected_mob, "<span class='danger'>Your skin twitches...</span>")
-				affected_mob.Jitter(3)
-		if(4)
-			if (prob(20))
-				to_chat(affected_mob, "<span class='danger'>The pain is unbearable!</span>")
-				affected_mob.emote("scream")
-			if (prob(15))
-				to_chat(affected_mob, "<span class='warning'>Your skin begins to shift, it hurts, but only for a moment..?</span>")
-				affected_mob.emote("cry")
-			if (prob(5))
-				to_chat(affected_mob, "<span class='notice'>Simple, efficient, glorious...</span>")
-				var/datum/component/mood/mood = affected_mob.GetComponent(/datum/component/mood)
-				mood.setSanity(SANITY_INSANE) // You're happy, aren't you?
 
 // FEV - Curling 13
 /datum/disease/curling_thirteen
@@ -97,7 +13,7 @@
 	viable_mobtypes = list(/mob/living/carbon/human)
 	cure_text = "Mutadone, Haloperidol and Penicillin"
 	cures = list(/datum/reagent/medicine/mutadone, /datum/reagent/medicine/haloperidol, /datum/reagent/medicine/spaceacillin)
-	cure_chance = 8 // If you can gather all three - you deserve a somewhat of a good chance.
+	cure_chance = 40 // If you can gather all three - you deserve a somewhat of a good chance.
 	severity = DISEASE_SEVERITY_BIOHAZARD
 
 /datum/disease/curling_thirteen/update_stage(new_stage)
@@ -174,3 +90,89 @@
 			if(prob(10))
 				affected_mob.adjustToxLoss(5)
 	return
+
+
+/datum/disease/fev1 //You die from mutations.
+	form = "Forced Evolutionary Virus"
+	name = "FEV-I Toxin Strain"
+	max_stages = 4
+	cures = list(/datum/reagent/medicine/mutadone)
+	cure_text = "Mutadone."
+	cure_chance = 40 // Yeah.
+	agent = "DNA"
+	desc = "A megavirus, with a protein sheath reinforced by ionized hydrogen. This virus is capable of mutating the affected into something horrifying..."
+	viable_mobtypes = list(/mob/living/carbon/human)
+	severity = DISEASE_SEVERITY_BIOHAZARD
+	spread_flags = DISEASE_SPREAD_NON_CONTAGIOUS
+	bypasses_immunity = FALSE // This can be cured!
+	var/FEV1trait = FALSE
+
+/datum/disease/fev1/stage_act()
+	..()
+	affected_mob.adjustCloneLoss(-4,0) // Don't die while you are mutating.
+	switch(stage)
+		if(2)
+			if (prob(8))
+				to_chat(affected_mob, "<span class='danger'>You feel weird...</span>")
+				affected_mob.easy_randmut(NEGATIVE+MINOR_NEGATIVE)
+		if(3)
+			if(prob(2))
+				affected_mob.easy_randmut(NEGATIVE+MINOR_NEGATIVE)
+		if(4)
+			if (prob(20))
+				to_chat(affected_mob, "<span class='danger'>The pain is unbearable!</span>")
+				affected_mob.emote("cry")
+			if (prob(15))
+				to_chat(affected_mob, "<span class='danger'>Your skin begins to shift, hurting like hell!</span>")
+				affected_mob.emote("scream")
+				affected_mob.Jitter(4)
+				affected_mob.add_quirk(/datum/quirk/fev)
+				affected_mob.easy_randmut(NEGATIVE+NEGATIVE)
+			if (prob(6))
+				to_chat(affected_mob, "<span class='danger'>Your body shuts down for a moment!</span>")
+				affected_mob.Unconscious(10)
+			if(!FEV1trait)
+				to_chat(affected_mob, "<span class='danger'>Your skin twitches and swells...</span>")
+				affected_mob.Jitter(3)
+				affected_mob.easy_randmut(NEGATIVE+MINOR_NEGATIVE)
+				FEV1trait = TRUE
+
+/datum/disease/fev2 //You die from mutations.
+	form = "Forced Evolutionary Virus"
+	name = "FEV-II Stable Strain"
+	max_stages = 4
+	cures = list(/datum/reagent/medicine/mutadone, /datum/reagent/medicine/haloperidol)
+	cure_text = "Mutadone."
+	cure_chance = 5 // Nonlethal.
+	agent = "DNA"
+	desc = "A megavirus, with a protein sheath reinforced by ionized hydrogen, which has been however, affected by radiation. This will mutate the host into something less... Horrifying."
+	viable_mobtypes = list(/mob/living/carbon/human)
+	severity = DISEASE_SEVERITY_BIOHAZARD
+	spread_flags = DISEASE_SPREAD_NON_CONTAGIOUS
+	bypasses_immunity = FALSE // This can be cured!
+	var/FEV2trait = FALSE
+
+/datum/disease/fev2/stage_act()
+	..()
+	affected_mob.adjustCloneLoss(-4,0) // Don't die while you are mutating.
+	switch(stage)
+		if(2)
+			if (prob(8))
+				to_chat(affected_mob, "<span class='danger'>You feel weird...</span>")
+				affected_mob.easy_randmut(NEGATIVE+MINOR_NEGATIVE)
+				affected_mob.emote("cough")
+		if(3)
+			if(prob(2))
+				to_chat(affected_mob, "<span class='danger'>Your skin hurts, and your insides burn!</span>")
+				affected_mob.adjustCloneLoss(2,0)
+				affected_mob.emote("cough")
+		if(4)
+			if(!FEV2trait)
+				to_chat(affected_mob, "<span class='reallybig hypnophrase'>Simple! Efficient! Glorious!</span>")
+				var/datum/component/mood/mood = affected_mob.GetComponent(/datum/component/mood)
+				mood.setSanity(SANITY_INSANE) // You're happy, aren't you?
+				affected_mob.add_quirk(/datum/quirk/fevII)
+				FEV2trait = TRUE //Stops spam
+				affected_mob.emote("screams")
+			if(prob(0.1))
+				to_chat(affected_mob, "<span class='danger'>You feel the lingering effects of the virus in your blood...</span>") //Warning that you're still able to infect others via blood to blood transmission

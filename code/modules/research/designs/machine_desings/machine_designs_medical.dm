@@ -58,6 +58,22 @@
 	build_path = /obj/item/circuitboard/machine/chem_master
 	category = list ("Medical Machinery")
 
+/datum/design/board/indusmutagensaltpeter
+	name = "Machine Design (Portable industrial botanical Dispenser Board)"
+	desc = "The circuit board for a portable chem dispenser."
+	id = "botanicalindus"
+	build_path = /obj/item/circuitboard/machine/indusmutagensaltpeter
+	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_ENGINEERING
+	category = list ("Hydroponics Machinery")
+
+/datum/design/board/induschem
+	name = "Machine Design (Portable industrial botanical Dispenser Board)"
+	desc = "The circuit board for a portable chem dispenser."
+	id = "medicalindus"
+	build_path = /obj/item/circuitboard/machine/induschem
+	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_ENGINEERING
+	category = list ("Medical Machinery")
+
 /datum/design/board/chem_heater
 	name = "Machine Design (Chemical Heater Board)"
 	desc = "The circuit board for a chemical heater."

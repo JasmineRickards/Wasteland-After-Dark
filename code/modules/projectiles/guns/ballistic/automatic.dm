@@ -802,7 +802,24 @@
 	suppressor_x_offset = 26
 	suppressor_y_offset = 28
 	extra_damage = -3
-
+	
+//Khan Police rifle			Keywords: KHANS, 5.56mm, Semi-auto, 20 (10-50) round magazine	
+/obj/item/gun/ballistic/automatic/marksman/policerifle_khans
+	name = "Kit Bashed Rifle"
+	desc = "A pre-war Rifle that has been constantly repaired and rebuilt by local Khan gunsmiths. Somehow, you feel safer holding this."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_prefix = "assault_carbine"
+	icon_state = "rifle-police"
+	item_state = "assault_carbine"
+	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
+	spread = 1.1
+	fire_delay = 2.5
+	extra_damage = 6
+	can_suppress = FALSE
+	can_scope = TRUE
+	zoomable = FALSE
 
 //Police rifle			Keywords: OASIS, 5.56mm, Semi-auto, 20 (10-50) round magazine
 /obj/item/gun/ballistic/automatic/marksman/policerifle

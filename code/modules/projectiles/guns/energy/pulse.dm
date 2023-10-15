@@ -77,3 +77,7 @@
 	icon_state = "m1911"
 	item_state = "gun"
 	cell_type = "/obj/item/stock_parts/cell/infinite"
+
+/obj/item/gun/energy/pulse/pistol/m1911/stranger
+	name = "\improper M1911"
+	desc = "A familiar firearm with none of the familiar components"

@@ -48,7 +48,7 @@
 	description = "You aren't meant to see this..?"
 	color = "#00FF00"
 	toxpwr = 0
-	overdose_threshold = 1 // So, someone drinking ANY will FOR SURE get overdosed. Lowered from 18.
+	overdose_threshold = 1 // FEV Fixed.
 	taste_description = "horrific agony"
 	taste_mult = 0.9
 	var/datum/disease/fev_disease = null
@@ -61,7 +61,7 @@
 /datum/reagent/toxin/FEV_solution/one
 	name = "Unstable FEV solution"
 	description = "An incredibly lethal strain of the Forced Evolutionary Virus. Consume at your own risk."
-//	fev_disease = /datum/disease/transformation/mutant/unstable
+	fev_disease = /datum/disease/fev1
 
 /datum/reagent/toxin/FEV_solution/one/reaction_mob(mob/living/carbon/M, method=TOUCH, reac_volume)
 	if(!..())
@@ -83,21 +83,13 @@
 /datum/reagent/toxin/FEV_solution/two
 	name = "FEV-II solution"
 	description = "A version of FEV that has been modified by radiation. A biological dead-end, harmless if the subject is not exposed to radiation."
-//	fev_disease = /datum/disease/transformation/mutant/super
+	fev_disease = /datum/disease/fev2
 
 /datum/reagent/toxin/FEV_solution/two/overdose_process(mob/living/carbon/C)
-	if(C.radiation < RAD_MOB_SAFE)
-		C.reagents.remove_reagent(src.type,10) // Clean up
-		return ..() // Infect with disease
-	else // You fucked up
-		if(prob(5))
-			to_chat(C, "<span class='danger'>IT BURNS!</span>")
-			C.emote("scream")
-			C.adjustFireLoss(10,0)
-		C.adjustFireLoss(5,0)
-		C.apply_effect(10,EFFECT_IRRADIATE,0) // Now the only thing you are turning into is a ghoul
-		C.Jitter(2)
-	return
+	C.adjustFireLoss(5,0)
+	C.apply_effect(1,EFFECT_IRRADIATE,0) //FEV-II is radioactive.
+	C.Jitter(2)
+	return ..()
 
 //FEV - Curling 13: The murderous type
 /datum/reagent/toxin/FEV_solution/curling
@@ -114,8 +106,8 @@
 		return
 
 /datum/reagent/toxin/mutagen
-	name = "Unstable mutagen"
-	description = "Might cause unpredictable mutations. Keep away from children."
+	name = "Diluted Forced Evolutionary Virus"
+	description = "Causes unpredictable mutations in plants, animals and people."
 	color = "#00FF00"
 	toxpwr = 0
 	taste_description = "slime"
@@ -195,8 +187,9 @@
 /datum/reagent/toxin/lexorin/on_mob_life(mob/living/carbon/C)
 	. = TRUE
 
-	if(HAS_TRAIT(C, TRAIT_NOBREATH))
+	/*if(HAS_TRAIT(C, TRAIT_NOBREATH))
 		. = FALSE
+	*/
 
 	if(.)
 		C.adjustOxyLoss(5, 0)

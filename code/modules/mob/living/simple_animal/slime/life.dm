@@ -113,7 +113,7 @@
 	adjust_bodytemperature(adjust_body_temperature(bodytemperature, loc_temp, 1))
 
 	//Account for massive pressure differences
-
+/*
 	if(bodytemperature < (T0C + 5)) // start calculating temperature damage etc
 		if(bodytemperature <= (T0C - 40)) // stun temperature
 			Tempstun = 1
@@ -126,7 +126,7 @@
 
 	else
 		Tempstun = 0
-
+*/
 	if(stat != DEAD)
 		var/bz_percentage = environment.total_moles() ? (environment.get_moles(GAS_BZ) / environment.total_moles()) : 0
 		var/stasis = (bz_percentage >= 0.05 && bodytemperature < (T0C + 100)) || force_stasis

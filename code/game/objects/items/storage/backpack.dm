@@ -113,6 +113,12 @@
 	item_state = "holdingsat"
 	species_exception = list(/datum/species/angel)
 
+/obj/item/storage/backpack/holding/satchel/stranger
+	name = "satchel of holding"
+	desc = "A satchel that opens into a localized pocket of Blue Space."
+	icon_state = "satchel-trekker"
+	item_state = "satchel-trekker"
+
 /obj/item/storage/backpack/holding/duffel
 	name = "duffel bag of holding"
 	desc = "A duffel bag that opens into a localized pocket of Blue Space."
@@ -433,6 +439,7 @@
 	new /obj/item/stack/sticky_tape/surgical(src)
 	new /obj/item/stack/medical/bone_gel(src)
 	new /obj/item/stack/medical/bone_gel(src)
+	new /obj/item/defibrillator/loaded(src)
 
 /obj/item/storage/backpack/duffelbag/sec
 	name = "security duffel bag"

@@ -1160,3 +1160,11 @@
 	name = "Bone Dancer traditions"
 	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/bone/lightarmour,/datum/crafting_recipe/tribalwar/bone/armour, /datum/crafting_recipe/tribalwar/bone/heavyarmour,
 								/datum/crafting_recipe/tribalwar/bone/garb,/datum/crafting_recipe/tribalwar/bone/helmet)
+
+/obj/item/book/granter/trait/legionalchemy
+	name = "Teachings of Mars"
+	desc = "A crude, handmade book containing the essentials on how to work alchemy tables. The cover is stamped with a brass bull."
+	oneuse = TRUE
+	granted_trait = TRAIT_MARS_TEACH
+	traitname = "legion medicine"
+	remarks = list("Sapere aude.", "Ad astra per aspera.", "Mars favors the bold.", "Ars longa, vita brevis.", "Vivamus, moriendum est.", "Sic gorgiamus allos subjectatos nunc.", "Aere perennius.", "Bis dat qui cito dat.", "Finis coronat opus.", "Nullum magnum ingenium sine mixture dementia fuit.", "Nemo mortalium omnibus horis sapit.")

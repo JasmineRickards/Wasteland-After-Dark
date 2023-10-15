@@ -13,6 +13,9 @@ here's a tip, go search DEFINES/access.dm
 /datum/job/bighorn
 	exp_type = EXP_TYPE_BIGHORN
 	faction = FACTION_BIGHORN
+	forbids = "Town taboos: Unlawful murder and conflict."
+	enforces = "Town rules: Obey the Sheriff and local laws, do not start a conflict with factions unless absolutely neccessary. Pay your technology tithes to the Brotherhood and assist them as reasonably expected."
+
 
 /*
 Mayor
