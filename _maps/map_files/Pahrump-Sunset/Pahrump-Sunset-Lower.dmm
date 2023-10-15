@@ -1734,10 +1734,6 @@
 	icon_state = "reddirtyfull"
 	},
 /area/f13/brotherhood/operations)
-"bfp" = (
-/obj/machinery/mineral/wasteland_vendor/bank,
-/turf/open/floor/plasteel/dark,
-/area/f13/brotherhood)
 "bgi" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 9
@@ -78157,7 +78153,7 @@ pVQ
 pVQ
 cRa
 oVq
-bfp
+onW
 onW
 onW
 acU
