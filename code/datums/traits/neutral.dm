@@ -54,8 +54,8 @@
 	var/mob/living/carbon/human/mob_tar = quirk_holder
 	mob_tar.dna.species.punchdamagelow += 10 //Fear.
 	mob_tar.dna.species.punchdamagehigh += 20  //Your head is exploding.
-	mob_tar.maxHealth += 10 //Mutie rage.
-	mob_tar.health += 10
+	mob_tar.maxHealth += 15 //Mutie rage.
+	mob_tar.health += 15
 	mob_tar.resize += 0.25
 	mob_tar.update_transform()
 	to_chat(mob_tar, "<span class='danger'>You feel extremely strong!</span>")
