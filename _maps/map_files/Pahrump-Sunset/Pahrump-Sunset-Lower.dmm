@@ -16231,37 +16231,6 @@
 /obj/effect/spawner/lootdrop/f13/armor/clothes,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel/bighorn)
-"mVc" = (
-/obj/structure/flora/rock/jungle{
-	density = 1
-	},
-/obj/structure/flora/grass/jungle/b,
-/obj/structure/flora/junglebush/b,
-/obj/structure/flora/ausbushes/ppflowers{
-	pixel_x = -6
-	},
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/window/reinforced{
-	color = "#3e3d42";
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	color = "#3e3d42"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/airlock/grunge{
-	name = "Knight Commander's Office";
-	req_access_txt = "120"
-	},
-/obj/machinery/door/airlock/grunge{
-	name = "Knight Commander's Office";
-	req_access_txt = "120"
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/open/water,
-/area/f13/brotherhood)
 "mVE" = (
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
@@ -16569,26 +16538,6 @@
 /obj/structure/barricade/wooden/planks,
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
-"nrx" = (
-/obj/structure/flora/rock/jungle{
-	density = 1
-	},
-/obj/structure/flora/grass/jungle/b,
-/obj/structure/flora/junglebush/b,
-/obj/structure/flora/ausbushes/ppflowers{
-	pixel_x = -6
-	},
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/window/reinforced{
-	color = "#3e3d42"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/airlock/grunge{
-	name = "Knight Commander's Office";
-	req_access_txt = "120"
-	},
-/turf/open/water,
-/area/f13/brotherhood)
 "ntC" = (
 /obj/machinery/light/small{
 	light_color = "#ad1b1b"
@@ -25210,7 +25159,7 @@
 	req_access_txt = "120"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/indestructible/ground/outside/desert,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood/operations)
 "wCO" = (
 /obj/structure/window/reinforced/spawner,
@@ -79956,7 +79905,7 @@ aZE
 pna
 gra
 odV
-nrx
+tHm
 vdQ
 bTe
 qVd
@@ -80213,7 +80162,7 @@ odV
 dpj
 odV
 xyl
-nrx
+tHm
 rWA
 bTe
 rWA
@@ -80470,7 +80419,7 @@ nZR
 ivn
 lld
 oVq
-mVc
+rSw
 mEL
 hUj
 mEL
