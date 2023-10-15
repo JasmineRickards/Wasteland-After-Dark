@@ -6115,10 +6115,7 @@
 	pixel_x = -32
 	},
 /obj/structure/rack,
-/obj/item/storage/firstaid/brute{
-	bound_x = 5
-	},
-/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/tactical,
 /turf/open/floor/plasteel/dark,
 /area/f13/brotherhood/medical)
 "ciX" = (
@@ -15234,7 +15231,7 @@
 "lOU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack,
-/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/tactical,
 /turf/open/floor/plasteel/dark,
 /area/f13/brotherhood/medical)
 "lOZ" = (
