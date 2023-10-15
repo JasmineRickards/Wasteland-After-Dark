@@ -24,20 +24,20 @@
 	mob_tar.dna.species.punchdamagelow += 6 //Larger Muscle-mass
 	mob_tar.dna.species.punchdamagehigh += 8 //But not too large. Reserved for FEV-II
 	quirk_holder.become_mega_nearsighted(ROUNDSTART_TRAIT) //Custom proc to make essentially welder-blindness.
-	mob_tar.maxHealth += 30 //These guys are tanky. Almost blind, and slower.
-	mob_tar.health += 30
-	mob_tar.resize += 0.15
+	mob_tar.maxHealth += 5 //These guys are tanky. Almost blind, and slower.
+	mob_tar.health += 5
+	mob_tar.resize += 0.1
 	mob_tar.update_transform()
 	to_chat(mob_tar, "<span class='notice'>You feel far stronger, and a tad dumber...</span>")
 
 /datum/quirk/fev/remove()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
 	mob_tar.remove_mega_nearsighted()
-	mob_tar.maxHealth -= 30 //Mutie rage.
-	mob_tar.health -= 30
+	mob_tar.maxHealth -= 5 //Mutie rage.
+	mob_tar.health -= 5
 	mob_tar.dna.species.punchdamagelow -= 6
 	mob_tar.dna.species.punchdamagehigh -= 8 
-	mob_tar.resize -= 0.15
+	mob_tar.resize -= 0.1
 	mob_tar.update_transform()
 
 /datum/quirk/fevII //FRANK FUCKING HORRIGAAAN
@@ -54,9 +54,9 @@
 	var/mob/living/carbon/human/mob_tar = quirk_holder
 	mob_tar.dna.species.punchdamagelow += 10 //Fear.
 	mob_tar.dna.species.punchdamagehigh += 20  //Your head is exploding.
-	mob_tar.maxHealth += 70 //Mutie rage.
-	mob_tar.health += 70
-	mob_tar.resize += 0.25
+	mob_tar.maxHealth += 15 //Mutie rage.
+	mob_tar.health += 15
+	mob_tar.resize += 0.2
 	mob_tar.update_transform()
 	to_chat(mob_tar, "<span class='danger'>You feel extremely strong!</span>")
 
@@ -64,9 +64,9 @@
 	var/mob/living/carbon/human/mob_tar = quirk_holder
 	mob_tar.dna.species.punchdamagelow -= 10
 	mob_tar.dna.species.punchdamagehigh -= 20 //Prevents stacking
-	mob_tar.maxHealth -= 70 //Mutie rage.
-	mob_tar.health -= 70
-	mob_tar.resize -= 0.25
+	mob_tar.maxHealth -= 15 //Mutie rage.
+	mob_tar.health -= 15
+	mob_tar.resize -= 0.2
 	mob_tar.update_transform()
 
 /datum/quirk/snob
