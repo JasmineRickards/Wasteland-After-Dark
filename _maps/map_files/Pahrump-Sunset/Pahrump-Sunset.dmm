@@ -30913,17 +30913,6 @@
 	icon_state = "greenrustychess"
 	},
 /area/f13/building/massfusion)
-"hdm" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/f13{
-	icon_state = "white"
-	},
-/area/f13/brotherhood)
 "hee" = (
 /obj/structure/punching_bag,
 /obj/effect/decal/cleanable/dirt,
@@ -57193,14 +57182,6 @@
 	icon_state = "housewood4-broken"
 	},
 /area/f13/village)
-"xqw" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/open/floor/f13{
-	icon_state = "white"
-	},
-/area/f13/brotherhood)
 "xqx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -114423,8 +114404,8 @@ aae
 aae
 rcg
 urG
-dvS
-hdm
+aGi
+urG
 rcg
 cBt
 sTq
@@ -114680,7 +114661,7 @@ aae
 aae
 rcg
 aGi
-xqw
+aGi
 aGi
 buS
 qxy
