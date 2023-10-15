@@ -390,7 +390,6 @@
 	icon_state = "boarded";
 	opacity = 1
 	},
-/obj/structure/timeddoor/onetwozerominutes,
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/tunnel)
 "du" = (
@@ -693,13 +692,6 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
 /turf/open/floor/f13/wood,
 /area/f13/building)
-"fS" = (
-/obj/effect/decal/remains/human,
-/obj/structure/timeddoor/sixtyminute,
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "horizontalinnermain0"
-	},
-/area/f13/tunnel)
 "fT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
@@ -1310,7 +1302,6 @@
 	icon_state = "boarded";
 	opacity = 1
 	},
-/obj/structure/timeddoor/onetwozerominutes,
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/tunnel)
 "jS" = (
@@ -1949,10 +1940,6 @@
 /obj/structure/closet/crate/grave,
 /turf/open/indestructible/ground/outside/snow,
 /area/f13/mountain_area)
-"oF" = (
-/obj/structure/timeddoor/sixtyminute,
-/turf/closed/wall/f13/tunnel,
-/area/f13/tunnel)
 "oG" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/wood_fancy,
@@ -2500,12 +2487,6 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/enclave)
-"sn" = (
-/obj/structure/timeddoor/sixtyminute,
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "horizontalinnermain0"
-	},
-/area/f13/tunnel)
 "sp" = (
 /obj/effect/decal/marking{
 	icon_state = "doubleverticalcorroded"
@@ -3066,7 +3047,6 @@
 	icon_state = "boarded";
 	opacity = 1
 	},
-/obj/structure/timeddoor/onetwozerominutes,
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/tunnel)
 "vS" = (
@@ -4619,15 +4599,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/enclave)
-"Hn" = (
-/obj/effect/decal/marking{
-	icon_state = "doublevertical"
-	},
-/obj/structure/timeddoor/sixtyminute,
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "horizontalinnermain0"
-	},
-/area/f13/tunnel)
 "Hr" = (
 /obj/machinery/light/floor,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
@@ -5533,7 +5504,6 @@
 	icon_state = "boarded";
 	opacity = 1
 	},
-/obj/structure/timeddoor/onetwozerominutes,
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/tunnel)
 "Oq" = (
@@ -6825,6 +6795,7 @@
 "Ys" = (
 /obj/structure/table/glass,
 /obj/item/pickaxe,
+/obj/item/storage/box/stockparts/deluxe,
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,
 /area/f13/enclave)
 "Yt" = (
@@ -68872,7 +68843,7 @@ Hc
 lZ
 ov
 WS
-oF
+dE
 fa
 dE
 dE
@@ -69129,7 +69100,7 @@ Ry
 Ry
 Ry
 iH
-sn
+ie
 ie
 ie
 ie
@@ -69386,7 +69357,7 @@ Ry
 ic
 jo
 to
-sn
+ie
 ie
 ie
 ZD
@@ -69643,7 +69614,7 @@ Ry
 jo
 jo
 to
-fS
+ZD
 ie
 ie
 ie
@@ -69900,7 +69871,7 @@ Ry
 gd
 Ry
 ex
-sn
+ie
 ie
 ie
 ie
@@ -70157,7 +70128,7 @@ mV
 Vg
 rt
 mK
-Hn
+pd
 pd
 sp
 vl
@@ -70414,7 +70385,7 @@ Ry
 GS
 Ry
 iH
-sn
+ie
 ie
 ie
 ie
@@ -70671,7 +70642,7 @@ Ry
 jo
 jo
 to
-sn
+ie
 ie
 ie
 ie
@@ -70928,7 +70899,7 @@ Ry
 Ry
 jo
 to
-sn
+ie
 ie
 ZD
 ie
@@ -71185,7 +71156,7 @@ Ry
 Ry
 Ry
 ex
-sn
+ie
 ie
 ie
 ie
@@ -71442,7 +71413,7 @@ wF
 mD
 Lb
 WS
-oF
+dE
 fa
 dE
 dE

@@ -546,6 +546,7 @@
 	color = "#c1b6a5"
 	},
 /obj/machinery/light/floor,
+/obj/item/storage/box/stockparts/deluxe,
 /turf/open/floor/plasteel/darkpurple,
 /area/f13/brotherhood/rnd)
 "afn" = (
@@ -19449,6 +19450,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/brotherhood/reactor)
 "qqi" = (
@@ -19715,6 +19719,7 @@
 /obj/structure/window/reinforced/spawner{
 	dir = 8
 	},
+/obj/item/storage/box/stockparts/deluxe,
 /turf/open/floor/f13{
 	icon_state = "darkdirtysolid"
 	},
@@ -20722,6 +20727,15 @@
 	},
 /turf/open/floor/carpet/black,
 /area/f13/brotherhood/offices2nd)
+"rJA" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
+/area/f13/brotherhood/reactor)
 "rJI" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
@@ -22763,6 +22777,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,
 /area/f13/brotherhood/leisure)
+"tNh" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
+/area/f13/brotherhood/reactor)
 "tNq" = (
 /obj/structure/bookcase/random/reference{
 	desc = "A collection of scrolls, archives and relics.";
@@ -23651,6 +23674,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/water,
 /area/f13/brotherhood)
+"uQA" = (
+/obj/machinery/power/smes/engineering,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
+/area/f13/brotherhood/reactor)
 "uQM" = (
 /turf/closed/indestructible/f13/matrix,
 /area/f13/brotherhood)
@@ -26481,6 +26514,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -83008,8 +83044,8 @@ aaa
 aaa
 hai
 qqb
-miU
-msJ
+tNh
+tNh
 wtC
 wtC
 utv
@@ -83266,7 +83302,7 @@ aaa
 hai
 ybX
 qHw
-qju
+rJA
 msJ
 fuQ
 hai
@@ -83778,7 +83814,7 @@ aae
 aae
 aaa
 hai
-uqG
+uQA
 qHw
 qju
 otJ
