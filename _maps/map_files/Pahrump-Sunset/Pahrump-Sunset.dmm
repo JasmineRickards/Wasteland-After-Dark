@@ -469,10 +469,6 @@
 	icon_state = "greenrustychess"
 	},
 /area/f13/building/massfusion)
-"abI" = (
-/obj/effect/landmark/start/f13/khan_senior,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "abJ" = (
 /obj/structure/closet/firecloset,
 /obj/item/clothing/suit/fire,
@@ -39822,10 +39818,6 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/building/massfusion)
-"mFC" = (
-/obj/effect/landmark/start/f13/khan_smith,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "mFG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/melee/onehanded/machete/training,
@@ -48207,6 +48199,8 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/machinery/fc_charger,
+/obj/item/stock_parts/fc/high/empty,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/hospital)
 "rSZ" = (
@@ -98019,7 +98013,7 @@ aaa
 aaa
 eLP
 nzb
-abI
+aaB
 aaB
 aaB
 aaB
@@ -98276,7 +98270,7 @@ aaa
 aaa
 eLP
 nzb
-mFC
+aaB
 aaB
 aaB
 aaB
