@@ -17663,7 +17663,7 @@
 	},
 /area/f13/building/nanotrasen)
 "bjJ" = (
-/obj/item/flag/bighorn,
+/obj/item/flag/bos,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalrightborderright1"
 	},
@@ -21628,6 +21628,10 @@
 	icon_state = "outermaincornerouter"
 	},
 /area/f13/wasteland/bighorn)
+"bXD" = (
+/obj/item/flag/bos,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/museum)
 "bXI" = (
 /obj/structure/railing/corner{
 	dir = 8
@@ -26750,6 +26754,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/building/hospital)
+"eBc" = (
+/obj/item/flag/bos,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft2bottom"
+	},
+/area/f13/wasteland/bighorn)
 "eBh" = (
 /obj/structure/chair/office/dark{
 	dir = 8
@@ -31093,6 +31103,10 @@
 	icon_state = "horizontalinnermain0"
 	},
 /area/f13/wasteland/west)
+"hlM" = (
+/obj/item/flag/bos,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland/museum)
 "hlS" = (
 /obj/structure/fence/corner{
 	dir = 4
@@ -36745,6 +36759,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vault1,
 /area/f13/building/museum)
+"kRF" = (
+/obj/item/flag/bos,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 8;
+	icon_state = "outerpavementcorner"
+	},
+/area/f13/wasteland/west)
 "kRO" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -42289,6 +42310,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/r_wall/rust,
 /area/f13/building)
+"oje" = (
+/obj/item/flag/bos,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland/bighorn)
 "ojo" = (
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -49200,6 +49225,13 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/open/indestructible/ground/outside/savannah,
 /area/f13/wasteland/valley)
+"sxR" = (
+/obj/item/flag/bos,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 1;
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland/west)
 "syG" = (
 /obj/machinery/computer/operating,
 /obj/machinery/light,
@@ -49947,6 +49979,12 @@
 	icon_state = "verticalinnermain0"
 	},
 /area/f13/wasteland/bighornbunker)
+"sXN" = (
+/obj/item/flag/bos,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontaloutermain2"
+	},
+/area/f13/wasteland/bighorn)
 "sXS" = (
 /obj/structure/barricade/wooden,
 /turf/open/indestructible/ground/outside/road{
@@ -55880,6 +55918,13 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland/valley)
+"wAT" = (
+/obj/item/flag/bos,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 1;
+	icon_state = "outerpavement"
+	},
+/area/f13/wasteland/bighorn)
 "wBe" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 8;
@@ -62513,7 +62558,7 @@ diz
 vmp
 byd
 tDv
-diz
+oje
 uMa
 diz
 diz
@@ -63541,7 +63586,7 @@ uMa
 diz
 qUE
 qfH
-diz
+oje
 sUG
 vDr
 fsG
@@ -72528,7 +72573,7 @@ bUE
 sOS
 bWl
 upn
-sOS
+eBc
 kYK
 kYK
 nmx
@@ -73535,7 +73580,7 @@ fMF
 fMF
 fMF
 fMF
-fMF
+bjJ
 fMF
 bqM
 fMF
@@ -77376,7 +77421,7 @@ tTV
 lKq
 uxj
 nzp
-jYk
+wAT
 ygj
 eus
 wOa
@@ -77644,7 +77689,7 @@ mig
 mig
 mig
 pat
-haK
+sXN
 qAk
 imF
 keR
@@ -78404,7 +78449,7 @@ ifg
 ifg
 ifg
 aod
-pak
+sxR
 ygj
 pZd
 anN
@@ -84052,7 +84097,7 @@ wEd
 wEd
 wEd
 wEd
-vtR
+kRF
 lWk
 lWk
 lWk
@@ -89973,7 +90018,7 @@ wEd
 wEd
 lPa
 wEd
-jns
+bXD
 bmH
 ksO
 nnD
@@ -91816,7 +91861,7 @@ jns
 jns
 kDp
 ksO
-nnD
+hlM
 nnD
 odm
 jns
@@ -93566,7 +93611,7 @@ rmP
 pMY
 dZL
 mpj
-jns
+bXD
 abP
 abP
 abP
@@ -99220,7 +99265,7 @@ rmP
 pMY
 dZL
 mpj
-jns
+bXD
 abP
 cOs
 kVQ
