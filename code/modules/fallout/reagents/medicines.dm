@@ -97,6 +97,7 @@
 	M.AdjustStun(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 	M.AdjustKnockdown(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 	M.adjustStaminaLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustOxyLoss(-1*REAGENTS_EFFECT_MULTIPLIER, 0)
 	..()
 
 // ---------------------------
