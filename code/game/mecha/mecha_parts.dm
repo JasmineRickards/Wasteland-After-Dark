@@ -220,6 +220,48 @@
 	desc = "A set of armor plates for the Durand. Built heavy to resist an incredible amount of brute force."
 	icon_state = "durand_armor"
 
+//////////// mw112mdd
+
+/obj/item/mecha_parts/chassis/mw112mdd
+	name = "\improper mw112mdd chassis"
+	construct_type = /datum/component/construction/unordered/mecha_chassis/mw112mdd
+
+/obj/item/mecha_parts/part/mw112mdd_torso
+	name = "\improper mw112mdd torso"
+	desc = "A torso part of mw112mdd. Contains power unit, processing core and life support systems within a robust protective frame."
+	icon_state = "mw112mdd_harness"
+
+/obj/item/mecha_parts/part/mw112mdd_head
+	name = "\improper mw112mdd head"
+	desc = "A mw112mdd head. Houses advanced surveillance and targeting sensors."
+	icon_state = "mw112mdd_head"
+
+/obj/item/mecha_parts/part/mw112mdd_left_arm
+	name = "\improper mw112mdd left arm"
+	desc = "A mw112mdd left arm. Data and power sockets are compatible with most exosuit tools and weapons."
+	icon_state = "mw112mdd_l_arm"
+
+/obj/item/mecha_parts/part/mw112mdd_right_arm
+	name = "\improper mw112mdd right arm"
+	desc = "A mw112mdd right arm. Data and power sockets are compatible with most exosuit tools and weapons."
+	icon_state = "mw112mdd_r_arm"
+
+/obj/item/mecha_parts/part/mw112mdd_left_leg
+	name = "\improper mw112mdd left leg"
+	desc = "A mw112mdd left leg."
+	icon_state = "mw112mdd_l_leg"
+
+/obj/item/mecha_parts/part/mw112mdd_right_leg
+	name = "\improper mw112mdd right leg"
+	desc = "A mw112mdd right leg."
+	icon_state = "mw112mdd_r_leg"
+
+/obj/item/mecha_parts/part/mw112mdd_armour
+	gender = PLURAL
+	name = "\improper mw112mdd armor plates"
+	desc = "A set of armor plates for the mw112mdd."
+	icon_state = "mw112mdd_armor"
+
 //////////// Marauder
 
 /obj/item/mecha_parts/chassis/marauder
@@ -357,6 +399,18 @@
 
 /obj/item/circuitboard/mecha/durand/main
 	name = "Durand Central Control module (Exosuit Board)"
+	icon_state = "mainboard"
+
+/obj/item/circuitboard/mecha/mw112mdd/peripherals
+	name = "mw112mdd Peripherals Control module (Exosuit Board)"
+	icon_state = "mcontroller"
+
+/obj/item/circuitboard/mecha/mw112mdd/targeting
+	name = "mw112mdd Weapon Control and Targeting module (Exosuit Board)"
+	icon_state = "mcontroller"
+
+/obj/item/circuitboard/mecha/mw112mdd/main
+	name = "mw112mdd Central Control module (Exosuit Board)"
 	icon_state = "mainboard"
 
 /obj/item/circuitboard/mecha/odysseus/peripherals
