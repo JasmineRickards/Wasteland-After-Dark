@@ -10320,11 +10320,6 @@
 /obj/structure/dresser,
 /turf/open/floor/wood/wood_common,
 /area/f13/city/bighorn)
-"tqq" = (
-/obj/structure/table,
-/obj/machinery/chem_dispenser/induschem,
-/turf/open/floor/plasteel/f13/vault_floor/white,
-/area/f13/building/hospital)
 "tqz" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -60018,7 +60013,7 @@ jWA
 jWA
 xAW
 lqO
-tqq
+aQV
 rRV
 szV
 lqO
