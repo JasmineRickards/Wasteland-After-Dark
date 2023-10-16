@@ -12,8 +12,11 @@
 	addiction_threshold = 25
 	value = REAGENT_VALUE_RARE
 	ghoulfriendly = TRUE
+	var/clot_rate = 0.25
+	/// If we have multiple bleeding wounds, we count the number of bleeding wounds, then multiply the clot rate by this^(n) before applying it to each cut, so more cuts = less clotting per cut (though still more total clotting)
+	var/clot_coeff_per_wound = 0.9
 
-/datum/reagent/medicine/stimpak/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
+/datum/reagent/medicine/stimpak/reaction_mob(mob/living/carbon/M, method=TOUCH, reac_volume, show_message = 1)
 	if(iscarbon(M) && M.stat != DEAD)
 		if(method in list(INGEST, VAPOR))
 			M.adjustToxLoss(3.75*reac_volume*REAGENTS_EFFECT_MULTIPLIER) //increased from 0.5*reac_volume, which was amusingly low since stimpak heals toxins. now a pill at safe max crits and then heals back up to low health within a few seconds
@@ -21,7 +24,7 @@
 				to_chat(M, "<span class='warning'>You don't feel so good...</span>")
 	..()
 
-/datum/reagent/medicine/stimpak/on_mob_add(mob/living/M)
+/datum/reagent/medicine/stimpak/on_mob_add(mob/living/carbon/M)
 	. = ..()
 	if(M.mind)
 		var/datum/job/job = SSjob.GetJob(M.mind.assigned_role)
@@ -35,8 +38,18 @@
 		var/datum/wound/W = thing
 		var/obj/item/bodypart/wounded_part = W.limb
 		if(wounded_part)
-			wounded_part.heal_damage(10, 10)//Does this even work? AAAAAAAAAAAAAAAAA Original .heal_damage(125, 125)
+			wounded_part.heal_damage(2, 2)//For future cooders, heal_damage does not heal wounds. It heals the limb itself (hence why it uses w.limb)
 	..()
+//THIS CHUNK OF CODE HANDLES STIMPACKS CLOTTING WOUNDS!! THE ABOVE CODE MAKES IT HEAL LIMBS FASTER//
+	var/effective_clot_rate = clot_rate
+	for(var/i in M.all_wounds)
+		var/datum/wound/iter_wound = i
+		if(iter_wound.blood_flow)
+			effective_clot_rate *= clot_coeff_per_wound
+	for(var/i in M.all_wounds)
+		var/datum/wound/iter_wound = i
+		iter_wound.blood_flow = max(0, iter_wound.blood_flow - effective_clot_rate)
+
 	if(M.health < 0)					//Functions as epinephrine.
 //		M.adjustToxLoss(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.adjustBruteLoss(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
@@ -67,7 +80,7 @@
 		. = TRUE
 	..()
 
-/datum/reagent/medicine/stimpak/overdose_process(mob/living/M)
+/datum/reagent/medicine/stimpak/overdose_process(mob/living/carbon/M)
 	M.adjustToxLoss(5*REAGENTS_EFFECT_MULTIPLIER)
 	M.adjustOxyLoss(7*REAGENTS_EFFECT_MULTIPLIER)
 	M.drowsyness += 2*REAGENTS_EFFECT_MULTIPLIER
@@ -96,8 +109,8 @@
 	M.adjustFireLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
 	M.AdjustStun(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 	M.AdjustKnockdown(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
-	M.adjustOxyLoss(-1*REAGENTS_EFFECT_MULTIPLIER,	0)
 	M.adjustStaminaLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustOxyLoss(-1*REAGENTS_EFFECT_MULTIPLIER, 0)
 	..()
 
 // ---------------------------
@@ -114,8 +127,11 @@
 	addiction_threshold = 16
 	value = REAGENT_VALUE_VERY_RARE
 	ghoulfriendly = TRUE
+	var/clot_rate = 0.50 //Superstims clot WAY faster
+	/// If we have multiple bleeding wounds, we count the number of bleeding wounds, then multiply the clot rate by this^(n) before applying it to each cut, so more cuts = less clotting per cut (though still more total clotting)
+	var/clot_coeff_per_wound = 0.9
 
-/datum/reagent/medicine/super_stimpak/on_mob_add(mob/living/M)
+/datum/reagent/medicine/super_stimpak/on_mob_add(mob/living/carbon/M)
 	. = ..()
 	if(M.mind)
 		var/datum/job/job = SSjob.GetJob(M.mind.assigned_role)
@@ -124,7 +140,22 @@
 				if(FACTION_LEGION)
 					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "betrayed caesar", /datum/mood_event/betrayed_caesar, name)
 
-/datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
+/datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/carbon/M)
+	for(var/thing in M.all_wounds)
+		var/datum/wound/W = thing
+		var/obj/item/bodypart/wounded_part = W.limb
+		if(wounded_part)
+			wounded_part.heal_damage(3, 3)//Superstims heal you faster
+	..()
+//THIS CHUNK OF CODE HANDLES STIMPACKS CLOTTING WOUNDS!! THE ABOVE CODE MAKES IT HEAL LIMBS FASTER//
+	var/effective_clot_rate = clot_rate
+	for(var/i in M.all_wounds)
+		var/datum/wound/iter_wound = i
+		if(iter_wound.blood_flow)
+			effective_clot_rate *= clot_coeff_per_wound
+	for(var/i in M.all_wounds)
+		var/datum/wound/iter_wound = i
+		iter_wound.blood_flow = max(0, iter_wound.blood_flow - effective_clot_rate)
 	if(M.reagents.has_reagent(/datum/reagent/medicine/medx))
 		M.reagents.remove_reagent(/datum/reagent/medicine/medx, 15) //Removes 15u of Med-X if processing Superstims.
 		to_chat(M, "<span class='warning'>The Med-X And Superstim Fluid in your blood reacts violently!</span>")
@@ -156,7 +187,7 @@
 		. = TRUE
 	..()
 
-/datum/reagent/medicine/super_stimpak/overdose_process(mob/living/M)
+/datum/reagent/medicine/super_stimpak/overdose_process(mob/living/carbon/M)
 	M.adjustToxLoss(10*REAGENTS_EFFECT_MULTIPLIER)
 	M.adjustOxyLoss(10*REAGENTS_EFFECT_MULTIPLIER)
 	..()
@@ -191,7 +222,7 @@
 		. = TRUE
 		..()
 
-/datum/reagent/medicine/longpork_stew/overdose_process(mob/living/M)
+/datum/reagent/medicine/longpork_stew/overdose_process(mob/living/carbon/M)
 	M.adjustToxLoss(2*REAGENTS_EFFECT_MULTIPLIER)
 	..()
 	. = TRUE
@@ -259,7 +290,7 @@
 			M.visible_message("<span class='userdanger'>[M] grabs at their throat and vomits violently onto the ground, screaming as they have a seizure! They need medical attention immediately!</span>")
 			to_chat(M, "<span class='userdanger'>The sky splits in half, rays of golden light piercing down towards you. Mars reaches out of the sky above, the holy aura causing you to fall to your knees. He beckoning you to heaven, and you take his hand. Your whole body begins to seize up as you go in a glorious rapture. </span>")
 
-/datum/reagent/medicine/berserker/overdose_process(mob/living/M)
+/datum/reagent/medicine/berserker/overdose_process(mob/living/carbon/M)
 	M.adjustToxLoss(5*REAGENTS_EFFECT_MULTIPLIER)
 	..()
 	. = TRUE
@@ -278,14 +309,26 @@
 	var/heal_factor = -5 //Subtractive multiplier if you do not have the perk.
 	var/heal_factor_perk = -5.5 //Multiplier if you have the right perk.
 	ghoulfriendly = TRUE
+	var/clot_rate = 0.15 //Tribal medicine is like smoking a joint and suddenly healing from fatal wounds. It doesn't work very well.
+	/// If we have multiple bleeding wounds, we count the number of bleeding wounds, then multiply the clot rate by this^(n) before applying it to each cut, so more cuts = less clotting per cut (though still more total clotting)
+	var/clot_coeff_per_wound = 0.9
 
 /datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/carbon/M)
 	for(var/thing in M.all_wounds)
 		var/datum/wound/W = thing
 		var/obj/item/bodypart/wounded_part = W.limb
 		if(wounded_part)
-			wounded_part.heal_damage(10, 10)//Does this even work? AAAAAAAAAAAAAAAAA Original .heal_damage(125, 125)
+			wounded_part.heal_damage(1, 1)//Tribal meds are way less efficient at this.
 	..()
+//THIS CHUNK OF CODE HANDLES CLOTTING WOUNDS!! THE ABOVE CODE MAKES IT HEAL LIMBS FASTER//
+	var/effective_clot_rate = clot_rate
+	for(var/i in M.all_wounds)
+		var/datum/wound/iter_wound = i
+		if(iter_wound.blood_flow)
+			effective_clot_rate *= clot_coeff_per_wound
+	for(var/i in M.all_wounds)
+		var/datum/wound/iter_wound = i
+		iter_wound.blood_flow = max(0, iter_wound.blood_flow - effective_clot_rate)
 	var/is_tribal = FALSE
 	if(HAS_TRAIT(M, TRAIT_TRIBAL))
 		is_tribal = TRUE
@@ -299,7 +342,7 @@
 		. = TRUE
 	..()
 
-/datum/reagent/medicine/bitter_drink/overdose_process(mob/living/M)
+/datum/reagent/medicine/bitter_drink/overdose_process(mob/living/carbon/M)
 	M.adjustToxLoss(1*REAGENTS_EFFECT_MULTIPLIER)
 	M.adjustOxyLoss(2*REAGENTS_EFFECT_MULTIPLIER)
 	..()
@@ -334,7 +377,7 @@
 	. = TRUE
 	..()
 
-/datum/reagent/medicine/healing_powder/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
+/datum/reagent/medicine/healing_powder/reaction_mob(mob/living/carbon/M, method=TOUCH, reac_volume, show_message = 1)
 	if(iscarbon(M) && M.stat != DEAD)
 		if(method in list(INGEST, VAPOR, INJECT))
 			M.adjustToxLoss(3*reac_volume*REAGENTS_EFFECT_MULTIPLIER) //also increased from 0.5, reduced from 6
@@ -342,7 +385,7 @@
 				to_chat(M, "<span class='warning'>You don't feel so good...</span>")
 	..()
 
-/datum/reagent/medicine/healing_powder/overdose_process(mob/living/M)
+/datum/reagent/medicine/healing_powder/overdose_process(mob/living/carbon/M)
 	M.adjustToxLoss(2*REAGENTS_EFFECT_MULTIPLIER)
 	M.adjustOxyLoss(4*REAGENTS_EFFECT_MULTIPLIER)
 	..()
@@ -486,13 +529,13 @@
 		to_chat(M, "<span class='userdanger'>Too much med-x! </span>")
 	..()
 
-/datum/reagent/medicine/medx/addiction_act_stage1(mob/living/M)
+/datum/reagent/medicine/medx/addiction_act_stage1(mob/living/carbon/M)
 	if(prob(33))
 		M.drop_all_held_items()
 		M.Jitter(2)
 	..()
 
-/datum/reagent/medicine/medx/addiction_act_stage2(mob/living/M)
+/datum/reagent/medicine/medx/addiction_act_stage2(mob/living/carbon/M)
 	if(prob(33))
 		M.drop_all_held_items()
 		M.adjustToxLoss(1*REAGENTS_EFFECT_MULTIPLIER)
@@ -501,7 +544,7 @@
 		M.Jitter(3)
 	..()
 
-/datum/reagent/medicine/medx/addiction_act_stage3(mob/living/M)
+/datum/reagent/medicine/medx/addiction_act_stage3(mob/living/carbon/M)
 	if(prob(33))
 		M.drop_all_held_items()
 		M.adjustToxLoss(2*REAGENTS_EFFECT_MULTIPLIER)
@@ -510,7 +553,7 @@
 		M.Jitter(4)
 	..()
 
-/datum/reagent/medicine/medx/addiction_act_stage4(mob/living/M)
+/datum/reagent/medicine/medx/addiction_act_stage4(mob/living/carbon/M)
 	if(prob(33))
 		M.drop_all_held_items()
 		M.adjustToxLoss(3*REAGENTS_EFFECT_MULTIPLIER)
@@ -551,20 +594,20 @@
 	..()
 	. = TRUE
 
-/datum/reagent/medicine/legionmedx/overdose_process(mob/living/M)
+/datum/reagent/medicine/legionmedx/overdose_process(mob/living/carbon/M)
 	if(prob(33))
 		M.drop_all_held_items()
 		M.Dizzy(2)
 		M.Jitter(2)
 	..()
 
-/datum/reagent/medicine/legionmedx/addiction_act_stage1(mob/living/M)
+/datum/reagent/medicine/legionmedx/addiction_act_stage1(mob/living/carbon/M)
 	if(prob(33))
 		M.drop_all_held_items()
 		M.Jitter(2)
 	..()
 
-/datum/reagent/medicine/legionmedx/addiction_act_stage2(mob/living/M)
+/datum/reagent/medicine/legionmedx/addiction_act_stage2(mob/living/carbon/M)
 	if(prob(33))
 		M.drop_all_held_items()
 		M.adjustToxLoss(1*REAGENTS_EFFECT_MULTIPLIER)
@@ -573,7 +616,7 @@
 		M.Jitter(3)
 	..()
 
-/datum/reagent/medicine/legionmedx/addiction_act_stage3(mob/living/M)
+/datum/reagent/medicine/legionmedx/addiction_act_stage3(mob/living/carbon/M)
 	if(prob(33))
 		M.drop_all_held_items()
 		M.adjustToxLoss(2*REAGENTS_EFFECT_MULTIPLIER)
@@ -582,7 +625,7 @@
 		M.Jitter(4)
 	..()
 
-/datum/reagent/medicine/legionmedx/addiction_act_stage4(mob/living/M)
+/datum/reagent/medicine/legionmedx/addiction_act_stage4(mob/living/carbon/M)
 	if(prob(33))
 		M.drop_all_held_items()
 		M.adjustToxLoss(3*REAGENTS_EFFECT_MULTIPLIER)
@@ -633,26 +676,26 @@
 	..()
 	. = TRUE
 
-/datum/reagent/medicine/mentat/overdose_process(mob/living/M)
+/datum/reagent/medicine/mentat/overdose_process(mob/living/carbon/M)
 	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 15)
 	if(prob(33))
 		M.Dizzy(2)
 		M.Jitter(2)
 	..()
 
-/datum/reagent/medicine/mentat/addiction_act_stage1(mob/living/M)
+/datum/reagent/medicine/mentat/addiction_act_stage1(mob/living/carbon/M)
 	if(prob(33))
 		M.Jitter(2)
 	..()
 
-/datum/reagent/medicine/mentat/addiction_act_stage2(mob/living/M)
+/datum/reagent/medicine/mentat/addiction_act_stage2(mob/living/carbon/M)
 	if(prob(33))
 		. = TRUE
 		M.Dizzy(3)
 		M.Jitter(3)
 	..()
 
-/datum/reagent/medicine/mentat/addiction_act_stage3(mob/living/M)
+/datum/reagent/medicine/mentat/addiction_act_stage3(mob/living/carbon/M)
 	if(prob(33))
 		M.adjustToxLoss(1*REAGENTS_EFFECT_MULTIPLIER)
 //		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 2)
@@ -661,7 +704,7 @@
 		M.Jitter(4)
 	..()
 
-/datum/reagent/medicine/mentat/addiction_act_stage4(mob/living/M)
+/datum/reagent/medicine/mentat/addiction_act_stage4(mob/living/carbon/M)
 	if(prob(33))
 		M.drop_all_held_items()
 		M.adjustToxLoss(2*REAGENTS_EFFECT_MULTIPLIER)
@@ -717,7 +760,7 @@
 	M.adjustFireLoss(-0.75*REAGENTS_EFFECT_MULTIPLIER, 0)
 	..()
 
-/datum/reagent/medicine/gaia/overdose_start(mob/living/M)
+/datum/reagent/medicine/gaia/overdose_start(mob/living/carbon/M)
 	metabolization_rate = 15 * REAGENTS_METABOLISM
 	..()
 
@@ -733,43 +776,55 @@
 	overdose_threshold = 16//No real downsides with use, aside from popping it twice quickly.
 	addiction_threshold = 14//No real downsides with use, aside from popping it twice quickly.
 	self_consuming = TRUE//So you can process without a liver. For future disembowelment reworks.
+	var/clot_rate = 0.2 //Hydra is still natural medicine.
+	/// If we have multiple bleeding wounds, we count the number of bleeding wounds, then multiply the clot rate by this^(n) before applying it to each cut, so more cuts = less clotting per cut (though still more total clotting)
+	var/clot_coeff_per_wound = 0.9
 
 /datum/reagent/medicine/hydra/on_mob_life(mob/living/carbon/M)
 	for(var/thing in M.all_wounds)
 		var/datum/wound/W = thing
 		var/obj/item/bodypart/wounded_part = W.limb
 		if(wounded_part)
-			wounded_part.heal_damage(10, 10)//Does this even work? AAAAAAAAAAAAAAAAA Original .heal_damage(125, 125)
+			wounded_part.heal_damage(1.5, 1.5)//Hydra is meant to be decent at this
 	..()
+//THIS CHUNK OF CODE HANDLES CLOTTING WOUNDS!! THE ABOVE CODE MAKES IT HEAL LIMBS FASTER//
+	var/effective_clot_rate = clot_rate
+	for(var/i in M.all_wounds)
+		var/datum/wound/iter_wound = i
+		if(iter_wound.blood_flow)
+			effective_clot_rate *= clot_coeff_per_wound
+	for(var/i in M.all_wounds)
+		var/datum/wound/iter_wound = i
+		iter_wound.blood_flow = max(0, iter_wound.blood_flow - effective_clot_rate)
 
-/datum/reagent/medicine/hydra/overdose_process(mob/living/M)
+/datum/reagent/medicine/hydra/overdose_process(mob/living/carbon/M)
 	if(prob(33))
 		M.drop_all_held_items()
 		M.Dizzy(2)
 		M.Jitter(2)
 	..()
 
-/datum/reagent/medicine/hydra/addiction_act_stage1(mob/living/M)
+/datum/reagent/medicine/hydra/addiction_act_stage1(mob/living/carbon/M)
 	if(prob(33))
 		M.drop_all_held_items()
 		M.Jitter(2)
 	..()
 
-/datum/reagent/medicine/hydra/addiction_act_stage2(mob/living/M)
+/datum/reagent/medicine/hydra/addiction_act_stage2(mob/living/carbon/M)
 	if(prob(33))
 		M.drop_all_held_items()
 		M.Dizzy(3)
 		M.Jitter(3)
 	..()
 
-/datum/reagent/medicine/hydra/addiction_act_stage3(mob/living/M)
+/datum/reagent/medicine/hydra/addiction_act_stage3(mob/living/carbon/M)
 	if(prob(33))
 		M.drop_all_held_items()
 		M.Dizzy(4)
 		M.Jitter(4)
 	..()
 
-/datum/reagent/medicine/hydra/addiction_act_stage4(mob/living/M)
+/datum/reagent/medicine/hydra/addiction_act_stage4(mob/living/carbon/M)
 	if(prob(33))
 		M.drop_all_held_items()
 		M.Dizzy(5)
