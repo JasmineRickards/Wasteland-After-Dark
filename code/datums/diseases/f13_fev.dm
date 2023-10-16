@@ -6,24 +6,25 @@
 	form = "Virus"
 	name = "Curling 13"
 	desc = "A modified version of Forced Evolutionary Virus specifically engineered to kill every irradiated lifeform. The more radiation you have stored - the faster you'll die."
-	max_stages = 5
+	max_stages = 6 //Oh BOY
 	stage_prob = 100 // It's handled below
 	spread_text = "Airborne"
 	agent = "Forced Evolutionary Virus"
 	viable_mobtypes = list(/mob/living/carbon/human)
-	cure_text = "Mutadone, Haloperidol and Penicillin"
-	cures = list(/datum/reagent/medicine/mutadone, /datum/reagent/medicine/haloperidol, /datum/reagent/medicine/spaceacillin)
-	cure_chance = 40 // If you can gather all three - you deserve a somewhat of a good chance.
+	cure_text = "Penicillin, followed by heavy rest"
+	cures = list(/datum/reagent/medicine/spaceacillin)
+	cure_chance = 5 // To compensate for the fact penicillin is so easy to make.
 	severity = DISEASE_SEVERITY_BIOHAZARD
 
 /datum/disease/curling_thirteen/update_stage(new_stage)
 	if(new_stage > stage)
-		var/radiation_prob = max(round(affected_mob.radiation * 0.05), 1) // 1000 rads will result in 50 chance
+		var/radiation_prob = max(round(affected_mob.radiation * 0.15), 1) // ~500 rads will result in 50 chance
 		var/new_stage_prob = min(radiation_prob, 50)
 		if(prob(new_stage_prob))
 			return ..()
 		return
 	return ..()
+
 
 /datum/disease/curling_thirteen/stage_act()
 	..()
@@ -83,12 +84,31 @@
 				affected_mob.emote("scream")
 				affected_mob.blur_eyes(5)
 				affected_mob.vomit(50, 1, 1, 0, 1, 1)
+				affected_mob.easy_randmut(NEGATIVE+MINOR_NEGATIVE)
 			if(prob(7))
 				to_chat(affected_mob, "<span class='userdanger'>Your skin keeps ripping itself apart!")
 				affected_mob.adjustBruteLoss(15,0)
 				affected_mob.emote("cry")
+				affected_mob.easy_randmut(NEGATIVE)
 			if(prob(10))
 				affected_mob.adjustToxLoss(5)
+		if(6) //I'm sorrry, but your ride is over, mutie.
+			if(prob(7))
+				affected_mob.adjustToxLoss(5)
+				affected_mob.adjustBruteLoss(25,0)
+				affected_mob.emote("scream")
+				affected_mob.blur_eyes(15)
+				affected_mob.Jitter(4)
+				affected_mob.vomit(50, 1, 1, 0, 1, 1)
+				affected_mob.easy_randmut(NEGATIVE+MINOR_NEGATIVE)
+			if(prob(10))
+				affected_mob.adjust_blindness(5)
+				affected_mob.adjustCloneLoss(5,0)
+				affected_mob.emote("cry")
+				affected_mob.blur_eyes(15)
+				affected_mob.Jitter(4)
+				affected_mob.vomit(50, 1, 1, 0, 1, 1)
+				affected_mob.easy_randmut(NEGATIVE)
 	return
 
 
@@ -99,7 +119,6 @@
 	cures = list(/datum/reagent/medicine/mutadone)
 	cure_text = "Mutadone."
 	cure_chance = 40 // Yeah.
-	agent = "DNA"
 	desc = "A megavirus, with a protein sheath reinforced by ionized hydrogen. This virus is capable of mutating the affected into something horrifying..."
 	viable_mobtypes = list(/mob/living/carbon/human)
 	severity = DISEASE_SEVERITY_BIOHAZARD
@@ -141,10 +160,9 @@
 	form = "Forced Evolutionary Virus"
 	name = "FEV-II Stable Strain"
 	max_stages = 4
-	cures = list(/datum/reagent/medicine/mutadone, /datum/reagent/medicine/haloperidol)
-	cure_text = "Mutadone."
+	cures = list(/datum/reagent/medicine/mutadone, /datum/reagent/medicine/spaceacillin)
+	cure_text = "Mutadone and Spaceallin."
 	cure_chance = 5 // Nonlethal.
-	agent = "DNA"
 	desc = "A megavirus, with a protein sheath reinforced by ionized hydrogen, which has been however, affected by radiation. This will mutate the host into something less... Horrifying."
 	viable_mobtypes = list(/mob/living/carbon/human)
 	severity = DISEASE_SEVERITY_BIOHAZARD
