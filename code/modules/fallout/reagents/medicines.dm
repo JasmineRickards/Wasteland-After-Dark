@@ -58,6 +58,7 @@
 		M.AdjustKnockdown(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.adjustOxyLoss(-5*REAGENTS_EFFECT_MULTIPLIER,	0)
 		M.adjustStaminaLoss(-2*REAGENTS_EFFECT_MULTIPLIER)//This will probably be horribly unbalanced because of multipliers, but we will see.
+		M.heal_bodypart_damage(1.5,1.5, only_organic = FALSE, only_robotic = TRUE)
 	if(M.oxyloss > 35)
 		M.setOxyLoss(35, 0)
 	if(M.losebreath >= 4)
@@ -76,7 +77,8 @@
 		M.adjustOxyLoss(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.AdjustKnockdown(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.adjustStaminaLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
-		M.adjustToxLoss(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.heal_bodypart_damage(1.5,1.5, only_organic = FALSE, only_robotic = TRUE)
+		//M.adjustToxLoss(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
 		. = TRUE
 	..()
 
@@ -111,6 +113,7 @@
 	M.AdjustKnockdown(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 	M.adjustStaminaLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
 	M.adjustOxyLoss(-1*REAGENTS_EFFECT_MULTIPLIER, 0)
+	M.heal_bodypart_damage(1,1, only_organic = FALSE, only_robotic = TRUE)
 	..()
 
 // ---------------------------
@@ -147,7 +150,7 @@
 		if(wounded_part)
 			wounded_part.heal_damage(3, 3)//Superstims heal you faster
 	..()
-//THIS CHUNK OF CODE HANDLES STIMPACKS CLOTTING WOUNDS!! THE ABOVE CODE MAKES IT HEAL LIMBS FASTER//
+//THIS CHUNK OF CODE HANDLES CLOTTING WOUNDS!! THE ABOVE CODE MAKES IT HEAL LIMBS FASTER//
 	var/effective_clot_rate = clot_rate
 	for(var/i in M.all_wounds)
 		var/datum/wound/iter_wound = i
@@ -167,6 +170,7 @@
 		M.AdjustKnockdown(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.adjustStaminaLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
 		M.adjustToxLoss(-3*REAGENTS_EFFECT_MULTIPLIER, 0)//Same vars as stimpaks, but reagent effect multiplier <?>
+		M.heal_bodypart_damage(2,2, only_organic = FALSE, only_robotic = TRUE)
 	if(M.oxyloss > 35)
 		M.setOxyLoss(35, 0)
 	if(M.losebreath >= 4)
@@ -184,6 +188,7 @@
 		M.AdjustStun(-5*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.AdjustKnockdown(-5*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.adjustStaminaLoss(-3*REAGENTS_EFFECT_MULTIPLIER)
+		M.heal_bodypart_damage(3,3, only_organic = FALSE, only_robotic = TRUE)
 		. = TRUE
 	..()
 
