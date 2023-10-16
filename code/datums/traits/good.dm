@@ -19,7 +19,7 @@
 	lose_text = "<span class='notice'>The terrible hunger fades - you feel peace at last.</span>"
 	medical_record_text = "Patient refuses to comment on their dietary preferences."
 
-/datum/quirk/horrifying_tastes/add()
+/datum/quirk/horrifying_tastes/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
 	var/datum/species/species = H.dna.species
 	species.liked_food |= LONGPORK
@@ -38,6 +38,11 @@
 	value = 2
 	gain_text = "<span class='notice'>You remember the old ways of your tribe..</span>"
 	lose_text = "<span class='notice'>You've forgotten the ways of your ancestors..</span>"
+
+/datum/quirk/tribal/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	ADD_TRAIT(H, TRAIT_TECHNOPHOBE, "Former Tribal")
+	ADD_TRAIT(H, TRAIT_TRIBAL, "Former Tribal")
 
 /datum/quirk/tribal/add()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -359,6 +364,11 @@
 	mob_tar.maxHealth += 10
 	mob_tar.health += 10
 
+/datum/quirk/lifegiver/on_spawn()
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.maxHealth += 10
+	mob_tar.health += 10
+
 /datum/quirk/iron_fist
 	name = "Iron Fist"
 	desc = "You have fists of kung-fury! Increases unarmed damage."
@@ -368,7 +378,12 @@
 	lose_text = "<span class='danger'>Your fists feel calm again.</span>"
 	locked = TRUE
 
-/datum/quirk/iron_fist/add()
+/datum/quirk/iron_fist/on_spawn()
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.dna.species.punchdamagelow += 3 //I HATE FALLOUT CODERS
+	mob_tar.dna.species.punchdamagehigh += 7
+
+/datum/quirk/iron_fist/add() //fixes roundstart things
 	var/mob/living/carbon/human/mob_tar = quirk_holder
 	mob_tar.dna.species.punchdamagelow += 3 //I HATE FALLOUT CODERS
 	mob_tar.dna.species.punchdamagehigh += 7
