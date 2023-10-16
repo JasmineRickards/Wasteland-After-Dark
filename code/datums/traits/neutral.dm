@@ -30,6 +30,15 @@
 	mob_tar.update_transform()
 	to_chat(mob_tar, "<span class='notice'>You feel far stronger, and a tad dumber...</span>")
 
+/datum/quirk/fev/on_spawn()
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.dna.species.punchdamagelow += 6 //Larger Muscle-mass
+	mob_tar.dna.species.punchdamagehigh += 8 //But not too large. Reserved for FEV-II
+	quirk_holder.become_mega_nearsighted(ROUNDSTART_TRAIT) //Custom proc to make essentially welder-blindness.
+	mob_tar.maxHealth += 5 //These guys are tanky. Almost blind, and slower.
+	mob_tar.health += 5
+	to_chat(mob_tar, "<span class='notice'>You feel far stronger, and a tad dumber...</span>")
+
 /datum/quirk/fev/remove()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
 	mob_tar.remove_mega_nearsighted()
@@ -59,6 +68,15 @@
 	mob_tar.resize += 0.2
 	mob_tar.update_transform()
 	to_chat(mob_tar, "<span class='danger'>You feel extremely strong!</span>")
+
+/datum/quirk/fevII/on_spawn() //should never happen.
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.dna.species.punchdamagelow += 10 //Fear.
+	mob_tar.dna.species.punchdamagehigh += 20  //Your head is exploding.
+	mob_tar.maxHealth += 15 //Mutie rage.
+	mob_tar.health += 15
+	to_chat(mob_tar, "<span class='danger'>You feel extremely strong!</span>")
+
 
 /datum/quirk/fevII/remove()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
