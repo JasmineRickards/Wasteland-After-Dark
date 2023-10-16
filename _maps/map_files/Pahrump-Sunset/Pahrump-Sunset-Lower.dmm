@@ -10703,6 +10703,13 @@
 /area/f13/brotherhood/rnd)
 "gUG" = (
 /obj/machinery/light/floor,
+/obj/structure/table/glass,
+/obj/item/clothing/head/helmet/f13/combat/environmental,
+/obj/item/clothing/suit/armor/f13/combat/environmental,
+/obj/item/clothing/mask/gas/glass,
+/obj/item/clothing/mask/gas/glass,
+/obj/item/tank/internals/emergency_oxygen/empty,
+/obj/item/tank/internals/emergency_oxygen/empty,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/brotherhood/medical)
 "gUU" = (
@@ -10976,6 +10983,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
+/obj/item/circuitboard/machine/dna_vault,
 /turf/open/floor/plasteel/darkpurple,
 /area/f13/brotherhood/rnd)
 "hla" = (
@@ -15825,6 +15833,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/darkred/side,
 /area/f13/brotherhood/operations)
+"mtA" = (
+/obj/structure/table,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/dna_probe,
+/obj/item/dna_probe,
+/turf/open/floor/plasteel/darkpurple,
+/area/f13/brotherhood/rnd)
 "mtO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -16277,6 +16292,21 @@
 /obj/structure/flora/wasteplant/wild_punga,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
+"mYp" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/rack,
+/obj/item/clothing/suit/armor/f13/combat/environmental,
+/obj/item/clothing/suit/armor/f13/combat/environmental,
+/obj/item/clothing/head/helmet/f13/combat/environmental,
+/obj/item/clothing/head/helmet/f13/combat/environmental,
+/obj/item/clothing/mask/gas/glass,
+/obj/item/clothing/mask/gas/glass,
+/obj/item/tank/internals/emergency_oxygen/empty,
+/obj/item/tank/internals/emergency_oxygen/empty,
+/turf/open/floor/f13{
+	icon_state = "reddirtyfull"
+	},
+/area/f13/brotherhood/operations)
 "mYD" = (
 /obj/item/circuitboard/machine/gibber,
 /turf/open/floor/plasteel/f13/vault_floor/white/whitesolid{
@@ -25845,6 +25875,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/brotherhood/reactor)
+"xsj" = (
+/obj/machinery/computer/pandemic,
+/turf/open/floor/plasteel/f13/vault_floor/plating,
+/area/f13/brotherhood/medical)
 "xtX" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet/black,
@@ -81717,7 +81751,7 @@ jxG
 gYI
 dpN
 iBP
-xiJ
+mYp
 xiJ
 dXl
 qbZ
@@ -84050,7 +84084,7 @@ gPb
 hYg
 cWz
 ldv
-ldv
+xsj
 gPb
 uQV
 vdQ
@@ -87915,7 +87949,7 @@ yfD
 pmb
 pmb
 dmc
-avf
+mtA
 mlg
 gkC
 qZp
