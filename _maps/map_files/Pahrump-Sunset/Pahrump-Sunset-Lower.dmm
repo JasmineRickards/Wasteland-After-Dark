@@ -12401,6 +12401,10 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
+"iDK" = (
+/obj/machinery/jukebox,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel/bighorn)
 "iDZ" = (
 /obj/structure/closet,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier3,
@@ -18805,6 +18809,11 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/tunnel)
+"pNP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/jukebox,
+/turf/open/floor/plasteel/darkpurple,
+/area/f13/brotherhood/rnd)
 "pOw" = (
 /obj/machinery/light/fo13colored/Pink{
 	dir = 8;
@@ -41640,7 +41649,7 @@ uXv
 xio
 xio
 erZ
-dFQ
+iDK
 wid
 wid
 wid
@@ -87947,7 +87956,7 @@ gxX
 yfD
 yfD
 pmb
-pmb
+pNP
 dmc
 mtA
 mlg

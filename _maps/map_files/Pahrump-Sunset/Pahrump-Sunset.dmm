@@ -29259,6 +29259,10 @@
 	},
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland/bighorn)
+"gbY" = (
+/obj/machinery/jukebox,
+/turf/closed/wall/r_wall/rust,
+/area/f13/building)
 "gcc" = (
 /obj/structure/simple_door/metal/store,
 /obj/structure/barricade/wooden/planks/pregame,
@@ -35063,6 +35067,10 @@
 	icon_state = "verticalleftborderright1"
 	},
 /area/f13/wasteland/east)
+"jKb" = (
+/obj/machinery/jukebox,
+/turf/open/floor/wood/wood_common,
+/area/f13/city/bighorn)
 "jKE" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13{
@@ -51942,6 +51950,11 @@
 	icon_state = "verticalleftborderright0"
 	},
 /area/f13/wasteland/east)
+"ufo" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/jukebox,
+/turf/open/floor/wood/wood_fancy,
+/area/f13/brotherhood/leisure)
 "ufs" = (
 /obj/structure/fluff/railing{
 	dir = 1
@@ -69981,7 +69994,7 @@ blj
 bmI
 kPo
 bul
-lUX
+jKb
 blj
 aTw
 fuK
@@ -93435,7 +93448,7 @@ ajF
 adO
 juz
 wbB
-ajF
+gbY
 baj
 acC
 afc
@@ -120633,7 +120646,7 @@ aqi
 cXF
 lmU
 lmU
-lmU
+ufo
 lmU
 esN
 wzD

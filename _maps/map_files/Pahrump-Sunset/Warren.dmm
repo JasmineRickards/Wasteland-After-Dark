@@ -3989,6 +3989,11 @@
 /obj/structure/decoration/rag,
 /turf/closed/mineral/random/high_chance,
 /area/f13/caves)
+"dJf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/jukebox,
+/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
+/area/f13/ncr)
 "dJK" = (
 /obj/structure/window/fulltile/store{
 	icon_state = "storewindowtop"
@@ -59615,7 +59620,7 @@ nKA
 iqi
 nKA
 nRO
-efS
+dJf
 iOR
 lqx
 iOR

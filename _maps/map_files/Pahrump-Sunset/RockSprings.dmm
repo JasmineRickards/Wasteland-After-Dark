@@ -920,10 +920,6 @@
 	icon_state = "verticalinnermain0"
 	},
 /area/f13/caves)
-"aQx" = (
-/obj/structure/timeddoor/sixtyminute,
-/turf/open/indestructible/ground/outside/sidewalk,
-/area/f13/building)
 "aQB" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 10
@@ -9764,6 +9760,7 @@
 	name = "wall rack";
 	pixel_y = 32
 	},
+/obj/machinery/jukebox,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legion)
 "jMv" = (
@@ -14786,7 +14783,6 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/structure/timeddoor/onetwozerominutes,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/building)
 "oMj" = (
@@ -15668,11 +15664,6 @@
 	},
 /turf/open/indestructible/ground/outside/desert/harsh,
 /area/f13/wasteland/rocksprings)
-"pGJ" = (
-/obj/machinery/light,
-/obj/structure/timeddoor/sixtyminute,
-/turf/open/indestructible/ground/outside/sidewalk,
-/area/f13/building)
 "pGQ" = (
 /obj/structure/spacevine{
 	name = "vines"
@@ -20170,10 +20161,6 @@
 	icon_state = "savannah2"
 	},
 /area/f13/wasteland/rocksprings)
-"tWO" = (
-/obj/structure/timeddoor/onetwozerominutes,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/building)
 "tWX" = (
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "floor1-old"
@@ -71088,8 +71075,8 @@ tgY
 tgY
 tgY
 oMc
-tWO
-tWO
+keD
+keD
 tgY
 tgY
 tgY
@@ -84342,8 +84329,8 @@ bWo
 bWo
 bWo
 bWo
-aQx
-pGJ
+bWo
+qfd
 kCG
 kCG
 kCG
@@ -84599,7 +84586,7 @@ tFh
 vtz
 bWo
 bWo
-aQx
+bWo
 sZx
 kCG
 owb
