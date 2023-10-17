@@ -2400,6 +2400,7 @@
 #include "code\modules\jobs\job_types\admin.dm"
 #include "code\modules\jobs\job_types\bighorn.dm"
 #include "code\modules\jobs\job_types\bos.dm"
+#include "code\modules\jobs\job_types\bos_civilian.dm"
 #include "code\modules\jobs\job_types\enclave.dm"
 #include "code\modules\jobs\job_types\followers.dm"
 #include "code\modules\jobs\job_types\khan.dm"
