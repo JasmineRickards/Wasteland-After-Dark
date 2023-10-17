@@ -1515,6 +1515,10 @@
 	spread = 10  //+2 from M1919
 	slowdown = 1.1 //-0.15 from M1919 - still very debilitating!
 
+/obj/item/gun/ballistic/automatic/m1919/m60/update_icon()
+	icon_state = "M60[cover_open ? "open" : "closed"][magazine ? CEILING(get_ammo(0)/20, 1)*20 : "-empty"]"
+	item_state = "M60[cover_open ? "open" : "closed"][magazine ? "mag" : "nomag"]"
+
 ////////
 //MISC//
 ////////

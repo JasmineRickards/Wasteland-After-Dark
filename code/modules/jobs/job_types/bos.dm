@@ -475,7 +475,7 @@ Star Paladin
 /datum/outfit/loadout/spalading
 	name = "Heavy Gunner Head Paladin"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/m1919/m60,
+		/obj/item/gun/ballistic/automatic/m1919/m60 = 1,
 	)
 /*
 Paladin
