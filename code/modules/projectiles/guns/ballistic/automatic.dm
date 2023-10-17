@@ -1498,7 +1498,13 @@
 		return
 	..()
 
-
+/obj/item/gun/ballistic/automatic/m1919/m60
+	name = "US Ordnance M60"
+	desc = "The M60 is a staple of the Midwestern Brotherhood, seen in the hands of Paladins of the Chicago chapter. It's as cruel to it's targets as the one who wields it."
+	icon_state = "M60"
+	item_state = "M60"
+	spread = 10  //+2 from M1919
+	slowodwn = 1.1 //-0.15 from M1919 - still very debilitating!
 
 ////////
 //MISC//
