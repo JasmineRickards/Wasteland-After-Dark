@@ -1343,13 +1343,14 @@
 	automatic = 1
 	mag_type = /obj/item/ammo_box/magazine/m762/ext
 	force = 24 //club
-	slowdown = 1.5 //really goddamn big
+	slowdown = 1.15 //Previously 1.5... Heavier than the M1919 for some reason?
 	autofire_shot_delay = 1.7
 	spread = 10
 	recoil = 0.85
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/automaticrifle_BAR.ogg'
 	extra_penetration = 0.25
+	extra_damage = -4 // This gives it 30 damage total with high AP!
 
 //H&K G11				Keywords: 4.73mm, Automatic, 50 round magazine
 /obj/item/gun/ballistic/automatic/g11
