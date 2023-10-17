@@ -59,7 +59,7 @@
 	supervisors = "Enclave Department of the Army."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavelt
 	req_admin_notify = 1
-	exp_requirements = 1500
+	exp_requirements = 1850
 
 	loadout_options = list(
 		/datum/outfit/loadout/lt_ballistics, // G11 and Plasma Glock
@@ -149,7 +149,7 @@
 	description = "You're a small garrison within a side entrance of a far larger complex. This complex sits within the Casper mountain range. Second in command after Lieutenant, your role is to direct their orders directly to the Sergeants and regular troops."
 	supervisors = "The Lieutenant."
 	outfit = /datum/outfit/job/enclave/peacekeeper/f13gysergeant
-	exp_requirements = 1400
+	exp_requirements = 1500
 
 	loadout_options = list(
 		/datum/outfit/loadout/gysgt_ballistics, // Vindicator
@@ -218,7 +218,7 @@
 	description = "You're a small garrison within a side entrance of a far larger complex. This complex sits within the Casper mountain range. Entrusted with the command of the squads assigned to the bunker, your job is to assist the Lieutenant alongside the scientists."
 	supervisors = "The Lieutenant and the Gunnery Sergeant."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavesgt
-	exp_requirements = 1200
+	exp_requirements = 1000
 
 	loadout_options = list(
 		/datum/outfit/loadout/sgt_ballistics,	// G11
@@ -358,7 +358,7 @@
 	supervisors = "The Lieutenant and the Sergeants"
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavespy
 	exp_type = EXP_TYPE_FALLOUT
-	exp_requirements = 3600//Next to a whitelist, this is the only thing to keep it bereft of you know what.
+	exp_requirements = 550 //Reduced to stress test Enclave RP & interaction from 3500 to 550 - tzula
 
 /datum/outfit/job/enclave/peacekeeper/enclavespy
 	name = "Enclave Private"
