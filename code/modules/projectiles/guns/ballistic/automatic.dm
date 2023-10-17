@@ -1513,7 +1513,7 @@
 	icon_state = "M60"
 	item_state = "M60"
 	spread = 10  //+2 from M1919
-	slowdwn = 1.1 //-0.15 from M1919 - still very debilitating!
+	slowdown = 1.1 //-0.15 from M1919 - still very debilitating!
 
 ////////
 //MISC//
