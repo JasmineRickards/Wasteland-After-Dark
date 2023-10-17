@@ -61,6 +61,10 @@
 #define RADIO_KEY_BOS "q"
 #define RADIO_TOKEN_BOS ":q"
 
+#define RADIO_CHANNEL_BOS_CIVI "Protectorate"
+#define RADIO_KEY_BOS_CIVI "p"
+#define RADIO_TOKEN_BOS_CIVI ":p"
+
 #define RADIO_CHANNEL_ENCLAVE "Enclave"
 #define RADIO_KEY_ENCLAVE "z"
 #define RADIO_TOKEN_ENCLAVE ":z"
@@ -101,6 +105,7 @@
 #define FREQ_VAULT 1361 //Vault
 #define FREQ_NCR 1363 //NCR
 #define FREQ_BOS 1365 //BOS
+#define FREQ_BOS_CIV 1366
 #define FREQ_ENCLAVE 1367 //ENCLAVE
 #define FREQ_TOWN 1369 //TOWN
 #define FREQ_LEGION 1371 //LEGION
