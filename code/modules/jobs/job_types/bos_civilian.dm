@@ -84,7 +84,7 @@
 
 /datum/job/bos/f13protectoratedoctor
 	title = "Protectorate Doctor"
-	flag = F13PROTECTORATESHOP
+	flag = F13PROTECTORATEDOC
 	total_positions = 2
 	spawn_positions = 2
 	description = "While you may be either apart of the Brotherhood, or merely apart of the dominion they rule over; you are still a Doctor! You are a noncombative, and should only act in immediate self defense."

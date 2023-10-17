@@ -711,19 +711,19 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	name = "BoS Off-Duty"
 	icon_state = "Off-Duty"
 
-/obj/effect/landmark/start/f13/pcitizen
+/obj/effect/landmark/start/f13/procitizen
 	name = "Protectorate Civilian"
 	icon_state = "Off-Duty"
 
-/obj/effect/landmark/start/f13/pscribe
+/obj/effect/landmark/start/f13/proscribe
 	name = "Protectorate Scribe"
 	icon_state = "Off-Duty"
 
-/obj/effect/landmark/start/f13/pshop
+/obj/effect/landmark/start/f13/proshop
 	name = "Protectorate Shopkeeper"
 	icon_state = "Off-Duty"
 
-/obj/effect/landmark/start/f13/pdoctor
+/obj/effect/landmark/start/f13/prodoctor
 	name = "Protectorate Doctor"
 	icon_state = "Off-Duty"
 
