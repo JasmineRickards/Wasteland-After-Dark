@@ -248,8 +248,8 @@
 
 /obj/item/mortar_shell/smoke/New()
 	..()
-	src.smoke = new /datum/effect_system/smoke_spread/willy_pete
-	src.smoke.attach(src)
+//	src.smoke = new /datum/effect_system/smoke_spread/willy_pete
+//	src.smoke.attach(src)
 
 /obj/item/mortar_shell/smoke/Destroy()
 	qdel(smoke)
@@ -265,14 +265,14 @@
 	qdel(src)
 
 //FRAG
-/obj/item/mortar_shell/frag
+/* /obj/item/mortar_shell/frag
 	name = "\improper 80mm mortar shell (FRAG)"
 	desc = "A hefty mortar shell. Looks to be a fragmentation round."
 	icon_state = "mortar_ammo_frag"
 	var/shrapnel_type = /obj/item/projectile/bullet/shrapnel_launcher/mortar
 	var/shrapnel_magnitude = 6//Previously 24. Way too powerful at that.
 
-/obj/item/mortar_shell/frag/New()
+ /obj/item/mortar_shell/frag/New()
 	..()
 	AddComponent(/datum/component/pellet_cloud, projectile_type=shrapnel_type, magnitude=shrapnel_magnitude)
 
@@ -281,7 +281,7 @@
 	forceMove(T) //AAAAAAAA
 	SEND_SIGNAL(src, COMSIG_ROCKET_IMPACT)
 	qdel(src)
-
+*/
 //RAD
 /obj/item/mortar_shell/rad
 	name = "\improper 80mm mortar shell (CNTM)"
@@ -321,7 +321,7 @@
 	new /obj/item/mortar_shell(src)
 	new /obj/item/mortar_shell(src)
 	new /obj/item/mortar_shell(src)
-	new /obj/item/mortar_shell/frag(src)
+//	new /obj/item/mortar_shell/frag(src)
 	new /obj/item/mortar_shell/smoke(src)
 	new /obj/item/mortar_shell/smoke(src)
 	new /obj/item/binoculars(src)
@@ -345,8 +345,8 @@
 	new /obj/item/mortar_shell(src)
 	new /obj/item/mortar_shell(src)
 	new /obj/item/mortar_shell(src)
-	new /obj/item/mortar_shell/frag(src)
-	new /obj/item/mortar_shell/frag(src)
+//	new /obj/item/mortar_shell/frag(src)
+//	new /obj/item/mortar_shell/frag(src)
 	new /obj/item/mortar_shell/smoke(src)
 	new /obj/item/mortar_shell/smoke(src)
 	new /obj/item/mortar_shell/smoke(src)
