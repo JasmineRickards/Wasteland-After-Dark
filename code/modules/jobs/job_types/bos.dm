@@ -285,8 +285,9 @@ Head Knight
 
 	loadout_options = list(
 	/datum/outfit/loadout/capstand, //Wattz 2k
-	/datum/outfit/loadout/capsap, //Marksman
-	/datum/outfit/loadout/capalt //Neostead with buck because they don't know slugs are better
+	/datum/outfit/loadout/capsap, //Laser SMG
+	/datum/outfit/loadout/capalt, //Neostead with buck because they don't know slugs are better
+	/datum/outfit/loadout/capcqc //SIG SMG
 	)
 
 	outfit = /datum/outfit/job/bos/f13knightcap
@@ -330,8 +331,6 @@ Head Knight
 	head =			/obj/item/clothing/head/helmet/f13/combat/brotherhood/captain
 	id =			/obj/item/card/id/dogtag
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
-		/obj/item/ammo_box/magazine/m14mm = 2,
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/book/granter/crafting_recipe/gunsmith_one=1,
@@ -341,6 +340,8 @@ Head Knight
 /datum/outfit/loadout/capstand
 	name = "Standard"
 	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
+		/obj/item/ammo_box/magazine/m14mm = 2,
 		/obj/item/gun/energy/laser/wattz2k = 1,
 		/obj/item/stock_parts/cell/ammo/mfc = 2,
 	)
@@ -355,8 +356,17 @@ Head Knight
 /datum/outfit/loadout/capalt
 	name = "Warden-Defender"
 	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
+		/obj/item/ammo_box/magazine/m14mm = 2,
 		/obj/item/gun/ballistic/shotgun/automatic/combat/neostead = 1,
 		/obj/item/ammo_box/shotgun/buck = 2,
+	)
+
+/datum/outfit/loadout/capcqc
+	name = "Frontal Assault"
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/smg/smg14 = 1,
+		/obj/item/ammo_box/magazine/smg14 = 2,
 	)
 
 /*
@@ -382,6 +392,7 @@ Star Paladin
 		/datum/outfit/loadout/spaladinc,  //AER14, no powerfist given strength of rifle.
 		/datum/outfit/loadout/spaladind, //Sledge + Powerfist
 		/datum/outfit/loadout/spaladine, //L30, no powerfist given strength of weapon.
+		/datum/outfit/loadout/spalading, //M60 LMG, no powerfist given strength of weapon. Alternative of laser minigun.
 		)
 
 	outfit = /datum/outfit/job/bos/f13seniorpaladin
@@ -461,7 +472,11 @@ Star Paladin
 	backpack_contents = list(
 		/obj/item/encminigunpack=1,
 	)
-
+/datum/outfit/loadout/spalading
+	name = "Heavy Gunner Head Paladin"
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/m1919/m60 = 1,
+	)
 /*
 Paladin
 */
@@ -479,7 +494,7 @@ Paladin
 	exp_requirements = 1200
 
 	loadout_options = list(
-	/datum/outfit/loadout/paladinb, //Combat Rifle + Power Fist
+	/datum/outfit/loadout/paladinb, //Battle rifle no power fist
 	/datum/outfit/loadout/paladinc, //AER12 no power fist.
 	/datum/outfit/loadout/paladind, //Sledge + Power Fist
 	)
@@ -526,11 +541,8 @@ Paladin
 /datum/outfit/loadout/paladinb
 	name = "Tactical Paladin"
 	backpack_contents = list(
-		/obj/item/melee/powerfist/f13 = 1,
-		/obj/item/gun/ballistic/automatic/combat = 1,
-		/obj/item/ammo_box/magazine/tommygunm45/stick = 5,
-		/obj/item/gun/energy/laser/pistol=1,
-		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/gun/ballistic/automatic/fnfal = 1,
+		/obj/item/ammo_box/magazine/m762/ext = 2,
 		/obj/item/clothing/accessory/bos/paladin = 1,
 		/obj/item/clothing/accessory/bos/juniorpaladin = 1,
 		)
@@ -729,7 +741,7 @@ Senior Knight
 	loadout_options = list(
 	/datum/outfit/loadout/sknighta, //AER9
 	/datum/outfit/loadout/sknightb, //Police Shotgun
-	/datum/outfit/loadout/sknightc, //R93 PDW
+	/datum/outfit/loadout/sknightc, //R93 Rifle
 	/datum/outfit/loadout/sknightd,
 	)
 
@@ -804,7 +816,7 @@ Senior Knight
 /datum/outfit/loadout/sknightc
 	name = "Recon"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/r93=1,
+		/obj/item/gun/ballistic/automatic/r93/rifle=1,
 		/obj/item/ammo_box/magazine/m556/rifle=2,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
