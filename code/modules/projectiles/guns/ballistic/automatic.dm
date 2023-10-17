@@ -966,6 +966,7 @@
 	scope_y_offset = 14
 	auto_eject_sound = 'sound/f13weapons/garand_ping.ogg'
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+	extra_penetration = 0.15
 
 /obj/item/gun/ballistic/automatic/m1garand/update_icon()
 	..()
@@ -981,6 +982,7 @@
 	name = "Old Glory"
 	desc = "This Machine kills communists!"
 	icon_state = "oldglory"
+	extra_damage = 10
 
 //Republics Pride			Keywords: UNIQUE, 7.62mm, Semi-auto, 8 rounds internal, Scoped, Damage +8, Penetration +0.1
 /obj/item/gun/ballistic/automatic/m1garand/republicspride
@@ -993,6 +995,8 @@
 	zoom_out_amt = 13
 	fire_delay = 0.5
 	can_scope = FALSE
+	extra_damage = 8
+	extra_penetration = 0.25
 
 //HT battle rifle
 /obj/item/gun/ballistic/automatic/bar/glowie
