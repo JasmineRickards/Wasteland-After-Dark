@@ -1507,17 +1507,76 @@
 		return
 	..()
 
-/obj/item/gun/ballistic/automatic/m1919/m60
+/obj/item/gun/ballistic/automatic/m60
 	name = "US Ordnance M60"
 	desc = "The M60 is a staple of the Midwestern Brotherhood, seen in the hands of Paladins of the Chicago chapter. It's as cruel to it's targets as the one who wields it."
-	icon_state = "M60"
-	item_state = "M60"
-	spread = 10  //+2 from M1919
-	slowdown = 1.1 //-0.15 from M1919 - still very debilitating!
+	icon_state = "m60"
+	item_state = "m60"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_prefix = "m60"
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	slot_flags = 0
+	slowdown = 1.15
+	mag_type = /obj/item/ammo_box/magazine/mm762
+	burst_shot_delay = 1.5
+	is_automatic = TRUE
+	automatic = 1
+	autofire_shot_delay = 1.1
+	fire_delay = 2
+	spread = 10
+	can_attachments = FALSE
+	var/cover_open = FALSE
+	var/require_twohands = FALSE
+	actions_types = null
+	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 
-/obj/item/gun/ballistic/automatic/m1919/m60/update_icon()
+/obj/item/gun/ballistic/automatic/m60/update_icon()
 	icon_state = "M60[cover_open ? "open" : "closed"][magazine ? CEILING(get_ammo(0)/20, 1)*20 : "-empty"]"
 	item_state = "M60[cover_open ? "open" : "closed"][magazine ? "mag" : "nomag"]"
+
+/obj/item/gun/ballistic/automatic/m60/examine(mob/user)
+	. = ..()
+	if(cover_open && magazine)
+		. += "<span class='notice'>It seems like you could use an <b>empty hand</b> to remove the magazine.</span>"
+
+/obj/item/gun/ballistic/automatic/m60/attack_self(mob/user)
+	cover_open = !cover_open
+	to_chat(user, "<span class='notice'>You [cover_open ? "open" : "close"] [src]'s cover.</span>")
+	if(cover_open)
+		playsound(user, 'sound/weapons/sawopen.ogg', 60, 1)
+	else
+		playsound(user, 'sound/weapons/sawclose.ogg', 60, 1)
+	update_icon()
+
+/obj/item/gun/ballistic/automatic/m60/afterattack(atom/target as mob|obj|turf, mob/living/user as mob|obj, flag, params)
+	if(cover_open)
+		to_chat(user, "<span class='warning'>[src]'s cover is open! Close it before firing!</span>")
+	else
+		. = ..()
+		update_icon()
+
+/obj/item/gun/ballistic/automatic/m60/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+	if(loc != user)
+		..()
+		return	//let them pick it up
+	if(!cover_open || (cover_open && !magazine))
+		..()
+	else if(cover_open && magazine)
+		//drop the mag
+		magazine.update_icon()
+		magazine.forceMove(drop_location())
+		user.put_in_hands(magazine)
+		magazine = null
+		update_icon()
+		to_chat(user, "<span class='notice'>You remove the magazine from [src].</span>")
+		playsound(user, 'sound/weapons/magout.ogg', 60, 1)
+
+/obj/item/gun/ballistic/automatic/m60/attackby(obj/item/A, mob/user, params)
+	if(!cover_open && istype(A, mag_type))
+		to_chat(user, "<span class='warning'>[src]'s cover is closed! You can't insert a new mag.</span>")
+		return
+	..()
 
 ////////
 //MISC//
