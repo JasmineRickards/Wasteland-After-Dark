@@ -358,7 +358,7 @@
 	supervisors = "The Lieutenant and the Sergeants"
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavespy
 	exp_type = EXP_TYPE_FALLOUT
-	exp_requirements = 3600//Next to a whitelist, this is the only thing to keep it bereft of you know what.
+	exp_requirements = 850 //Reduced to stress test Enclave RP & interaction from 3500 to 850 - tzula
 
 /datum/outfit/job/enclave/peacekeeper/enclavespy
 	name = "Enclave Private"
