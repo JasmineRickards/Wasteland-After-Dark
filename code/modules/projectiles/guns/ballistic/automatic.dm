@@ -802,8 +802,8 @@
 	suppressor_x_offset = 26
 	suppressor_y_offset = 28
 	extra_damage = -3
-	
-//Khan Police rifle			Keywords: KHANS, 5.56mm, Semi-auto, 20 (10-50) round magazine	
+
+//Khan Police rifle			Keywords: KHANS, 5.56mm, Semi-auto, 20 (10-50) round magazine
 /obj/item/gun/ballistic/automatic/marksman/policerifle_khans
 	name = "Kit Bashed Rifle"
 	desc = "A pre-war Rifle that has been constantly repaired and rebuilt by local Khan gunsmiths. Somehow, you feel safer holding this."
@@ -1513,7 +1513,7 @@
 	icon_state = "M60"
 	item_state = "M60"
 	spread = 10  //+2 from M1919
-	slowodwn = 1.1 //-0.15 from M1919 - still very debilitating!
+	slowdwn = 1.1 //-0.15 from M1919 - still very debilitating!
 
 ////////
 //MISC//
