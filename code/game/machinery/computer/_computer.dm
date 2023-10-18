@@ -37,7 +37,6 @@
 		return TRUE
 
 /obj/machinery/computer/Destroy()
-	QDEL_NULL(circuit)
 	for(var/obj/machinery/computer/pickComputer in range(1, src))
 		addtimer(CALLBACK(pickComputer, .proc/why_overlays), 5)
 	return ..()
