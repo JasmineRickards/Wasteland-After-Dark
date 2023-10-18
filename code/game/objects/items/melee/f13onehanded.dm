@@ -666,22 +666,9 @@
 	if(!unarmed_adjusted)
 		mob_overlay_icon = lefthand_file
 	if(ishuman(user) && slot == SLOT_GLOVES)
-		ADD_TRAIT(user, TRAIT_UNARMED_WEAPON, "glove")
-		if(HAS_TRAIT(user, TRAIT_UNARMED_WEAPON))
-			H.dna.species.punchdamagehigh += force //Future reference. Always use += so you dont override their base damage. There was a way to stack infinite damage...
-			H.dna.species.punchdamagelow += force
-			H.dna.species.attack_sound = hitsound
-			if(sharpness == SHARP_POINTY || sharpness ==  SHARP_EDGED)
-				H.dna.species.attack_verb = pick("slash","slice","rip","tear","cut","dice")
-			if(sharpness == SHARP_NONE)
-				H.dna.species.attack_verb = pick("punch","jab","whack")
+		ADD_TRAIT(user, TRAIT_UNARMED_WEAPON, "glove") //Wasteland after Dark edit: Code moved to species.dm because whoever coded this was clueless
 	if(ishuman(user) && slot != SLOT_GLOVES && !H.gloves)
 		REMOVE_TRAIT(user, TRAIT_UNARMED_WEAPON, "glove")
-		if(!HAS_TRAIT(user, TRAIT_UNARMED_WEAPON))
-			H.dna.species.punchdamagelow -= force // I HATE FALLOUT CODERS
-			H.dna.species.punchdamagehigh -= force
-		H.dna.species.attack_sound = 'sound/weapons/punch1.ogg'
-		H.dna.species.attack_verb = "punch"
 
 /obj/item/melee/unarmed/examine(mob/user)
 	. = ..()
