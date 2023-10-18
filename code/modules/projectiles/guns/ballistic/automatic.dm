@@ -966,6 +966,7 @@
 	scope_y_offset = 14
 	auto_eject_sound = 'sound/f13weapons/garand_ping.ogg'
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+	extra_penetration = 0.15
 
 /obj/item/gun/ballistic/automatic/m1garand/update_icon()
 	..()
@@ -981,6 +982,7 @@
 	name = "Old Glory"
 	desc = "This Machine kills communists!"
 	icon_state = "oldglory"
+	extra_damage = 10
 
 //Republics Pride			Keywords: UNIQUE, 7.62mm, Semi-auto, 8 rounds internal, Scoped, Damage +8, Penetration +0.1
 /obj/item/gun/ballistic/automatic/m1garand/republicspride
@@ -993,6 +995,8 @@
 	zoom_out_amt = 13
 	fire_delay = 0.5
 	can_scope = FALSE
+	extra_damage = 8
+	extra_penetration = 0.25
 
 //HT battle rifle
 /obj/item/gun/ballistic/automatic/bar/glowie
@@ -1343,13 +1347,14 @@
 	automatic = 1
 	mag_type = /obj/item/ammo_box/magazine/m762/ext
 	force = 24 //club
-	slowdown = 1.5 //really goddamn big
+	slowdown = 1.15 //Previously 1.5... Heavier than the M1919 for some reason?
 	autofire_shot_delay = 1.7
 	spread = 10
 	recoil = 0.85
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/automaticrifle_BAR.ogg'
 	extra_penetration = 0.25
+	extra_damage = -4 // This gives it 30 damage total with high AP!
 
 //H&K G11				Keywords: 4.73mm, Automatic, 50 round magazine
 /obj/item/gun/ballistic/automatic/g11
