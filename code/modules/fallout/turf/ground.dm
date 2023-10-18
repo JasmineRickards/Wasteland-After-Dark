@@ -432,9 +432,8 @@
 	desc = "Looks cold."
 	icon_state = "snowplating"
 	footstep = FOOTSTEP_PLATING
-	barefootstep = FOOTSTEP_HARD_BAREFOOT
-	clawfootstep = FOOTSTEP_HARD_CLAW
-	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	barefootstep = FOOTSTEP_PLATING
+	clawfootstep = FOOTSTEP_PLATING
 
 /turf/open/indestructible/ground/outside/snow/proc/setTurfPlant(newTurfPlant)
 	turfPlant = newTurfPlant

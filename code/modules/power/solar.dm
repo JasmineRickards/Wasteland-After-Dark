@@ -186,7 +186,7 @@
 		control.gen += sgen
 
 //Bit of a hack but this whole type is a hack
-/obj/machinery/power/solar/fake/Initialize(mapload, obj/item/solar_assembly/S)
+/obj/machinery/power/solar/fake/Initialize(turf/loc, obj/item/solar_assembly/S)
 	. = ..()
 	UnregisterSignal(SSsun, COMSIG_SUN_MOVED)
 
@@ -245,7 +245,7 @@
 			to_chat(user, "<span class='warning'>You need to secure the assembly before you can add glass.</span>")
 			return
 		var/obj/item/stack/sheet/S = W
-		var/obj/item/stack/sheet/G = S.split_stack(null, 2)
+		var/obj/item/stack/sheet/G = S.change_stack(null, 2)
 		if(G)
 			glass_type = G
 			G.moveToNullspace()

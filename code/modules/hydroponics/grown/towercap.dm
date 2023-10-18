@@ -50,33 +50,23 @@
 
 /obj/item/grown/log/attackby(obj/item/W, mob/user, params)
 	if(W.sharpness)
-		user.show_message(span_notice("You make [plank_name] out of \the [src]!"), MSG_VISUAL)
+		user.show_message("<span class='notice'>You make [plank_name] out of \the [src]!</span>", MSG_VISUAL)
 		var/seed_modifier = 3
 		if(seed)
 			seed_modifier = round(seed.potency / 25)
-		// We do this so that other stuff merges with this, not the other way around.
-		// That way we know we always have a reference to a stack of the largest possible size.
-		var/obj/item/stack/plank = new plank_type(null, 1 + seed_modifier) // created in nullspace to avoid deletion via merging on turf entered
+		var/obj/item/stack/plank = new plank_type(user.loc, 1 + seed_modifier)
 		var/old_plank_amount = plank.amount
-		for(var/obj/item/stack/potential_stack in get_turf(user))
-			if(QDELETED(potential_stack))
-				continue
-			if(potential_stack == plank)
-				continue
-			if(potential_stack.amount >= potential_stack.max_amount) // don't steal from already full stacks
-				continue
-			if(!potential_stack.can_merge(plank))
-				continue
-			potential_stack.merge(plank)
-		plank.forceMove(get_turf(user))
+		for(var/obj/item/stack/ST in user.loc)
+			if(ST != plank && istype(ST, plank_type) && ST.amount < ST.max_amount)
+				ST.attackby(plank, user) //we try to transfer all old unfinished stacks to the new stack we created.
 		if(plank.amount > old_plank_amount)
-			to_chat(user, span_notice("You add the newly-formed [plank_name] to the stack. It now contains [plank.amount] [plank_name]."))
+			to_chat(user, "<span class='notice'>You add the newly-formed [plank_name] to the stack. It now contains [plank.amount] [plank_name].</span>")
 		qdel(src)
 
 	if(CheckAccepted(W))
 		var/obj/item/reagent_containers/food/snacks/grown/leaf = W
 		if(leaf.dry)
-			user.show_message(span_notice("You wrap \the [W] around the log, turning it into a torch!"))
+			user.show_message("<span class='notice'>You wrap \the [W] around the log, turning it into a torch!</span>")
 			var/obj/item/flashlight/flare/torch/T = new /obj/item/flashlight/flare/torch(user.loc)
 			usr.dropItemToGround(W)
 			usr.put_in_active_hand(T)
@@ -84,7 +74,7 @@
 			qdel(src)
 			return
 		else
-			to_chat(usr, span_warning("You must dry this first!"))
+			to_chat(usr, "<span class ='warning'>You must dry this first!</span>")
 	else
 		return ..()
 
