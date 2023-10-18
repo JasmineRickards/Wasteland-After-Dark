@@ -166,8 +166,7 @@
 	if(reagents)
 		qdel(reagents)
 
-	if (length(overlays))
-		overlays.Cut()
+	LAZYCLEARLIST(overlays)
 
 	for(var/i in targeted_by)
 		var/mob/M = i
@@ -507,7 +506,7 @@
 	return
 
 /atom/proc/hitby(atom/movable/AM, skipcatch, hitpush, blocked, datum/thrownthing/throwingdatum)
-	if(density && !QDELETED(src) && !QDELETED(AM) && !has_gravity(AM)) //thrown stuff bounces off dense stuff in no grav, unless the thrown stuff ends up inside what it hit(embedding, bola, etc...).
+	if(density && !has_gravity(AM)) //thrown stuff bounces off dense stuff in no grav, unless the thrown stuff ends up inside what it hit(embedding, bola, etc...).
 		addtimer(CALLBACK(src, .proc/hitby_react, AM), 2)
 
 /atom/proc/hitby_react(atom/movable/AM)
