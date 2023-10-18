@@ -1524,6 +1524,9 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		var/damage = rand(user.dna.species.punchdamagelow, user.dna.species.punchdamagehigh)
 		if(HAS_TRAIT(user, TRAIT_PERFECT_ATTACKER)) // unit test no-miss trait
 			damage = user.dna.species.punchdamagehigh
+		if(HAS_TRAIT(user, TRAIT_UNARMED_WEAPON))
+			if(user.gloves.force >= 5)
+				damage = user.dna.species.punchdamagehigh + (user.gloves.force/1.2) //WASTELAND AFTER DARK EDIT: I FUC- Ahem. Fixes a bug where you could get infinite damage. Now a 24 damage weapon does 20 when worn
 		var/punchedstam = target.getStaminaLoss()
 		var/punchedbrute = target.getBruteLoss()
 
