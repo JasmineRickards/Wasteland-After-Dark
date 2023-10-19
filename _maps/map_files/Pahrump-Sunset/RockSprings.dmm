@@ -5578,6 +5578,11 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"fts" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/weapon/revolver44variants,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legion)
 "ftC" = (
 /obj/structure/railing/wood{
 	dir = 8;
@@ -7200,6 +7205,11 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"haw" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/weapon/melee/tier4,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legion)
 "haP" = (
 /obj/machinery/light/small/broken{
 	dir = 1
@@ -7228,6 +7238,11 @@
 	icon_state = "verticalinnermain0"
 	},
 /area/f13/wasteland/rocksprings)
+"hcr" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/mid,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legion)
 "hcv" = (
 /obj/structure/chair/folding{
 	dir = 4
@@ -15307,6 +15322,11 @@
 /obj/machinery/door/unpowered/celldoor,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/building)
+"pnq" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/weapon/melee/tier3,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legion)
 "pnD" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -20205,6 +20225,11 @@
 /obj/structure/junk/drawer,
 /turf/open/indestructible/ground/outside/desert/harsh,
 /area/f13/wasteland/rocksprings)
+"uah" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/blueprintLowMid,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legion)
 "uaw" = (
 /obj/structure/stairs/east{
 	color = "#A47449"
@@ -21588,6 +21613,11 @@
 	},
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/building)
+"vrO" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/weapon/melee/random_mid,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legion)
 "vrS" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -41863,7 +41893,7 @@ lvP
 fCY
 jLa
 kEh
-hAL
+fts
 gtX
 hAL
 jLa
@@ -42376,8 +42406,8 @@ kjx
 amM
 gtX
 qDd
-hAL
-hAL
+uah
+pnq
 gtX
 vci
 jLa
@@ -42631,10 +42661,10 @@ jLa
 rob
 amM
 hAL
+vrO
 hAL
-hAL
-hAL
-hAL
+hcr
+haw
 gtX
 tTm
 xGu
@@ -43145,7 +43175,7 @@ jLa
 dKQ
 gXG
 dnA
-hAL
+gXG
 hDv
 hAL
 ofa

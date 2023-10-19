@@ -2784,6 +2784,17 @@
 /obj/item/book/granter/crafting_recipe/gunsmith_one,
 /turf/open/floor/plasteel/f13/vault_floor/yellow,
 /area/f13/tunnel)
+"bIi" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/suit/armor/f13/power_armor/midwest,
+/obj/item/clothing/head/helmet/f13/power_armor/midwest,
+/obj/structure/kitchenspike_frame{
+	anchored = 1;
+	desc = "A robust, thick metal frame used to hold power armor upright during maintenance.";
+	name = "Trader power armor frame"
+	},
+/turf/open/floor/carpet/black,
+/area/f13/brotherhood/offices2nd)
 "bIj" = (
 /obj/structure/barricade/wooden/strong,
 /turf/open/indestructible/ground/inside/mountain,
@@ -8525,7 +8536,7 @@
 /obj/structure/kitchenspike_frame{
 	anchored = 1;
 	desc = "A robust, thick metal frame used to hold power armor upright during maintenance.";
-	name = "power armor frame"
+	name = "Trader power armor frame"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red{
 	icon_state = "darkyellowfull"
@@ -8722,11 +8733,9 @@
 /obj/machinery/door/window{
 	dir = 4
 	},
-/obj/item/clothing/suit/armored/medium/combatmk2/headknight,
-/obj/item/clothing/head/helmet/f13/combat/brotherhood/captain{
-	name = "Brotherhood Knight Captain Helmet"
-	},
 /obj/structure/closet/locker,
+/obj/item/clothing/suit/armor/f13/power_armor/t45d/Knightcommander,
+/obj/item/clothing/head/helmet/f13/power_armor/t45d/Knightcommander,
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/brotherhood/offices2nd)
 "exT" = (
@@ -10983,7 +10992,19 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
-/obj/item/circuitboard/machine/dna_vault,
+/obj/item/encryptionkey/headset_bos,
+/obj/item/encryptionkey/headset_bos,
+/obj/item/encryptionkey/headset_bos,
+/obj/item/encryptionkey/headset_bos,
+/obj/item/encryptionkey/headset_bos,
+/obj/item/encryptionkey/headset_bos,
+/obj/item/encryptionkey/headset_bos,
+/obj/item/encryptionkey/headset_bos,
+/obj/item/encryptionkey/headset_bos,
+/obj/item/encryptionkey/headset_bos,
+/obj/item/encryptionkey/headset_bos,
+/obj/item/encryptionkey/headset_bos,
+/obj/item/mmi/posibrain,
 /turf/open/floor/plasteel/darkpurple,
 /area/f13/brotherhood/rnd)
 "hla" = (
@@ -15771,6 +15792,66 @@
 /obj/item/card/id/dogtag{
 	pixel_x = 4
 	},
+/obj/item/card/id/dogtag{
+	pixel_x = 4
+	},
+/obj/item/card/id/dogtag{
+	pixel_x = 4
+	},
+/obj/item/card/id/dogtag{
+	pixel_x = 4
+	},
+/obj/item/card/id/dogtag{
+	pixel_x = 4
+	},
+/obj/item/card/id/dogtag{
+	pixel_x = 4
+	},
+/obj/item/card/id/dogtag{
+	pixel_x = 4
+	},
+/obj/item/card/id/dogtag{
+	pixel_x = 4
+	},
+/obj/item/card/id/dogtag{
+	pixel_x = 4
+	},
+/obj/item/card/id/dogtag{
+	pixel_x = 4
+	},
+/obj/item/card/id/dogtag{
+	pixel_x = 4
+	},
+/obj/item/card/id/dogtag{
+	pixel_x = 4
+	},
+/obj/item/card/id/dogtag{
+	pixel_x = 4
+	},
+/obj/item/encryptionkey/headset_bos{
+	pixel_x = -8
+	},
+/obj/item/encryptionkey/headset_bos{
+	pixel_x = -8
+	},
+/obj/item/encryptionkey/headset_bos{
+	pixel_x = -8
+	},
+/obj/item/encryptionkey/headset_bos{
+	pixel_x = -8
+	},
+/obj/item/encryptionkey/headset_bos{
+	pixel_x = -8
+	},
+/obj/item/encryptionkey/headset_bos{
+	pixel_x = -8
+	},
+/obj/item/encryptionkey/headset_bos{
+	pixel_x = -8
+	},
+/obj/item/encryptionkey/headset_bos{
+	pixel_x = -8
+	},
 /turf/open/floor/wood/wood_fancy,
 /area/f13/brotherhood/offices2nd)
 "mrm" = (
@@ -15842,6 +15923,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/dna_probe,
 /obj/item/dna_probe,
+/obj/item/circuitboard/machine/dna_vault,
 /turf/open/floor/plasteel/darkpurple,
 /area/f13/brotherhood/rnd)
 "mtO" = (
@@ -17139,6 +17221,7 @@
 /obj/item/gun/energy/laser/aer9,
 /obj/item/gun/energy/laser/aer9,
 /obj/effect/spawner/bundle/f13/aer12,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -17494,6 +17577,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/unique,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -21638,6 +21722,15 @@
 /obj/machinery/vending/wardrobe/robo_wardrobe,
 /turf/open/floor/plating/tunnel,
 /area/f13/brotherhood)
+"sIb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/rack,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/weapon/melee/tier5,
+/turf/open/floor/f13{
+	icon_state = "reddirtyfull"
+	},
+/area/f13/brotherhood/operations)
 "sIk" = (
 /obj/structure/sink{
 	pixel_y = 19
@@ -24599,6 +24692,14 @@
 	},
 /turf/open/water,
 /area/f13/brotherhood)
+"vQK" = (
+/obj/item/bodypart/l_arm/robot,
+/obj/item/bodypart/l_leg/robot,
+/obj/item/bodypart/chest/robot,
+/obj/item/bodypart/r_arm/robot,
+/obj/item/bodypart/r_leg/robot,
+/turf/open/floor/plasteel/darkpurple,
+/area/f13/brotherhood/rnd)
 "vRA" = (
 /obj/structure/chair/booth{
 	icon_state = "booth_south_middle"
@@ -25169,6 +25270,13 @@
 	},
 /obj/effect/spawner/lootdrop/f13/crafting,
 /obj/effect/spawner/lootdrop/f13/crafting,
+/obj/item/encryptionkey/headset_med,
+/obj/item/encryptionkey/headset_med,
+/obj/item/encryptionkey/headset_med,
+/obj/item/encryptionkey/headset_med,
+/obj/item/encryptionkey/headset_med,
+/obj/item/encryptionkey/headset_med,
+/obj/item/encryptionkey/headset_med,
 /turf/open/floor/f13{
 	icon_state = "darkdirtysolid"
 	},
@@ -25746,6 +25854,8 @@
 "xiJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack,
+/obj/item/clothing/suit/armor/f13/power_armor/midwest,
+/obj/item/clothing/head/helmet/f13/power_armor/midwest,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -80732,7 +80842,7 @@ jxG
 mLF
 dpN
 jGM
-ovV
+sIb
 ovV
 dWc
 ogj
@@ -88472,7 +88582,7 @@ dmc
 dmc
 yfD
 pmb
-dmc
+vQK
 dmc
 axh
 qZp
@@ -91016,7 +91126,7 @@ msW
 dpF
 aZv
 sPA
-cHT
+bIi
 dpc
 ceX
 hLB
