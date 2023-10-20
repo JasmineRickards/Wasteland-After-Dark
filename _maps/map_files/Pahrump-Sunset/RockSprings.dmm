@@ -17301,6 +17301,10 @@
 /obj/structure/closet/fridge/standard,
 /turf/open/floor/plasteel/bar,
 /area/f13/building)
+"rky" = (
+/obj/item/seeds/ambrosia/gaia,
+/turf/open/indestructible/ground/outside/graveldirt,
+/area/f13/legion)
 "rkT" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/road{
@@ -33374,7 +33378,7 @@ rPW
 gqa
 wcL
 mIO
-mTt
+rky
 bbN
 mPL
 hXy

@@ -15736,6 +15736,7 @@
 	},
 /area/f13/ncr)
 "phs" = (
+/obj/item/seeds/ambrosia/gaia,
 /turf/open/indestructible/ground/outside/savannah/edgesnew{
 	dir = 10
 	},
