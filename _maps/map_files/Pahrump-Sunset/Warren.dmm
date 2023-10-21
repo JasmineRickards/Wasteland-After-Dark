@@ -914,7 +914,7 @@
 "aQo" = (
 /obj/structure/barricade/wooden,
 /obj/structure/decoration/rag,
-/turf/closed/indestructible/f13vaultrusted,
+/turf/closed/wall/rust,
 /area/f13/ncr)
 "aQG" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -2174,7 +2174,7 @@
 	dir = 1;
 	pixel_y = 7
 	},
-/turf/closed/indestructible/f13vaultrusted,
+/turf/closed/wall/rust,
 /area/f13/ncr)
 "bWS" = (
 /obj/effect/decal/cleanable/blood/tracks{
@@ -2506,7 +2506,7 @@
 /obj/effect/overlay/turfs/cliff{
 	pixel_y = -10
 	},
-/turf/closed/wall/r_wall,
+/turf/closed/wall/rust,
 /area/f13/ncr)
 "cmg" = (
 /obj/effect/overlay/turfs/cliff/alt{
@@ -3309,7 +3309,7 @@
 	pixel_y = 7
 	},
 /obj/structure/decoration/vent/rusty,
-/turf/closed/indestructible/f13vaultrusted,
+/turf/closed/wall/rust,
 /area/f13/ncr)
 "daq" = (
 /obj/structure/barricade/sandbags,
@@ -3340,7 +3340,7 @@
 /obj/effect/overlay/turfs/cliff{
 	pixel_y = -10
 	},
-/turf/closed/wall/r_wall,
+/turf/closed/wall/rust,
 /area/f13/ncr)
 "dcB" = (
 /obj/structure/fence,
@@ -5187,7 +5187,7 @@
 	dir = 1;
 	pixel_y = 7
 	},
-/turf/closed/indestructible/f13vaultrusted,
+/turf/closed/wall/rust,
 /area/f13/ncr)
 "eYb" = (
 /obj/structure/flora/grass/wasteland{
@@ -7055,7 +7055,7 @@
 	dir = 9;
 	pixel_y = -11
 	},
-/turf/closed/wall/r_wall,
+/turf/closed/wall/rust,
 /area/f13/ncr)
 "gFG" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7129,12 +7129,6 @@
 /obj/structure/flora/grass/jungle/b,
 /turf/open/indestructible/ground/outside/water,
 /area/f13/city)
-"gJX" = (
-/obj/effect/overlay/turfs/cliff{
-	pixel_y = -10
-	},
-/turf/closed/indestructible/f13vaultrusted,
-/area/f13/ncr)
 "gKi" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -11160,7 +11154,7 @@
 	dir = 9;
 	pixel_y = 7
 	},
-/turf/closed/indestructible/f13vaultrusted,
+/turf/closed/wall/rust,
 /area/f13/ncr)
 "kNj" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -12847,7 +12841,7 @@
 /obj/structure/decoration/rag{
 	icon_state = "skin"
 	},
-/turf/closed/wall/r_wall,
+/turf/closed/wall/rust,
 /area/f13/ncr)
 "msz" = (
 /obj/effect/spawner/lootdrop/ammo/fiftypercent,
@@ -13840,7 +13834,7 @@
 	pixel_x = 7;
 	pixel_y = 29
 	},
-/turf/closed/indestructible/f13vaultrusted,
+/turf/closed/wall/rust,
 /area/f13/ncr)
 "nkj" = (
 /turf/open/floor/f13{
@@ -14147,10 +14141,6 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/city)
-"nyO" = (
-/obj/structure/barricade/wooden,
-/turf/closed/indestructible/f13vaultrusted,
-/area/f13/ncr)
 "nzx" = (
 /obj/effect/spawner/lootdrop/f13/junkspawners,
 /obj/structure/flora/grass/jungle/b,
@@ -14936,7 +14926,7 @@
 	dir = 1;
 	pixel_y = 7
 	},
-/turf/closed/indestructible/f13vaultrusted,
+/turf/closed/wall/rust,
 /area/f13/ncr)
 "osz" = (
 /obj/structure/flora/grass/wasteland{
@@ -20520,7 +20510,7 @@
 /area/f13/city)
 "tJc" = (
 /obj/structure/barricade/wooden,
-/turf/closed/wall/r_wall,
+/turf/closed/wall/rust,
 /area/f13/ncr)
 "tJF" = (
 /obj/structure/wreck/trash/machinepiletwo,
@@ -22989,7 +22979,7 @@
 /area/f13/wasteland/warren)
 "vOh" = (
 /obj/effect/overlay/turfs/sidewalk,
-/turf/closed/indestructible/f13vaultrusted,
+/turf/closed/wall/rust,
 /area/f13/ncr)
 "vOk" = (
 /mob/living/simple_animal/hostile/ghoul,
@@ -25382,7 +25372,7 @@
 	dir = 9;
 	pixel_y = -11
 	},
-/turf/closed/wall/r_wall,
+/turf/closed/wall/rust,
 /area/f13/ncr)
 "xWz" = (
 /obj/structure/chair/bench,
@@ -46013,36 +46003,36 @@ vrA
 vrA
 jfK
 ufN
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
-aQW
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
 qZx
 "}
 (80,1,1) = {"
@@ -46270,7 +46260,7 @@ vrA
 pbp
 xzm
 giD
-aQW
+jjr
 sQs
 due
 cKy
@@ -46527,7 +46517,7 @@ pbp
 pbp
 jfK
 giD
-aQW
+jjr
 nZR
 cJK
 gLP
@@ -46784,7 +46774,7 @@ kaz
 lMO
 jfK
 giD
-aQW
+jjr
 oXS
 hwE
 cJK
@@ -47041,7 +47031,7 @@ ugw
 ubO
 jfK
 giD
-aQW
+jjr
 noj
 cJK
 hwE
@@ -47298,7 +47288,7 @@ pbp
 pbp
 jfK
 giD
-aQW
+jjr
 nkj
 gLP
 cJK
@@ -47555,7 +47545,7 @@ ejl
 pbp
 xzm
 giD
-aQW
+jjr
 fgO
 ovP
 jAX
@@ -47812,7 +47802,7 @@ ejl
 pbp
 jfK
 giD
-aQW
+jjr
 nMu
 jjr
 wCG
@@ -48069,7 +48059,7 @@ tIj
 raM
 vro
 giD
-aQW
+jjr
 xAc
 jjr
 jjr
@@ -48321,12 +48311,12 @@ cEs
 hRW
 bYc
 jXh
-aRt
-aRt
-aRt
-aRt
-aRt
-aQW
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
 xAc
 xAc
 aRt
@@ -48578,7 +48568,7 @@ aLn
 hgd
 qjT
 jXh
-aRt
+jjr
 jXh
 jXh
 jXh
@@ -49596,9 +49586,9 @@ hgd
 xAc
 ghE
 xAc
-aQW
-aRt
-aRt
+jjr
+jjr
+jjr
 pgU
 cJK
 bVs
@@ -49606,7 +49596,7 @@ aRt
 cQA
 bIZ
 hPK
-aRt
+jjr
 jXh
 jXh
 jXh
@@ -49853,17 +49843,17 @@ hgd
 ghE
 ghE
 eoC
-aQW
-aRt
-aRt
-aRt
+jjr
+jjr
+jjr
+jjr
 qsM
-aRt
-aRt
-aRt
-aRt
-aRt
-aRt
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
 qCw
 aRt
 qCw
@@ -50109,8 +50099,8 @@ kkI
 hgd
 ghE
 ghE
-aQW
-aQW
+jjr
+jjr
 aQW
 xAc
 ghE
@@ -50365,9 +50355,9 @@ kzC
 kkI
 hgd
 qqp
-aQW
-aQW
-aQW
+jjr
+jjr
+jjr
 hwz
 ghE
 xAc
@@ -50621,10 +50611,10 @@ qto
 qto
 kkI
 hgd
-aQW
-aQW
-aRt
-aRt
+jjr
+jjr
+jjr
+jjr
 aRt
 aRt
 jyh
@@ -50878,8 +50868,8 @@ qto
 qto
 kkI
 ovx
-aQW
-aRt
+jjr
+jjr
 qEu
 jTO
 iEN
@@ -51135,8 +51125,8 @@ qto
 qto
 kkI
 eeQ
-aQW
-aRt
+jjr
+jjr
 xSI
 lWw
 qBR
@@ -51392,8 +51382,8 @@ qto
 qto
 kkI
 xTm
-aQW
-aRt
+jjr
+jjr
 nNg
 lWw
 fvh
@@ -51649,8 +51639,8 @@ qto
 qto
 kkI
 xTm
-aQW
-aRt
+jjr
+jjr
 wDo
 qBR
 jjD
@@ -51906,8 +51896,8 @@ kzC
 qto
 kkI
 xTm
-aQW
-aRt
+jjr
+jjr
 wLy
 qBR
 ahP
@@ -52163,8 +52153,8 @@ qto
 qto
 kkI
 xTm
-aQW
-aRt
+jjr
+jjr
 iuG
 wLy
 lNn
@@ -52420,8 +52410,8 @@ qto
 qto
 kkI
 xTm
-aQW
-aRt
+jjr
+jjr
 hBv
 abj
 egn
@@ -52677,8 +52667,8 @@ qto
 qaI
 kkI
 jSz
-aQW
-aRt
+jjr
+jjr
 iuG
 wLy
 wLy
@@ -52927,15 +52917,15 @@ hLa
 mPU
 qto
 qto
-aQW
-aQW
-aQW
-aQW
-aQW
+jjr
+jjr
+jjr
+jjr
+jjr
 vOh
-aQW
-aQW
-aRt
+jjr
+jjr
+jjr
 wLy
 eFR
 rPq
@@ -53184,15 +53174,15 @@ hLa
 mPU
 qto
 qto
-aQW
-jyh
-aRt
-jyh
-jyh
-aRt
-aRt
-jyh
-aRt
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
+jjr
 aRt
 aRt
 jyh
@@ -53441,8 +53431,8 @@ hLa
 mPU
 hxq
 qto
-aQW
-aRt
+jjr
+jjr
 wnH
 sgu
 rIU
@@ -53698,8 +53688,8 @@ hLa
 mPU
 qto
 qto
-aQW
-aRt
+jjr
+jjr
 sBv
 uyl
 bYh
@@ -53955,8 +53945,8 @@ hLa
 mPU
 qto
 qto
-aQW
-aRt
+jjr
+jjr
 xHc
 bYh
 bYh
@@ -54212,8 +54202,8 @@ hLa
 mPU
 qto
 iDy
-aQW
-aRt
+jjr
+jjr
 xHc
 bYh
 fCs
@@ -54469,8 +54459,8 @@ hLa
 qJp
 fpC
 cLw
-aQW
-aQW
+jjr
+jjr
 xHc
 bYh
 bYh
@@ -54726,8 +54716,8 @@ hLa
 eWC
 szO
 cLw
-aQW
-aRt
+jjr
+jjr
 xBj
 cxt
 bYh
@@ -54983,8 +54973,8 @@ hLa
 eWC
 szO
 wBg
-aQW
-aRt
+jjr
+jjr
 wnH
 qfI
 cEW
@@ -55240,8 +55230,8 @@ hLa
 eWC
 bqe
 bbg
-aQW
-aQW
+jjr
+jjr
 rWy
 msT
 qto
@@ -55498,7 +55488,7 @@ eWC
 eWC
 qJp
 bWJ
-aRt
+jjr
 qto
 qto
 qto
@@ -55755,7 +55745,7 @@ eWC
 eWC
 eWC
 osv
-aRt
+jjr
 cLw
 cLw
 cLw
@@ -56012,7 +56002,7 @@ eWC
 eWC
 eWC
 osv
-aQW
+jjr
 cLw
 cLw
 wBg
@@ -56269,7 +56259,7 @@ eWC
 eWC
 eWC
 osv
-aQW
+jjr
 cLw
 gWW
 gWW
@@ -56526,7 +56516,7 @@ eWC
 eWC
 eWC
 osv
-aRt
+jjr
 cLw
 gWW
 uxw
@@ -56783,7 +56773,7 @@ eWC
 eWC
 eWC
 osv
-aRt
+jjr
 cLw
 gWW
 uzA
@@ -57040,7 +57030,7 @@ eWC
 eWC
 eWC
 nkd
-aRt
+jjr
 cLw
 gWW
 vJC
@@ -57296,8 +57286,8 @@ hLa
 eWC
 eWC
 kMS
-aQW
-aRt
+jjr
+jjr
 vfP
 gWW
 tkn
@@ -57553,7 +57543,7 @@ eWC
 eWC
 osv
 nkd
-aQW
+jjr
 bJX
 kHs
 gWW
@@ -57808,8 +57798,8 @@ eWC
 eWC
 eWC
 kMS
-aQW
-aQW
+jjr
+jjr
 xzG
 mwR
 qto
@@ -59349,7 +59339,7 @@ hLa
 eWC
 eWC
 kMS
-aQW
+jjr
 irD
 djp
 vCO
@@ -60119,7 +60109,7 @@ hLa
 hLa
 eWC
 eXQ
-gJX
+clF
 fKE
 eWC
 rhs
@@ -61147,7 +61137,7 @@ hLa
 hLa
 eWC
 osv
-gJX
+clF
 whs
 nWl
 rkz
@@ -61404,7 +61394,7 @@ hLa
 hLa
 eWC
 osv
-aQW
+jjr
 eRl
 kVS
 wBg
@@ -61918,7 +61908,7 @@ hLa
 hLa
 eWC
 osv
-aQW
+jjr
 fiK
 dMc
 qiG
@@ -62689,7 +62679,7 @@ hLa
 hLa
 eWC
 osv
-aQW
+jjr
 umj
 gTa
 dMc
@@ -62946,7 +62936,7 @@ hLa
 hLa
 eWC
 osv
-aQW
+jjr
 fOd
 gIF
 fyW
@@ -63203,7 +63193,7 @@ hLa
 hLa
 eWC
 osv
-nyO
+tJc
 dIS
 mvy
 pmS
@@ -63459,8 +63449,8 @@ hLa
 hLa
 hLa
 pLS
-aQW
-aQW
+jjr
+jjr
 pSQ
 hxv
 dDl
@@ -63716,8 +63706,8 @@ hLa
 hLa
 hLa
 pLS
-aQW
-aQW
+jjr
+jjr
 pLS
 pSQ
 pSQ
@@ -63973,8 +63963,8 @@ hLa
 hLa
 pLS
 qZx
-aQW
-aRt
+jjr
+jjr
 qZx
 qZx
 qZx
