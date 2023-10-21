@@ -1708,6 +1708,10 @@
 	},
 /turf/open/floor/wood/wood_common,
 /area/f13/city/bighorn)
+"bHY" = (
+/obj/structure/lattice/catwalk,
+/turf/open/transparent/openspace,
+/area/f13/city/bighorn)
 "bIn" = (
 /obj/structure/filingcabinet/chestdrawer,
 /turf/open/floor/plasteel/f13{
@@ -1970,6 +1974,13 @@
 "cnX" = (
 /turf/closed/wall/r_wall/rust,
 /area/f13/building/mall)
+"coc" = (
+/obj/structure/table,
+/obj/structure/sign/poster/contraband/pinup_anthro7{
+	pixel_y = 32
+	},
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/city/bighorn)
 "com" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -2270,6 +2281,11 @@
 /obj/structure/wreck/trash/machinepiletwo,
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/mall)
+"cZB" = (
+/obj/structure/lattice/catwalk,
+/obj/machinery/light/small,
+/turf/open/transparent/openspace,
+/area/f13/city/bighorn)
 "dbl" = (
 /obj/structure/table,
 /obj/structure/junk/small/tv{
@@ -3337,6 +3353,11 @@
 	obj_integrity = 1200
 	},
 /turf/open/floor/f13/wood,
+/area/f13/city/bighorn)
+"fvQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/transparent/openspace,
 /area/f13/city/bighorn)
 "fxl" = (
 /obj/structure/decoration/warning{
@@ -5395,6 +5416,11 @@
 "jKa" = (
 /turf/closed/wall/f13/wood/house,
 /area/f13/wasteland)
+"jKt" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small,
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/city/bighorn)
 "jLj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6179,6 +6205,16 @@
 "lqO" = (
 /turf/closed/wall/f13/store,
 /area/f13/building/hospital)
+"lqZ" = (
+/obj/structure/table,
+/obj/structure/sign/poster/contraband/pinup_anthro12{
+	pixel_x = -32
+	},
+/obj/structure/sign/poster/contraband/pinup_anthro10{
+	pixel_y = 32
+	},
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/city/bighorn)
 "lsj" = (
 /obj/structure/table,
 /obj/structure/junk/arcade,
@@ -7019,6 +7055,13 @@
 	icon_state = "redrustyfull"
 	},
 /area/f13/building/mall)
+"mTy" = (
+/obj/structure/rack,
+/obj/item/binoculars,
+/obj/item/binoculars,
+/obj/item/binoculars,
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/city/bighorn)
 "mTY" = (
 /turf/open/floor/wood/wood_fancy,
 /area/f13/brotherhood)
@@ -7310,6 +7353,11 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"nxV" = (
+/obj/structure/lattice/catwalk,
+/obj/machinery/light/small,
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/city/bighorn)
 "nyg" = (
 /obj/item/kirbyplants,
 /obj/structure/sign/warning/biohazard{
@@ -8222,6 +8270,14 @@
 /obj/structure/window/fulltile/ruins/broken,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"pjv" = (
+/obj/structure/table,
+/obj/machinery/computer/terminal{
+	dir = 8;
+	termtag = "Secret"
+	},
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/city/bighorn)
 "pjN" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt{
@@ -8330,6 +8386,9 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/building/mall)
+"pyk" = (
+/turf/closed/wall/f13/store,
+/area/f13/city/bighorn)
 "pyC" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/blue,
@@ -8792,6 +8851,12 @@
 	dir = 1
 	},
 /area/f13/brotherhood)
+"quU" = (
+/obj/structure/table,
+/obj/item/paper_bin,
+/obj/item/pen,
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/city/bighorn)
 "qvE" = (
 /obj/structure/chair/booth,
 /obj/effect/decal/cleanable/dirt,
@@ -9129,6 +9194,9 @@
 	},
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/building/mall)
+"qVw" = (
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/city/bighorn)
 "qVF" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -9143,6 +9211,10 @@
 "qYF" = (
 /turf/closed/indestructible/riveted,
 /area/f13/tcoms)
+"qYM" = (
+/obj/structure/simple_door/glass,
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/city/bighorn)
 "qYO" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/snacks/donut/berry,
@@ -9716,6 +9788,10 @@
 "slA" = (
 /turf/open/floor/f13,
 /area/f13/brotherhood)
+"smQ" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/city/bighorn)
 "smS" = (
 /obj/effect/spawner/lootdrop/f13/advcrafting,
 /turf/open/floor/plasteel/f13{
@@ -10650,6 +10726,10 @@
 	sunlight_state = 1
 	},
 /area/f13/building/hospital)
+"tWJ" = (
+/obj/structure/window/fulltile/wood,
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/city/bighorn)
 "tWZ" = (
 /obj/structure/closet/cabinet,
 /obj/effect/spawner/lootdrop/f13/armor/clothes,
@@ -11765,6 +11845,14 @@
 	icon_state = "greenrustychess"
 	},
 /area/f13/building/massfusion)
+"wwn" = (
+/obj/structure/lattice/catwalk,
+/obj/machinery/light/small,
+/turf/open/transparent/openspace{
+	name = "air";
+	sunlight_state = 1
+	},
+/area/f13/city/bighorn)
 "wxI" = (
 /obj/structure/table/wood/bar,
 /obj/item/gavelblock{
@@ -12031,6 +12119,16 @@
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
 	},
+/area/f13/city/bighorn)
+"xco" = (
+/obj/structure/chair/f13chair2{
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/city/bighorn)
+"xdm" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/transparent/openspace,
 /area/f13/city/bighorn)
 "xdn" = (
 /obj/structure/window/fulltile/ruins{
@@ -25933,9 +26031,9 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
+bbB
+aak
+aak
 abv
 abv
 abv
@@ -26190,16 +26288,16 @@ oez
 oez
 oez
 oez
-oez
-oez
-vqz
-ojS
-ojS
-ojS
-ojS
-ojS
-ojS
-wqF
+aaj
+bHY
+wwn
+pyk
+pyk
+pyk
+pyk
+pyk
+pyk
+csj
 oez
 oez
 oez
@@ -26447,16 +26545,16 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-wqF
-oez
-oez
-wqF
-oez
+aaj
+bHY
+bHY
+bHY
+cZB
+csj
+csj
+csj
+csj
+aKa
 oez
 oez
 oez
@@ -26704,16 +26802,16 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-wqF
-oez
-oez
-wqF
-oez
+aaj
+bHY
+bHY
+bHY
+bHY
+tWJ
+qVw
+mTy
+csj
+aKa
 oez
 oez
 oez
@@ -26961,16 +27059,16 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-wqF
-oez
-oez
-wqF
-oez
+aaj
+bHY
+bHY
+bHY
+bHY
+qYM
+smQ
+mTy
+csj
+aKa
 oez
 oez
 oez
@@ -27218,16 +27316,16 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-wqF
-oez
-oez
-wqF
-oez
+aaj
+bHY
+bHY
+bHY
+bHY
+tWJ
+smQ
+jKt
+csj
+aKa
 oez
 oez
 oez
@@ -27475,17 +27573,17 @@ oez
 oez
 oez
 oez
+aaj
+bHY
+bHY
+bHY
+nxV
+csj
+smQ
+smQ
+csj
+aKa
 oez
-oez
-oez
-oez
-aKa
-wqF
-aKa
-aKa
-wqF
-aKa
-aKa
 oez
 oez
 oez
@@ -27732,17 +27830,17 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
+aaj
+bHY
+cZB
 ojS
-ojS
-wqF
-wqF
-wqF
-wqF
+pyk
+csj
+xdm
+smQ
+csj
 aKa
-aKa
+oez
 oez
 oez
 oez
@@ -27989,17 +28087,17 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
+dUC
+uur
+uur
 ojS
-wqF
-wqF
+csj
+csj
+fvQ
+jKt
+csj
 aKa
-aKa
-aKa
-aKa
-aKa
+oez
 oez
 oez
 oez
@@ -28250,13 +28348,13 @@ oez
 oez
 oez
 ojS
-wqF
+csj
+lqZ
+smQ
+xco
+csj
 aKa
-aKa
-aKa
-aKa
-aKa
-aKa
+oez
 oez
 oez
 oez
@@ -28507,11 +28605,11 @@ oez
 oez
 oez
 ojS
-wqF
-aKa
-aKa
-aKa
-aKa
+csj
+coc
+quU
+pjv
+csj
 aKa
 aKa
 aKa
@@ -28764,12 +28862,12 @@ oez
 oez
 oez
 ojS
+csj
+csj
+csj
+csj
+csj
 wqF
-aKa
-aKa
-aKa
-aKa
-aKa
 aKa
 aKa
 oez
