@@ -90,8 +90,9 @@
 	ADD_TRAIT(user, TRAIT_PUSHIMMUNE, "PA_push_immunity") //SPA makes you really hard to push.
 	if(isliving(user))
 		to_chat(user, "<span class='notice'>You feel safer surrounded by steel.</span>")
-		user.maxHealth += 25
-		user.health += 25
+		var/mob/living/carbon/human/H = user
+		H.maxHealth += 25
+		H.health += 25
 
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/dropped(mob/user)
 	..()
@@ -101,8 +102,9 @@
 	REMOVE_TRAIT(user, TRAIT_PUSHIMMUNE, "PA_push_immunity")
 	if(isliving(user))
 		to_chat(user, "<span class='notice'>You feel less safe, and vulnerable!</span>")
-		user.maxHealth -= 25
-		user.health -= 25
+		var/mob/living/carbon/human/H = user
+		H.maxHealth -= 25
+		H.health -= 25
 
 // T-45B
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b
