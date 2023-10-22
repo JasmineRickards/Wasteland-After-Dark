@@ -215,7 +215,7 @@
 /obj/structure/anvil/proc/tryfinish(mob/user)
 	var/artifactchance = 0
 	if(!artifactrolled)
-		artifactchance = (1+(user.mind.get_skill_level(/datum/skill/level/dwarfy/blacksmithing)/4))/2500
+		artifactchance = (1+(user.mind.get_skill_level(/datum/skill/level/dwarfy/blacksmithing)/4))/1500 //Makes artifacts more likely
 		artifactrolled = TRUE
 	var/artifact = max(prob(artifactchance), debug)
 	var/finalfailchance = outrightfailchance
@@ -246,8 +246,8 @@
 			set_light_on(FALSE)
 			if(artifact)
 				to_chat(user, "It is an artifact, a creation whose legacy shall live on forevermore.") //todo: SSblackbox
-				currentquality = max(currentquality, 2)
-				finisheditem.quality = currentquality * 3//this is insane i know it's 1/2500 for most of the time and 0.8% at best
+				currentquality = max(currentquality, itemqualitymax) //Fixes artifacts being actually worse than normal items in our codebase
+				finisheditem.quality = currentquality * 1.5 //Nerfs artifacts, but fixes how awful this was.
 				finisheditem.artifact = TRUE
 			else
 				finisheditem.quality = min(currentquality, itemqualitymax)
@@ -269,8 +269,14 @@
 			currentsteps = 0
 			outrightfailchance = 1
 			artifactrolled = FALSE
+			var/stepexperience = currentsteps + finisheditem.quality
+			var/finalexperience = (150 *(stepexperience + finisheditem.quality))/8 //A total of 8x the amount of EXP at MAX, with a minimum gain of 150, Keep in mind that this is of course only possible with a max-tier anvil and an already insanely high level. Just makes earlier levels faster.
 			if(user.mind.skill_holder)
-				user.mind.auto_gain_experience(/datum/skill/level/dwarfy/blacksmithing, 100, 10000000, silent = FALSE)
+				if(currentquality <= 1)
+					user.mind.auto_gain_experience(/datum/skill/level/dwarfy/blacksmithing, 250, 500000, silent = FALSE) //Incentivises not spamming Slag
+				else
+					user.mind.auto_gain_experience(/datum/skill/level/dwarfy/blacksmithing, finalexperience, 500000, silent = FALSE) //Makes forging less grindy in terms of raw levels - PRE CHANGE: 2300 sheets of iron on average for half way done. Took 3 hours of solid forging.
+
 			break
 
 
