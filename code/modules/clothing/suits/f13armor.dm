@@ -287,6 +287,8 @@
 	var/powered = TRUE
 	/// If TRUE - the suit has been recently affected by EMP blast
 	var/emped = FALSE
+	/// Adjusts the bonus HP the suit gives you.
+	var/hpboost = 40 //Default HP amount
 	/// Path of item that this set of armor gets salvaged into
 	var/obj/item/salvaged_type = null
 	/// Used to track next tool required to salvage the suit
@@ -319,8 +321,15 @@
 		return
 	ADD_TRAIT(user, TRAIT_STUNIMMUNE, "PA_stun_immunity")
 	ADD_TRAIT(user, TRAIT_PUSHIMMUNE, "PA_push_immunity")
+	ADD_TRAIT(user, TRAIT_NOSLIPALL,  "PA_push_immunity")
 	ADD_TRAIT(user, SPREAD_CONTROL, "PA_spreadcontrol")
 	ADD_TRAIT(user, TRAIT_POWER_ARMOR, "PA_worn_trait") // General effects from being in PA
+	ADD_TRAIT(user, TRAIT_PIERCEIMMUNE, "PA_worn_trait") // Nuh uh to shrapnel
+	if(isliving(user))
+		var/mob/living/carbon/human/H = user
+		to_chat(H, "<span class='notice'>You feel secure in steel, likely able to shrug off far more damage.</span>")
+		H.maxHealth += hpboost
+		H.health += hpboost
 
 /obj/item/clothing/suit/armor/f13/power_armor/dropped(mob/user)
 	..()
@@ -331,8 +340,15 @@
 /obj/item/clothing/suit/armor/f13/power_armor/proc/remove_traits(mob/user)
 	REMOVE_TRAIT(user, TRAIT_STUNIMMUNE, "PA_stun_immunity")
 	REMOVE_TRAIT(user, TRAIT_PUSHIMMUNE, "PA_push_immunity")
+	REMOVE_TRAIT(user, TRAIT_NOSLIPALL, "PA_push_immunity") //You have to be kidding me.
 	REMOVE_TRAIT(user, SPREAD_CONTROL, "PA_spreadcontrol")
 	REMOVE_TRAIT(user, TRAIT_POWER_ARMOR, "PA_worn_trait")
+	REMOVE_TRAIT(user, TRAIT_PIERCEIMMUNE, "PA_worn_trait") //Nuh uh to shrapnel
+	if(isliving(user))
+		var/mob/living/carbon/human/H = user
+		to_chat(H, "<span class='notice'>You feel less safe and secure, and more vulnerable.</span>")
+		H.maxHealth -= hpboost
+		H.health -= hpboost
 
 /obj/item/clothing/suit/armor/f13/power_armor/Destroy()
 	. = ..()
@@ -627,6 +643,7 @@
 	armor = list("melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 25)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t51b
+	hpboost = 50
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51green
 	name = "Hardened T-51b power armor"
@@ -666,6 +683,7 @@
 	icon_state = "t60powerarmor"
 	item_state = "t60powerarmor"
 	slowdown = 0.2
+	hpboost = 60
 	armor = list("melee" = 80, "bullet" = 70, "laser" = 80, "energy" = 30, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 50, "wound" = 50)
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 30)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t60
@@ -678,6 +696,7 @@
 
 /obj/item/clothing/suit/armor/f13/power_armor/excavator
 	name = "excavator power armor"
+	hpboost = 20 //Its pretty bad otherwise.
 	desc = "Developed by Garrahan Mining Co. in collaboration with West Tek, the Excavator-class power armor was designed to protect miners from rockfalls and airborne contaminants while increasing the speed at which they could work. "
 	icon_state = "excavator"
 	item_state = "excavator"
@@ -689,6 +708,7 @@
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for its user's comfort."
 	icon_state = "advpowerarmor1"
 	item_state = "advpowerarmor1"
+	hpboost = 60
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 85, "energy" = 35, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 50)
 
 //Enclave armor adjust as needed
@@ -698,6 +718,7 @@
 	icon_state = "advanced"
 	item_state = "advanced"
 	slowdown = 0.3//Worst slowdown of all combat sets.
+	hpboost = 60
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 85, "energy" = 85, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 50)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/x02 // Oh the misery
 
@@ -707,6 +728,7 @@
 	icon_state = "tesla"
 	item_state = "tesla"
 	slowdown = 0.25//Worst slowdown of all combat sets.
+	hpboost = 60
 	armor = list("melee" = 75, "bullet" = 75, "laser" = 95, "energy" = 95, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 50)
 	var/hit_reflect_chance = 35
 
@@ -720,11 +742,13 @@
 /obj/item/clothing/suit/armor/f13/power_armor/x02/eastcoast
 	name = "X-02 power armor"
 	desc = "A very rare suit of X-02 power armor."
+	hpboost = 70 //DOES NOT SPAWN OUTSIDE OF ADMIN INTERVENTION
 	icon_state = "PA_x02"
 	item_state = "PA_x02"
 
 /obj/item/clothing/suit/armor/f13/power_armor/tesla/eastcoast
 	name = "X-02 tesla armor"
+	hpboost = 70 //DOES NOT SPAWN OUTSIDE OF ADMIN INTERVENTION
 	desc = "A very rare suit of X-02 power armor. This one has been fitted with extra electronics and tesla attraction coils to be used with energy-based weapons."
 	icon_state = "PA_x02tesla"
 	item_state = "PA_x02tesla"
