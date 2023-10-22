@@ -2630,7 +2630,7 @@
 /area/f13/brotherhood)
 "ajX" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/door/unpowered/secure_bosciv,
+/obj/machinery/door/unpowered/secure_bos/civ,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/building)
 "aka" = (
@@ -3137,7 +3137,7 @@
 /turf/open/floor/plasteel/freezer,
 /area/f13/brotherhood)
 "alU" = (
-/obj/machinery/door/unpowered/secure_bosciv,
+/obj/machinery/door/unpowered/secure_bos/civ,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/building)
 "alY" = (
@@ -4731,7 +4731,7 @@
 "asT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/unpowered/secure_bosciv,
+/obj/machinery/door/unpowered/secure_bos/civ,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -12815,7 +12815,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "aTv" = (
-/obj/machinery/door/unpowered/secure_bosciv,
+/obj/machinery/door/unpowered/secure_bos/civ,
 /turf/open/floor/f13{
 	icon_state = "whitegreenrustychess"
 	},
@@ -18739,7 +18739,7 @@
 /turf/open/floor/wood/wood_mosaic,
 /area/f13/city/bighorn)
 "bnK" = (
-/obj/machinery/door/unpowered/secure_bosciv,
+/obj/machinery/door/unpowered/secure_bos/civ,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -30237,7 +30237,7 @@
 /turf/closed/mineral/random/low_chance,
 /area/f13/caves)
 "gDx" = (
-/obj/machinery/door/unpowered/secure_bosciv,
+/obj/machinery/door/unpowered/secure_bos/civ,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "gDC" = (
