@@ -289,6 +289,8 @@
 	var/emped = FALSE
 	/// Adjusts the bonus HP the suit gives you.
 	var/hpboost = 40 //Default HP amount
+	/// Handles if its equipped
+	var/isequipped = FALSE
 	/// Path of item that this set of armor gets salvaged into
 	var/obj/item/salvaged_type = null
 	/// Used to track next tool required to salvage the suit
@@ -326,10 +328,12 @@
 	ADD_TRAIT(user, TRAIT_POWER_ARMOR, "PA_worn_trait") // General effects from being in PA
 	ADD_TRAIT(user, TRAIT_PIERCEIMMUNE, "PA_worn_trait") // Nuh uh to shrapnel
 	if(isliving(user))
-		var/mob/living/carbon/human/H = user
-		to_chat(H, "<span class='notice'>You feel secure in steel, likely able to shrug off far more damage.</span>")
-		H.maxHealth += hpboost
-		H.health += hpboost
+		if(!isequipped)
+			var/mob/living/carbon/human/H = user
+			to_chat(H, "<span class='notice'>You feel secure in steel, likely able to shrug off far more damage.</span>")
+			H.maxHealth += hpboost
+			H.health += hpboost
+			isequipped = TRUE
 
 /obj/item/clothing/suit/armor/f13/power_armor/dropped(mob/user)
 	..()
@@ -345,10 +349,12 @@
 	REMOVE_TRAIT(user, TRAIT_POWER_ARMOR, "PA_worn_trait")
 	REMOVE_TRAIT(user, TRAIT_PIERCEIMMUNE, "PA_worn_trait") //Nuh uh to shrapnel
 	if(isliving(user))
-		var/mob/living/carbon/human/H = user
-		to_chat(H, "<span class='notice'>You feel less safe and secure, and more vulnerable.</span>")
-		H.maxHealth -= hpboost
-		H.health -= hpboost
+		if(isequipped)
+			var/mob/living/carbon/human/H = user
+			to_chat(H, "<span class='notice'>You feel less safe and secure, and more vulnerable.</span>")
+			H.maxHealth -= hpboost
+			H.health -= hpboost
+			isequipped = FALSE
 
 /obj/item/clothing/suit/armor/f13/power_armor/Destroy()
 	. = ..()
