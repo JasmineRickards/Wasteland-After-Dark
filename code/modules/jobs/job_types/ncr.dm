@@ -236,7 +236,10 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	display_order = JOB_DISPLAY_ORDER_LIEUTENANT
 	outfit = /datum/outfit/job/ncr/f13lieutenant
 	exp_requirements = 1250
-
+	loadout_options = list( // ALL: PA setup, Deagle
+		/datum/outfit/loadout/lieutenantsierra,
+		/datum/outfit/loadout/lieutenantdeagle,
+		)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/ncr,
@@ -283,6 +286,26 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	if(H.mind)
 		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
 		H.mind.AddSpell(S)
+
+/datum/outfit/loadout/lieutenantsierra
+	name = "Field Commander"
+	backpack_contents = list(
+		/obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra,
+		/obj/item/clothing/head/helmet/f13/power_armor/t45d,
+		/obj/item/melee/onehanded/knife/bowie = 1,
+		/obj/item/flashlight/seclite = 1,
+		/obj/item/book/granter/trait/pa_wear,
+		)
+
+/datum/outfit/loadout/lieutenantdeagle
+	name = "Backline Commander"
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/deagle = 1,
+		/obj/item/ammo_box/magazine/d12g = 3,
+		/obj/item/melee/onehanded/knife/bowie = 1,
+		/obj/item/flashlight/seclite = 1,
+		/obj/item/gun/ballistic/automatic/marksman/sniper/sniperranger,
+		)
 
 
 // SERGEANT
