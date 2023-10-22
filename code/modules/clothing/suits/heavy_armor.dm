@@ -82,6 +82,28 @@
 	Now begone, report this to coders. NOW!"
 	slowdown = 0.6
 
+/obj/item/clothing/suit/armored/heavy/salvaged_pa/equipped(mob/user, slot)
+	..()
+	assign_traits(user)
+
+/obj/item/clothing/suit/armored/heavy/salvaged_pa/proc/assign_traits(mob/user)
+	ADD_TRAIT(user, TRAIT_PUSHIMMUNE, "PA_push_immunity") //SPA makes you really hard to push.
+	if(isliving(user))
+		to_chat(user, "<span class='notice'>You feel safer surrounded by steel.</span>")
+		user.maxHealth += 25
+		user.health += 25
+
+/obj/item/clothing/suit/armored/heavy/salvaged_pa/dropped(mob/user)
+	..()
+	remove_traits(user)
+
+/obj/item/clothing/suit/armored/heavy/salvaged_pa/proc/remove_traits(mob/user)
+	REMOVE_TRAIT(user, TRAIT_PUSHIMMUNE, "PA_push_immunity")
+	if(isliving(user))
+		to_chat(user, "<span class='notice'>You feel less safe, and vulnerable!</span>")
+		user.maxHealth -= 25
+		user.health -= 25
+
 // T-45B
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b
 	name = "salvaged T-45b power armor"
