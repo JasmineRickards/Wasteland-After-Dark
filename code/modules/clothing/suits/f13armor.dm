@@ -324,6 +324,7 @@
 	ADD_TRAIT(user, TRAIT_NOSLIPALL,  "PA_push_immunity")
 	ADD_TRAIT(user, SPREAD_CONTROL, "PA_spreadcontrol")
 	ADD_TRAIT(user, TRAIT_POWER_ARMOR, "PA_worn_trait") // General effects from being in PA
+	ADD_TRAIT(user, TRAIT_PIERCEIMMUNE, "PA_worn_trait") // Nuh uh to shrapnel
 	if(isliving(user))
 		var/mob/living/carbon/human/H = user
 		to_chat(H, "<span class='notice'>You feel secure in steel, likely able to shrug off far more damage.</span>")
@@ -342,6 +343,7 @@
 	REMOVE_TRAIT(user, TRAIT_NOSLIPALL, "PA_push_immunity") //You have to be kidding me.
 	REMOVE_TRAIT(user, SPREAD_CONTROL, "PA_spreadcontrol")
 	REMOVE_TRAIT(user, TRAIT_POWER_ARMOR, "PA_worn_trait")
+	REMOVE_TRAIT(user, TRAIT_PIERCEIMMUNE, "PA_worn_trait") //Nuh uh to shrapnel
 	if(isliving(user))
 		var/mob/living/carbon/human/H = user
 		to_chat(H, "<span class='notice'>You feel less safe and secure, and more vulnerable.</span>")
