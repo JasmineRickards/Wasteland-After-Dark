@@ -22,7 +22,7 @@
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
-
+/*
 /obj/item/gun/ballistic/revolver/hobo/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0, stam_cost = 0)
 	if(prob(1))
 		playsound(user, fire_sound, 50, 1)
@@ -31,13 +31,13 @@
 		user.dropItemToGround(src)
 		return FALSE
 	..()
-
+*/
 
 /obj/item/gun/ballistic/rifle/hobo
 	slowdown = 0.4
 	icon = 'icons/fallout/objects/guns/energy.dmi'
 	can_scope = TRUE
-
+/*
 /obj/item/gun/ballistic/rifle/hobo/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0, stam_cost = 0)
 	if(prob(1))
 		playsound(user, fire_sound, 50, 1)
@@ -55,7 +55,7 @@
 		user.dropItemToGround(src)
 		return FALSE
 	..()
-
+*/
 /////////////
 //HOBO GUNS//
 /////////////
@@ -95,7 +95,7 @@
 	fire_delay = 0.25
 	spread = 2
 	fire_sound = 'sound/weapons/Gunshot.ogg'
-
+/*
 /obj/item/gun/ballistic/revolver/hobo/piperifle/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0, stam_cost = 0)
 	if(prob(1))
 		playsound(user, fire_sound, 50, 1)
@@ -104,7 +104,7 @@
 		user.dropItemToGround(src)
 		return FALSE
 	..()
-
+*/
 //Pepperbox gun											Keywords: 10mm, 4 rounds internal
 /obj/item/gun/ballistic/revolver/hobo/pepperbox
 	name = "pepperbox gun (10mm)"
@@ -118,7 +118,7 @@
 	fire_delay = 0.25
 	spread = 7
 	fire_sound = 'sound/weapons/Gunshot.ogg'
-
+/*
 /obj/item/gun/ballistic/revolver/hobo/pepperbox/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0, stam_cost = 0)
 	if(prob(1))
 		playsound(user, fire_sound, 50, 1)
@@ -127,7 +127,7 @@
 		user.dropItemToGround(src)
 		return FALSE
 	..()
-
+*/
 //Shotgun bat											Keywords: Shotgun, 1 round internal, Extra damage +2, Melee damage
 /obj/item/gun/ballistic/revolver/single_shotgun
 	name = "shotgun bat"
