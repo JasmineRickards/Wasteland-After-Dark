@@ -76,7 +76,7 @@
 
 /datum/reagent/toxin/FEV_solution/one/on_mob_life(mob/living/carbon/C)
 	C.apply_effect(40,EFFECT_IRRADIATE,0)
-	C.adjustCloneLoss(3,0) // ~15 units will get you near crit condition.
+	C.adjustCloneLoss(15,0) // ~5 units will get you near crit condition.
 	return ..()
 
 //FEV - II: The super mutie kind
@@ -86,9 +86,13 @@
 	fev_disease = /datum/disease/fev2
 
 /datum/reagent/toxin/FEV_solution/two/overdose_process(mob/living/carbon/C)
-	C.adjustFireLoss(5,0)
-	C.apply_effect(1,EFFECT_IRRADIATE,0) //FEV-II is radioactive.
-	C.Jitter(2)
+	C.adjustBruteLoss(6,0)
+	C.adjustFireLoss(15,0)
+	C.apply_effect(70,EFFECT_IRRADIATE,0) //FEV-II is radioactive.
+	C.adjustCloneLoss(3,0) // ~10 units will crit you.
+	C.Jitter(30)
+	if(prob(1))
+		to_chat(C, "<span class='danger'>You feel your insides burning, holy shit!</span>")
 	return ..()
 
 //FEV - Curling 13: The murderous type
