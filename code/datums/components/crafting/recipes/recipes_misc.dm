@@ -42,7 +42,7 @@
 
 /datum/crafting_recipe/gate_bosciv
 	name = "Brotherhood civilian steel door"
-	result = /obj/machinery/door/unpowered/secure_bosciv
+	result = /obj/machinery/door/unpowered/secure_bos/civ
 	reqs = list(/obj/item/stack/sheet/metal = 35)
 	time = 180
 	subcategory = CAT_MISCELLANEOUS
