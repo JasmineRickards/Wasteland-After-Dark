@@ -106,7 +106,7 @@
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
 		overdose_process(H) // Disease
-		H.reagents.remove_reagent(src.type,100) // Our job here is done
+		C.apply_effect(600,EFFECT_IRRADIATE,0) //Curling is mixed with a radioactive precursor to accelerate its lethality.
 		return
 
 /datum/reagent/toxin/mutagen
