@@ -290,11 +290,11 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/outfit/loadout/lieutenantsierra
 	name = "Field Commander"
 	backpack_contents = list(
-		/obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra,
-		/obj/item/clothing/head/helmet/f13/power_armor/t45d,
+		/obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra = 1,
+		/obj/item/clothing/head/helmet/f13/power_armor/t45d = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/flashlight/seclite = 1,
-		/obj/item/book/granter/trait/pa_wear,
+		/obj/item/book/granter/trait/pa_wear = 1,
 		)
 
 /datum/outfit/loadout/lieutenantdeagle
@@ -304,7 +304,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_box/magazine/d12g = 3,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/flashlight/seclite = 1,
-		/obj/item/gun/ballistic/automatic/marksman/sniper/sniperranger,
+		/obj/item/gun/ballistic/automatic/marksman/sniper/sniperranger = 1,
 		)
 
 
