@@ -667,6 +667,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmith_two,				300),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmith_three, 				600),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmith_four, 				1200),
+		new /datum/data/wasteland_equipment("Cheap gun blueprints",			/obj/effect/spawner/lootdrop/f13/blueprintLowMid, 					400),
+		new /datum/data/wasteland_equipment("Moderate gun blueprints",		/obj/effect/spawner/lootdrop/f13/blueprintMid, 						1000),
 		)
 	highpop_list = list(
 		new /datum/data/wasteland_equipment("survival knife",				/obj/item/melee/onehanded/knife/survival, 							40),
@@ -681,6 +683,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmith_two,				300),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmith_three, 				600),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmith_four, 				1200),
+		new /datum/data/wasteland_equipment("Cheap gun blueprints",			/obj/effect/spawner/lootdrop/f13/blueprintLowMid, 					400),
+		new /datum/data/wasteland_equipment("Moderate gun blueprints",		/obj/effect/spawner/lootdrop/f13/blueprintMid, 						1000),
 		)
 
 
@@ -1067,6 +1071,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("DKS-501 sniper rifle",			/obj/item/gun/ballistic/automatic/marksman/sniper,					400),
 		new /datum/data/wasteland_equipment("R91 assault rifle",			/obj/item/gun/ballistic/automatic/assault_rifle,					700),
 		new /datum/data/wasteland_equipment("Marksman Carbine", 			/obj/item/gun/ballistic/automatic/marksman, 						600),
+		new /datum/data/wasteland_equipment("R84 LMG", 						/obj/item/gun/ballistic/automatic/r84, 								1200),
 		new /datum/data/wasteland_equipment("NCR salvaged T-45d", 			/obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b/ncr,			1500),
 		new /datum/data/wasteland_equipment("NCR salvaged T-45d helmet", 	/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr, 		500),
 		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400)
@@ -1095,6 +1100,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("DKS-501 sniper rifle",			/obj/item/gun/ballistic/automatic/marksman/sniper,					400),
 		new /datum/data/wasteland_equipment("R91 assault rifle",			/obj/item/gun/ballistic/automatic/assault_rifle,					700),
 		new /datum/data/wasteland_equipment("Marksman Carbine", 			/obj/item/gun/ballistic/automatic/marksman, 						600),
+		new /datum/data/wasteland_equipment("R84 LMG", 						/obj/item/gun/ballistic/automatic/r84, 								1200),
 		new /datum/data/wasteland_equipment("NCR salvaged T-45d", 			/obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b/ncr,			1500),
 		new /datum/data/wasteland_equipment("NCR salvaged T-45d helmet", 	/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr, 		500),
 		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400)
@@ -1130,7 +1136,6 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("10mm SMG blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,			400),
 		new /datum/data/wasteland_equipment("Lever-action shotgun",			/obj/item/book/granter/crafting_recipe/blueprint/leveraction,		500),
 		new /datum/data/wasteland_equipment("Trail Carbine",				/obj/item/gun/ballistic/rifle/repeater/trail,						300),
-		new /datum/data/wasteland_equipment("Brush gun", 					/obj/item/gun/ballistic/rifle/repeater/brush, 						700),
 		new /datum/data/wasteland_equipment("Marksman Carbine", 			/obj/item/gun/ballistic/automatic/marksman, 						600),
 		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400)
 		)
@@ -1159,7 +1164,6 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("10mm SMG blueprint",			/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,			400),
 		new /datum/data/wasteland_equipment("Lever-action shotgun",			/obj/item/book/granter/crafting_recipe/blueprint/leveraction,		500),
 		new /datum/data/wasteland_equipment("Trail Carbine",				/obj/item/gun/ballistic/rifle/repeater/trail,						300),
-		new /datum/data/wasteland_equipment("Brush gun", 					/obj/item/gun/ballistic/rifle/repeater/brush, 						700),
 		new /datum/data/wasteland_equipment("Marksman Carbine", 			/obj/item/gun/ballistic/automatic/marksman, 						600),
 		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400)
 		)
@@ -1182,6 +1186,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmith_two,				300),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmith_three, 				600),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmith_four, 				1200),
+		new /datum/data/wasteland_equipment("Reverse engineered blueprint",		/obj/effect/spawner/lootdrop/f13/blueprintHigh, 				1800),
+		new /datum/data/wasteland_equipment("Reverse engineered advanced blueprint",		/obj/effect/spawner/lootdrop/f13/blueprintVHigh, 	2600),
 		new /datum/data/wasteland_equipment("Russian primer book", 			/obj/item/book/granter/trait/rifleman, 								800),
 		new /datum/data/wasteland_equipment("Wattz laser pistol",			/obj/item/gun/energy/laser/wattz,									150),
 		new /datum/data/wasteland_equipment("Reinforced combat helmet",		/obj/item/clothing/head/helmet/f13/combat/mk2 ,						200),
@@ -1193,6 +1199,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("T-45d armor", 					/obj/item/clothing/suit/armor/f13/power_armor/t45d,		 			2500),
 		new /datum/data/wasteland_equipment("T-45d helmet", 				/obj/item/clothing/head/helmet/f13/power_armor/t45d, 				500),
 		new /datum/data/wasteland_equipment("M-60LMG", 						/obj/item/gun/ballistic/automatic/m60, 								2500),
+		new /datum/data/wasteland_equipment("Combat Rifle", 					/obj/item/gun/ballistic/automatic/combat, 						450),
 		new /datum/data/wasteland_equipment("LSW",							/obj/item/gun/ballistic/automatic/lsw, 								700),
 		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400)
 		)
@@ -1212,6 +1219,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmith_two,				300),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmith_three, 				600),
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmith_four, 				1200),
+		new /datum/data/wasteland_equipment("Reverse engineered blueprint",		/obj/effect/spawner/lootdrop/f13/blueprintHigh, 				1800),
+		new /datum/data/wasteland_equipment("Reverse engineered advanced blueprint",		/obj/effect/spawner/lootdrop/f13/blueprintVHigh, 	2600),
 		new /datum/data/wasteland_equipment("Russian primer book", 			/obj/item/book/granter/trait/rifleman, 								800),
 		new /datum/data/wasteland_equipment("Wattz laser pistol",			/obj/item/gun/energy/laser/wattz,									150),
 		new /datum/data/wasteland_equipment("Reinforced combat helmet",		/obj/item/clothing/head/helmet/f13/combat/mk2 ,						200),
@@ -1224,6 +1233,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("T-45d armor", 					/obj/item/clothing/suit/armor/f13/power_armor/t45d,					2500),
 		new /datum/data/wasteland_equipment("T-45d helmet", 				/obj/item/clothing/head/helmet/f13/power_armor/t45d, 				500),
 		new /datum/data/wasteland_equipment("M-60LMG", 					/obj/item/gun/ballistic/automatic/m60, 									2500),
+		new /datum/data/wasteland_equipment("Combat Rifle", 					/obj/item/gun/ballistic/automatic/combat, 						450),
 		new /datum/data/wasteland_equipment("LSW",							/obj/item/gun/ballistic/automatic/lsw, 								700),
 		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400)
 		)
