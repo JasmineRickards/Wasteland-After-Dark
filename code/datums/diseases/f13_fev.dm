@@ -11,8 +11,8 @@
 	spread_text = "Airborne"
 	agent = "Forced Evolutionary Virus"
 	viable_mobtypes = list(/mob/living/carbon/human)
-	cure_text = "Penicillin and Mutadone, followed by heavy rest"
-	cures = list(/datum/reagent/medicine/mutadone, /datum/reagent/medicine/spaceacillin)
+	cure_text = "Penicillin, followed by heavy rest. It is recommended to apply anti-irradiation treatment to the patient during their rest."
+	cures = list(/datum/reagent/medicine/spaceacillin)
 	cure_chance = 5 // To compensate for the fact penicillin is so easy to make.
 	severity = DISEASE_SEVERITY_BIOHAZARD
 
