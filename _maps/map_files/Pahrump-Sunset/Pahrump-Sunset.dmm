@@ -1259,16 +1259,6 @@
 	icon_state = "greenrustychess"
 	},
 /area/f13/building/massfusion)
-"aeK" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/nest/ghoul{
-	max_mobs = 2;
-	radius = 5
-	},
-/turf/open/floor/f13{
-	icon_state = "bluedirtychess2"
-	},
-/area/f13/building)
 "aeM" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/vending/boozeomat,
@@ -103876,7 +103866,7 @@ agk
 abC
 acM
 aef
-aeK
+acR
 ajk
 akp
 acR
