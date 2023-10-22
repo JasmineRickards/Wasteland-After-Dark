@@ -146,7 +146,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 /////////			-Very heavy rifle round.
 
 /obj/item/projectile/bullet/a50MG
-	damage = 75
+	damage = 55
 	armour_penetration = 1
 	pixels_per_second = 4000
 	zone_accuracy_factor = 100
@@ -156,8 +156,8 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	supereffective_faction = list("hostile", "ant", "supermutant", "deathclaw", "cazador", "raider", "china", "gecko", "wastebot", "radscorpion")
 
 /obj/item/projectile/bullet/a50MG/incendiary
-	damage = 60
-	var/fire_stacks = 4
+	damage = 45
+	var/fire_stacks = 8
 	zone_accuracy_factor = 100
 
 /obj/item/projectile/bullet/a50MG/incendiary/on_hit(atom/target, blocked = FALSE)
@@ -176,7 +176,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 
 /obj/item/projectile/bullet/a50MG/rubber
 	name = ".50 rubber bullet"
-	damage = 25
+	damage = 15
 	stamina = 100
 	armour_penetration = 0
 	sharpness = SHARP_NONE

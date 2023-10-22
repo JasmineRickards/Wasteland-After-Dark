@@ -10,7 +10,7 @@
 	can_suppress = FALSE
 	burst_size = 1
 	actions_types = null
-	fire_delay = 3
+	fire_delay = 1
 	spread = 0
 	recoil = 0.1
 	casing_ejector = FALSE
