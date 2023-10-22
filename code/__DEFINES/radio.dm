@@ -61,7 +61,7 @@
 #define RADIO_KEY_BOS "q"
 #define RADIO_TOKEN_BOS ":q"
 
-#define RADIO_CHANNEL_BOS_CIVI "Protectorate"
+#define RADIO_CHANNEL_BOS_CIVI "Protectorate2"
 #define RADIO_KEY_BOS_CIVI "p"
 #define RADIO_TOKEN_BOS_CIVI ":p"
 
@@ -81,7 +81,7 @@
 #define RADIO_KEY_KHANS "a"
 #define RADIO_TOKEN_KHANS ":a"
 
-#define RADIO_CHANNEL_DEN "Den"
+#define RADIO_CHANNEL_DEN "Protectorate"
 #define RADIO_KEY_DEN "j"
 #define RADIO_TOKEN_DEN ":j"
 
