@@ -81,6 +81,7 @@
 	It isn't meant to be used, it just dictates procs and all that stuff to the subtypes, such as t45b and so on. \
 	Now begone, report this to coders. NOW!"
 	slowdown = 0.6
+	var/spaequipped = FALSE
 
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/equipped(mob/user, slot)
 	..()
@@ -89,10 +90,12 @@
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/proc/assign_traits(mob/user)
 	ADD_TRAIT(user, TRAIT_PUSHIMMUNE, "PA_push_immunity") //SPA makes you really hard to push.
 	if(isliving(user))
+		if(!spaequipped)
 		to_chat(user, "<span class='notice'>You feel safer surrounded by steel.</span>")
 		var/mob/living/carbon/human/H = user
 		H.maxHealth += 25
 		H.health += 25
+		spaequipped = TRUE
 
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/dropped(mob/user)
 	..()
@@ -101,10 +104,12 @@
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/proc/remove_traits(mob/user)
 	REMOVE_TRAIT(user, TRAIT_PUSHIMMUNE, "PA_push_immunity")
 	if(isliving(user))
-		to_chat(user, "<span class='notice'>You feel less safe, and vulnerable!</span>")
-		var/mob/living/carbon/human/H = user
-		H.maxHealth -= 25
-		H.health -= 25
+		if(spaequipped)
+			to_chat(user, "<span class='notice'>You feel less safe, and vulnerable!</span>")
+			var/mob/living/carbon/human/H = user
+			H.maxHealth -= 25
+			H.health -= 25
+			spaequipped = FALSE
 
 // T-45B
 /obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b
