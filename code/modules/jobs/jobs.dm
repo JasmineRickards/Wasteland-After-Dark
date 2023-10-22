@@ -149,7 +149,7 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Protectorate Civilian",
 	"Protectorate Shopkeeper",
 	"Protectorate Doctor",
-	"Protectorate Scribe"
+	"Protectorate Scribe",
 
 ))
 
