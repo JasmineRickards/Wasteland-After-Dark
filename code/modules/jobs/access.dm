@@ -436,7 +436,7 @@
 /proc/get_all_jobs()
 	return list("Wastelander", "Outlaw", "Tribal",
 				"Mayor", "Sheriff", "Deputy", "Banker", "Barkeep", "Shopkeeper", "Citizen", "Preacher", "Secretary",
-				"Baron", "Castellan","Keeper", "Knight-Commander", "Paladin Marshal", "Paladin", "Librarian", "Scribe", "Knight-Captain", "Knight", "Initiate", "BoS Off-Duty",
+				"Baron", "Castellan","Keeper", "Knight-Commander", "Paladin Marshal", "Paladin", "Librarian", "Scribe", "Knight-Captain", "Knight", "Initiate", "BoS Off-Duty", "Protectorate Civilian", "Protectorate Shopkeeper", "Protectorate Doctor", "Protectorate Scribe",
 				"Enclave Internal Security", "Enclave Lieutenant", "Enclave Platoon Sergeant", "Enclave Sergeant", "Enclave Specialist", ,"Enclave Private", "Enclave Scientist", "Enclave Pilot Officer", "Enclave Bunker Duty",
 				"Followers Administrator", "Followers Doctor", "Followers Volunteer", "Followers Guard", "Followers Robot",
 				"Khan Senior Enforcer", "Khan Smith", "Khan Enforcer", "Khan Chemist",
