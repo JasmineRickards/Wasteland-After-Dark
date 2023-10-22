@@ -47,6 +47,15 @@
 	time = 20
 	category = CAT_MEDICAL
 
+/datum/crafting_recipe/healpowder50
+	name = "Batch of healing powders (x50)"
+	result = /obj/item/storage/box/medicine/powder50
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 75,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 75)
+	time = 100
+	category = CAT_MEDICAL
+
+
 /datum/crafting_recipe/bitterdrink
 	name = "Bottle bitterdrink"
 	result = /obj/item/reagent_containers/pill/patch/bitterdrink
@@ -92,6 +101,18 @@
 				/obj/item/reagent_containers/food/snacks/grown/pungafruit = 10)
 	time = 20
 	category = CAT_MEDICAL
+
+/datum/crafting_recipe/healpoultice50
+	name = "Batch of healing poultice (x50)"
+	result = /obj/item/storage/box/medicine/poultice50
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 50,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 50,
+				/obj/item/reagent_containers/food/snacks/grown/feracactus = 50,
+				/obj/item/reagent_containers/food/snacks/grown/fungus = 50,
+				/obj/item/reagent_containers/food/snacks/grown/pungafruit = 50)
+	time = 100
+	category = CAT_MEDICAL
+
 
 /datum/crafting_recipe/smell_salts
 	name = "Smelling salts"
@@ -139,6 +160,16 @@
 	time = 20
 	category = CAT_MEDICAL
 
+/datum/crafting_recipe/imitation50
+	name = "Imitation Stimpak x50"
+	result = /obj/item/storage/box/medicine/stimpaks/imitation_stimpaks50
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 100,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 100,
+				/obj/item/reagent_containers/syringe = 50)
+	time = 100
+	category = CAT_MEDICAL
+
+
 /datum/crafting_recipe/stimpak
 	name = "Stimpak"
 	result = /obj/item/reagent_containers/hypospray/medipen/stimpak
@@ -159,6 +190,17 @@
 	time = 20
 	category = CAT_MEDICAL
 
+/datum/crafting_recipe/stimpak50
+	name = "Stimpak x50"
+	result = /obj/item/storage/box/medicine/stimpaks/stimpaks50
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 100,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 100,
+				/obj/item/reagent_containers/syringe = 50)
+	tools = list(TOOL_WORKBENCH)
+	time = 100
+	category = CAT_MEDICAL
+
+
 /datum/crafting_recipe/superstimpak
 	name = "Super Stimpak"
 	result = /obj/item/reagent_containers/hypospray/medipen/stimpak/super
@@ -178,6 +220,17 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 30
 	category = CAT_MEDICAL
+
+/datum/crafting_recipe/superstimpak50
+	name = "Super Stimpak (x50)"
+	result = /obj/item/storage/box/medicine/stimpaks/superstimpaks50
+	reqs = list(/obj/item/reagent_containers/hypospray/medipen/stimpak = 50,
+				/obj/item/stack/sheet/leather = 100,
+				/obj/item/reagent_containers/food/snacks/grown/mutfruit = 100)
+	tools = list(TOOL_WORKBENCH)
+	time = 140
+	category = CAT_MEDICAL
+
 
 /datum/crafting_recipe/salvage_stimpak
 	name = "Salvage injector"
