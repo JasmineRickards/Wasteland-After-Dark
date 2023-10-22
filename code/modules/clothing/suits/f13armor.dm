@@ -696,7 +696,7 @@
 
 /obj/item/clothing/suit/armor/f13/power_armor/excavator
 	name = "excavator power armor"
-	hpboost = 80 //Its pretty bad otherwise.
+	hpboost = 20 //Its pretty bad otherwise.
 	desc = "Developed by Garrahan Mining Co. in collaboration with West Tek, the Excavator-class power armor was designed to protect miners from rockfalls and airborne contaminants while increasing the speed at which they could work. "
 	icon_state = "excavator"
 	item_state = "excavator"
