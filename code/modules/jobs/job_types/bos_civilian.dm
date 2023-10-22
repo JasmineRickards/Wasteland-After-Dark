@@ -143,7 +143,7 @@
 
 /datum/outfit/job/bos/f13protectoratescribe
 	name = "Protectorate Scribe"
-	jobtype = /datum/job/bos/f13scribe
+	jobtype = /datum/job/bos/f13protectoratescribe
 	chemwhiz = TRUE
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	shoes = 		/obj/item/clothing/shoes/combat
