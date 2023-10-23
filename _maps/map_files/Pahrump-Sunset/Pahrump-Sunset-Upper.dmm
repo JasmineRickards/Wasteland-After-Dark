@@ -11089,6 +11089,9 @@
 /obj/machinery/computer/arcade,
 /turf/open/floor/carpet/arcade,
 /area/f13/building/mall)
+"uBK" = (
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/caves)
 "uCf" = (
 /turf/closed/wall/f13/wood,
 /area/f13/building)
@@ -60742,9 +60745,9 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
+aKa
+aKa
+aKa
 abv
 abv
 abv
@@ -60999,11 +61002,11 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oWZ
-oWZ
+aKa
+aKa
+aKa
+uBK
+uBK
 aKa
 aKa
 aKa
