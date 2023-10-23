@@ -667,6 +667,7 @@
 	slowdown = 0.20 //+0.05 from helmet = total 0.255
 	armor = list("melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/midwest
+	hpboost = 50
 
 /obj/item/clothing/suit/armor/f13/power_armor/midwest/hardened
 	name = "Midwestern advanced power armor"
