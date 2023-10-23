@@ -12843,11 +12843,12 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "aTv" = (
-/obj/machinery/door/unpowered/secure_bos/civ,
+/obj/structure/railing,
 /turf/open/floor/f13{
-	icon_state = "whitegreenrustychess"
+	dir = 4;
+	icon_state = "rampdowntop"
 	},
-/area/f13/building)
+/area/f13/brotherhood)
 "aTw" = (
 /turf/closed/wall/r_wall/rust,
 /area/f13/city/bighorn)
@@ -26425,11 +26426,23 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/mall)
+"egD" = (
+/obj/structure/chair/bench,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft2"
+	},
+/area/f13/building)
 "egF" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontalbottomborderbottom0"
 	},
 /area/f13/wasteland/nanotrasen)
+"eha" = (
+/obj/structure/chair/bench,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalleftborderright0"
+	},
+/area/f13/building)
 "ehL" = (
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/outside/desert,
@@ -27023,10 +27036,8 @@
 /turf/open/floor/plasteel/f13,
 /area/f13/building/museum)
 "ezj" = (
-/obj/structure/railing{
-	dir = 1
-	},
 /obj/effect/turf_decal/trimline/blue/filled/line,
+/obj/structure/railing,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -31733,6 +31744,7 @@
 /area/f13/wasteland/west)
 "huH" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/chair/bench,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalleftborderright0"
 	},
@@ -33534,7 +33546,10 @@
 /obj/machinery/light{
 	pixel_x = 16
 	},
-/obj/structure/punching_bag,
+/obj/structure/table/wood,
+/obj/machinery/chem_dispenser/drinks/beer{
+	dir = 1
+	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "iBb" = (
@@ -35667,6 +35682,13 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"jJP" = (
+/obj/structure/table/wood,
+/obj/machinery/chem_dispenser/drinks{
+	dir = 1
+	},
+/turf/open/floor/f13/wood,
+/area/f13/building)
 "jJU" = (
 /obj/machinery/door/airlock/glass_large{
 	name = "Followers Clinic"
@@ -36067,11 +36089,9 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "jUU" = (
-/obj/structure/railing{
-	dir = 1
-	},
 /obj/effect/turf_decal/trimline/blue/filled/line,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/railing,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -39306,6 +39326,11 @@
 	},
 /turf/open/floor/carpet,
 /area/f13/building/mall)
+"lSa" = (
+/obj/structure/table/wood,
+/obj/item/storage/box/drinkingglasses,
+/turf/open/floor/f13/wood,
+/area/f13/building)
 "lSl" = (
 /obj/structure/table/glass,
 /obj/item/defibrillator/loaded,
@@ -48074,6 +48099,10 @@
 /obj/item/clothing/under/dress/westernbustle,
 /turf/open/floor/wood/wood_fancy/wood_fancy_light,
 /area/f13/building/mall)
+"rcW" = (
+/obj/structure/railing,
+/turf/open/transparent/openspace,
+/area/f13/brotherhood)
 "rdm" = (
 /obj/structure/chair/stool{
 	dir = 4;
@@ -50963,6 +50992,11 @@
 /obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland/bighorn)
+"sQz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair/bench,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/building)
 "sQG" = (
 /obj/machinery/light/small/broken{
 	dir = 8
@@ -108512,7 +108546,7 @@ knn
 uFx
 xEi
 iLF
-rjC
+egD
 rjC
 rkl
 eQU
@@ -108547,7 +108581,7 @@ buW
 oQI
 oQI
 oQI
-buW
+aTv
 fLj
 rcg
 aaa
@@ -108769,7 +108803,7 @@ ejQ
 ava
 huH
 sqL
-kER
+eha
 kER
 rvX
 eQU
@@ -108804,7 +108838,7 @@ pbO
 dvS
 dvS
 dvS
-pbO
+rcW
 pal
 rcg
 aaa
@@ -109024,9 +109058,9 @@ fKT
 euB
 cvo
 uFx
-ass
+sQz
 aUH
-ass
+sQz
 hnP
 rkl
 vJu
@@ -110573,7 +110607,7 @@ pgy
 xvO
 eQU
 vJu
-aTv
+bnK
 afS
 yjl
 amz
@@ -112368,7 +112402,7 @@ frP
 xyU
 xyU
 xyU
-xyU
+jJP
 abP
 aaa
 aaa
@@ -112882,7 +112916,7 @@ sag
 loO
 xyU
 xyU
-xyU
+lSa
 abP
 aaa
 aaa
@@ -113139,7 +113173,7 @@ aqS
 vVu
 xyU
 xyU
-mMV
+xyU
 abP
 aaa
 aae
