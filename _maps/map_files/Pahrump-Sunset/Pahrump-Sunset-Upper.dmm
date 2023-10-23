@@ -2086,6 +2086,10 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/building/massfusion)
+"cCz" = (
+/obj/structure/fence/pole_t,
+/turf/open/floor/plasteel/f13/vault_floor/plating,
+/area/f13/building)
 "cDx" = (
 /obj/structure/closet/crate/bin,
 /turf/open/floor/f13{
@@ -4893,10 +4897,25 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/f13/building/hospital)
+"iDm" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/railing{
+	dir = 5
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "iDO" = (
 /obj/structure/bed/old,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/hospital)
+"iDY" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/railing{
+	color = null;
+	dir = 9
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "iEf" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -8667,6 +8686,13 @@
 "qca" = (
 /turf/open/floor/carpet/black,
 /area/f13/building/mall)
+"qcg" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/railing{
+	dir = 6
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "qcE" = (
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
@@ -9693,6 +9719,13 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/radiation)
+"rXz" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "rXW" = (
 /obj/structure/closet,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
@@ -10643,6 +10676,13 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/mall)
+"tNH" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/railing{
+	dir = 10
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "tNK" = (
 /obj/machinery/photocopier,
 /turf/open/floor/f13{
@@ -10690,6 +10730,9 @@
 	pixel_x = 13
 	},
 /turf/closed/wall/r_wall/rust,
+/area/f13/building)
+"tRY" = (
+/turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/building)
 "tSW" = (
 /obj/machinery/computer/terminal{
@@ -11341,6 +11384,13 @@
 /obj/structure/lattice/catwalk,
 /turf/open/transparent/openspace,
 /area/f13/building/massfusion)
+"vjC" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "vkz" = (
 /obj/structure/sink/kitchen{
 	dir = 4;
@@ -11863,6 +11913,13 @@
 	sunlight_state = 1
 	},
 /area/f13/city/bighorn)
+"wwt" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "wxI" = (
 /obj/structure/table/wood/bar,
 /obj/item/gavelblock{
@@ -60480,12 +60537,12 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
+dtb
+dtb
+dtb
+dtb
+dtb
+dtb
 oez
 oez
 oez
@@ -60737,12 +60794,12 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
+dtb
+dtb
+dtb
+dtb
+dtb
+dtb
 oez
 oez
 aKa
@@ -60989,17 +61046,17 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+iDY
+rXz
+rXz
+rXz
+tNH
+dtb
+dtb
+dtb
+dtb
+dtb
+dtb
 oez
 oez
 aKa
@@ -61246,17 +61303,17 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+vjC
+tRY
+cCz
+tRY
+qcg
+dtb
+dtb
+dtb
+dtb
+dtb
+dtb
 oez
 oez
 aKa
@@ -61503,17 +61560,17 @@ oez
 oez
 oez
 oez
+vjC
+tRY
+syu
+syu
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+dtb
+dtb
+dtb
+dtb
+dtb
+dtb
 oez
 oez
 aKa
@@ -61760,17 +61817,17 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+vjC
+tRY
+cCz
+tRY
+tNH
+dtb
+dtb
+dtb
+dtb
+dtb
+dtb
 oez
 oez
 aKa
@@ -62017,17 +62074,17 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+iDm
+wwt
+wwt
+wwt
+qcg
+dtb
+dtb
+dtb
+dtb
+dtb
+dtb
 oez
 oez
 aKa
