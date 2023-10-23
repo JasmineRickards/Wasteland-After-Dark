@@ -3624,6 +3624,7 @@
 	dir = 1
 	},
 /mob/living/simple_animal/hostile/ghoul,
+/obj/structure/wreck/trash/machinepiletwo,
 /turf/open/floor/plasteel/f13{
 	icon_state = "darkrusty"
 	},
@@ -5747,6 +5748,8 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 4
 	},
+/obj/item/clothing/head/helmet/f13/power_armor/excavator,
+/obj/item/clothing/suit/armor/f13/power_armor/excavator,
 /turf/open/floor/plasteel/f13{
 	icon_state = "darkrustysolid"
 	},
@@ -7382,6 +7385,7 @@
 /area/f13/village)
 "aBE" = (
 /obj/item/crafting/transistor,
+/obj/structure/wreck/trash/machinepiletwo,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalleftborderleft2"
 	},
@@ -25037,6 +25041,15 @@
 	icon_state = "redrustyfull"
 	},
 /area/f13/building/firestation)
+"dov" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/structure/wreck/trash/machinepiletwo,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/building)
 "dow" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontaltopborderbottom2"
@@ -26087,6 +26100,10 @@
 	icon_state = "horizontaloutermain0"
 	},
 /area/f13/wasteland/firestation)
+"dUy" = (
+/obj/structure/car,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/quarry)
 "dUI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -26626,6 +26643,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/structure/wreck/trash/machinepiletwo,
 /turf/open/floor/f13{
 	icon_state = "hydrofloor"
 	},
@@ -28318,6 +28336,13 @@
 /obj/item/flashlight/lamp,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"fpe" = (
+/obj/effect/decal/waste,
+/obj/structure/wreck/trash/machinepiletwo,
+/turf/open/floor/plasteel/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/building/massfusion)
 "fpg" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 1
@@ -29284,6 +29309,7 @@
 /obj/effect/decal/cleanable/generic,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/waste,
+/obj/structure/wreck/trash/machinepiletwo,
 /turf/open/floor/plasteel/f13{
 	icon_state = "yellowrustysolid"
 	},
@@ -29351,6 +29377,7 @@
 	},
 /obj/effect/decal/waste,
 /mob/living/simple_animal/hostile/ghoul,
+/obj/structure/wreck/trash/machinepiletwo,
 /turf/open/floor/plasteel/f13{
 	icon_state = "darkrusty"
 	},
@@ -29721,6 +29748,10 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/building/massfusion)
+"gej" = (
+/obj/structure/car/rubbish3,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/quarry)
 "geo" = (
 /obj/machinery/microwave{
 	pixel_y = 5
@@ -30259,6 +30290,10 @@
 /obj/item/stack/sheet/glass/fifty,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"gwH" = (
+/obj/structure/wreck/trash/machinepile,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/quarry)
 "gxa" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt{
@@ -30441,6 +30476,10 @@
 /obj/structure/barricade/wooden,
 /turf/closed/mineral/random/low_chance,
 /area/f13/caves)
+"gDv" = (
+/obj/structure/car/rubbish2,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/quarry)
 "gDx" = (
 /obj/machinery/door/unpowered/secure_bos/civ,
 /turf/open/floor/f13/wood,
@@ -31666,6 +31705,12 @@
 	icon_state = "outerpavement"
 	},
 /area/f13/wasteland/east)
+"how" = (
+/obj/structure/wreck/trash/machinepile,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/building)
 "hoA" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt{
@@ -32835,6 +32880,10 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/building/firestation)
+"iec" = (
+/obj/structure/wreck/trash/machinepiletwo,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/f13/building/hospital)
 "iej" = (
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier4,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier4,
@@ -34290,6 +34339,12 @@
 	icon_state = "verticalrightborderleft1"
 	},
 /area/f13/wasteland/east)
+"iSJ" = (
+/obj/structure/car/rubbish1,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalrightborderleft0"
+	},
+/area/f13/wasteland/east)
 "iSM" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalleftborderleft3"
@@ -34320,6 +34375,13 @@
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 5;
+	icon_state = "dirt"
+	},
+/area/f13/wasteland/quarry)
+"iTB" = (
+/obj/structure/car/rubbish2,
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 1;
 	icon_state = "dirt"
 	},
 /area/f13/wasteland/quarry)
@@ -34750,6 +34812,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/freezer,
 /area/f13/building)
+"jes" = (
+/obj/item/book/granter/trait/pa_wear,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "jex" = (
 /obj/effect/turf_decal/stripes/white/line,
 /obj/effect/decal/cleanable/dirt{
@@ -39245,6 +39311,10 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"lQt" = (
+/obj/structure/car/rubbish1,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/quarry)
 "lQv" = (
 /obj/effect/decal/remains{
 	icon_state = "remains"
@@ -39620,6 +39690,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"mbu" = (
+/obj/structure/wreck/trash/machinepiletwo,
+/turf/open/floor/plasteel/f13/vault_floor/white,
+/area/f13/building/hospital)
 "mbv" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalbottombordertop0"
@@ -41579,6 +41653,13 @@
 	icon_state = "floordirtysolid"
 	},
 /area/f13/brotherhood)
+"nla" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/structure/wreck/trash/machinepiletwo,
+/turf/open/floor/plasteel/f13/vault_floor/white,
+/area/f13/building/hospital)
 "nlf" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalbottombordertop2"
@@ -46152,6 +46233,16 @@
 /obj/structure/flora/grass/jungle,
 /turf/open/water,
 /area/f13/wasteland/valley)
+"pUT" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/wreck/trash/machinepile,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/building/firestation)
 "pVl" = (
 /turf/closed/indestructible/f13/matrix/transition{
 	destination_x = 2;
@@ -46341,6 +46432,10 @@
 	icon_state = "horizontaloutermain2left"
 	},
 /area/f13/wasteland/west)
+"qcx" = (
+/obj/structure/wreck/trash/machinepiletwo,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/quarry)
 "qcV" = (
 /obj/structure/window/fulltile/wood,
 /turf/open/floor/f13/wood,
@@ -48624,6 +48719,10 @@
 /obj/item/clothing/under/pants/track,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"rsk" = (
+/obj/structure/car/rubbish3,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland/heaven)
 "rsC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/toy/tennis/rainbow,
@@ -49582,6 +49681,7 @@
 /obj/structure/sign/warning/nosmoking{
 	pixel_x = -32
 	},
+/obj/structure/wreck/trash/machinepiletwo,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -51861,6 +51961,10 @@
 	icon_state = "outerpavement"
 	},
 /area/f13/wasteland/west)
+"tqN" = (
+/obj/structure/car/rubbish4,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/quarry)
 "tqR" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/open/indestructible/ground/outside/dirt,
@@ -53557,6 +53661,13 @@
 /obj/machinery/hydroponics/constructable,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"uoO" = (
+/obj/structure/car/rubbish1,
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 4;
+	icon_state = "dirtcorner"
+	},
+/area/f13/wasteland/quarry)
 "upn" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalleftborderleft1"
@@ -54456,6 +54567,10 @@
 	},
 /turf/open/floor/carpet,
 /area/f13/building/mall)
+"uPh" = (
+/obj/structure/car/rubbish4,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland/heaven)
 "uPC" = (
 /obj/structure/showcase/cyborg/old,
 /obj/effect/decal/cleanable/dirt,
@@ -55182,6 +55297,12 @@
 	icon_state = "horizontaltopbordertop2"
 	},
 /area/f13/wasteland/east)
+"vkd" = (
+/obj/structure/wreck/trash/machinepile,
+/turf/open/floor/plasteel/f13/vault_floor/blue/side{
+	dir = 1
+	},
+/area/f13/building/hospital)
 "vkh" = (
 /obj/machinery/autolathe/constructionlathe,
 /turf/open/floor/f13/wood,
@@ -56302,6 +56423,15 @@
 /obj/structure/flora/grass/jungle,
 /turf/open/water,
 /area/f13/wasteland/valley)
+"vUM" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/structure/wreck/trash/machinepile,
+/turf/open/floor/f13{
+	icon_state = "hydrofloor"
+	},
+/area/f13/building)
 "vUN" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalleftborderleft0"
@@ -57583,6 +57713,12 @@
 	icon_state = "dirt"
 	},
 /area/f13/wasteland/hospital)
+"wFB" = (
+/obj/structure/car/rubbish1,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalinnermain0"
+	},
+/area/f13/wasteland/east)
 "wFX" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
@@ -58021,6 +58157,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
+/obj/structure/wreck/trash/machinepile,
 /turf/open/floor/f13{
 	icon_state = "hydrofloor"
 	},
@@ -58485,6 +58622,12 @@
 	icon_state = "horizontalinnermain3"
 	},
 /area/f13/wasteland/hospital)
+"xfM" = (
+/obj/structure/car/rubbish4,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalinnermain0"
+	},
+/area/f13/wasteland/east)
 "xfT" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -76396,7 +76539,7 @@ ahu
 ibe
 tHz
 ibe
-ibe
+uPh
 ibe
 ghQ
 uiC
@@ -77678,7 +77821,7 @@ bcA
 oRI
 pjb
 ibe
-ibe
+rsk
 ibe
 ibe
 ibe
@@ -96564,7 +96707,7 @@ aaB
 aaB
 aae
 cpq
-cpq
+lQt
 aae
 aae
 aae
@@ -96818,10 +96961,10 @@ aae
 aae
 aae
 aaB
+qcx
 cpq
 cpq
-cpq
-cpq
+gDv
 cpq
 aae
 aae
@@ -97074,13 +97217,13 @@ aaa
 aae
 aae
 aae
+tqN
+gej
 cpq
 cpq
 cpq
 cpq
-cpq
-cpq
-cpq
+gwH
 cpq
 aae
 aae
@@ -97984,7 +98127,7 @@ bsX
 bml
 uiD
 aAi
-aAi
+dov
 blg
 wCK
 mWT
@@ -98101,8 +98244,8 @@ aaa
 aae
 aae
 aig
-cpq
-cpq
+gej
+gDv
 fTa
 cpq
 hzN
@@ -98111,7 +98254,7 @@ xjM
 xjM
 alk
 rqE
-txT
+uoO
 cpq
 cpq
 cpq
@@ -98356,8 +98499,8 @@ ixZ
 adg
 aaa
 xEU
-cpq
-cpq
+gej
+gDv
 izc
 cpq
 aiS
@@ -98368,7 +98511,7 @@ akj
 xjM
 xjM
 xjM
-prR
+iTB
 cpq
 cpq
 cpq
@@ -98498,7 +98641,7 @@ gsB
 bml
 bml
 bml
-bml
+vUM
 blg
 mHD
 bml
@@ -98884,9 +99027,9 @@ dqx
 alQ
 xUx
 cpq
-cpq
-cpq
-cpq
+gej
+gDv
+tqN
 cpq
 aae
 aae
@@ -99384,7 +99527,7 @@ aaT
 adg
 aaa
 aae
-cpq
+gwH
 fTa
 nrn
 xjM
@@ -99919,7 +100062,7 @@ prR
 cpq
 cpq
 cpq
-cpq
+gej
 aae
 aae
 aae
@@ -100176,8 +100319,8 @@ prR
 cpq
 cpq
 cpq
-cpq
-cpq
+dUy
+gDv
 aae
 aae
 aae
@@ -100414,10 +100557,10 @@ aaa
 aaa
 aae
 aae
-cpq
+qcx
 cpq
 izc
-cpq
+gej
 cpq
 cpq
 cpq
@@ -100674,7 +100817,7 @@ aae
 aae
 cpq
 cpq
-cpq
+lQt
 cpq
 cpq
 akk
@@ -100932,7 +101075,7 @@ aae
 aae
 aiW
 cpq
-cpq
+tqN
 cpq
 cpq
 cpq
@@ -101190,7 +101333,7 @@ aae
 aae
 aae
 aae
-cpq
+qcx
 cpq
 cpq
 cpq
@@ -101450,7 +101593,7 @@ aae
 aae
 aae
 aae
-cpq
+tqN
 cpq
 cpq
 cpq
@@ -104287,7 +104430,7 @@ eeF
 cpq
 cpq
 cpq
-cpq
+gej
 cpq
 nrn
 xjM
@@ -104544,7 +104687,7 @@ aae
 aae
 cpq
 dns
-cpq
+tqN
 cpq
 nrn
 xjM
@@ -104802,7 +104945,7 @@ aae
 aae
 cpq
 cpq
-cpq
+gej
 nrn
 xjM
 prR
@@ -105058,7 +105201,7 @@ vVo
 aae
 aae
 cpq
-cpq
+gDv
 cpq
 nrn
 xjM
@@ -105106,7 +105249,7 @@ lqE
 uZi
 aMz
 uZi
-uZi
+iec
 aMz
 aIZ
 eAT
@@ -105316,7 +105459,7 @@ aae
 aae
 cpq
 cpq
-cpq
+gej
 nrn
 xjM
 crm
@@ -105572,8 +105715,8 @@ vVo
 aae
 aae
 cpq
-cpq
-cpq
+lQt
+tqN
 nrn
 xjM
 xjM
@@ -106899,7 +107042,7 @@ ijr
 ijr
 ijr
 ijr
-aEs
+vkd
 aKA
 ijr
 btO
@@ -107076,7 +107219,7 @@ aae
 aae
 aae
 xwg
-mFy
+poA
 oNI
 afg
 afa
@@ -107164,7 +107307,7 @@ fWG
 fWG
 aHT
 ijr
-tFm
+mbu
 tFm
 tFm
 aJo
@@ -107409,7 +107552,7 @@ aFP
 oOU
 aKA
 ijr
-aFD
+nla
 aFD
 aNf
 ijr
@@ -107949,7 +108092,7 @@ aGa
 aGa
 aGa
 rVv
-aGa
+pUT
 aGa
 aGa
 aMq
@@ -109553,7 +109696,7 @@ agk
 ber
 qAs
 afS
-afS
+how
 afS
 afS
 bfx
@@ -115054,7 +115197,7 @@ adv
 oJI
 jAS
 vVo
-ciV
+fpe
 bpp
 uqJ
 lxJ
@@ -115139,7 +115282,7 @@ cpx
 pkJ
 nAt
 cvo
-xPu
+wFB
 xPu
 pgy
 pCk
@@ -115653,7 +115796,7 @@ cpx
 pkJ
 nAt
 cvo
-xPu
+aDD
 xPu
 aMv
 pgy
@@ -115817,7 +115960,7 @@ aaa
 aae
 ahz
 abt
-aaB
+jes
 lTe
 aaB
 lTe
@@ -116432,7 +116575,7 @@ eiK
 eiK
 xPu
 xPu
-xPu
+aWS
 ify
 pMY
 buU
@@ -117264,7 +117407,7 @@ xPu
 kBI
 xPu
 xPu
-xPu
+xfM
 xPu
 xPu
 iVI
@@ -117966,7 +118109,7 @@ cpx
 pkJ
 nAt
 cvo
-xPu
+xfM
 xPu
 xPu
 xPu
@@ -118030,7 +118173,7 @@ aKP
 nAt
 cvo
 xPu
-xPu
+aDD
 xPu
 xPu
 xPu
@@ -118287,7 +118430,7 @@ lIb
 nAt
 dQT
 sLz
-sLz
+iSJ
 sLz
 sLz
 sLz
