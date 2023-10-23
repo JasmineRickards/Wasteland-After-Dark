@@ -566,7 +566,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/fakelattice,
 /obj/machinery/button/door{
-	id = "policegarage";
+	id = "8";
 	name = "Store garage";
 	pixel_y = 32
 	},
@@ -597,7 +597,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/barricade/wooden/planks/pregame,
 /obj/machinery/door/poddoor{
-	id = 8
+	id = "8"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/building)
@@ -28845,10 +28845,10 @@
 "fIi" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/barricade/bars,
-/obj/machinery/door/poddoor{
-	id = 8
-	},
 /obj/structure/table/reinforced,
+/obj/machinery/door/poddoor{
+	id = "8"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/building)
 "fIZ" = (
