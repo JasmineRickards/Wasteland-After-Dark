@@ -405,6 +405,17 @@
 /obj/item/storage/backpack/duffelbag/med/surgery/alien,
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/enclave)
+"dx" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/spawner/lootdrop/weapons/oldarmyelite,
+/obj/effect/spawner/lootdrop/weapons/oldarmyelite,
+/obj/effect/spawner/lootdrop/weapons/oldarmyelite,
+/obj/effect/spawner/lootdrop/weapons/oldarmyelite,
+/obj/structure/closet/crate,
+/turf/open/floor/plasteel/f13/vault_floor/red,
+/area/f13/enclave)
 "dz" = (
 /obj/machinery/light{
 	dir = 8
@@ -1280,6 +1291,10 @@
 "jE" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/effect/turf_decal/bot,
+/obj/effect/spawner/lootdrop/weapons/waster,
+/obj/effect/spawner/lootdrop/armylootbasic,
+/obj/effect/spawner/lootdrop/clothing_low,
+/obj/effect/spawner/lootdrop/f13/armor,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/enclave)
 "jH" = (
@@ -1702,6 +1717,10 @@
 	icon_state = "horizontalinnermain0"
 	},
 /area/f13/mountain_area)
+"mZ" = (
+/obj/machinery/jukebox,
+/turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,
+/area/f13/enclave)
 "na" = (
 /obj/machinery/light{
 	dir = 4;
@@ -1946,7 +1965,6 @@
 /area/f13/building)
 "oI" = (
 /obj/item/pickaxe/mini,
-/obj/item/card/id/rusted,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "oL" = (
@@ -4292,6 +4310,10 @@
 	},
 /obj/structure/closet/secure_closet/personal,
 /obj/effect/turf_decal/bot,
+/obj/effect/spawner/lootdrop/weapons/waster,
+/obj/effect/spawner/lootdrop/armylootbasic,
+/obj/effect/spawner/lootdrop/clothing_low,
+/obj/effect/spawner/lootdrop/f13/armor,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/enclave)
 "EL" = (
@@ -5153,6 +5175,10 @@
 	},
 /obj/structure/closet/secure_closet/personal,
 /obj/effect/turf_decal/bot,
+/obj/effect/spawner/lootdrop/weapons/waster,
+/obj/effect/spawner/lootdrop/armylootbasic,
+/obj/effect/spawner/lootdrop/clothing_low,
+/obj/effect/spawner/lootdrop/f13/armor,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/enclave)
 "Lg" = (
@@ -5235,6 +5261,10 @@
 	},
 /obj/structure/closet/secure_closet/personal,
 /obj/effect/turf_decal/bot,
+/obj/effect/spawner/lootdrop/weapons/waster,
+/obj/effect/spawner/lootdrop/armylootbasic,
+/obj/effect/spawner/lootdrop/clothing_low,
+/obj/effect/spawner/lootdrop/f13/armor,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/enclave)
 "LS" = (
@@ -5907,6 +5937,10 @@
 	},
 /turf/open/floor/f13,
 /area/f13/enclave)
+"RH" = (
+/obj/machinery/jukebox,
+/turf/open/floor/f13,
+/area/f13/enclave)
 "RI" = (
 /obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable{
@@ -5975,9 +6009,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/enclave)
 "RZ" = (
-/obj/effect/spawner/lootdrop/weapons/oldarmyelite,
-/turf/open/indestructible/ground/outside/snow_plating,
-/area/f13/mountain_area)
+/mob/living/simple_animal/slime/random,
+/turf/open/floor/engine,
+/area/f13/enclave)
 "Sb" = (
 /obj/effect/landmark/start/f13/usscientist,
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,
@@ -6046,6 +6080,10 @@
 	},
 /obj/structure/closet/secure_closet/personal,
 /obj/effect/turf_decal/bot,
+/obj/effect/spawner/lootdrop/weapons/waster,
+/obj/effect/spawner/lootdrop/armylootbasic,
+/obj/effect/spawner/lootdrop/clothing_low,
+/obj/effect/spawner/lootdrop/f13/armor,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/enclave)
 "Sy" = (
@@ -15635,7 +15673,7 @@ tt
 va
 EG
 tt
-RZ
+tt
 tt
 tt
 Ev
@@ -18270,7 +18308,7 @@ Aa
 Jx
 Jx
 Jx
-Jx
+RH
 Jx
 Yt
 Vy
@@ -22884,7 +22922,7 @@ iI
 iI
 fB
 iI
-iI
+mZ
 iI
 iI
 iI
@@ -24665,7 +24703,7 @@ jU
 FJ
 FJ
 FJ
-zK
+dx
 AW
 RI
 oU
@@ -28566,7 +28604,7 @@ SP
 Lk
 WB
 pC
-pC
+RZ
 KI
 AW
 iT
@@ -29584,7 +29622,7 @@ HA
 iT
 AW
 KI
-pC
+RZ
 pC
 yb
 Fq
@@ -29594,7 +29632,7 @@ SP
 Oz
 wA
 pC
-pC
+RZ
 KI
 AW
 iT
@@ -30612,7 +30650,7 @@ HA
 iT
 AW
 KI
-pC
+RZ
 pC
 zD
 FD
@@ -30622,7 +30660,7 @@ SP
 SN
 Bj
 pC
-pC
+RZ
 KI
 AW
 iT
