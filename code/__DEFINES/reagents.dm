@@ -86,6 +86,12 @@ GLOBAL_LIST_INIT(blacklisted_plant_reagents, list(
 	/datum/reagent/toxin/plasma, /datum/reagent/oxygen, /datum/reagent/nitrous_oxide, /datum/reagent/nitrogen,		//gases
 	/datum/reagent/fermi,				//blanket fermichem ban sorry. this also covers mkultra etc etc.
 	/datum/reagent/toxin/FEV_solution,	//lol no
+	/datum/reagent/toxin/FEV_solution/one,	//lol no
+	/datum/reagent/toxin/FEV_solution/two,
+	/datum/reagent/toxin/FEV_solution/curling, //Absolutely not
+	/datum/reagent/medicine/stimpak,
+	/datum/reagent/medicine/super_stimpak,
+	/datum/reagent/medicine/medx,
 	/datum/reagent/consumable/semen,	//NO.
 	/datum/reagent/medicine/changelinghaste,
 	/datum/reagent/medicine/changelingadrenaline,
