@@ -35005,6 +35005,10 @@
 /obj/structure/closet/cabinet,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"jjr" = (
+/obj/structure/railing,
+/turf/open/transparent/openspace,
+/area/f13/radiation)
 "jjG" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -110569,7 +110573,7 @@ aeP
 aeP
 aeP
 aeP
-abl
+jjr
 lts
 ese
 agR
@@ -110826,7 +110830,7 @@ aeP
 aeP
 aeP
 aeP
-abl
+jjr
 raN
 oiJ
 agR
@@ -111083,7 +111087,7 @@ aeP
 aeP
 aeP
 aeP
-abl
+jjr
 gQs
 ese
 agR
@@ -111340,7 +111344,7 @@ aeP
 aeP
 aeP
 aeP
-abl
+jjr
 dBY
 bOE
 agR
@@ -111597,7 +111601,7 @@ aeP
 aeP
 aeP
 aeP
-abl
+jjr
 dBY
 aXT
 agR

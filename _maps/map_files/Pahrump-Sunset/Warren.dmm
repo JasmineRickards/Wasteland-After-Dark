@@ -3136,10 +3136,6 @@
 "cLw" = (
 /turf/open/indestructible/ground/outside/savannah,
 /area/f13/wasteland/ncr)
-"cMd" = (
-/obj/structure/simple_door/metal/vaultreinforced,
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/bunker)
 "cMf" = (
 /obj/effect/overlay/turfs/cliff{
 	pixel_y = -15
@@ -6117,10 +6113,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/bunker)
-"fBx" = (
-/obj/structure/simple_door/metal/vaultreinforced,
-/turf/closed/indestructible/rock,
-/area/f13/bunker)
 "fBy" = (
 /obj/structure/car/rubbish3{
 	pixel_x = -5
@@ -7625,7 +7617,6 @@
 /obj/structure/sign/poster/contraband/pinup_anthro9{
 	pixel_y = -32
 	},
-/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot,
 /obj/machinery/light/broken,
 /turf/open/floor/plasteel/f13/vault_floor/green,
 /area/f13/bunker)
@@ -10185,10 +10176,10 @@
 /turf/open/floor/plating/rust,
 /area/f13/city)
 "jnB" = (
-/obj/structure/rack/shelf_metal,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/f13/bomb/top_tier,
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/obj/structure/lattice/catwalk,
+/obj/machinery/door/airlock/highsecurity,
+/obj/effect/mapping_helpers/airlock/locked,
+/turf/open/floor/plating/tunnel,
 /area/f13/bunker)
 "jnN" = (
 /obj/effect/decal/cleanable/glass,
@@ -10528,13 +10519,6 @@
 	icon_state = "dirtfull_dark"
 	},
 /area/f13/raiders)
-"jHs" = (
-/obj/structure/simple_door/metal/vaultreinforced,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
-	},
-/area/f13/bunker)
 "jHG" = (
 /obj/structure/table/wood/fancy,
 /obj/item/candle/infinite,
@@ -12270,8 +12254,8 @@
 	},
 /area/f13/ncr)
 "llK" = (
-/mob/living/simple_animal/hostile/securitron/sentrybot,
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/obj/effect/decal/fakelattice,
+/turf/closed/wall/r_wall/f13/vault,
 /area/f13/bunker)
 "llV" = (
 /turf/open/indestructible,
@@ -13471,11 +13455,6 @@
 	icon_state = "horizontalinnermain1"
 	},
 /area/f13/wasteland/warren)
-"mwB" = (
-/obj/structure/simple_door/metal/vaultreinforced,
-/obj/structure/simple_door/metal/vaultreinforced,
-/turf/open/floor/plasteel/f13/vault_floor/green,
-/area/f13/bunker)
 "mwR" = (
 /obj/structure/flora/tree/tall{
 	icon_state = "tree_2"
@@ -15396,9 +15375,8 @@
 	},
 /area/f13/wasteland/warren)
 "ojq" = (
-/obj/structure/simple_door/metal/vaultreinforced,
 /obj/effect/turf_decal/vg_decals/radiation_huge,
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/turf/closed/wall/r_wall/f13/vault,
 /area/f13/bunker)
 "ojM" = (
 /obj/effect/turf_decal/stripes/line{
@@ -15705,10 +15683,9 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/warren)
 "oAf" = (
-/obj/structure/simple_door/metal/vaultreinforced,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/indestructible/ground/outside/desert,
+/turf/closed/wall/r_wall/f13/vault,
 /area/f13/bunker)
 "oAx" = (
 /obj/effect/overlay/turfs/cliff{
@@ -18404,10 +18381,11 @@
 	},
 /area/f13/bunker)
 "qVr" = (
-/obj/structure/vault_door/old{
-	id = "25"
-	},
 /obj/structure/lattice/catwalk,
+/obj/structure/vault_door{
+	id = "25";
+	name = "Vault --- blast door"
+	},
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
 "qVC" = (
@@ -21678,8 +21656,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/warren)
 "tUV" = (
-/obj/structure/simple_door/metal/vaultreinforced,
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/turf/closed/wall/r_wall/f13/vault,
 /area/f13/bunker)
 "tVn" = (
 /obj/item/reagent_containers/glass/bucket,
@@ -21765,12 +21742,6 @@
 	icon_state = "outermaincornerouter"
 	},
 /area/f13/wasteland/warren)
-"tZt" = (
-/obj/structure/rack/shelf_metal,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/f13/bomb/tier3,
-/turf/open/floor/plasteel/f13/vault_floor/green,
-/area/f13/bunker)
 "tZH" = (
 /obj/structure/filingcabinet{
 	pixel_x = 11
@@ -24007,12 +23978,6 @@
 /obj/structure/simple_door/wood,
 /turf/open/floor/wood/wood_common,
 /area/f13/city)
-"vTz" = (
-/obj/structure/simple_door/metal/vaultreinforced,
-/turf/open/floor/plasteel/f13{
-	icon_state = "catwalk"
-	},
-/area/f13/bunker)
 "vTB" = (
 /obj/structure/car/rubbish1,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -24583,9 +24548,8 @@
 	},
 /area/f13/ncr)
 "wuD" = (
-/obj/structure/simple_door/metal/vaultreinforced,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/green,
+/turf/closed/wall/r_wall/f13/vault,
 /area/f13/bunker)
 "wvb" = (
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -47158,7 +47122,7 @@ tUV
 aIe
 hvs
 hvs
-bvx
+hvs
 tUV
 tUV
 tUV
@@ -47170,7 +47134,7 @@ tUV
 tUV
 tUV
 tUV
-fBx
+tUV
 qZx
 qZx
 qZx
@@ -47415,7 +47379,7 @@ tUV
 qNg
 hvs
 hvs
-bvx
+hvs
 tUV
 gKg
 ajH
@@ -47430,10 +47394,10 @@ ajH
 tUV
 tUV
 wuD
-jHs
-jHs
-vTz
-vTz
+wuD
+wuD
+tUV
+tUV
 qZx
 qZx
 qZx
@@ -47672,7 +47636,7 @@ tUV
 aIe
 hvs
 hvs
-bvx
+hvs
 tUV
 hvs
 jEQ
@@ -47690,15 +47654,15 @@ tSf
 laA
 tSf
 hvs
-vTz
-vTz
-vTz
-vTz
-vTz
-vTz
-vTz
-vTz
-vTz
+tUV
+tUV
+tUV
+tUV
+tUV
+tUV
+tUV
+tUV
+vQy
 iqX
 pCV
 pCV
@@ -47929,7 +47893,7 @@ tUV
 aIe
 hvs
 hvs
-bvx
+hvs
 tUV
 gtj
 hvs
@@ -47955,9 +47919,9 @@ veP
 veP
 pYJ
 veP
-veP
+llK
 vQy
-vOc
+tUV
 vOc
 vOc
 vOc
@@ -48186,7 +48150,7 @@ tUV
 aIe
 hvs
 hvs
-bvx
+hvs
 tUV
 hvs
 hvs
@@ -48439,12 +48403,12 @@ qZx
 qZx
 qZx
 qZx
-fBx
+tUV
 ije
 hvs
 hvs
-bvx
-mwB
+hvs
+tUV
 tUV
 tUV
 tUV
@@ -48469,9 +48433,9 @@ veP
 veP
 veP
 veP
-veP
+llK
 vQy
-jZc
+tUV
 eEO
 jZc
 jZc
@@ -48691,11 +48655,11 @@ jLg
 jLg
 jLg
 qZx
-cMd
-cMd
-cMd
-cMd
-cMd
+tUV
+tUV
+tUV
+tUV
+tUV
 tUV
 cDa
 hvs
@@ -48708,7 +48672,7 @@ ajH
 hvs
 ajH
 hvs
-gKg
+hvs
 ajH
 hvs
 ajH
@@ -48726,9 +48690,9 @@ veP
 veP
 veP
 veP
-veP
-vQy
-noq
+llK
+tUV
+tUV
 jZc
 eEO
 jZc
@@ -48948,8 +48912,8 @@ jLg
 jLg
 jLg
 qZx
-cMd
-jnB
+tUV
+huy
 tlG
 huy
 rCN
@@ -48984,7 +48948,7 @@ ejG
 ejG
 ejG
 ejG
-qVr
+jnB
 qVh
 qVh
 qVh
@@ -49205,8 +49169,8 @@ jLg
 jLg
 jLg
 qZx
-cMd
-tZt
+tUV
+huy
 tSf
 tSf
 tSf
@@ -49240,8 +49204,8 @@ veP
 veP
 veP
 veP
-veP
-vQy
+llK
+tUV
 mFx
 uhL
 uhL
@@ -49462,8 +49426,8 @@ jLg
 jLg
 jLg
 qZx
-cMd
-tZt
+tUV
+rCN
 tSf
 pSm
 tSf
@@ -49472,7 +49436,7 @@ tUV
 hvs
 hvs
 tUV
-mwB
+tUV
 tUV
 tUV
 tUV
@@ -49492,12 +49456,12 @@ bIU
 nVG
 nVG
 nVG
-vTz
+tUV
 bMR
 bMR
 bMR
-vTz
-vTz
+tUV
+vQy
 iqX
 pCV
 pCV
@@ -49719,7 +49683,7 @@ jLg
 jLg
 jLg
 qZx
-cMd
+tUV
 tlG
 tSf
 tSf
@@ -49749,11 +49713,11 @@ bIU
 nVG
 nVG
 nVG
-vTz
+tUV
 poW
 icM
 gQf
-vTz
+tUV
 qZx
 iqX
 pCV
@@ -49976,7 +49940,7 @@ jLg
 jLg
 jLg
 qZx
-cMd
+tUV
 ycd
 tSf
 bUt
@@ -50010,7 +49974,7 @@ gQD
 icM
 icM
 icM
-vTz
+tUV
 qZx
 iqX
 pCV
@@ -50233,7 +50197,7 @@ jLg
 jLg
 jLg
 qZx
-cMd
+tUV
 xtu
 tSf
 tSf
@@ -50252,7 +50216,7 @@ hvs
 hvs
 hvs
 hvs
-gKg
+hvs
 hvs
 tUV
 cqV
@@ -50263,11 +50227,11 @@ hvs
 hvs
 hvs
 hvs
-vTz
+tUV
 pbZ
 fpt
 pbZ
-vTz
+tUV
 qZx
 iqX
 pCV
@@ -50490,7 +50454,7 @@ jLg
 jLg
 jLg
 qZx
-cMd
+tUV
 tUV
 tUV
 tUV
@@ -50515,16 +50479,16 @@ tUV
 hvs
 hvs
 fcH
-uMQ
+tSf
 hvs
 hvs
 hvs
 hvs
-vTz
-vTz
-vTz
-vTz
-vTz
+tUV
+tUV
+tUV
+tUV
+tUV
 qZx
 iqX
 pCV
@@ -51536,7 +51500,7 @@ tSf
 tSf
 ckO
 iAS
-llK
+hvs
 hvs
 tUV
 qZx
@@ -52036,7 +52000,7 @@ qZx
 tUV
 hvs
 hvs
-gKg
+hvs
 tUV
 tQx
 tQx
@@ -52546,7 +52510,7 @@ jLg
 jLg
 jLg
 qZx
-cMd
+tUV
 tUV
 tUV
 xBP
@@ -52803,7 +52767,7 @@ jLg
 jLg
 jLg
 qZx
-cMd
+tUV
 rtu
 wvZ
 rtu
@@ -53060,7 +53024,7 @@ jLg
 jLg
 jLg
 qZx
-cMd
+tUV
 fOu
 rtu
 rtu
@@ -53071,7 +53035,7 @@ tUV
 ojq
 kUU
 tUV
-cMd
+tUV
 qZx
 qZx
 qZx
@@ -53317,18 +53281,18 @@ jLg
 jLg
 jLg
 qZx
-cMd
+tUV
 rtu
 pVE
 wvZ
 rtu
-cMd
+tUV
 xbE
 hvs
 hvs
 hvs
 qBI
-cMd
+tUV
 qZx
 jLg
 jLg
@@ -53574,18 +53538,18 @@ jLg
 jLg
 jLg
 qZx
-cMd
+tUV
 rtu
 hOo
 rtu
 hOo
-cMd
+tUV
 xEE
 kEL
 hvs
 hvs
 qBI
-cMd
+tUV
 qZx
 jLg
 jLg
@@ -53831,18 +53795,18 @@ jLg
 jLg
 jLg
 qZx
-cMd
-cMd
-cMd
-cMd
-cMd
-cMd
+tUV
+tUV
+tUV
+tUV
+tUV
+tUV
 xbE
 hvs
 hvs
 guD
 qBI
-cMd
+tUV
 qZx
 jLg
 jLg
@@ -54093,13 +54057,13 @@ qZx
 qZx
 qZx
 qZx
-cMd
+tUV
 pWp
 hvs
 hvs
 hvs
 okj
-cMd
+tUV
 qZx
 jLg
 jLg
@@ -54350,13 +54314,13 @@ jLg
 jLg
 jLg
 qZx
-cMd
+tUV
 acf
 hvs
 hvs
 hvs
 hvs
-cMd
+tUV
 qZx
 jLg
 jLg
@@ -54607,13 +54571,13 @@ jLg
 jLg
 jLg
 qZx
-cMd
+tUV
 wHA
 guD
 guD
 guD
 hvs
-cMd
+tUV
 qZx
 jLg
 jLg
@@ -54864,13 +54828,13 @@ jLg
 jLg
 jLg
 qZx
-cMd
-cMd
+tUV
+tUV
 oAf
 fAL
 oAf
-cMd
-cMd
+tUV
+tUV
 qZx
 jLg
 jLg
