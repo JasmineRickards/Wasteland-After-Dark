@@ -5,7 +5,6 @@
 	limbs_id = "smutant"
 	species_traits = list(NOTRANSSTING,NOAROUSAL)
 	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_NOBREATH,TRAIT_RADIMMUNE,TRAIT_VIRUSIMMUNE,TRAIT_SMUTANT)
-	inherent_traits = list()
 	inherent_biotypes = list(MOB_INORGANIC, MOB_HUMANOID)
 	speedmod = 0.90
 	siemens_coeff = 0
