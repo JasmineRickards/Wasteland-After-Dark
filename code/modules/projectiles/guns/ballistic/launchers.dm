@@ -4,6 +4,7 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher
 	desc = "A break-operated grenade rifle. Projectiles travel slowly."
 	name = "grenade rifle"
+	fire_delay = 60
 	icon_state = "dshotgun-sawn"
 	item_state = "gun"
 	inaccuracy_modifier = 0.5
@@ -85,6 +86,7 @@
 	desc = "Technically, this is actually a rocket propelled grenade launcher, rather than a true rocket launcher. The person you shot is unlikely to care much, though."
 	icon_state = "rocketlauncher"
 	item_state = "rocketlauncher"
+	fire_delay = 60
 	mag_type = /obj/item/ammo_box/magazine/internal/rocketlauncher
 	fire_sound = 'sound/weapons/rocketlaunch.ogg'
 	w_class = WEIGHT_CLASS_BULKY
