@@ -1076,7 +1076,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("R84 LMG", 						/obj/item/gun/ballistic/automatic/r84, 								1200),
 		new /datum/data/wasteland_equipment("NCR salvaged T-45d", 			/obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b/ncr,			1500),
 		new /datum/data/wasteland_equipment("NCR salvaged T-45d helmet", 	/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr, 		500),
-		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400)
+		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400),
+		new /datum/data/wasteland_equipment("Bozar LMG",							/obj/item/gun/ballistic/automatic/bozar, 			2000)
 		)
 	highpop_list = list(
 		new /datum/data/wasteland_equipment("Basic salvage",				/obj/item/salvage/low,												15),
@@ -1105,7 +1106,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("R84 LMG", 						/obj/item/gun/ballistic/automatic/r84, 								1200),
 		new /datum/data/wasteland_equipment("NCR salvaged T-45d", 			/obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b/ncr,			1500),
 		new /datum/data/wasteland_equipment("NCR salvaged T-45d helmet", 	/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr, 		500),
-		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400)
+		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400),
+		ew /datum/data/wasteland_equipment("Bozar LMG",							/obj/item/gun/ballistic/automatic/bozar, 			2000)
 		)
 
 /obj/machinery/mineral/wasteland_vendor/weapons/Legion
@@ -1139,7 +1141,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Lever-action shotgun",			/obj/item/book/granter/crafting_recipe/blueprint/leveraction,		500),
 		new /datum/data/wasteland_equipment("Trail Carbine",				/obj/item/gun/ballistic/rifle/repeater/trail,						300),
 		new /datum/data/wasteland_equipment("Marksman Carbine", 			/obj/item/gun/ballistic/automatic/marksman, 						600),
-		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400)
+		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400),
+		new /datum/data/wasteland_equipment("M1919 Browning",							/obj/item/gun/ballistic/automatic/m1919, 			2900)
 		)
 	highpop_list = list(
 		new /datum/data/wasteland_equipment("Basic salvage",				/obj/item/salvage/low,												15),
@@ -1167,7 +1170,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Lever-action shotgun",			/obj/item/book/granter/crafting_recipe/blueprint/leveraction,		500),
 		new /datum/data/wasteland_equipment("Trail Carbine",				/obj/item/gun/ballistic/rifle/repeater/trail,						300),
 		new /datum/data/wasteland_equipment("Marksman Carbine", 			/obj/item/gun/ballistic/automatic/marksman, 						600),
-		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400)
+		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400),
+		new /datum/data/wasteland_equipment("M1919 Browning",							/obj/item/gun/ballistic/automatic/m1919, 			2900)
 		)
 
 /obj/machinery/mineral/wasteland_vendor/weapons/BoS
