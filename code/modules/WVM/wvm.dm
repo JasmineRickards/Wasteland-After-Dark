@@ -1200,7 +1200,6 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Power armor pamphlet",			/obj/item/book/granter/trait/pa_wear,								2000),
 		new /datum/data/wasteland_equipment("T-45d armor", 					/obj/item/clothing/suit/armor/f13/power_armor/t45d,		 			2500),
 		new /datum/data/wasteland_equipment("T-45d helmet", 				/obj/item/clothing/head/helmet/f13/power_armor/t45d, 				500),
-		new /datum/data/wasteland_equipment("M-60LMG", 						/obj/item/gun/ballistic/automatic/m60, 								2500),
 		new /datum/data/wasteland_equipment("Combat Rifle", 					/obj/item/gun/ballistic/automatic/combat, 						450),
 		new /datum/data/wasteland_equipment("LSW",							/obj/item/gun/ballistic/automatic/lsw, 								700),
 		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400)
@@ -1234,7 +1233,6 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Power armor pamphlet",			/obj/item/book/granter/trait/pa_wear,								2000),
 		new /datum/data/wasteland_equipment("T-45d armor", 					/obj/item/clothing/suit/armor/f13/power_armor/t45d,					2500),
 		new /datum/data/wasteland_equipment("T-45d helmet", 				/obj/item/clothing/head/helmet/f13/power_armor/t45d, 				500),
-		new /datum/data/wasteland_equipment("M-60LMG", 					/obj/item/gun/ballistic/automatic/m60, 									2500),
 		new /datum/data/wasteland_equipment("Combat Rifle", 					/obj/item/gun/ballistic/automatic/combat, 						450),
 		new /datum/data/wasteland_equipment("LSW",							/obj/item/gun/ballistic/automatic/lsw, 								700),
 		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400)
