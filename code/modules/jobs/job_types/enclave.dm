@@ -6,7 +6,7 @@
 
 	access = list(ACCESS_ENCLAVE, ACCESS_SECURITY, ACCESS_AI_UPLOAD)
 	minimal_access = list(ACCESS_ENCLAVE, ACCESS_SECURITY, ACCESS_AI_UPLOAD)
-	forbids = "Enclave taboos: Aiding Brotherhood or Republic members in any way no matter how small."
+	forbids = "Enclave taboos: Aiding Brotherhood or Republic members in any way no matter how small, revealing the Enclave, being captured alive."
 	enforces = "Enclave rules: Stay in uniform. Act mature and respectful. Obey orders and always remember you are fighting for the only true legitimate power in this land of savages. Wearing gasmasks outside the compound is encouraged but not required."
 	objectivesList = list("Department of Defense advisory: Collect resources, attrition is depleting our reserves.", "Science Divison advisory: Capture human subjects for experiments, alive.")
 
@@ -215,6 +215,7 @@
 	flag = F13USSGT
 	total_positions = 2
 	spawn_positions = 2
+	access = list(ACCESS_ENCLAVE, ACCESS_CHANGE_IDS, ACCESS_ENCLAVE_COMMAND, ACCESS_SECURITY, ACCESS_AI_UPLOAD) //Fixes Enclave SGTs not having armory access
 	description = "You're a small garrison within a side entrance of a far larger complex. This complex sits within the Casper mountain range. Entrusted with the command of the squads assigned to the bunker, your job is to assist the Lieutenant alongside the scientists."
 	supervisors = "The Lieutenant and the Gunnery Sergeant."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavesgt
@@ -223,6 +224,7 @@
 	loadout_options = list(
 		/datum/outfit/loadout/sgt_ballistics,	// G11
 		/datum/outfit/loadout/sgt_laser, 	// Plasma
+		/datum/outfit/loadout/sgt_closequarters, //CQC
 		)
 
 /datum/outfit/job/enclave/peacekeeper/enclavesgt
@@ -244,6 +246,7 @@
 		/obj/item/storage/pill_bottle/chem_tin/mentats = 1,
 		/obj/item/reagent_containers/hypospray/medipen/psycho = 1,
 		/obj/item/reagent_containers/hypospray/medipen/medx = 1,
+		/obj/item/clothing/mask/chameleon = 1,
 		/obj/item/card/id/syndicate/anyone =1
 		)
 
@@ -253,6 +256,12 @@
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m473 = 3,
 		/obj/item/grenade/f13/plasma = 2,
+		)
+
+/datum/outfit/loadout/sgt_closequarters
+	name = "Close Quarters Operator"
+	backpack_contents = list(
+		/obj/item/book/granter/martial/cqc = 1,
 		)
 
 /datum/outfit/loadout/sgt_laser
