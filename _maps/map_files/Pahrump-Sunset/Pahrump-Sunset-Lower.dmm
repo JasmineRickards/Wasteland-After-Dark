@@ -23343,6 +23343,7 @@
 	pixel_y = 6
 	},
 /obj/item/stock_parts/cell/super,
+/obj/item/disk/tech_disk/bostech,
 /turf/open/floor/plasteel/darkpurple,
 /area/f13/brotherhood/rnd)
 "uuJ" = (

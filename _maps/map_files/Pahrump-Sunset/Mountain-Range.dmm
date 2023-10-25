@@ -2464,6 +2464,7 @@
 "rV" = (
 /obj/structure/table/glass,
 /obj/item/soap,
+/obj/item/disk/tech_disk/enclave,
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,
 /area/f13/enclave)
 "rX" = (
