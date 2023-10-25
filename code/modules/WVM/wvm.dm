@@ -1107,7 +1107,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("NCR salvaged T-45d", 			/obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b/ncr,			1500),
 		new /datum/data/wasteland_equipment("NCR salvaged T-45d helmet", 	/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr, 		500),
 		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400),
-		ew /datum/data/wasteland_equipment("Bozar LMG",							/obj/item/gun/ballistic/automatic/bozar, 			2000)
+		new /datum/data/wasteland_equipment("Bozar LMG",							/obj/item/gun/ballistic/automatic/bozar, 			2000)
 		)
 
 /obj/machinery/mineral/wasteland_vendor/weapons/Legion

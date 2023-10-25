@@ -48391,6 +48391,7 @@
 	},
 /area/f13/wasteland/firestation)
 "rjC" = (
+/obj/effect/landmark/start/f13/offduty,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalleftborderleft2"
 	},
@@ -59618,6 +59619,12 @@
 	icon_state = "horizontalinnermain0"
 	},
 /area/f13/wasteland/massfusion)
+"xMk" = (
+/obj/effect/landmark/start/f13/offduty,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/building)
 "xMu" = (
 /obj/structure/railing/corner,
 /turf/open/indestructible/ground/outside/sidewalk,
@@ -111789,7 +111796,7 @@ beF
 agk
 geP
 afS
-afS
+xMk
 afS
 rEt
 agk
