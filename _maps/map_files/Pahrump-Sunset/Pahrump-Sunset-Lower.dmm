@@ -9793,6 +9793,10 @@
 	},
 /turf/open/floor/plasteel/f13/stone,
 /area/f13/brotherhood)
+"fPM" = (
+/obj/effect/turf_decal/stripes/red/line,
+/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
+/area/f13/brotherhood/reactor)
 "fQn" = (
 /obj/machinery/light/small{
 	dir = 1;
@@ -11745,7 +11749,6 @@
 /turf/open/floor/wood/wood_common,
 /area/f13/tunnel/bighorn)
 "hYB" = (
-/obj/effect/turf_decal/stripes/red/line,
 /obj/machinery/light/small{
 	dir = 1;
 	light_color = "red"
@@ -12746,6 +12749,12 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/tunnel)
+"iXp" = (
+/obj/effect/turf_decal/stripes/red/line{
+	dir = 8
+	},
+/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
+/area/f13/brotherhood/reactor)
 "iXJ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vault1{
@@ -17716,7 +17725,9 @@
 /area/f13/brotherhood)
 "oEO" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/stripes/red/line,
+/obj/effect/turf_decal/stripes/red/corner{
+	dir = 4
+	},
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/brotherhood/reactor)
 "oFi" = (
@@ -22082,9 +22093,9 @@
 	},
 /area/f13/brotherhood/leisure)
 "sWt" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/stripes/red/line,
+/obj/effect/turf_decal/stripes/red/corner{
+	dir = 8
+	},
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/brotherhood/reactor)
 "sXj" = (
@@ -84435,8 +84446,8 @@ miU
 otJ
 oRj
 hai
-oEO
-pII
+aly
+fPM
 pII
 pII
 pII
@@ -84693,7 +84704,7 @@ rte
 kbd
 hai
 hYB
-pII
+fPM
 pII
 pII
 pII
@@ -84949,8 +84960,8 @@ hai
 aAX
 hai
 hai
-oEO
-pII
+aly
+fPM
 pII
 pII
 pII
@@ -85206,12 +85217,12 @@ sPA
 ebt
 ebt
 hai
+eLA
 sWt
-pII
-pII
-pII
-pII
-hSI
+iXp
+iXp
+iXp
+oEO
 hai
 nzR
 ixe
