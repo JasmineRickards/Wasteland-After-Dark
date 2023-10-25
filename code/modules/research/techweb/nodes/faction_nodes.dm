@@ -34,16 +34,16 @@
 	desc = "This disk is patterned with the markings of the Central Intelligence Agency. You feel like having this is a dangerous idea."
 	custom_materials = null
 
-/obj/item/disk/tech_disk/abductor/Initialize()
+/obj/item/disk/tech_disk/enclave/Initialize()
 	. = ..()
-	stored_research = new /datum/techweb/enclave
+	stored_research = new /datum/techweb/enclavetech
 
 /obj/item/disk/tech_disk/bostech
 	name = "BoS technology disk"
 	desc = "This disk is patterned with the markings of the Midwestern Brotherhood. You feel like having this is a dangerous idea."
 	custom_materials = null
 
-/obj/item/disk/tech_disk/abductor/Initialize()
+/obj/item/disk/tech_disk/bostech/Initialize()
 	. = ..()
-	stored_research = new /datum/techweb/bos
+	stored_research = new /datum/techweb/bostech
 
