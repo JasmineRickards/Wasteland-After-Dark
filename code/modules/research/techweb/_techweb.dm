@@ -74,15 +74,23 @@
 	id = "BOS"
 	organization = "Brotherhood of Steel"
 
-/datum/techweb/bos/New()
-	var/datum/techweb_node/enclavetech/Node = new()
+/datum/techweb/bostech	//BOS tech "channel"
+	id = "BOS1"
+	organization = "Brotherhood of Steel"
+
+/datum/techweb/bostech/New()
+	var/datum/techweb_node/bostech/Node = new()
 	research_node(Node, TRUE)
 
 /datum/techweb/enclave	//enclave techweb
 	id = "ENCLAVE"
 	organization = "Enclave"
 
-/datum/techweb/enclave/New()
+/datum/techweb/enclavetech	//enclave techweb
+	id = "ENCLAVE1"
+	organization = "Enclave"
+
+/datum/techweb/enclavetech/New()
 	var/datum/techweb_node/enclavetech/Node = new()
 	research_node(Node, TRUE)
 
