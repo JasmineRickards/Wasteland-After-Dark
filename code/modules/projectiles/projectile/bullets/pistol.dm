@@ -386,13 +386,15 @@ Uranium, Contaminated
 
 /obj/item/projectile/bullet/mm14
 	name = "14mm FMJ bullet"
-	damage = 32
+	damage = 30
 	wound_bonus = 42
 	bare_wound_bonus = 28
+	armour_penetration = 0.25 //It says AP in code comments yet it had no AP?
 
 /obj/item/projectile/bullet/mm14/contam
 	name = "14mm contaiminated bullet"
-	damage = 18
+	damage = 15
+	armour_penetration = 0.1 
 	var/smoke_radius = 1
 
 /obj/item/projectile/bullet/mm14/contam/Initialize()
@@ -412,8 +414,8 @@ Uranium, Contaminated
 
 /obj/item/projectile/bullet/mm14/uraniumtipped
 	name = "14mm uranium-tipped bullet"
-	damage = 24
-	armour_penetration = 0.1
+	damage = 20
+	armour_penetration = 0.35
 	irradiate = 80
 
 
