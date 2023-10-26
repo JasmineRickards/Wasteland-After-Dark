@@ -113,6 +113,7 @@
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/reagent_containers/medspray/synthflesh = 1,
 		/obj/item/storage/firstaid = 1,
+		/obj/item/encryptionkey/headset_bos_civi=1,
 		)
 
 /datum/outfit/job/bos/f13protectoratedoctor/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -153,6 +154,7 @@
 	glasses =		/obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
 		/obj/item/storage/firstaid/regular=1,
+		/obj/item/encryptionkey/headset_bos_civi=1,
 		)
 
 /datum/outfit/job/bos/f13protectoratescribe/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -163,7 +165,7 @@
 	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_RESEARCHER, src)
-//	ADD_TRAIT(H, TRAIT_POOR_AIM, src)
+	//ADD_TRAIT(H, TRAIT_POOR_AIM, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
