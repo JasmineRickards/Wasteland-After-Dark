@@ -3876,15 +3876,7 @@
 	},
 /area/f13/city/bighorn)
 "aph" = (
-/obj/structure/closet/crate,
-/obj/item/reagent_containers/glass/beaker/waterbottle,
-/obj/item/reagent_containers/glass/beaker/waterbottle,
-/obj/item/reagent_containers/glass/beaker/waterbottle,
-/obj/item/reagent_containers/glass/beaker/waterbottle,
-/obj/item/reagent_containers/glass/beaker/waterbottle,
-/obj/item/reagent_containers/glass/beaker/waterbottle,
-/obj/item/reagent_containers/glass/beaker/waterbottle,
-/obj/item/reagent_containers/glass/beaker/waterbottle,
+/obj/machinery/chem_heater,
 /turf/open/floor/plasteel/freezer,
 /area/f13/building)
 "api" = (
@@ -27023,6 +27015,7 @@
 "eyF" = (
 /obj/structure/table/glass,
 /obj/item/storage/box/medicine/stimpaks/superstimpaks5,
+/obj/machinery/reagentgrinder,
 /turf/open/floor/plasteel/freezer,
 /area/f13/building)
 "eyP" = (
@@ -42223,6 +42216,12 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"nAg" = (
+/obj/machinery/door/unpowered/secure_bos,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/building)
 "nAj" = (
 /obj/item/seeds/feracactus,
 /turf/open/indestructible/ground/outside/dirt,
@@ -110255,7 +110254,7 @@ agk
 agk
 tcr
 tcr
-bnK
+nAg
 agk
 tcr
 acp

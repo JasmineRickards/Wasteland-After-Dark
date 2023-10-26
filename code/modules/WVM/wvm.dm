@@ -653,6 +653,44 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Cat",							/mob/living/simple_animal/pet/cat/Runtime,							10000),
 		)
 
+/obj/machinery/mineral/wasteland_vendor/weaponsbighorn
+	name = "Trader - Weapons"
+	icon_state = "weapon_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("survival knife",				/obj/item/melee/onehanded/knife/survival, 							70),
+		new /datum/data/wasteland_equipment(".22 Pistol",					/obj/item/gun/ballistic/automatic/pistol/pistol22,					110),
+		new /datum/data/wasteland_equipment("9mm pistol",					/obj/item/gun/ballistic/automatic/pistol/ninemil,					150),
+		new /datum/data/wasteland_equipment("10mm pistol",					/obj/item/gun/ballistic/automatic/pistol/n99,						150),
+		new /datum/data/wasteland_equipment("Colt Revolver",				/obj/item/gun/ballistic/revolver/colt357,							160),
+		new /datum/data/wasteland_equipment("M1911",						/obj/item/gun/ballistic/automatic/pistol/m1911,						160),
+		new /datum/data/wasteland_equipment("Cowboy Repeater",				/obj/item/gun/ballistic/rifle/repeater/cowboy,						160),
+		new /datum/data/wasteland_equipment("M1 Carbine",					/obj/item/gun/ballistic/automatic/m1carbine,						170),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 1",		/obj/item/book/granter/crafting_recipe/gunsmith_one, 				200),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmith_two,				300),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmith_three, 				600),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmith_four, 				1200),
+		new /datum/data/wasteland_equipment("Cheap gun blueprints",			/obj/effect/spawner/lootdrop/f13/blueprintLowMid, 					400),
+		new /datum/data/wasteland_equipment("Moderate gun blueprints",		/obj/effect/spawner/lootdrop/f13/blueprintMid, 						1000),
+		new /datum/data/wasteland_equipment("Expensive gun blueprints",		/obj/effect/spawner/lootdrop/f13/blueprintHigh, 				1800),
+		)
+	highpop_list = list(
+		new /datum/data/wasteland_equipment("survival knife",				/obj/item/melee/onehanded/knife/survival, 							40),
+		new /datum/data/wasteland_equipment(".22 Pistol",					/obj/item/gun/ballistic/automatic/pistol/pistol22,					50),
+		new /datum/data/wasteland_equipment("9mm pistol",					/obj/item/gun/ballistic/automatic/pistol/beretta,					60),
+		new /datum/data/wasteland_equipment("10mm pistol",					/obj/item/gun/ballistic/automatic/pistol/n99,						60),
+		new /datum/data/wasteland_equipment("Colt Revolver",				/obj/item/gun/ballistic/revolver/colt357,							70),
+		new /datum/data/wasteland_equipment("M1911",						/obj/item/gun/ballistic/automatic/pistol/m1911,						70),
+		new /datum/data/wasteland_equipment("Cowboy Repeater",				/obj/item/gun/ballistic/rifle/repeater/cowboy,						80),
+		new /datum/data/wasteland_equipment("M1 Carbine",					/obj/item/gun/ballistic/automatic/m1carbine,						90),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 1",		/obj/item/book/granter/crafting_recipe/gunsmith_one, 				200),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmith_two,				300),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmith_three, 				600),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmith_four, 				1200),
+		new /datum/data/wasteland_equipment("Cheap gun blueprints",			/obj/effect/spawner/lootdrop/f13/blueprintLowMid, 					400),
+		new /datum/data/wasteland_equipment("Moderate gun blueprints",		/obj/effect/spawner/lootdrop/f13/blueprintMid, 						1000),
+		new /datum/data/wasteland_equipment("Expensive gun blueprints",		/obj/effect/spawner/lootdrop/f13/blueprintHigh, 				1800),
+		)
+
 /obj/machinery/mineral/wasteland_vendor/weapons
 	name = "Wasteland Vending Machine - Weapons"
 	icon_state = "weapon_idle"
