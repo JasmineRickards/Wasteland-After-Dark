@@ -7971,6 +7971,19 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/stone,
 /area/f13/brotherhood)
+"dMo" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small{
+	dir = 4;
+	light_color = "red"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
+/area/f13/brotherhood/reactor)
 "dMD" = (
 /obj/structure/handrail/g_central{
 	pixel_y = -16
@@ -8383,6 +8396,13 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/tunnel/bighorn)
+"eha" = (
+/obj/machinery/door/airlock/grunge{
+	id_tag = "thebox";
+	name = "The box"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
+/area/f13/brotherhood/reactor)
 "ehp" = (
 /obj/structure/bookcase/random/religion{
 	desc = "A collection of scrolls, archives and relics.";
@@ -9474,6 +9494,13 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/brotherhood/reactor)
+"fsf" = (
+/obj/machinery/light/small{
+	dir = 1;
+	light_color = "#d8b1b1"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
+/area/f13/brotherhood/reactor)
 "fsu" = (
 /obj/effect/decal/cleanable/chem_pile,
 /turf/open/floor/plasteel/f13{
@@ -9553,6 +9580,11 @@
 /obj/structure/dresser,
 /turf/open/floor/carpet/black,
 /area/f13/brotherhood)
+"fxj" = (
+/obj/structure/bed,
+/obj/item/bedsheet/blue,
+/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
+/area/f13/brotherhood/reactor)
 "fxU" = (
 /obj/structure/chair/wood{
 	dir = 1
@@ -12642,6 +12674,10 @@
 	icon_state = "rampdowntop"
 	},
 /area/f13/brotherhood/medical)
+"iPm" = (
+/obj/structure/simple_door/metal/vaultreinforced,
+/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
+/area/f13/brotherhood/reactor)
 "iPU" = (
 /obj/structure/sign/poster/official/safety_eye_protection,
 /turf/closed/wall/r_wall,
@@ -16541,6 +16577,19 @@
 /obj/item/dice,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel/bighorn)
+"nkI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/light/small{
+	dir = 8;
+	light_color = "#d8b1b1"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
+/area/f13/brotherhood/reactor)
 "nmK" = (
 /obj/machinery/light/small,
 /turf/open/indestructible/ground/outside/water,
@@ -16610,6 +16659,18 @@
 	icon_state = "casino"
 	},
 /area/f13/brotherhood/offices2nd)
+"npR" = (
+/obj/machinery/button/door{
+	id = "thebox"
+	},
+/turf/closed/indestructible/vaultdoor{
+	desc = "A wall built to withstand an atomic explosion.";
+	icon = 'icons/fallout/turfs/walls/vault_reinforced.dmi';
+	icon_state = "vaultrwall0";
+	icon_type_smooth = "vaultrwall";
+	name = "vault reinforced wall"
+	},
+/area/f13/brotherhood/reactor)
 "nqd" = (
 /obj/structure/handrail/g_central{
 	dir = 8;
@@ -18183,6 +18244,10 @@
 /obj/structure/simple_door/bunker/glass,
 /turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
+"pgh" = (
+/obj/structure/closet/secure_closet/brig,
+/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
+/area/f13/brotherhood/reactor)
 "pgO" = (
 /obj/structure/table/wood,
 /turf/open/floor/f13/wood,
@@ -83150,18 +83215,18 @@ aak
 khl
 khl
 khl
-aae
-aak
-aae
-aae
-aae
-aae
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 hai
 qqb
 tNh
-tNh
+nkI
 wtC
 wtC
 utv
@@ -83407,14 +83472,14 @@ aak
 hOa
 hOa
 hOa
-dlD
-jUU
-dlD
-aae
-aae
-aae
-aae
 aaa
+hai
+hai
+hai
+hai
+hai
+hai
+hai
 hai
 ybX
 qHw
@@ -83664,14 +83729,14 @@ aak
 rLF
 khl
 khl
-jUU
-aak
-dlD
-aae
-aae
-aae
-aae
 aaa
+hai
+bow
+bow
+bow
+hai
+pgh
+pgh
 hai
 uqG
 qHw
@@ -83921,14 +83986,14 @@ aae
 hcL
 khl
 qIn
-khl
-hcL
-hOa
-khl
-aae
-aae
-aae
 aaa
+hai
+bow
+bow
+bow
+hai
+fsf
+bow
 hai
 uQA
 qHw
@@ -84178,14 +84243,14 @@ aak
 rLF
 hOa
 wMt
-khl
-hcL
-khl
-khl
-aae
-aae
-aae
 aaa
+hai
+bow
+bow
+bow
+eha
+bow
+bow
 hai
 mTy
 cmW
@@ -84435,15 +84500,15 @@ aak
 hcL
 khl
 wMt
-hOa
-rLF
-khl
-khl
-aae
-aae
-aae
 aaa
 hai
+bow
+bow
+bow
+hai
+fsf
+bow
+iPm
 vQy
 kbd
 miU
@@ -84692,18 +84757,18 @@ aae
 dlD
 dlD
 hOa
-hOa
-hOa
-khl
-khl
-aae
-aae
-aae
 aaa
+hai
+fxj
+bow
+bow
+hai
+pgh
+pgh
 hai
 oOV
 qHw
-wtC
+dMo
 rte
 kbd
 hai
@@ -84949,14 +85014,14 @@ dlD
 aak
 dlD
 rLF
-khl
-rLF
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+hai
+hai
+hai
+hai
+hai
+npR
+hai
 hai
 hai
 hai
@@ -85206,8 +85271,8 @@ aae
 jUU
 jUU
 hOa
-hOa
-hcL
+aaa
+aaa
 aaa
 sPA
 sPA
