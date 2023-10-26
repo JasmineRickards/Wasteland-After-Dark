@@ -24930,6 +24930,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/wood_fancy,
 /area/f13/brotherhood/offices2nd)
+"wdn" = (
+/obj/machinery/mineral/wasteland_vendor/weaponsbighorn,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel/bighorn)
 "wdq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -45629,7 +45633,7 @@ aqv
 wid
 fDv
 uXv
-dFQ
+wdn
 dFQ
 oGo
 dFQ
