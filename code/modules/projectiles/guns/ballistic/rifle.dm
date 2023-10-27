@@ -370,8 +370,8 @@
 	zoomable = FALSE
 	fire_sound = 'sound/f13weapons/antimaterielfire.ogg'
 	pump_sound = 'sound/f13weapons/antimaterielreload.ogg'
-	extra_damage = -8
-	extra_penetration = -0.6
+	extra_damage = -6
+	extra_penetration = -0.4
 
 /obj/item/gun/ballistic/rifle/mag/amrsawn/shoot_live_shot(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
 	..()
