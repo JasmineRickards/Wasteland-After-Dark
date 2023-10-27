@@ -284,7 +284,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Ranger-Hunter Centurion"
 	suit = /obj/item/clothing/suit/armor/f13/legion/rangercent
 	head = /obj/item/clothing/head/helmet/f13/legion/rangercent
-	suit_store = /obj/item/gun/ballistic/rifle/mag/antimateriel
+	suit_store = /obj/item/gun/ballistic/rifle/mag/amrsawn
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/amr = 2,
 		/obj/item/ammo_box/c4570 = 3,
@@ -704,6 +704,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	loadout_options = list(	// ALL: .45 Revolver, Machete
 		/datum/outfit/loadout/expambusher,	// lever-action shotgun, Bottlecap mine, MP5
 		/datum/outfit/loadout/expsniper,	// SKS, Smokebomb
+		/datum/outfit/loadout/expauto,		// Mosin Avtomat.
 		)
 
 	matchmaking_allowed = list(
@@ -763,6 +764,14 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/obj/item/ammo_box/magazine/sks = 2,
 		/obj/item/grenade/smokebomb = 1,
 		/obj/item/attachments/scope = 1,
+		)
+
+/datum/outfit/loadout/expauto
+	name = "Pursuer"
+	glasses = /obj/item/clothing/glasses/sunglasses/big
+	suit_store = /obj/item/gun/ballistic/automatic/avtomat
+	backpack_contents = list(
+		/obj/item/ammo_box/a762box = 1,
 		)
 
 
