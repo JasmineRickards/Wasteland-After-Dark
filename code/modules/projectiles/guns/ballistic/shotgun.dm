@@ -187,7 +187,7 @@
 	fire_delay = 0.5
 	force = 10
 	slowdown = 0.1
-	extra_damage = 10
+	extra_damage = 5
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 
 /obj/item/gun/ballistic/revolver/singleshotgun/axe
