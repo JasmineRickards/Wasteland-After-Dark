@@ -364,14 +364,14 @@
 	mag_type = /obj/item/ammo_box/magazine/amr
 	fire_delay = 8
 	recoil = 5
-	spread = 4
-	force = 5
-	slowdown = 0.5
+	spread = 2
+	force = 20
+	slowdown = 0.4
 	zoomable = FALSE
 	fire_sound = 'sound/f13weapons/antimaterielfire.ogg'
 	pump_sound = 'sound/f13weapons/antimaterielreload.ogg'
 	extra_damage = -10
-	extra_penetration = -0.4
+	extra_penetration = -0.35
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_prefix = "WHAT"
 
