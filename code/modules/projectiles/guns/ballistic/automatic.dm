@@ -435,6 +435,8 @@
 	can_suppress = FALSE
 	can_attachments = TRUE
 	extra_damage = -4
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_prefix = "micro"
 
 
 //Carl Gustaf			Keywords: 10mm, Automatic, 36 rounds
@@ -509,6 +511,8 @@
 	spread = 28		// RATTLE 'EM, BOYS!
 	slowdown = 0.6	//Higher
 	icon_state = "typewriter"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_prefix = "typewriter"
 
 
 //P90				Keywords: 10mm, Automatic, 50 rounds. Special modifiers: damage +1
@@ -1073,7 +1077,8 @@
 	desc = "A pre-war Mosin-Nagant 91/30 rifle was modified into a makeshift machine gun, with a high rate of fire, gas-driven receiver, and increased internal magazine. A Legion bull has been branded into its wooden stock."
 	icon_state = "avtomat"
 	item_state = "rifle"
-	icon_prefix = "308"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_prefix = "avtomat"
 	force = 20
 	slowdown = 0.8
 	mag_type = /obj/item/ammo_box/magazine/internal/avtomat
