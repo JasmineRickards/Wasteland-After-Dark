@@ -1049,7 +1049,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/avtomat
 	fire_delay = 1
 	burst_size = 3
-	spread = 1.2
+	spread = 3
 	is_automatic = TRUE
 	automatic = 1
 	autofire_shot_delay = 2.5
