@@ -886,7 +886,7 @@ ATTACHMENTS
 
 	busy_action = TRUE
 
-	if(!bypass_timer && (!do_mob(user, target, 15) || user.zone_selected != BODY_ZONE_PRECISE_MOUTH))
+	if(!bypass_timer && (!do_mob(user, target, 30) || user.zone_selected != BODY_ZONE_PRECISE_MOUTH))
 		if(user)
 			if(user == target)
 				user.visible_message("<span class='notice'>[user] decided not to shoot.</span>")
