@@ -1037,6 +1037,32 @@
 	auto_eject_sound = 'sound/weapons/magout.ogg'
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 
+//Mosin Avtomat
+/obj/item/gun/ballistic/automatic/avtomat
+	name = "Mosin-Nagant Assultus"
+	desc = "A pre-war Mosin-Nagant 91/30 rifle was modified into a makeshift machine gun, with a high rate of fire, gas-driven receiver, and increased internal magazine. A Legion bull has been branded into its wooden stock."
+	icon_state = "avtomat"
+	item_state = "rifle"
+	icon_prefix = "308"
+	force = 20
+	slowdown = 0.8
+	mag_type = /obj/item/ammo_box/magazine/internal/avtomat
+	fire_delay = 1
+	burst_size = 3
+	spread = 3
+	is_automatic = TRUE
+	automatic = 1
+	autofire_shot_delay = 2.5
+	can_attachments = TRUE
+	can_bayonet = TRUE
+	bayonet_state = "bayonet"
+	knife_x_offset = 22
+	knife_y_offset = 21
+	can_scope = FALSE
+	fire_sound = 'sound/f13weapons/automaticrifle_BAR.ogg'
+	recoil = 10
+	extra_damage = -5
+
 
 //DKS 501 sniper rifle				Keywords: .308, Semi-auto, 7 round magazine, Scoped, Extra speed +500, Fire delay +1, 43dmg
 /obj/item/gun/ballistic/automatic/marksman/sniper
@@ -1080,8 +1106,8 @@
 	zoom_out_amt = 14
 
 /obj/item/gun/ballistic/automatic/marksman/sniper/snipervenator
-	name = "explorer sniper rifle"
-	desc = "The customized sniper rifle, fitted with a telescopic sight for extreme accuracy and chambered for a high-ballistic performance centerfire cartridge. It is a superior version of the regular sniper rifle and is decorated with the flag of the bull and tokens of a hunt."
+	name = "venator sniper rifle"
+	desc = "A customized DKS-501 sniper rifle, fitted with a telescopic sight for extreme accuracy and chambered for a high-ballistic performance centerfire cartridge. It is a superior version of the regular sniper rifle and is decorated with the flag of the bull and tokens of a hunt."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
@@ -1092,6 +1118,8 @@
 	slowdown = 0.12
 	zoom_amt = 15
 	zoom_out_amt = 17
+	extra_damage = 15 //~39 to 50 damage
+	extra_penetration = 0.3 //Slightly less than medicine stick
 
 /obj/item/gun/ballistic/automatic/marksman/sniper/sniperranger
 	name = "compact sniper rifle"

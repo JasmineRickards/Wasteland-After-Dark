@@ -356,6 +356,28 @@
 		H.visible_message("<span class='danger'>[H] drops to the floor from recoil as they fire unprepared!</span>")
 		user.Knockdown(60)
 
+/obj/item/gun/ballistic/rifle/mag/amrsawn
+	name = "\improper Sawn-off Hécate II AMR"
+	desc = "A Hécate II that has been defiled by someone with too much time on their hands, featuring an extremely short barrel, wooden grip, and restored iron sights. A Legion flag is wrapped around its stock."
+	icon_state = "WHAT"
+	item_state = "amr"
+	mag_type = /obj/item/ammo_box/magazine/amr
+	fire_delay = 8
+	recoil = 5
+	spread = 4
+	force = 5
+	slowdown = 0.5
+	zoomable = FALSE
+	fire_sound = 'sound/f13weapons/antimaterielfire.ogg'
+	pump_sound = 'sound/f13weapons/antimaterielreload.ogg'
+	extra_damage = -10
+	extra_penetration = -0.4
+
+/obj/item/gun/ballistic/rifle/mag/amrsawn/shoot_live_shot(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
+	..()
+	if(HAS_TRAIT(user, TRAIT_FAST_PUMP))
+		src.pump(user)
+
 // BETA // Obsolete
 /obj/item/gun/ballistic/rifle/rifletesting
 	name = "hunting"
