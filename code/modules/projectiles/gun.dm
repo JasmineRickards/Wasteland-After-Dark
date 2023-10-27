@@ -882,7 +882,7 @@ ATTACHMENTS
 			"<span class='userdanger'>You stick [src] in your mouth, goodbye cruel world...</span>")
 	else
 		target.visible_message("<span class='warning'>[user] puts the barrel of [src] against [target]'s forehead. The game was rigged from the start.</span>", \
-			"<span class='userdanger'>[user] puts the barrel of [src] at your head. This must be a 20-karat run of bad luck...</span>")
+			"<span class='userdanger'>[user] puts the barrel of [src] to your head. This must be an 18-carat run of bad luck...</span>")
 
 	busy_action = TRUE
 
