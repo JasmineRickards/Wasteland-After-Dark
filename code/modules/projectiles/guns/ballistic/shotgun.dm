@@ -184,7 +184,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/pardner
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 0.5
+	fire_delay = 10 //More or less the AMR's firing delay. To prevent instant reload firing.
 	force = 10
 	slowdown = 0.1
 	extra_damage = 5
