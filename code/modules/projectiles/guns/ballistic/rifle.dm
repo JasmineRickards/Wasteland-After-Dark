@@ -371,7 +371,11 @@
 	pump_sound = 'sound/f13weapons/antimaterielreload.ogg'
 	extra_damage = -8
 	extra_penetration = -0.1
-	
+
+/obj/item/gun/ballistic/rifle/mag/amrsawn/shoot_live_shot(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
+	..()
+	if(HAS_TRAIT(user, TRAIT_FAST_PUMP))
+		src.pump(user)
 
 // BETA // Obsolete
 /obj/item/gun/ballistic/rifle/rifletesting
