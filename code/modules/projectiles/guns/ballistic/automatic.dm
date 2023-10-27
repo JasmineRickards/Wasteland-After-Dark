@@ -1052,7 +1052,7 @@
 	spread = 1.2
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 2
+	autofire_shot_delay = 2.5
 	can_attachments = TRUE
 	can_bayonet = TRUE
 	bayonet_state = "bayonet"
