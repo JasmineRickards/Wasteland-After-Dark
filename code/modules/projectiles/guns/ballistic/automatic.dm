@@ -1074,14 +1074,14 @@
 //Mosin Avtomat
 /obj/item/gun/ballistic/automatic/avtomat
 	name = "Mosin-Nagant Assultus"
-	desc = "A pre-war Mosin-Nagant 91/30 rifle was modified into a makeshift machine gun, with a high rate of fire, gas-driven receiver, and increased internal magazine. A Legion bull has been branded into its wooden stock."
+	desc = "A pre-war Mosin-Nagant 91/30 rifle was modified into a makeshift machine gun, with a high rate of fire, gas-driven receiver, and increased internal magazine. It feeds from a chain-like stripper clip, and Legion bull has been branded into its wooden stock."
 	icon_state = "avtomat"
 	item_state = "rifle"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_prefix = "avtomat"
 	force = 20
-	slowdown = 0.8
-	mag_type = /obj/item/ammo_box/magazine/internal/avtomat
+	slowdown = 0.5
+	mag_type = /obj/item/ammo_box/magazine/avtomat
 	fire_delay = 1
 	burst_size = 3
 	spread = 3
