@@ -837,7 +837,7 @@
 	reqs = list(/obj/item/gun/ballistic/revolver/colt357 = 2,
 				/obj/item/ammo_box/magazine/mm762 = 1,
 				/obj/item/stack/crafting/metalparts = 15,
-				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/advanced_crafting_components/alloys = 1)
 	tools = list(TOOL_AWORKBENCH)
 	time = 600
 	category = CAT_WEAPONRY
