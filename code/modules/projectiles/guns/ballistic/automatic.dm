@@ -418,6 +418,24 @@
 	update_icon()
 	return
 
+/obj/item/gun/ballistic/automatic/smg/micro_uzi
+	name = "Micro-Uzi"
+	desc = "An even more lightweight version of the Uzi. It shoots fast and it's extremely inaccurate. Handle with care."
+	icon_state = "micro"
+	item_state = "uzi"
+	mag_type = /obj/item/ammo_box/magazine/uzim9mm
+	fire_delay = 3
+	recoil = 4
+	burst_shot_delay = 2.2
+	is_automatic = TRUE
+	automatic = 1
+	slowdown = 0.2
+	autofire_shot_delay = 1
+	spread = 24
+	can_suppress = FALSE
+	can_attachments = TRUE
+	extra_damage = -4
+
 
 //Carl Gustaf			Keywords: 10mm, Automatic, 36 rounds
 /obj/item/gun/ballistic/automatic/smg/cg45
@@ -480,6 +498,18 @@
 	init_mag_type = /obj/item/ammo_box/magazine/tommygunm45/stick
 	fire_delay = 3.75
 	spread = 19
+
+//M1928
+/obj/item/gun/ballistic/automatic/smg/tommygun/chicago
+	name = "M1928 Chicago Typewriter"
+	desc = "A powerful submachinegun chambered in .45 ACP, this weapon fires at a blistering rate with a heavy pistol cartridge, popular for its use by gangs of the Old World. This model was more expensive and stopped being produced."
+	mag_type = /obj/item/ammo_box/magazine/tommygunm45
+	init_mag_type = /obj/item/ammo_box/magazine/tommygunm45
+	autofire_shot_delay = 1.25
+	spread = 28		// RATTLE 'EM, BOYS!
+	slowdown = 0.6	//Higher
+	icon_state = "typewriter"
+
 
 //P90				Keywords: 10mm, Automatic, 50 rounds. Special modifiers: damage +1
 /obj/item/gun/ballistic/automatic/smg/p90
