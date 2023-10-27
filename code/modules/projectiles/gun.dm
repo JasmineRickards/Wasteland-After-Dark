@@ -879,14 +879,14 @@ ATTACHMENTS
 
 	if(user == target)
 		target.visible_message("<span class='warning'>[user] sticks [src] in [user.p_their()] mouth, ready to pull the trigger...</span>", \
-			"<span class='userdanger'>You stick [src] in your mouth, ready to pull the trigger...</span>")
+			"<span class='userdanger'>You stick [src] in your mouth, goodbye cruel world...</span>")
 	else
-		target.visible_message("<span class='warning'>[user] points [src] at [target]'s head, ready to pull the trigger...</span>", \
-			"<span class='userdanger'>[user] points [src] at your head, ready to pull the trigger...</span>")
+		target.visible_message("<span class='warning'>[user] puts the barrel of [src] against [target]'s forehead. The game was rigged from the start.</span>", \
+			"<span class='userdanger'>[user] puts the barrel of [src] at your head. This must be a 20-karat run of bad luck...</span>")
 
 	busy_action = TRUE
 
-	if(!bypass_timer && (!do_mob(user, target, 120) || user.zone_selected != BODY_ZONE_PRECISE_MOUTH))
+	if(!bypass_timer && (!do_mob(user, target, 15) || user.zone_selected != BODY_ZONE_PRECISE_MOUTH))
 		if(user)
 			if(user == target)
 				user.visible_message("<span class='notice'>[user] decided not to shoot.</span>")
@@ -902,7 +902,7 @@ ATTACHMENTS
 	playsound('sound/weapons/dink.ogg', 30, 1)
 
 	if(chambered && chambered.BB)
-		chambered.BB.damage *= 5
+		chambered.BB.damage *= 10
 
 	process_fire(target, user, TRUE, params, stam_cost = getstamcost(user))
 
