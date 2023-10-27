@@ -6124,6 +6124,7 @@
 /obj/structure/rack,
 /obj/item/storage/firstaid/toxin,
 /obj/item/storage/firstaid/brute,
+/obj/item/storage/box/medicine/stimpaks/superstimpaks5,
 /turf/open/floor/plasteel/dark,
 /area/f13/brotherhood/medical)
 "ciX" = (
@@ -11746,6 +11747,12 @@
 	},
 /turf/open/floor/plasteel/f13/stone,
 /area/f13/brotherhood)
+"hUv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/reinforced,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/f13/brotherhood/operations)
 "hUw" = (
 /obj/structure/chair/stool/retro/backed{
 	dir = 1
@@ -13506,6 +13513,7 @@
 /obj/item/pen{
 	pixel_y = 5
 	},
+/obj/item/storage/box/medicine/stimpaks/superstimpaks5,
 /turf/open/floor/plasteel/darkpurple,
 /area/f13/brotherhood/rnd)
 "jHm" = (
@@ -15317,6 +15325,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack,
 /obj/item/storage/firstaid/fire,
+/obj/item/storage/box/medicine/stimpaks/superstimpaks5,
 /turf/open/floor/plasteel/dark,
 /area/f13/brotherhood/medical)
 "lOZ" = (
@@ -16791,6 +16800,12 @@
 "nyH" = (
 /turf/closed/mineral/random/low_chance,
 /area/f13/tunnel/bighorn)
+"nyO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/reinforced,
+/obj/item/storage/box/medicine/stimpaks/superstimpaks5,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/f13/brotherhood/operations)
 "nyY" = (
 /obj/machinery/light/broken,
 /turf/open/floor/plasteel/f13/vault_floor/yellow{
@@ -26072,6 +26087,7 @@
 	},
 /obj/item/storage/firstaid/regular,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/storage/box/medicine/stimpaks/superstimpaks5,
 /turf/open/floor/plasteel/dark,
 /area/f13/brotherhood/medical)
 "xsc" = (
@@ -80941,8 +80957,8 @@ qfo
 pKe
 jPL
 vmp
-vmp
-uBR
+hUv
+nyO
 cYq
 wUI
 dpN

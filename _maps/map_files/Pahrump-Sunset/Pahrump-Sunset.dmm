@@ -56270,7 +56270,9 @@
 "vQG" = (
 /obj/structure/table/reinforced,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/storage/box/medicine/stimpaks/superstimpaks50,
+/obj/item/storage/box/medicine/stimpaks/superstimpaks5,
+/obj/item/storage/box/medicine/stimpaks/superstimpaks5,
+/obj/item/storage/box/medicine/stimpaks/superstimpaks5,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/building)
 "vQI" = (
