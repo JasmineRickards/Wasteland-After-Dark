@@ -171,6 +171,34 @@
 	else
 		icon_state = "[initial(icon_state)]"
 
+//Single shotgun
+/obj/item/gun/ballistic/revolver/singleshotgun
+	name = "Pardner 77 single-shot shotgun"
+	desc = "An old-world New England Pardner shotgun, 2077 production line - right before the nukes."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_state = "pardner"
+	item_state = "shotgundouble"
+	icon_prefix = "shotgundouble"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/pardner
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	fire_delay = 0.5
+	force = 10
+	slowdown = 0.1
+	extra_damage = 10
+
+/obj/item/gun/ballistic/revolver/singleshotgun/axe
+	name = "Pardner 77 hatchet"
+	desc = "A New England Pardner that has been sawn down and had a fireaxe tightly attached to the barrel. The stock has been replaced by something more comfortable to hold on to."
+	icon_state = "pardneraxe"
+	slowdown = 0.08
+	force = 35
+	armour_penetration = 0.1 //Not for the bullet. This is the gun.
+	wound_bonus = 15 //Same as above
+	extra_damage = 5 //Half of parent
+
 
 //Hunting shotgun				Keywords: Shotgun, Pump-action, 4 rounds
 /obj/item/gun/ballistic/shotgun/hunting
