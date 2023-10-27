@@ -99,6 +99,11 @@
 	caliber = "357"
 	max_ammo = 6
 
+/obj/item/ammo_box/magazine/internal/cylinder/rev357/chain
+	name = "357 magnum shell chain"
+	caliber = "357"
+	max_ammo = 20
+
 /obj/item/ammo_box/magazine/internal/cylinder/rev45
 	name = ".45 ACP revolver cylinder"
 	ammo_type = /obj/item/ammo_casing/c45
