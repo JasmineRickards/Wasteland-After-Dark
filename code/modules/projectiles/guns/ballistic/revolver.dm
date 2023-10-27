@@ -172,6 +172,16 @@
 	spread = 0
 	fire_sound = 'sound/f13weapons/357magnum.ogg'
 
+/obj/item/gun/ballistic/revolver/colt357/conversion
+	name = "Colt single-action chain revolver"
+	desc = "A .357 magnum revolver that has been modified to fire from a chain of twenty shells. Fanning is the only way to utilize it properly."
+	icon_state = "357chain"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev357/chain
+	fire_delay = 0.7
+	spread = 20
+	recoil = 3
+	extra_damage = -4
+
 /obj/item/gun/ballistic/revolver/colt357/mateba //this is a skin that rigbe wanted
 	name = "\improper Unica 6 auto-revolver"
 	desc = "A pre-war high-power autorevolver commonly used by people who think they look cool."
@@ -187,7 +197,7 @@
 	item_state = "lucky"
 	w_class = WEIGHT_CLASS_SMALL
 	fire_delay = 3
-	block_chance = 20
+	block_chance = 50
 
 //Police revolver					Keywords: .357, Double action, 6 rounds cylinder, Pocket Pistol
 /obj/item/gun/ballistic/revolver/police
