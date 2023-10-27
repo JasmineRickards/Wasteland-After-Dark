@@ -1119,7 +1119,7 @@
 	zoom_amt = 15
 	zoom_out_amt = 17
 	extra_damage = 15 //~39 to 50 damage
-	extra_penetration = 0.4 //On par with medicine stick
+	extra_penetration = 0.3 //Slightly less than medicine stick
 
 /obj/item/gun/ballistic/automatic/marksman/sniper/sniperranger
 	name = "compact sniper rifle"
