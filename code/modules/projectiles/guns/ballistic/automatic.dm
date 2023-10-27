@@ -513,7 +513,7 @@
 	icon_state = "typewriter"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_prefix = "typewriter"
-extra_damage = -5
+	extra_damage = -5
 
 //P90				Keywords: 10mm, Automatic, 50 rounds. Special modifiers: damage +1
 /obj/item/gun/ballistic/automatic/smg/p90
