@@ -362,7 +362,7 @@
 	icon_state = "WHAT"
 	item_state = "amr"
 	mag_type = /obj/item/ammo_box/magazine/amr
-	fire_delay = 12 //Heavy round, tiny bit slower
+	fire_delay = 8
 	recoil = 5
 	spread = 4
 	force = 5
