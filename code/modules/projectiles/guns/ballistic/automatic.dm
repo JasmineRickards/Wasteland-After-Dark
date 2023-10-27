@@ -787,18 +787,19 @@
 //Combat Rifle		Keywords: .45 Caliber Rifle, BoS rifle
 /obj/item/gun/ballistic/automatic/combat
 	name = "Combat Rifle"
-	desc = "A .45 semi-automatic combat rifle, produced pre-war for National Guard forces."
+	desc = "A .45 automatic combat rifle, produced pre-war for National Guard forces."
 	icon_state = "combat_rifle"
 	item_state = "combatrifle"
 	icon_prefix = "combatrifle"
 	mag_type = /obj/item/ammo_box/magazine/tommygunm45/stick
-	fire_delay = 3
+	fire_delay = 1
+	automatic = TRUE
 	burst_size = 1
 	spread = 1
 	slowdown = 0.25
 	extra_penetration = 0.1
-	automatic_burst_overlay = FALSE
-	semi_auto = TRUE
+	automatic_burst_overlay = TRUE
+	semi_auto = FALSE
 	fire_sound = 'sound/f13weapons/combatrifle.ogg'
 
 //Service rifle			Keywords: NCR, 5.56mm, Semi-auto, 20 (10-50) round magazine, 25dmg
@@ -1251,8 +1252,9 @@
 	spread = 1
 	burst_size = 1
 	can_attachments = FALSE
-	semi_auto = TRUE
-	automatic_burst_overlay = FALSE
+	automatic = TRUE
+	semi_auto = FALSE
+	automatic_burst_overlay = TRUE
 	can_scope = FALSE
 	zoomable = TRUE
 	zoom_amt = 6
