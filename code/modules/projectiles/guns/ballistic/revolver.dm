@@ -181,6 +181,8 @@
 	spread = 20
 	recoil = 3
 	extra_damage = -4
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_prefix = "357chain"
 
 /obj/item/gun/ballistic/revolver/colt357/mateba //this is a skin that rigbe wanted
 	name = "\improper Unica 6 auto-revolver"
