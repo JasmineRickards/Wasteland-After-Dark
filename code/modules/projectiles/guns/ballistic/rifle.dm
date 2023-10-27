@@ -366,7 +366,7 @@
 	recoil = 5
 	spread = 4
 	force = 5
-	slowdown = 0.8
+	slowdown = 0.5
 	zoomable = FALSE
 	fire_sound = 'sound/f13weapons/antimaterielfire.ogg'
 	pump_sound = 'sound/f13weapons/antimaterielreload.ogg'
