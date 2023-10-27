@@ -198,7 +198,7 @@
 	force = 35
 	armour_penetration = 0.1 //Not for the bullet. This is the gun.
 	wound_bonus = 15 //Same as above
-	extra_damage = 5 //Half of parent
+	extra_damage = 2.5 //Half of parent
 	icon_prefix = "pardneraxe"
 
 
