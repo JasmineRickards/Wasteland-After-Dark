@@ -180,7 +180,7 @@
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "pardner"
 	item_state = "shotgundouble"
-	icon_prefix = "shotgundouble"
+	icon_prefix = "pardner"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/pardner
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -188,6 +188,7 @@
 	force = 10
 	slowdown = 0.1
 	extra_damage = 10
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 
 /obj/item/gun/ballistic/revolver/singleshotgun/axe
 	name = "Pardner 77 hatchet"
@@ -198,6 +199,7 @@
 	armour_penetration = 0.1 //Not for the bullet. This is the gun.
 	wound_bonus = 15 //Same as above
 	extra_damage = 5 //Half of parent
+	icon_prefix = "pardneraxe"
 
 
 //Hunting shotgun				Keywords: Shotgun, Pump-action, 4 rounds
