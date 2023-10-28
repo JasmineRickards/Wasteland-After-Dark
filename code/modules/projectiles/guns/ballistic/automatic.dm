@@ -290,6 +290,8 @@
 	update_icon()
 	return
 
+
+
 /obj/item/gun/ballistic/automatic/smg/greasegun/worn
 	name = "beat up 9mm submachine gun"
 	desc = "What was once an inexpensive, but reliable submachine gun is now an inexpensive piece of shit. It's impressive this thing still fires at all."
@@ -320,6 +322,21 @@
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
 	return
+
+/obj/item/gun/ballistic/automatic/smg/greasegun/upgraded
+	name = "upgraded 9mm submachine gun"
+	desc = "An inexpensive submachine gun with added parts, chambered in 9mm. It has a higher rate of fire and uses a suppressor. It seems the magwell only accepts special drum magazines."
+	icon_state = "greaseplus"
+	item_state = "smg9mm"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_prefix = "greaseplus"
+	mag_type = /obj/item/ammo_box/magazine/greasedrum
+	spread = 13
+	slowdown = 0.35
+	autofire_shot_delay = 1.85
+	can_attachments = FALSE
+	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
+	extra_damage = -4
 
 //10mm SMG			Keywords: 10mm, Automatic, 12/24 rounds
 /obj/item/gun/ballistic/automatic/smg/smg10mm
