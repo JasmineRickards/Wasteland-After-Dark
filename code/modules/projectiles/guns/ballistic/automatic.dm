@@ -1105,15 +1105,15 @@
 	spread = 3
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 2.5
+	autofire_shot_delay = 2
 	can_attachments = TRUE
 	can_bayonet = TRUE
 	bayonet_state = "bayonet"
 	knife_x_offset = 22
 	knife_y_offset = 21
 	can_scope = FALSE
-	fire_sound = 'sound/f13weapons/automaticrifle_BAR.ogg'
-	recoil = 10
+	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+	recoil = 4
 	extra_damage = -5
 
 
