@@ -429,7 +429,7 @@
 				/obj/item/stack/sheet/mineral/wood = 10)
 	category = CAT_TRIBAL
 	tools = list(TOOL_WORKBENCH)
-	always_available = TRUE
+	always_available = FALSE
 
 
 /datum/crafting_recipe/tribalwar/lightcloak
