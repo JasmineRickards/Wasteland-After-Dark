@@ -96,6 +96,14 @@
 	caliber = ".45"
 	max_ammo = 50
 
+/obj/item/ammo_box/magazine/greasedrum
+	name = "grease gun drum magazine (9mm)"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "tommydrum"
+	ammo_type = /obj/item/ammo_casing/c9mm
+	caliber = "9mm"
+	max_ammo = 50
+
 /obj/item/ammo_box/magazine/tommygunm45/stick
 	name = "Thompson stick magazine (.45)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'

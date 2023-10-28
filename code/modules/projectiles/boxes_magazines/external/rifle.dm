@@ -126,6 +126,8 @@
 	ammo_type = /obj/item/ammo_casing/a762
 	caliber = "a762"
 	max_ammo = 15
+	icon_state = "avtomat"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
 
 /obj/item/ammo_box/magazine/avtomat/update_icon()
 	..()
