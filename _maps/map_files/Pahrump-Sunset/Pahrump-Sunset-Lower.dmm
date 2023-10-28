@@ -8399,7 +8399,7 @@
 /area/f13/tunnel/bighorn)
 "eha" = (
 /obj/machinery/door/airlock/grunge{
-	id_tag = "thebox";
+	id_tag = "thebox1";
 	name = "The box"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
@@ -16679,15 +16679,10 @@
 /area/f13/brotherhood/offices2nd)
 "npR" = (
 /obj/machinery/button/door{
-	id = "thebox"
+	id = "thebox1";
+	pixel_x = 32
 	},
-/turf/closed/indestructible/vaultdoor{
-	desc = "A wall built to withstand an atomic explosion.";
-	icon = 'icons/fallout/turfs/walls/vault_reinforced.dmi';
-	icon_state = "vaultrwall0";
-	icon_type_smooth = "vaultrwall";
-	name = "vault reinforced wall"
-	},
+/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/brotherhood/reactor)
 "nqd" = (
 /obj/structure/handrail/g_central{
@@ -18269,7 +18264,7 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/brotherhood)
 "pgh" = (
-/obj/structure/closet/secure_closet/brig,
+/obj/structure/closet/locker,
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/brotherhood/reactor)
 "pgO" = (
@@ -84788,8 +84783,8 @@ fxj
 bow
 bow
 hai
-pgh
-pgh
+npR
+bow
 hai
 oOV
 qHw
@@ -85045,7 +85040,7 @@ hai
 hai
 hai
 hai
-npR
+hai
 hai
 hai
 hai
