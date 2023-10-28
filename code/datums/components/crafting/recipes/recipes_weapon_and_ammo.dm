@@ -275,7 +275,15 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
-
+/datum/crafting_recipe/greaseplusmag
+	name = "drum magazine for the upgraded grease gun"
+	result = /obj/item/ammo_box/magazine/greasedrum
+	reqs = list(/obj/item/stack/crafting/metalparts = 3,
+				/obj/item/ammo_box/magazine/tommygunm45 = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 40
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
 
 /datum/crafting_recipe/c38boxincin
 	name = ".38 incendiary-tipped ammo box"
@@ -784,6 +792,21 @@
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/gun/ballistic/automatic/smg/mini_uzi = 1)
 	tools = list(TOOL_AWORKBENCH)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_available = TRUE
+
+//upgraded m3a1
+/datum/crafting_recipe/greaseplus
+	name = "Upgraded 9mm SMG"
+	result = /obj/item/gun/ballistic/automatic/smg/greasegun/upgraded
+	reqs = list(/obj/item/stack/crafting/metalparts = 10,
+				/obj/item/suppressor = 1,
+				/obj/item/stack/crafting/goodparts = 6,
+				/obj/item/ammo_box/magazine/greasedrum = 1,
+				/obj/item/gun/ballistic/automatic/smg/greasegun = 1)
+	tools = list(TOOL_WORKBENCH)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
