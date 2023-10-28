@@ -284,6 +284,7 @@
 	time = 40
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
+	always_available = TRUE
 
 /datum/crafting_recipe/c38boxincin
 	name = ".38 incendiary-tipped ammo box"
