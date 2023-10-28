@@ -188,14 +188,14 @@
 	force = 10
 	slowdown = 0.1
 	extra_damage = 5
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	fire_sound = 'sound/f13weapons/antimaterielfire.ogg'
 
 /obj/item/gun/ballistic/revolver/singleshotgun/axe
 	name = "Pardner 77 hatchet"
 	desc = "A New England Pardner that has been sawn down and had a fireaxe tightly attached to the barrel. The stock has been replaced by something more comfortable to hold on to."
 	icon_state = "pardneraxe"
 	slowdown = 0.08
-	force = 35
+	force = 40
 	armour_penetration = 0.1 //Not for the bullet. This is the gun.
 	wound_bonus = 15 //Same as above
 	extra_damage = 2.5 //Half of parent
