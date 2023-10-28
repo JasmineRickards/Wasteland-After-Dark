@@ -831,10 +831,12 @@
 	slowdown = 0.15
 	fire_delay = 1
 	burst_size = 1
+	autofire_shot_delay = 4
 	spread = 1
 	can_attachments = TRUE
-	automatic_burst_overlay = FALSE
-	semi_auto = TRUE
+	automatic_burst_overlay = TRUE
+	automatic = TRUE
+	semi_auto = FALSE
 	can_bayonet = TRUE
 	bayonet_state = "bayonet"
 	knife_x_offset = 22
