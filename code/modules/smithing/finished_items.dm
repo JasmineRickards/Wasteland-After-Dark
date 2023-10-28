@@ -236,7 +236,7 @@
 	item_state = "sabre_smith"
 	overlay_state = "hilt_sabre"
 	block_parry_data = /datum/block_parry_data/smithsaber
-	armour_penetration = 0.25
+	armour_penetration = 0.15
 	force = 24
 	block_chance = 45
 
@@ -429,7 +429,7 @@
 	wound_bonus = 45						//The craftsmanship is simply unrivaled
 	bare_wound_bonus = 30
 	block_chance = 25
-	armour_penetration = 0.5
+	armour_penetration = 0.4
 
 /obj/item/melee/smith/twohand/axe/warhoned/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
@@ -487,7 +487,7 @@
 
 
 // Good throwing, thats about it (27, 40)
-/obj/item/melee/smith/javelin 
+/obj/item/melee/smith/javelin
 	name = "javelin"
 	icon_state = "javelin_smith"
 	overlay_state = "shaft_javelin"
