@@ -107,11 +107,11 @@
 	crate_type = /obj/structure/closet/crate/secure/engineering
 */
 /datum/supply_pack/engineering/industrialrcd
-	name = "Industrial RCD"
-	desc = "An industrial RCD in case the station has gone through more then one meteor storm and the CE needs to bring out the somthing a bit more reliable. Does not contain spare ammo for the industrial RCD or any other RCD models."
+	name = "Combat RCD"
+	desc = "An combat RCD in case the station has gone through more then one meteor storm and the CE needs to bring out the somthing a bit more reliable. Does not contain spare ammo for the industrial RCD or any other RCD models."
 	cost = 4500
-	contains = list(/obj/item/construction/rcd/industrial)
-	crate_name = "industrial rcd"
+	contains = list(/obj/item/construction/rcd/combat)
+	crate_name = "Combat RCD"
 	crate_type = /obj/structure/closet/crate/secure/engineering
 
 /datum/supply_pack/engineering/inducers
