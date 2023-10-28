@@ -25,7 +25,7 @@
 	description = "More ways to bring back the newly dead."
 	prereq_ids = list("adv_biotech", "exp_surgery", "adv_engi", "adv_power")
 	design_ids = list("defib_decay", "defib_shock", "defib_heal", "defib_speed")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 7500)
 
 /datum/techweb_node/plumbing
 	id = "plumbing"
