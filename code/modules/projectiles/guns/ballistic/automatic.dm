@@ -1281,11 +1281,16 @@
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 	slowdown = 0.15
 
+
 /obj/item/gun/ballistic/automatic/r93/rifle
 	name = "R93-A Carbine"
-	desc = "A lightweight carbine manufactured by the Brotherhood of Steel with a folding stock and longer barrel, based on weapons from the R-series platforms. It is generally issued to marksmen and squad leaders."
-	fire_delay = 1.5
+	desc = "A lightweight carbine manufactured by the Brotherhood of Steel with a folding stock and longer barrel, based on weapons from the R-series platforms and re-chambered for 5mm. It is generally issued to marksmen and squad leaders."
+	fire_delay = 1
+	autofire_shot_delay = 2
+	can_attachments = TRUE
+	can_scope = FALSE
 	can_bayonet = FALSE
+	mag_type = /obj/item/ammo_box/magazine/m5mm
 	slowdown = 0.3
 	extra_damage = 6
 	extra_penetration = 0.05
