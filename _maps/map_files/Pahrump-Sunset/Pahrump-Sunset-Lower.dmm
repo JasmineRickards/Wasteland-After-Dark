@@ -8400,7 +8400,9 @@
 "eha" = (
 /obj/machinery/door/airlock/grunge{
 	id_tag = "thebox1";
-	name = "The box"
+	name = "The box";
+	req_access_txt = "120";
+	desc = "A dark room, borderline torture. Primarily used on unruly initiates or caste members that ignore authority."
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/brotherhood/reactor)
@@ -16677,13 +16679,6 @@
 	icon_state = "casino"
 	},
 /area/f13/brotherhood/offices2nd)
-"npR" = (
-/obj/machinery/button/door{
-	id = "thebox1";
-	pixel_x = 32
-	},
-/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
-/area/f13/brotherhood/reactor)
 "nqd" = (
 /obj/structure/handrail/g_central{
 	dir = 8;
@@ -84783,7 +84778,7 @@ fxj
 bow
 bow
 hai
-npR
+bow
 bow
 hai
 oOV
