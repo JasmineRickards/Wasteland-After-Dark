@@ -1228,6 +1228,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmith_four, 				1200),
 		new /datum/data/wasteland_equipment("Reverse engineered blueprint",		/obj/effect/spawner/lootdrop/f13/blueprintHigh, 				1800),
 		new /datum/data/wasteland_equipment("Reverse engineered advanced blueprint",		/obj/effect/spawner/lootdrop/f13/blueprintVHigh, 	2600),
+		new /datum/data/wasteland_equipment("M-60 LMG blueprint",		/obj/item/book/granter/crafting_recipe/blueprint/m60, 	5000),
 		new /datum/data/wasteland_equipment("Russian primer book", 			/obj/item/book/granter/trait/rifleman, 								800),
 		new /datum/data/wasteland_equipment("Wattz laser pistol",			/obj/item/gun/energy/laser/wattz,									150),
 		new /datum/data/wasteland_equipment("Reinforced combat helmet",		/obj/item/clothing/head/helmet/f13/combat/mk2 ,						200),
@@ -1238,7 +1239,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Power armor pamphlet",			/obj/item/book/granter/trait/pa_wear,								2000),
 		new /datum/data/wasteland_equipment("T-45d armor", 					/obj/item/clothing/suit/armor/f13/power_armor/t45d,		 			2500),
 		new /datum/data/wasteland_equipment("T-45d helmet", 				/obj/item/clothing/head/helmet/f13/power_armor/t45d, 				500),
-		new /datum/data/wasteland_equipment("M-60LMG", 						/obj/item/gun/ballistic/automatic/m60, 								3200),
+//		new /datum/data/wasteland_equipment("M-60LMG", 						/obj/item/gun/ballistic/automatic/m60, 								3200),
 		new /datum/data/wasteland_equipment("Combat Rifle", 					/obj/item/gun/ballistic/automatic/combat, 						450),
 		new /datum/data/wasteland_equipment("LSW",							/obj/item/gun/ballistic/automatic/lsw, 								700),
 		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400)
@@ -1261,6 +1262,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmith_four, 				1200),
 		new /datum/data/wasteland_equipment("Reverse engineered blueprint",		/obj/effect/spawner/lootdrop/f13/blueprintHigh, 				1800),
 		new /datum/data/wasteland_equipment("Reverse engineered advanced blueprint",		/obj/effect/spawner/lootdrop/f13/blueprintVHigh, 	2600),
+		new /datum/data/wasteland_equipment("M-60 LMG blueprint",		/obj/item/book/granter/crafting_recipe/blueprint/m60, 	5000),
 		new /datum/data/wasteland_equipment("Russian primer book", 			/obj/item/book/granter/trait/rifleman, 								800),
 		new /datum/data/wasteland_equipment("Wattz laser pistol",			/obj/item/gun/energy/laser/wattz,									150),
 		new /datum/data/wasteland_equipment("Reinforced combat helmet",		/obj/item/clothing/head/helmet/f13/combat/mk2 ,						200),
@@ -1272,7 +1274,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Power armor pamphlet",			/obj/item/book/granter/trait/pa_wear,								2000),
 		new /datum/data/wasteland_equipment("T-45d armor", 					/obj/item/clothing/suit/armor/f13/power_armor/t45d,					2500),
 		new /datum/data/wasteland_equipment("T-45d helmet", 				/obj/item/clothing/head/helmet/f13/power_armor/t45d, 				500),
-		new /datum/data/wasteland_equipment("M-60LMG", 					/obj/item/gun/ballistic/automatic/m60, 									3200),
+//		new /datum/data/wasteland_equipment("M-60LMG", 					/obj/item/gun/ballistic/automatic/m60, 									3200),
 		new /datum/data/wasteland_equipment("Combat Rifle", 					/obj/item/gun/ballistic/automatic/combat, 						450),
 		new /datum/data/wasteland_equipment("LSW",							/obj/item/gun/ballistic/automatic/lsw, 								700),
 		new /datum/data/wasteland_equipment("Riot shotgun",							/obj/item/gun/ballistic/automatic/shotgun/riot, 			1400)

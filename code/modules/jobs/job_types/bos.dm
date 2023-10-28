@@ -235,6 +235,7 @@ Head Scribe
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93/rifle)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m60)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
 
 /datum/outfit/job/bos/f13headscribe
@@ -620,6 +621,7 @@ Senior Scribe
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93/rifle)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m60)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
 
 /datum/outfit/job/bos/f13seniorscribe
