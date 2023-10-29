@@ -70,7 +70,7 @@
 	description = "If the light stuff just won't do it."
 	prereq_ids = list("adv_weaponry")
 	design_ids = list("large_Grenade", "pyro_Grenade", "adv_Grenade")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2750)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 
 /datum/techweb_node/ballistic_weapons
 	id = "ballistic_weapons"
