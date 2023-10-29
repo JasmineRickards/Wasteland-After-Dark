@@ -68,24 +68,13 @@
 	user.log_message(message, LOG_EMOTE)
 	message = span_subtle("<b>[user]</b> " + "<i>[user.say_emphasis(message)]</i>")
 
-	var/list/ghosties = list()
-	// Exclude ghosts from the initial message if its a subtler, lets be *discrete*
-	if(subtler)
-		for(var/mob/dead/observer in GLOB.dead_mob_list)
-			if(ghost.client)
-				ghosties += ghost
-
 	// Everyone in range can see it
 	user.visible_message(
 		message = message,
 		blind_message = message,
 		self_message = message,
 		vision_distance = 1,
-		ignored_mobs = ghosties)
-
-	//broadcast to ghosts, if they have a client, are dead, arent in the lobby, allow ghostsight,
-	user.emote_for_ghost_sight(message, subtler)
-
+		ignored_mobs = GLOB.dead_mob_list)
 
 ///////////////// VERB CODE
 /mob/living/proc/subtle_keybind()
