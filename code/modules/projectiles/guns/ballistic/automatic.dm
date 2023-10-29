@@ -1092,34 +1092,6 @@
 	auto_eject_sound = 'sound/weapons/magout.ogg'
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 
-//Mosin Avtomat
-/obj/item/gun/ballistic/automatic/avtomat
-	name = "Mosin-Nagant Assultus"
-	desc = "A pre-war Mosin-Nagant 91/30 rifle was modified into a makeshift machine gun, with a high rate of fire, gas-driven receiver, and increased internal magazine. It feeds from a chain-like stripper clip, and Legion bull has been branded into its wooden stock."
-	icon_state = "avtomat"
-	item_state = "rifle"
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
-	icon_prefix = "avtomat"
-	force = 20
-	slowdown = 0.5
-	mag_type = /obj/item/ammo_box/magazine/avtomat
-	fire_delay = 1
-	burst_size = 3
-	spread = 3
-	is_automatic = TRUE
-	automatic = 1
-	autofire_shot_delay = 2
-	can_attachments = TRUE
-	can_bayonet = TRUE
-	bayonet_state = "bayonet"
-	knife_x_offset = 22
-	knife_y_offset = 21
-	can_scope = FALSE
-	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-	recoil = 4
-	extra_damage = -5
-
-
 //DKS 501 sniper rifle				Keywords: .308, Semi-auto, 7 round magazine, Scoped, Extra speed +500, Fire delay +1, 43dmg
 /obj/item/gun/ballistic/automatic/marksman/sniper
 	name = "sniper rifle"
