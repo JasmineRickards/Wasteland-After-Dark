@@ -106,7 +106,7 @@
 /obj/item/ammo_box/magazine/internal/shot/avtomat
 	ammo_type = /obj/item/ammo_casing/a762
 	caliber = "a762"
-	max_ammo = 15
+	max_ammo = 14
 	multiload = 1
 
 /obj/item/ammo_box/magazine/internal/shot/pardner
