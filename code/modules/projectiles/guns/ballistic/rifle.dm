@@ -269,17 +269,14 @@
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_prefix = "avtomat"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/avtomat
-	fire_delay = 1
-	burst_size = 3
-	spread = 3
-	is_automatic = TRUE
+	spread = 17 //Ridiculous
 	automatic = 1
-	autofire_shot_delay = 2
+	autofire_shot_delay = 1.05
 	can_scope = FALSE
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-	recoil = 1.75
+	recoil = 0.75
 	extra_damage = -5
-	var/pump_stam_cost = 0
+	pump_stam_cost = 0
 
 /obj/item/gun/ballistic/rifle/avtomat/shoot_live_shot(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
 	..()
