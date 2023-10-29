@@ -117,10 +117,10 @@
 /obj/item/clothing/under/f13/ncr/sniper
 	name = "NCR sniper fatigues"
 	desc = "A standard duty uniform for snipers of the New California Republic."
-	can_adjust = FALSE
-	icon_state = "ncr_snipermgs"
-	item_state = "ncr_snipermgs"
-	item_color = "ncr_snipermgs"
+	can_adjust = TRUE
+	icon_state = "ncr_sniper"
+	item_state = "ncr_sniper"
+	item_color = "ncr_sniper"
 
 /obj/item/clothing/under/f13/ncr/pants
 	name = "NCR fatigue pants"
@@ -939,7 +939,7 @@
 	name = "PLA uniform"
 	desc = "An pre-war People's Liberation Army uniform, worn by enlisted and NCOs."
 	icon = 'icons/fallout/clothing/uniforms.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	mob_overlay_icon = 'icons/mob/clothing/uniform.dmi'
 	icon_state = "chinese_soldier"
 	item_state = "chinese_soldier"
 
@@ -947,7 +947,7 @@
 	name = "PLA officer's uniform"
 	desc = "An pre-war People's Liberation Army uniform, worn by officers."
 	icon = 'icons/fallout/clothing/uniforms.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	mob_overlay_icon = 'icons/mob/clothing/uniform.dmi'
 	icon_state = "chinese_officer"
 	item_state = "chinese_officer"
 
@@ -1311,10 +1311,11 @@
 
 /obj/item/clothing/under/f13/combat
 	name = "combat uniform"
-	desc = "An ancient combat uniform, that went out of use around the time of the Great War."
+	desc = "An ancient combat uniform issued to US Army troops to be worn underneath combat armor."
 	icon_state = "combat"
 	item_state = "bl_suit"
 	item_color = "combat"
+	mob_overlay_icon = 'icons/mob/clothing/uniform.dmi'
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
 /obj/item/clothing/under/f13/gunner

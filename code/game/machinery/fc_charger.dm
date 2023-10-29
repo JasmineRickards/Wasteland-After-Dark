@@ -4,10 +4,10 @@
 	icon = 'icons/fallout/objects/powercore.dmi'
 	icon_state = "ccharger"
 	use_power = IDLE_POWER_USE
-	idle_power_usage = 15
-	active_power_usage = 180
+	idle_power_usage = 1
+	active_power_usage = 2
 	power_channel = EQUIP
-	circuit = /obj/item/circuitboard/machine/cell_charger
+	circuit = /obj/item/circuitboard/machine/fc_charger
 	pass_flags = PASSTABLE
 	var/obj/item/stock_parts/fc/charging = null
 	var/charge_rate = 10
@@ -33,8 +33,8 @@
 		. += "<span class='notice'>The status display reads: Charge rate at <b>[charge_rate]J</b> per cycle.</span>"
 
 /obj/machinery/fc_charger/attackby(obj/item/W, mob/user, params)
-	if(istype(W, /obj/item/stock_parts/cell) && !panel_open)
-		var/obj/item/stock_parts/cell/C = W
+	if(istype(W, /obj/item/stock_parts/fc) && !panel_open)
+		var/obj/item/stock_parts/fc/C = W
 		if(stat & BROKEN)
 			to_chat(user, "<span class='warning'>[src] is broken!</span>")
 			return
@@ -78,7 +78,7 @@
 	QDEL_NULL(charging)
 	return ..()
 
-/obj/machinery/fc_charger/proc/removecell()
+/obj/machinery/fc_charger/proc/removefc()
 	charging.update_icon()
 	charging = null
 	update_icon()
@@ -92,7 +92,7 @@
 
 	user.visible_message("[user] removes [charging] from [src].", "<span class='notice'>You remove [charging] from [src].</span>")
 
-	removecell()
+	removefc()
 
 /obj/machinery/fc_charger/attack_tk(mob/user)
 	if(!charging)
@@ -101,7 +101,7 @@
 	charging.forceMove(loc)
 	to_chat(user, "<span class='notice'>You telekinetically remove [charging] from [src].</span>")
 
-	removecell()
+	removefc()
 
 /obj/machinery/fc_charger/attack_ai(mob/user)
 	if(!charging)
@@ -110,7 +110,7 @@
 	charging.forceMove(loc)
 	to_chat(user, "<span class='notice'>You remotely disconnect the battery port and eject [charging] from [src].</span>")
 
-	removecell()
+	removefc()
 	return
 
 /obj/machinery/fc_charger/attack_robot(mob/user)
@@ -126,7 +126,7 @@
 		charging.emp_act(severity)
 
 /obj/machinery/fc_charger/RefreshParts()
-	charge_rate = 500
+	charge_rate = 10
 	for(var/obj/item/stock_parts/capacitor/C in component_parts)
 		charge_rate *= C.rating
 

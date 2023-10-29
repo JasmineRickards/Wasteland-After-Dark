@@ -48,7 +48,7 @@
 	design_ids = list("odysseus_chassis", "odysseus_torso", "odysseus_head", "odysseus_left_arm", "odysseus_right_arm" ,"odysseus_left_leg", "odysseus_right_leg",
 	"odysseus_main", "odysseus_peri")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-
+/*
 /datum/techweb_node/gygax
 	id = "mech_gygax"
 	display_name = "EXOSUIT: Gygax"
@@ -57,15 +57,15 @@
 	design_ids = list("gygax_chassis", "gygax_torso", "gygax_head", "gygax_left_arm", "gygax_right_arm", "gygax_left_leg", "gygax_right_leg", "gygax_main",
 	"gygax_peri", "gygax_targ", "gygax_armor")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3000)
-
+*/
 /datum/techweb_node/medigax
 	id = "mech_medigax"
 	display_name = "EXOSUIT: Medical-Spec Gygax"
 	description = "Medical-Spec Gygax designs"
-	prereq_ids = list("mech_gygax", "mecha_odysseus")
+	prereq_ids = list("mecha_odysseus")
 	design_ids = list("medigax_chassis", "medigax_torso", "medigax_head", "medigax_left_arm", "medigax_right_arm", "medigax_left_leg", "medigax_right_leg", "medigax_armor")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-
+/*
 /datum/techweb_node/durand
 	id = "mech_durand"
 	display_name = "EXOSUIT: Durand"
@@ -83,7 +83,7 @@
 	design_ids = list("marauder_chassis", "marauder_torso", "marauder_head", "marauder_left_arm", "marauder_right_arm", "marauder_left_leg", "marauder_right_leg", "marauder_main",
 	"marauder_peri", "marauder_targ", "marauder_armor")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
-
+*/
 /*
 /datum/techweb_node/phazon
 	id = "mecha_phazon"
@@ -183,7 +183,7 @@
 	prereq_ids = list("adv_weaponry")
 	design_ids = list("mech_laser_heavy")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-
+/*
 /datum/techweb_node/mech_pulse_rifle
 	id = "mech_pulse_rifle"
 	display_name = "eZ-13 MK2 heavy pulse rifle"
@@ -191,7 +191,7 @@
 	prereq_ids = list("adv_weaponry")
 	design_ids = list("mech_pulse_rifle")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-
+*/
 /datum/techweb_node/mech_grenade_launcher
 	id = "mech_grenade_launcher"
 	display_name = "Exosuit Weapon (SGL-6 Grenade Launcher)"
@@ -199,7 +199,7 @@
 	prereq_ids = list("adv_weaponry")
 	design_ids = list("mech_grenade_launcher", "mech_grenade_launcher_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-
+/*
 /datum/techweb_node/mech_breaching_missile_rack
 	id = "mech_breaching_missile_rack"
 	display_name = "Exosuit Weapon (BRM-6 Missile Rack)"
@@ -215,7 +215,7 @@
 	prereq_ids = list("adv_weaponry")
 	design_ids = list("mech_missile_rack", "mech_missile_rack_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-
+*/
 /*
 /datum/techweb_node/clusterbang_launcher
 	id = "clusterbang_launcher"

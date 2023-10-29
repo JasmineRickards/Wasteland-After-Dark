@@ -72,7 +72,7 @@
 	addtimer(CALLBACK(src, .proc/set_ready_state, 1), equip_cooldown)
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser
-	equip_cooldown = 7
+	equip_cooldown = 4
 	name = "\improper CH-PS \"Immolator\" laser"
 	desc = "A weapon for combat exosuits. Shoots basic lasers."
 	icon_state = "mecha_laser"
@@ -82,7 +82,7 @@
 	harmful = TRUE
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy
-	equip_cooldown = 14
+	equip_cooldown = 5
 	name = "\improper CH-LC \"Solaris\" laser cannon"
 	desc = "A weapon for combat exosuits. Shoots heavy lasers."
 	icon_state = "mecha_laser"
@@ -91,7 +91,7 @@
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/ion
-	equip_cooldown = 16
+	equip_cooldown = 12
 	name = "\improper MKIV ion heavy cannon"
 	desc = "A weapon for combat exosuits. Shoots technology-disabling ion beams. Don't catch yourself in the blast!"
 	icon_state = "mecha_ion"
@@ -110,7 +110,7 @@
 	harmful = TRUE
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/pulse
-	equip_cooldown = 40
+	equip_cooldown = 6
 	name = "\improper MKII heavy pulse cannon"
 	desc = "A weapon for combat exosuits. Shoots powerful destructive blasts."
 	icon_state = "mecha_pulse"
@@ -232,7 +232,7 @@
 	desc = "A weapon for combat exosuits. Shoots a spread of pellets."
 	icon_state = "mecha_scatter"
 	fire_sound = 'sound/weapons/sound_weapons_mech_shotgun.ogg'
-	equip_cooldown = 20
+	equip_cooldown = 6
 	projectile = /obj/item/projectile/bullet/scattershot
 	projectiles = 40
 	projectiles_cache = 40
@@ -246,7 +246,7 @@
 	name = "\improper Melon Seed \"Scattershot\""
 	desc = "A weapon for combat exosuits. Shoots a spread of pellets, shaped as seed."
 	icon_state = "mecha_scatter"
-	equip_cooldown = 20
+	equip_cooldown = 6
 	projectile = /obj/item/projectile/bullet/seed
 	projectiles = 20
 	projectiles_cache = 20
@@ -261,12 +261,12 @@
 	desc = "A weapon for combat exosuits. Shoots a rapid, three shot burst."
 	icon_state = "mecha_uac2"
 	fire_sound = 'sound/weapons/sound_weapons_mech_autocannon.ogg'
-	equip_cooldown = 10
+	equip_cooldown = 4
 	projectile = /obj/item/projectile/bullet/lmg
 	projectiles = 300
 	projectiles_cache = 300
 	projectiles_cache_max = 1200
-	projectiles_per_shot = 3
+	projectiles_per_shot = 2
 	variance = 6
 	randomspread = 1
 	projectile_delay = 2

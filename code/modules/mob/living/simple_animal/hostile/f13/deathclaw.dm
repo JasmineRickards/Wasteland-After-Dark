@@ -55,6 +55,39 @@
 	aggrosound = list('sound/f13npc/deathclaw/aggro1.ogg', 'sound/f13npc/deathclaw/aggro2.ogg', )
 	idlesound = list('sound/f13npc/deathclaw/idle.ogg',)
 	death_sound = 'sound/f13npc/deathclaw/death.ogg'
+	var/can_execute = FALSE
+	var/execute_threshold = -20 //Default health you have to be to be executed
+
+/mob/living/simple_animal/hostile/deathclaw/AttackingTarget()
+	if(can_execute)
+		var/mob/living/M = target
+		if(!ishuman(M) || M.health > execute_threshold)
+			..()
+			return
+
+		if(get_dist(src, M) > 0)
+			a_intent = INTENT_GRAB
+			grab_state = GRAB_NECK
+			summon_backup(15)
+
+			start_pulling(M, 1)
+			M.grabbedby(src)
+			M.drop_all_held_items()
+			M.stop_pulling()
+
+			var/obj/item/bodypart/chest/O = M.get_bodypart(BODY_ZONE_CHEST)
+			O.force_wound_upwards(/datum/wound/pierce/critical)
+
+			visible_message("<span class='danger'>[src] growls, lifting [M] into the air and violently executing them!</span>")
+			to_chat(M, "<span class='userdanger'>[src] lifts you into the air, violently putting an end to your life!</span>")
+
+			M.adjustBruteLoss(100)//Not tanking this without abuse of a specific mechanic. Bypasses armor.
+
+		if(!ishuman(M) || M.health <= 0)
+			src.drop_all_held_items()
+			src.stop_pulling()
+	..()
+
 /*
 	var/charging = FALSE
 */
@@ -80,36 +113,9 @@
 	armour_penetration = 0.4
 	footstep_type = FOOTSTEP_MOB_HEAVY
 	color = rgb(95,104,94)
+	can_execute = TRUE
 	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/deathclaw = 6,
 							/obj/item/stack/sheet/animalhide/deathclaw = 3)
-
-/mob/living/simple_animal/hostile/deathclaw/mother/AttackingTarget()
-	var/mob/living/M = target
-	if(!ishuman(M) || M.health > 20)
-		..()
-		return
-
-	if(get_dist(src, M) > 0)
-		a_intent = INTENT_GRAB
-		grab_state = GRAB_NECK
-		summon_backup(15)
-
-		start_pulling(M, 1)
-		M.grabbedby(src)
-		M.drop_all_held_items()
-		M.stop_pulling()
-
-		var/obj/item/bodypart/chest/O = M.get_bodypart(BODY_ZONE_CHEST)
-		O.force_wound_upwards(/datum/wound/pierce/critical)
-
-		visible_message("<span class='danger'>[src] growls, lifting [M] into the air and violently executing them!</span>")
-		to_chat(M, "<span class='userdanger'>[src] lifts you into the air, violently putting an end to your life!</span>")
-
-		M.adjustBruteLoss(100)//Not tanking this without abuse of a specific mechanic. Bypasses armor.
-
-	if(!ishuman(M) || M.health <= 0)
-		src.drop_all_held_items()
-		src.stop_pulling()
 
 //Legendary Deathclaw
 /mob/living/simple_animal/hostile/deathclaw/legendary
@@ -123,6 +129,8 @@
 	melee_damage_upper = 55
 	armour_penetration = 0.5
 	footstep_type = FOOTSTEP_MOB_HEAVY
+	can_execute = TRUE
+	execute_threshold = 0 //This guy hurts
 	guaranteed_butcher_results = list(/obj/item/stack/sheet/animalhide/deathclaw = 6)
 
 /mob/living/simple_animal/hostile/deathclaw/legendary/Initialize()
@@ -130,33 +138,6 @@
 	if(prob(37))
 		guaranteed_butcher_results = list(/obj/item/melee/unarmed/deathclawgauntlet = 1)
 
-/mob/living/simple_animal/hostile/deathclaw/legendary/AttackingTarget()
-	var/mob/living/M = target
-	if(!ishuman(M) || M.health > 20)
-		..()
-		return
-
-	if(get_dist(src, M) > 0)
-		a_intent = INTENT_GRAB
-		grab_state = GRAB_NECK
-		summon_backup(15)
-
-		start_pulling(M, 1)
-		M.grabbedby(src)
-		M.drop_all_held_items()
-		M.stop_pulling()
-
-		var/obj/item/bodypart/chest/O = M.get_bodypart(BODY_ZONE_CHEST)
-		O.force_wound_upwards(/datum/wound/pierce/critical)
-
-		visible_message("<span class='danger'>[src] growls, lifting [M] into the air and violently executing them!</span>")
-		to_chat(M, "<span class='userdanger'>[src] lifts you into the air, violently putting an end to your life!</span>")
-
-		M.adjustBruteLoss(100)//Not tanking this without abuse of a specific mechanic. Bypasses armor.
-
-	if(!ishuman(M) || M.health <= 0)
-		src.drop_all_held_items()
-		src.stop_pulling()
 
 //Power Armor Deathclaw the tankest and the scariest deathclaw in the West. One mistake will end you. May the choice be with you.
 /mob/living/simple_animal/hostile/deathclaw/power_armor
@@ -168,113 +149,9 @@
 	maxHealth = 2500
 	health = 2500
 	stat_attack = UNCONSCIOUS
-	melee_damage_lower = 70
-	melee_damage_upper = 80
-	armour_penetration = 1
+	melee_damage_lower = 55
+	melee_damage_upper = 65
+	armour_penetration = 0.75
 	footstep_type = FOOTSTEP_MOB_HEAVY
-
-
-/mob/living/simple_animal/hostile/deathclaw/power_armor/AttackingTarget()
-	var/mob/living/M = target
-	if(!ishuman(M) || M.health > 20)
-		..()
-		return
-
-	if(get_dist(src, M) > 0)
-		a_intent = INTENT_GRAB
-		grab_state = GRAB_NECK
-		summon_backup(15)
-
-		start_pulling(M, 1)
-		M.grabbedby(src)
-		M.drop_all_held_items()
-		M.stop_pulling()
-
-		var/obj/item/bodypart/chest/O = M.get_bodypart(BODY_ZONE_CHEST)
-		O.force_wound_upwards(/datum/wound/pierce/critical)
-
-		visible_message("<span class='danger'>[src] growls, lifting [M] into the air and violently executing them!</span>")
-		to_chat(M, "<span class='userdanger'>[src] lifts you into the air, violently putting an end to your life!</span>")
-
-		M.adjustBruteLoss(100)//Not tanking this without abuse of a specific mechanic. Bypasses armor.
-
-	if(!ishuman(M) || M.health <= 0)
-		src.drop_all_held_items()
-		src.stop_pulling()
-/*
-/mob/living/simple_animal/hostile/deathclaw/bullet_act(obj/item/projectile/Proj)
-	if(!Proj)
-		return
-	if(prob(10))
-		visible_message(span_danger("\The [src] growls, enraged!"))
-
-		addtimer(CALLBACK(src, .proc/Charge), 3)
-	if(prob(85) || Proj.damage > 30) //prob(x) = chance for proj to actually do something, adjust depending on how OP you want deathclaws to be
-		return ..()
-	else
-		visible_message(span_danger("\The [Proj] bounces off \the [src]'s thick hide!"))
-		return 0
-
-/mob/living/simple_animal/hostile/deathclaw/do_attack_animation(atom/A, visual_effect_icon, obj/item/used_item, no_effect)
-	if(!charging)
-		..()
-
-/mob/living/simple_animal/hostile/deathclaw/AttackingTarget()
-	if(!charging)
-		return ..()
-
-/mob/living/simple_animal/hostile/deathclaw/Goto(target, delay, minimum_distance)
-	if(!charging)
-		..()
-
-/mob/living/simple_animal/hostile/deathclaw/Move()
-	if(charging)
-		new /obj/effect/temp_visual/decoy/fading(loc,src)
-		DestroySurroundings()
-	. = ..()
-	if(charging)
-		DestroySurroundings()
-
-/mob/living/simple_animal/hostile/deathclaw/proc/Charge()
-	var/turf/T = get_turf(target)
-	if(!T || T == loc)
-		return
-	charging = TRUE
-	visible_message(span_danger(">[src] charges!"))
-	DestroySurroundings()
-	walk(src, 0)
-	setDir(get_dir(src, T))
-	var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(loc,src)
-	animate(D, alpha = 0, color = "#FF0000", transform = matrix()*2, time = 1)
-	throw_at(T, get_dist(src, T), 1, src, 0, callback = CALLBACK(src, .proc/charge_end))
-
-/mob/living/simple_animal/hostile/deathclaw/proc/charge_end(list/effects_to_destroy)
-	charging = FALSE
-	if(target)
-		Goto(target, move_to_delay, minimum_distance)
-
-/mob/living/simple_animal/hostile/deathclaw/Bump(atom/A)
-	if(charging)
-		if(isturf(A) || isobj(A) && A.density)
-			A.ex_act(EXPLODE_HEAVY)
-		DestroySurroundings()
-	..()
-
-/mob/living/simple_animal/hostile/deathclaw/throw_impact(atom/A)
-	if(!charging)
-		return ..()
-
-	else if(isliving(A))
-		var/mob/living/L = A
-		L.visible_message(span_danger("[src] slams into [L]!"), span_userdanger("[src] slams into you!"))
-		L.apply_damage(melee_damage_lower/2, BRUTE)
-		playsound(get_turf(L), 'sound/effects/meteorimpact.ogg', 100, 1)
-		shake_camera(L, 4, 3)
-		shake_camera(src, 2, 3)
-		var/throwtarget = get_edge_target_turf(src, get_dir(src, get_step_away(L, src)))
-		L.throw_at(throwtarget, 3)
-
-
-	charging = FALSE
-	charging = FALSE
-*/
+	can_execute = TRUE
+	execute_threshold = 10 //Can be executed easier.

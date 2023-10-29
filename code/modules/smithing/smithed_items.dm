@@ -324,6 +324,7 @@
 	finalitem.icon_state = "knife_smith"
 	finalitem.name = "kitchen knife"
 	finalitem.desc = "A handmade kitchen knife."
+	finalitem.w_class = WEIGHT_CLASS_SMALL //Fixes these being larger than intended
 	var/mutable_appearance/overlay = mutable_appearance('icons/fallout/objects/crafting/blacksmith.dmi', "hilt_knife")
 	overlay.appearance_flags = RESET_COLOR
 	finalitem.add_overlay(overlay)

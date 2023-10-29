@@ -41,6 +41,11 @@
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/crafter
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)
+	
+/obj/item/clothing/neck/apron/labor/forge/khan
+	name = "smith apron"
+	icon_state = "labor"
+	desc = "A heavy leather apron designed for protecting the user when metalforging and help carry some minor tools."
 
 /obj/item/clothing/neck/apron/housewife
 	name = "50s housewife apron"

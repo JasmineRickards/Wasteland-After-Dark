@@ -35,7 +35,7 @@
 	dismemberment = 5
 	ricochets_max = 2
 	ricochet_chance = 70
-	embedding = list(embed_chance=70, ignore_throwspeed_threshold=TRUE, fall_chance=4, embed_chance_turf_mod=-100, projectile_payload = /obj/item/shrapnel)
+	embedding = list(embed_chance=35, ignore_throwspeed_threshold=TRUE, fall_chance=4, embed_chance_turf_mod=-100, projectile_payload = /obj/item/shrapnel)
 	ricochet_incidence_leeway = 60
 	sharpness = SHARP_EDGED
 	wound_bonus = 50
@@ -78,7 +78,7 @@
 	ricochet_auto_aim_range = 2
 	ricochet_incidence_leeway = 0
 	embed_falloff_tile = -2
-	embedding = list(embed_chance=55, fall_chance=20, jostle_chance=7, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.7, pain_mult=3, jostle_pain_mult=3, rip_time=15, embed_chance_turf_mod=-100, projectile_payload = /obj/item/shrapnel/stingball)
+	embedding = list(embed_chance=5, fall_chance=20, jostle_chance=7, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.7, pain_mult=3, jostle_pain_mult=3, rip_time=15, embed_chance_turf_mod=-100, projectile_payload = /obj/item/shrapnel/stingball)
 
 /obj/item/projectile/bullet/pellet/stingball/mega
 	name = "megastingball pellet"
@@ -116,11 +116,11 @@
 	ricochets_max = 0
 	ricochet_chance = 0
 	ricochet_incidence_leeway = 0
-	embedding = list(embed_chance=100, ignore_throwspeed_threshold=TRUE, fall_chance=0, embed_chance_turf_mod=-100, projectile_payload = /obj/item/shrapnel/launcher)
+	embedding = list(embed_chance=50, ignore_throwspeed_threshold=TRUE, fall_chance=0, embed_chance_turf_mod=-100, projectile_payload = /obj/item/shrapnel/launcher)
 	sharpness = SHARP_EDGED
 
 /obj/item/shrapnel/launcher
 	name = "shrapnel chunk"
-	embedding = list(embed_chance=100, fall_chance=0, jostle_chance=7, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.7, pain_mult=3, jostle_pain_mult=3)
+	embedding = list(embed_chance=50, fall_chance=0, jostle_chance=7, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.7, pain_mult=3, jostle_pain_mult=3)
 	armour_penetration = 1//As above.
 	icon_state = "tiny"

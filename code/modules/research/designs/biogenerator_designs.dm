@@ -61,6 +61,14 @@
 	make_reagents = list(/datum/reagent/plantnutriment/left4zednutriment = 10)
 	category = list("initial","Botany Chemicals")
 
+/datum/design/strangeseed
+	name = "Strange Seed Replication"
+	id = "strangeseed"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 1200) //Expensive
+	build_path = /obj/item/seeds/random
+	category = list("initial", "Organic Materials")
+
 /datum/design/rh_nut
 	name = "10u Robust Harvest"
 	id = "rh_nut"

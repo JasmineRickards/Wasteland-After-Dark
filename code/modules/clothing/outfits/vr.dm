@@ -48,7 +48,7 @@
 	info = "Use the radio in your backpack."
 
 /obj/item/card/id/dogtag/virt
-	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	access = list(ACCESS_ROBOTICS, ACCESS_BOS_CIVILIAN, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 
 /obj/item/radio/headset/headset_bos/virt
 	name = "Brotherhood VR Radio"

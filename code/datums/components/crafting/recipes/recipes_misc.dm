@@ -40,6 +40,15 @@
 	category = CAT_MISC
 	always_available = FALSE
 
+/datum/crafting_recipe/gate_bosciv
+	name = "Brotherhood civilian steel door"
+	result = /obj/machinery/door/unpowered/secure_bos/civ
+	reqs = list(/obj/item/stack/sheet/metal = 35)
+	time = 180
+	subcategory = CAT_MISCELLANEOUS
+	category = CAT_MISC
+	always_available = FALSE
+
 /datum/crafting_recipe/gate_khanate
 	name = "Khans steel-reinforced wood door"
 	result = /obj/machinery/door/unpowered/securedoor/khandoor
@@ -408,7 +417,7 @@
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
 	always_available = FALSE
-	
+
 
 /datum/crafting_recipe/plunger
 	name = "Plunger"

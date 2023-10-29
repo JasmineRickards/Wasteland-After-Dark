@@ -19,7 +19,7 @@
 	lose_text = "<span class='notice'>The terrible hunger fades - you feel peace at last.</span>"
 	medical_record_text = "Patient refuses to comment on their dietary preferences."
 
-/datum/quirk/horrifying_tastes/add()
+/datum/quirk/horrifying_tastes/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
 	var/datum/species/species = H.dna.species
 	species.liked_food |= LONGPORK
@@ -38,6 +38,11 @@
 	value = 2
 	gain_text = "<span class='notice'>You remember the old ways of your tribe..</span>"
 	lose_text = "<span class='notice'>You've forgotten the ways of your ancestors..</span>"
+
+/datum/quirk/tribal/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	ADD_TRAIT(H, TRAIT_TECHNOPHOBE, "Former Tribal")
+	ADD_TRAIT(H, TRAIT_TRIBAL, "Former Tribal")
 
 /datum/quirk/tribal/add()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -165,7 +170,7 @@
 	lose_text = "<span class='danger'>You forget how musical instruments work.</span>"
 	medical_record_text = "Patient brain scans show a highly-developed auditory pathway."
 
-/datum/quirk/musician/on_spawn()
+/datum/quirk/musician/add()
 	var/mob/living/carbon/human/H = quirk_holder
 	var/obj/item/choice_beacon/music/B = new(get_turf(H))
 	H.put_in_hands(B)
@@ -184,7 +189,7 @@
 	lose_text = "<span class='danger'>You forget how photo cameras work.</span>"
 	medical_record_text = "Patient mentions photography as a stress-relieving hobby."
 
-/datum/quirk/photographer/on_spawn()
+/datum/quirk/photographer/add()
 	var/mob/living/carbon/human/H = quirk_holder
 	var/obj/item/camera/camera = new(get_turf(H))
 	H.put_in_hands(camera)
@@ -223,7 +228,7 @@
 	lose_text = "<span class='danger'>You forget how to tag walls properly.</span>"
 	medical_record_text = "Patient was recently seen for possible paint huffing incident."
 
-/datum/quirk/tagger/on_spawn()
+/datum/quirk/tagger/add()
 	var/mob/living/carbon/human/H = quirk_holder
 	var/obj/item/toy/crayon/spraycan/spraycan = new(get_turf(H))
 	H.put_in_hands(spraycan)
@@ -274,7 +279,7 @@
 	lose_text = "<span class='danger'>Everything seems a little darker.</span>"
 	locked = TRUE
 
-/datum/quirk/night_vision/on_spawn()
+/datum/quirk/night_vision/add()
 	var/mob/living/carbon/human/H = quirk_holder
 	H.update_sight()
 
@@ -354,6 +359,11 @@
 	lose_text = "<span class='danger'>You feel less healthy than usual.</span>"
 	locked = TRUE
 
+/datum/quirk/lifegiver/add()
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.maxHealth += 10
+	mob_tar.health += 10
+
 /datum/quirk/lifegiver/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
 	mob_tar.maxHealth += 10
@@ -370,8 +380,13 @@
 
 /datum/quirk/iron_fist/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.dna.species.punchdamagelow = 4
-	mob_tar.dna.species.punchdamagehigh = 11
+	mob_tar.dna.species.punchdamagelow += 3 //I HATE FALLOUT CODERS
+	mob_tar.dna.species.punchdamagehigh += 7
+
+/datum/quirk/iron_fist/add() //fixes roundstart things
+	var/mob/living/carbon/human/mob_tar = quirk_holder
+	mob_tar.dna.species.punchdamagelow += 3 //I HATE FALLOUT CODERS
+	mob_tar.dna.species.punchdamagehigh += 7
 
 /datum/quirk/light_step
 	name = "Light Step"

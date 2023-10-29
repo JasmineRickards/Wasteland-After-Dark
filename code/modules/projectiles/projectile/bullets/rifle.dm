@@ -81,7 +81,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 /obj/item/projectile/bullet/a556/uraniumtipped
 	name = "5.56 uranium-tipped bullet"
 	damage = 24
-	armour_penetration = 0.1
+	armour_penetration = 0.25
 	irradiate = 50
 
 /obj/item/projectile/bullet/a556/simple //for simple mobs, separate to allow balancing
@@ -127,9 +127,9 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	armour_penetration = 0.2
 
 /obj/item/projectile/bullet/a762/uraniumtipped
-	name = "7.62 uranium-tipped bullet"
+	name = "7.62 depleted uranium bullet"
 	damage = 30
-	armour_penetration = 0.2
+	armour_penetration = 0.4
 	irradiate = 30
 
 /obj/item/projectile/bullet/a762/microshrapnel
@@ -146,7 +146,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 /////////			-Very heavy rifle round.
 
 /obj/item/projectile/bullet/a50MG
-	damage = 75
+	damage = 55
 	armour_penetration = 1
 	pixels_per_second = 4000
 	zone_accuracy_factor = 100
@@ -156,8 +156,8 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	supereffective_faction = list("hostile", "ant", "supermutant", "deathclaw", "cazador", "raider", "china", "gecko", "wastebot", "radscorpion")
 
 /obj/item/projectile/bullet/a50MG/incendiary
-	damage = 60
-	var/fire_stacks = 4
+	damage = 45
+	var/fire_stacks = 8
 	zone_accuracy_factor = 100
 
 /obj/item/projectile/bullet/a50MG/incendiary/on_hit(atom/target, blocked = FALSE)
@@ -176,7 +176,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 
 /obj/item/projectile/bullet/a50MG/rubber
 	name = ".50 rubber bullet"
-	damage = 25
+	damage = 15
 	stamina = 100
 	armour_penetration = 0
 	sharpness = SHARP_NONE
@@ -190,7 +190,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	name = "12.7mm uranium-tipped bullet"
 	damage = 50
 	armour_penetration = 1
-	irradiate = 30
+	irradiate = 300
 
 /obj/item/projectile/bullet/a50MG/contam
 	name = "12.7mm contaminated bullet"
@@ -306,7 +306,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 //////////////////////////
 
 /obj/item/projectile/bullet/m5mm  //for rifles// one of the only bullets to have integral AP
-	damage = 19
+	damage = 20
 	wound_bonus = 24
 	bare_wound_bonus = 10
 	armour_penetration = 0.45
@@ -321,7 +321,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 
 /obj/item/projectile/bullet/m5mm/shock
 	name = "5mm shock bullet"
-	damage = 13.3 //70% of 19
+	damage = 14
 	wound_bonus = 0
 	sharpness = SHARP_NONE
 
@@ -334,7 +334,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 //////////////////////////
 
 /obj/item/projectile/bullet/c5mm
-	damage = 19
+	damage = 15
 	armour_penetration = 0.5
 
 

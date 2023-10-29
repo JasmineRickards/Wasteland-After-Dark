@@ -87,6 +87,11 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Scribe",
 "Initiate",
 "BoS Off-Duty",
+"Protectorate Civilian",
+"Protectorate Shopkeeper",
+"Protectorate Doctor",
+"Protectorate Scribe",
+
 
 "Legion Centurion",
 "Legion Venator",
@@ -141,6 +146,11 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Scribe",
 	"BoS Off-Duty",
 	"Initiate",
+	"Protectorate Civilian",
+	"Protectorate Shopkeeper",
+	"Protectorate Doctor",
+	"Protectorate Scribe",
+
 ))
 
 GLOBAL_LIST_INIT(bighorn_positions, list(
@@ -228,8 +238,10 @@ GLOBAL_LIST_INIT(khan_positions, list(
 ))
 */
 GLOBAL_LIST_INIT(khan_positions, list(
+	"Khan Senior Enforcer",
 	"Khan Enforcer",
 	"Khan Chemist",
+	"Khan Smith",
 ))
 
 GLOBAL_LIST_INIT(enclave_positions, list(

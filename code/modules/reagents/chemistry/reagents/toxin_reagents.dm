@@ -48,7 +48,7 @@
 	description = "You aren't meant to see this..?"
 	color = "#00FF00"
 	toxpwr = 0
-	overdose_threshold = 1 // So, someone drinking ANY will FOR SURE get overdosed. Lowered from 18.
+	overdose_threshold = 1 // FEV Fixed.
 	taste_description = "horrific agony"
 	taste_mult = 0.9
 	var/datum/disease/fev_disease = null
@@ -61,7 +61,7 @@
 /datum/reagent/toxin/FEV_solution/one
 	name = "Unstable FEV solution"
 	description = "An incredibly lethal strain of the Forced Evolutionary Virus. Consume at your own risk."
-//	fev_disease = /datum/disease/transformation/mutant/unstable
+	fev_disease = /datum/disease/fev1
 
 /datum/reagent/toxin/FEV_solution/one/reaction_mob(mob/living/carbon/M, method=TOUCH, reac_volume)
 	if(!..())
@@ -76,28 +76,24 @@
 
 /datum/reagent/toxin/FEV_solution/one/on_mob_life(mob/living/carbon/C)
 	C.apply_effect(40,EFFECT_IRRADIATE,0)
-	C.adjustCloneLoss(3,0) // ~15 units will get you near crit condition.
+	C.adjustCloneLoss(15,0) // ~5 units will get you near crit condition.
 	return ..()
 
 //FEV - II: The super mutie kind
 /datum/reagent/toxin/FEV_solution/two
 	name = "FEV-II solution"
 	description = "A version of FEV that has been modified by radiation. A biological dead-end, harmless if the subject is not exposed to radiation."
-//	fev_disease = /datum/disease/transformation/mutant/super
+	fev_disease = /datum/disease/fev2
 
 /datum/reagent/toxin/FEV_solution/two/overdose_process(mob/living/carbon/C)
-	if(C.radiation < RAD_MOB_SAFE)
-		C.reagents.remove_reagent(src.type,10) // Clean up
-		return ..() // Infect with disease
-	else // You fucked up
-		if(prob(5))
-			to_chat(C, "<span class='danger'>IT BURNS!</span>")
-			C.emote("scream")
-			C.adjustFireLoss(10,0)
-		C.adjustFireLoss(5,0)
-		C.apply_effect(10,EFFECT_IRRADIATE,0) // Now the only thing you are turning into is a ghoul
-		C.Jitter(2)
-	return
+	C.adjustBruteLoss(6,0)
+	C.adjustFireLoss(15,0)
+	C.apply_effect(70,EFFECT_IRRADIATE,0) //FEV-II is radioactive.
+	C.adjustCloneLoss(3,0) // ~10 units will crit you.
+	C.Jitter(30)
+	if(prob(1))
+		to_chat(C, "<span class='danger'>You feel your insides burning, holy shit!</span>")
+	return ..()
 
 //FEV - Curling 13: The murderous type
 /datum/reagent/toxin/FEV_solution/curling
@@ -110,12 +106,12 @@
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
 		overdose_process(H) // Disease
-		H.reagents.remove_reagent(src.type,100) // Our job here is done
+		H.apply_effect(600,EFFECT_IRRADIATE,0) //Curling is mixed with a radioactive precursor to accelerate its lethality.
 		return
 
 /datum/reagent/toxin/mutagen
-	name = "Unstable mutagen"
-	description = "Might cause unpredictable mutations. Keep away from children."
+	name = "Diluted Forced Evolutionary Virus"
+	description = "Causes unpredictable mutations in plants, animals and people."
 	color = "#00FF00"
 	toxpwr = 0
 	taste_description = "slime"
@@ -195,8 +191,9 @@
 /datum/reagent/toxin/lexorin/on_mob_life(mob/living/carbon/C)
 	. = TRUE
 
-	if(HAS_TRAIT(C, TRAIT_NOBREATH))
+	/*if(HAS_TRAIT(C, TRAIT_NOBREATH))
 		. = FALSE
+	*/
 
 	if(.)
 		C.adjustOxyLoss(5, 0)

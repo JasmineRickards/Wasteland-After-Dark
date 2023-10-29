@@ -204,7 +204,7 @@
 
 /obj/item/clothing/suit/armor/f13/legion/recruit
 	name = "legion recruit armor"
-	desc = "Well, it's better than nothing."
+	desc = "Football gear that has been reinforced with steel plates and treated leather. Better than nothing."
 	icon_state = "legion_recruit"
 	item_state = "legion_recruit"
 	armor = list("melee" = 33, "bullet" = 25, "laser" = 5, "energy" = 10, "bomb" = 20, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 0, "wound" = 10)
@@ -212,8 +212,8 @@
 
 /obj/item/clothing/suit/armor/f13/legion/recruit/decan
 	name = "legion recruit armor"
-	desc = "Recruit decanii receive slightly better protection than regular recruits. Slightly."
-	armor = list("melee" = 40, "bullet" = 30, "laser" = 5, "energy" = 10, "bomb" = 20, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 0, "wound" = 10)
+	desc = "A recruit legionary's armor worn over a cheap low-key kevlar vest to catch shrapnel."
+	armor = list("melee" = 40, "bullet" = 30, "laser" = 5, "energy" = 10, "bomb" = 20, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 0, "wound" = 20)
 
 /obj/item/clothing/suit/armor/f13/legion/prime
 	name = "legion prime armor"
@@ -224,8 +224,8 @@
 
 /obj/item/clothing/suit/armor/f13/legion/prime/decan
 	name = "legion prime decanus armor"
-	desc = "Legion prime decanus armor-an extra reinforced baseball uniform."
-	armor = list("melee" = 45, "bullet" = 35, "laser" = 10, "energy" = 10, "bomb" = 20, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 0, "wound" = 10)
+	desc = "A prime legionary's armor worn over a light kevlar vest to catch shrapnel and absorb impacts."
+	armor = list("melee" = 45, "bullet" = 35, "laser" = 10, "energy" = 10, "bomb" = 20, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 0, "wound" = 25)
 
 /obj/item/clothing/suit/armor/f13/legion/orator
 	name = "Legion Orator armor"
@@ -253,17 +253,17 @@
 
 /obj/item/clothing/suit/armor/f13/legion/heavy
 	name = "legion veteran decan armor"
-	desc = "A Legion veterans armor reinforced with a patched bulletproof vest, the wearer has the markings of a Decanus."
+	desc = "A set of Veteran Legionary armor with ceramic plating leftover from combat armor, worn over a high-quality kevlar vest. It's much heavier than typical Legion armor."
 	icon = 'icons/fallout/clothing/armored_heavy.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
 	icon_state = "legion_heavy"
 	item_state = "legion_heavy"
-	armor = list("melee" = 60, "bullet" = 46, "laser" = 25, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0, "wound" = 20)
+	armor = list("melee" = 60, "bullet" = 46, "laser" = 25, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0, "wound" = 30)
 	slowdown = 0.1
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
 
 /obj/item/clothing/suit/armor/f13/legion/vet/explorer
-	name = "legion scout armor"
+	name = "legion explorer armor"
 	desc = "Armor based on layered strips of laminated linen and leather, the technique giving it surprising resilience for low weight."
 	icon = 'icons/fallout/clothing/armored_light.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
@@ -275,18 +275,18 @@
 /obj/item/clothing/suit/armor/f13/legion/vet/vexil
 	name = "legion vexillarius armor"
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	desc = " Worn by Vexillarius, this armor has been reinforced with circular metal plates on the chest and a back mounted pole for the flag of the Bull, making the wearer easy to see at a distance."
+	desc = "A set of Veteran Legionary armor with flag-bearer insignia, worn over a high-quality kevlar vest."
 	icon_state = "legion_vex"
 	item_state = "legion_vex"
-	armor = list("melee" = 57, "bullet" = 42, "laser" = 42, "energy" = 20, "bomb" = 30, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 0, "wound" = 10)
+	armor = list("melee" = 57, "bullet" = 42, "laser" = 42, "energy" = 20, "bomb" = 30, "bio" = 30, "rad" = 30, "fire" = 30, "acid" = 0, "wound" = 30) //Must compete with HT so we will give it wound armor equivalent to the veteran decanus'
 	slowdown = 0.05
 
 /obj/item/clothing/suit/armor/f13/legion/venator
-	name = "legion explorer armor"
-	desc = "Explorer armor reinforced with metal plates and chainmail."
+	name = "legion venator armor"
+	desc = "Explorer armor reinforced with kevlar and light chainmail."
 	icon_state = "legion-venator"
 	item_state = "legion-venator"
-	armor = list("melee" = 50, "bullet" = 35, "laser" = 20, "energy" = 20, "bomb" = 20, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 0, "wound" = 10)
+	armor = list("melee" = 50, "bullet" = 35, "laser" = 20, "energy" = 20, "bomb" = 20, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 0, "wound" = 15)
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
 
 /obj/item/clothing/suit/armor/f13/legion/centurion //good all around
@@ -296,7 +296,7 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
 	icon_state = "legion_centurion"
 	item_state = "legion_centurion"
-	armor = list("melee" = 60, "bullet" = 50, "laser" = 35, "energy" = 25, "bomb" = 45, "bio" = 20, "rad" = 20, "fire" = 45, "acid" = 45, "wound" = 20)
+	armor = list("melee" = 60, "bullet" = 50, "laser" = 35, "energy" = 25, "bomb" = 45, "bio" = 20, "rad" = 20, "fire" = 45, "acid" = 45, "wound" = 30)
 	slowdown = 0.1
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10) // Rest in pieces
 
@@ -307,8 +307,8 @@
 	desc = "A Centurion able to defeat a Brotherhood Paladin gets the honorific title 'Paladin-Slayer', and adds bits of the looted armor to his own."
 	icon_state = "legion_palacent"
 	item_state = "legion_palacent"
-	armor = list("melee" = 55, "bullet" = 45, "laser" = 70, "energy" = 65, "bomb" = 55, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 0, "wound" = 20)
-	slowdown = 0.3
+	armor = list("melee" = 55, "bullet" = 45, "laser" = 70, "energy" = 65, "bomb" = 55, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 0, "wound" = 40) //almost SPA
+	slowdown = 0.35
 
 
 /obj/item/clothing/suit/armor/f13/legion/rangercent //speed and bullet resist, sacrifices all else
@@ -329,7 +329,7 @@
 	icon_state = "legion_legate"
 	item_state = "legion_legate"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list("melee" = 60, "bullet" = 60, "laser" = 40, "energy" = 35, "bomb" = 45, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0, "wound" = 10)
+	armor = list("melee" = 60, "bullet" = 60, "laser" = 40, "energy" = 35, "bomb" = 45, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0, "wound" = 50) //Admin spawn
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 15) // Wouldn't it be hilarious if we just tore apart the Legate's armor?
 
 /obj/item/clothing/suit/armor/f13/combat/legion
@@ -605,7 +605,7 @@
 	item_state = "ranger"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	slowdown = 0.03
-	armor = list("melee" = 30, "bullet" = 45, "laser" = 35, "energy" = 15, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20, "wound" = 35)
+	armor = list("melee" = 25, "bullet" = 55, "laser" = 45, "energy" = 35, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20, "wound" = 35) //Somewhat weak to melee but comparatively strong otherwise
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 
 /obj/item/clothing/suit/armor/f13/rangercombat/Initialize()
@@ -668,7 +668,7 @@
 	desc = "A renforced combat armor set made by the Brotherhood of Steel, standard issue for all Senior Knights. It bears a silver stripe."
 	icon_state = "brotherhood_armor_senior"
 	item_state = "brotherhood_armor_senior"
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 60, "energy" = 55, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
+	armor = list("melee" = 55, "bullet" = 55, "laser" = 65, "energy" = 55, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
 
 /obj/item/clothing/suit/armor/f13/combat/brotherhood/captain
 	name = "brotherhood head knight armor"
@@ -969,7 +969,7 @@
 	desc = "A dark armor, used commonly in espionage or shadow ops."
 	icon_state = "remnant"
 	item_state = "remnant"
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
+	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 22, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
 
 
 //THE GRAVEYARD
@@ -1046,4 +1046,4 @@
 	desc = "An old set of pre-war combat armor, painted black."
 	icon_state = "enclave_new"
 	item_state = "enclave_new"
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
+	armor = list("melee" = 60, "bullet" = 60, "laser" = 60, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)

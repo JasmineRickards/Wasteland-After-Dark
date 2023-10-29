@@ -78,7 +78,7 @@
 	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms."
 	icon_state = "combat_helmet_mk2"
 	item_state = "combat_helmet_mk2"
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 40, "energy" = 22, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
+	armor = list("melee" = 55, "bullet" = 55, "laser" = 45, "energy" = 22, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
@@ -404,13 +404,20 @@
 	name = "Brotherhood T-45d power helmet"
 	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
 
-/obj/item/clothing/head/helmet/f13/power_armor/t45d/Knightcommander
-	name = "Knight-Commander's T-45d Power Armour"
-	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it. But, this helmet was made with a bit of comfort in mind."
-
 /obj/item/clothing/head/helmet/f13/power_armor/t45d/bos/update_icon_state()
 	icon_state = "t45dhelmet[light_on]"
 	item_state = "t45dhelmet[light_on]"
+
+/obj/item/clothing/head/helmet/f13/power_armor/t45d/Knightcommander
+	name = "Knight-Commander's Midwestern power armor helmet"
+	desc = "This decorated helmet belongs to the Midwestern branch of the Brotherhood of Steel."
+	icon = 'icons/mob/clothing/head.dmi'
+	icon_state = "midwestpakc_helm"
+
+/obj/item/clothing/head/helmet/f13/power_armor/t45d/Knightcommander/update_icon_state()
+	icon_state = "midwestpakc_helm"
+	item_state = "midwestpakc_helm"
+	icon = 'icons/mob/clothing/head.dmi'
 
 /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	name = "T-51b power helmet"
@@ -453,19 +460,21 @@
 	salvaged_type = null
 
 /obj/item/clothing/head/helmet/f13/power_armor/midwest
-	name = "Midwestern T-51b power helmet"
+	name = "Midwestern power armor helmet"
 	desc = "This helmet belongs to the Midwestern branch of the Brotherhood of Steel."
 	icon_state = "midwestgrey_helm"
 	item_state = "midwestgrey_helm"
+	icon = 'icons/mob/clothing/head.dmi'
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	armor = list("melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 72)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/midwest
 
 /obj/item/clothing/head/helmet/f13/power_armor/midwest/hardened
-	name = "Hardened midwestern T-51b power helmet"
+	name = "Midwestern advanced power armor helmet"
 	desc = "This helmet belongs to the Midwestern branch of the Brotherhood of Steel. This particular one has gone through a chemical hardening process, increasing its armor capabilities."
 	icon_state = "midwestpa_helm"
 	item_state = "midwestpa_helm"
+	icon = 'icons/mob/clothing/head.dmi'
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 27, "bomb" = 64, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 75)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/midwest/hardened

@@ -120,6 +120,22 @@
 /obj/item/ammo_box/magazine/sks/empty
 	start_empty = 1
 
+/obj/item/ammo_box/magazine/avtomat
+	name = "Assultus stripper clip"
+	desc = "A modified stripper clip made to feed into a Mosin Assultus. It's more like an ammo link than a traditional stripper."
+	ammo_type = /obj/item/ammo_casing/a762
+	caliber = "a762"
+	max_ammo = 15
+	icon_state = "avtomat"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+
+/obj/item/ammo_box/magazine/avtomat/update_icon()
+	..()
+	if (ammo_count() >= 15)
+		icon_state = "avtomat-15"
+	else
+		icon_state = "avtomat-[ammo_count()]"
+	
 /obj/item/ammo_box/magazine/m762
 	name = "rifle magazine (7.62x51)"
 	icon_state = "mag308"

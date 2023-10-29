@@ -151,6 +151,17 @@
 	//No other icons for it atm
 
 /obj/machinery/power/am_control_unit/attackby(obj/item/W, mob/user, params)
+	if(W.tool_behaviour == TOOL_MULTITOOL)
+		var/message = "[key_name(usr)] is trying to overload [src.name]! This WILL flatten the nearby area. Ensure this is a raid!"
+		log_game(message)
+		log_admin(message)
+		message_admins(message)
+		to_chat(user, "<span class='warning'>Once hacked and overloaded, the [src.name] WILL detonate immediately!! Ensure you've said your goodbyes.</span>")
+		user.visible_message("<span class='danger'>[user.name] begins hacking the [src.name] to overload!</danger>", \
+			"<span class='danger'>You begin hacking the [src.name].</span>", \
+			"<span class='italics'>You hear a set of beeps as someone begins tinkering with safety protocols.</span>")
+		if(do_after(user,280, target = src))
+			exploding = TRUE
 	if(istype(W, /obj/item/wrench))
 		if(!anchored)
 			W.play_tool_sound(src, 75)
@@ -330,7 +341,13 @@
 			//update_icon() when we have the icon for it
 
 	if(href_list["strengthup"])
-		fuel_injection++
+		if(fuel_injection < 2)
+			fuel_injection++
+		else
+			var/message = "[key_name(usr)] has tried to change the injection amount for an antimatter reactor above 2!!"
+			log_game(message)
+			log_admin(message)
+			message_admins(message)
 		var/message = "[key_name(usr)] has changed the fuel injection to [fuel_injection] for the AM."
 		log_game(message)
 		log_admin(message)

@@ -83,7 +83,7 @@
 		blind_message = message,
 		self_message = message,
 		vision_distance = 1,
-		ignored_mobs = non_admin_ghosts)
+		ignored_mobs = ghosties)
 
 	//broadcast to ghosts, if they have a client, are dead, arent in the lobby, allow ghostsight,
 	user.emote_for_ghost_sight(message, subtler)

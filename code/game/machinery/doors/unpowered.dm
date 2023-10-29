@@ -279,3 +279,12 @@
 		if("closing")
 			playsound(src,'sound/machines/door_close.ogg',40,1)
 			flick("secure_bos_closing", src)
+
+/obj/machinery/door/unpowered/secure_bos/civ
+	name = "steel security door"
+	desc = "Hard steel makes a statement. The statement in this case is stay out."
+	icon_state = "secure_bos"
+	max_integrity = 1000
+	obj_integrity = 1000
+	assemblytype = /obj/item/stack/sheet/metal/ten
+	req_access_txt = "257"

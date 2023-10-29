@@ -334,7 +334,7 @@
 
 /obj/item/twohanded/spear/bonespear/deathclaw/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded = 20, force_wielded = 45, icon_wielded="[icon_prefix]2")
+	AddComponent(/datum/component/two_handed, force_unwielded = 15, force_wielded = 45, icon_wielded="[icon_prefix]2")
 
 
 

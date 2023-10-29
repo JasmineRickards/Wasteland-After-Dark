@@ -920,10 +920,6 @@
 	icon_state = "verticalinnermain0"
 	},
 /area/f13/caves)
-"aQx" = (
-/obj/structure/timeddoor/sixtyminute,
-/turf/open/indestructible/ground/outside/sidewalk,
-/area/f13/building)
 "aQB" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 10
@@ -5582,6 +5578,11 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"fts" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/weapon/revolver44variants,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legion)
 "ftC" = (
 /obj/structure/railing/wood{
 	dir = 8;
@@ -7204,6 +7205,11 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"haw" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/weapon/melee/tier4,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legion)
 "haP" = (
 /obj/machinery/light/small/broken{
 	dir = 1
@@ -7232,6 +7238,11 @@
 	icon_state = "verticalinnermain0"
 	},
 /area/f13/wasteland/rocksprings)
+"hcr" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/mid,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legion)
 "hcv" = (
 /obj/structure/chair/folding{
 	dir = 4
@@ -9764,6 +9775,7 @@
 	name = "wall rack";
 	pixel_y = 32
 	},
+/obj/machinery/jukebox,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legion)
 "jMv" = (
@@ -14786,7 +14798,6 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/structure/timeddoor/onetwozerominutes,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/building)
 "oMj" = (
@@ -15311,6 +15322,11 @@
 /obj/machinery/door/unpowered/celldoor,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/building)
+"pnq" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/weapon/melee/tier3,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legion)
 "pnD" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -15668,11 +15684,6 @@
 	},
 /turf/open/indestructible/ground/outside/desert/harsh,
 /area/f13/wasteland/rocksprings)
-"pGJ" = (
-/obj/machinery/light,
-/obj/structure/timeddoor/sixtyminute,
-/turf/open/indestructible/ground/outside/sidewalk,
-/area/f13/building)
 "pGQ" = (
 /obj/structure/spacevine{
 	name = "vines"
@@ -17290,6 +17301,10 @@
 /obj/structure/closet/fridge/standard,
 /turf/open/floor/plasteel/bar,
 /area/f13/building)
+"rky" = (
+/obj/item/seeds/ambrosia/gaia,
+/turf/open/indestructible/ground/outside/graveldirt,
+/area/f13/legion)
 "rkT" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/road{
@@ -20170,10 +20185,6 @@
 	icon_state = "savannah2"
 	},
 /area/f13/wasteland/rocksprings)
-"tWO" = (
-/obj/structure/timeddoor/onetwozerominutes,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/building)
 "tWX" = (
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "floor1-old"
@@ -20218,6 +20229,11 @@
 /obj/structure/junk/drawer,
 /turf/open/indestructible/ground/outside/desert/harsh,
 /area/f13/wasteland/rocksprings)
+"uah" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/blueprintLowMid,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legion)
 "uaw" = (
 /obj/structure/stairs/east{
 	color = "#A47449"
@@ -21601,6 +21617,11 @@
 	},
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/building)
+"vrO" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/weapon/melee/random_mid,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legion)
 "vrS" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -33357,7 +33378,7 @@ rPW
 gqa
 wcL
 mIO
-mTt
+rky
 bbN
 mPL
 hXy
@@ -41876,7 +41897,7 @@ lvP
 fCY
 jLa
 kEh
-hAL
+fts
 gtX
 hAL
 jLa
@@ -42389,8 +42410,8 @@ kjx
 amM
 gtX
 qDd
-hAL
-hAL
+uah
+pnq
 gtX
 vci
 jLa
@@ -42644,10 +42665,10 @@ jLa
 rob
 amM
 hAL
+vrO
 hAL
-hAL
-hAL
-hAL
+hcr
+haw
 gtX
 tTm
 xGu
@@ -43158,7 +43179,7 @@ jLa
 dKQ
 gXG
 dnA
-hAL
+gXG
 hDv
 hAL
 ofa
@@ -71088,8 +71109,8 @@ tgY
 tgY
 tgY
 oMc
-tWO
-tWO
+keD
+keD
 tgY
 tgY
 tgY
@@ -84342,8 +84363,8 @@ bWo
 bWo
 bWo
 bWo
-aQx
-pGJ
+bWo
+qfd
 kCG
 kCG
 kCG
@@ -84599,7 +84620,7 @@ tFh
 vtz
 bWo
 bWo
-aQx
+bWo
 sZx
 kCG
 owb

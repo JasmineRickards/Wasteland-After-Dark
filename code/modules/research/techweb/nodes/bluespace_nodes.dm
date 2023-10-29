@@ -32,6 +32,14 @@
 	design_ids = list("bluespace_cell", "quadratic_capacitor")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
+/datum/techweb_node/prewartech
+	id = "prewartech"
+	display_name = "Pre-War Industrials"
+	description = "Even more powerful.. power!"
+	prereq_ids = list("bluespace_power", "medicalindus")
+	design_ids = list("botanicalindus", "medicalindus")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 15000)
+
 /*8
 /datum/techweb_node/bluespace_holding
 	id = "bluespace_holding"

@@ -8,8 +8,8 @@ Main doors: ACCESS_CAPTAIN 20
 	selection_color = "#95a5a6"
 	faction = FACTION_BROTHERHOOD
 
-	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
-	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	outfit = /datum/outfit/job/bos/
 	exp_type = EXP_TYPE_BROTHERHOOD
 
@@ -44,6 +44,7 @@ Main doors: ACCESS_CAPTAIN 20
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/boscombathelmetmk2)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/bos)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_bos)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_bosciv)
 
 /*
 Elder
@@ -65,8 +66,8 @@ Elder
 
 	outfit = /datum/outfit/job/bos/f13elder
 
-	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_MINERAL_STOREROOM, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_CHANGE_IDS)
-	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_MINERAL_STOREROOM, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_CHANGE_IDS)
+	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_MINERAL_STOREROOM, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_CHANGE_IDS)
+	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_MINERAL_STOREROOM, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_CHANGE_IDS)
 
 /datum/outfit/job/bos/f13elder/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -85,7 +86,7 @@ Elder
 	suit =	/obj/item/clothing/suit/f13/elder
 	glasses =	/obj/item/clothing/glasses/night
 	accessory =	/obj/item/clothing/accessory/bos/elder
-	suit_store =	/obj/item/gun/energy/laser/laer
+	suit_store = /obj/item/gun/energy/laser/laer
 	neck =	/obj/item/clothing/neck/mantle/bos/right
 	ears = /obj/item/radio/headset/headset_bos/command
 	backpack_contents = list(
@@ -122,8 +123,8 @@ Head Paladin
 
 	outfit = /datum/outfit/job/bos/f13sentinel
 
-	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_CHANGE_IDS)
-	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_CHANGE_IDS)
+	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_CHANGE_IDS)
+	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_CHANGE_IDS)
 
 /datum/outfit/job/bos/f13sentinel/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -213,8 +214,8 @@ Head Scribe
 
 	outfit = /datum/outfit/job/bos/f13headscribe
 
-	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_CHANGE_IDS)
-	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_CHANGE_IDS)
+	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_CHANGE_IDS)
+	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_CHANGE_IDS)
 
 /datum/outfit/job/bos/f13headscribe/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -233,6 +234,8 @@ Head Scribe
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93/rifle)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m60)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
 
 /datum/outfit/job/bos/f13headscribe
@@ -285,14 +288,15 @@ Head Knight
 
 	loadout_options = list(
 	/datum/outfit/loadout/capstand, //Wattz 2k
-	/datum/outfit/loadout/capsap, //Marksman
-	/datum/outfit/loadout/capalt //Neostead with buck because they don't know slugs are better
+	/datum/outfit/loadout/capsap, //Laser SMG
+	/datum/outfit/loadout/capalt, //Neostead with buck because they don't know slugs are better
+	/datum/outfit/loadout/capcqc //SIG SMG
 	)
 
 	outfit = /datum/outfit/job/bos/f13knightcap
 
-	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_ARMORY, ACCESS_BRIG, ACCESS_CHANGE_IDS)
-	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_ARMORY, ACCESS_BRIG, ACCESS_CHANGE_IDS)
+	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_ARMORY, ACCESS_BRIG, ACCESS_CHANGE_IDS)
+	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_ARMORY, ACCESS_BRIG, ACCESS_CHANGE_IDS)
 
 
 /datum/outfit/job/bos/f13knightcap/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -310,6 +314,7 @@ Head Knight
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93/rifle)
 
 
 /datum/outfit/job/bos/f13knightcap
@@ -330,8 +335,6 @@ Head Knight
 	head =			/obj/item/clothing/head/helmet/f13/combat/brotherhood/captain
 	id =			/obj/item/card/id/dogtag
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
-		/obj/item/ammo_box/magazine/m14mm = 2,
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/book/granter/crafting_recipe/gunsmith_one=1,
@@ -341,6 +344,8 @@ Head Knight
 /datum/outfit/loadout/capstand
 	name = "Standard"
 	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
+		/obj/item/ammo_box/magazine/m14mm = 2,
 		/obj/item/gun/energy/laser/wattz2k = 1,
 		/obj/item/stock_parts/cell/ammo/mfc = 2,
 	)
@@ -355,8 +360,17 @@ Head Knight
 /datum/outfit/loadout/capalt
 	name = "Warden-Defender"
 	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
+		/obj/item/ammo_box/magazine/m14mm = 2,
 		/obj/item/gun/ballistic/shotgun/automatic/combat/neostead = 1,
 		/obj/item/ammo_box/shotgun/buck = 2,
+	)
+
+/datum/outfit/loadout/capcqc
+	name = "Frontal Assault"
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/smg/smg14 = 1,
+		/obj/item/ammo_box/magazine/smg14 = 2,
 	)
 
 /*
@@ -382,12 +396,13 @@ Star Paladin
 		/datum/outfit/loadout/spaladinc,  //AER14, no powerfist given strength of rifle.
 		/datum/outfit/loadout/spaladind, //Sledge + Powerfist
 		/datum/outfit/loadout/spaladine, //L30, no powerfist given strength of weapon.
+		/datum/outfit/loadout/spalading, //M60 LMG, no powerfist given strength of weapon. Alternative of laser minigun.
 		)
 
 	outfit = /datum/outfit/job/bos/f13seniorpaladin
 
-	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
-	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/bos,
@@ -461,7 +476,11 @@ Star Paladin
 	backpack_contents = list(
 		/obj/item/encminigunpack=1,
 	)
-
+/datum/outfit/loadout/spalading
+	name = "Heavy Gunner Head Paladin"
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/m60 = 1,
+	)
 /*
 Paladin
 */
@@ -479,15 +498,15 @@ Paladin
 	exp_requirements = 1200
 
 	loadout_options = list(
-	/datum/outfit/loadout/paladinb, //Combat Rifle + Power Fist
+	/datum/outfit/loadout/paladinb, //Battle rifle no power fist
 	/datum/outfit/loadout/paladinc, //AER12 no power fist.
 	/datum/outfit/loadout/paladind, //Sledge + Power Fist
 	)
 
 	outfit = /datum/outfit/job/bos/f13paladin
 
-	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
-	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/bos,
@@ -526,11 +545,8 @@ Paladin
 /datum/outfit/loadout/paladinb
 	name = "Tactical Paladin"
 	backpack_contents = list(
-		/obj/item/melee/powerfist/f13 = 1,
-		/obj/item/gun/ballistic/automatic/combat = 1,
-		/obj/item/ammo_box/magazine/tommygunm45/stick = 5,
-		/obj/item/gun/energy/laser/pistol=1,
-		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/gun/ballistic/automatic/fnfal = 1,
+		/obj/item/ammo_box/magazine/m762/ext = 2,
 		/obj/item/clothing/accessory/bos/paladin = 1,
 		/obj/item/clothing/accessory/bos/juniorpaladin = 1,
 		)
@@ -576,8 +592,8 @@ Senior Scribe
 
 	outfit = /datum/outfit/job/bos/f13seniorscribe
 
-	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
-	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/bos,
@@ -604,6 +620,8 @@ Senior Scribe
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93/rifle)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m60)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
 
 /datum/outfit/job/bos/f13seniorscribe
@@ -649,8 +667,8 @@ Scribe
 
 	outfit = /datum/outfit/job/bos/f13scribe
 
-	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
-	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/bos,
@@ -696,6 +714,7 @@ Scribe
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93/rifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
 
 /datum/outfit/loadout/scribea
@@ -729,14 +748,14 @@ Senior Knight
 	loadout_options = list(
 	/datum/outfit/loadout/sknighta, //AER9
 	/datum/outfit/loadout/sknightb, //Police Shotgun
-	/datum/outfit/loadout/sknightc, //R93 PDW
+	/datum/outfit/loadout/sknightc, //R93 Rifle
 	/datum/outfit/loadout/sknightd,
 	)
 
 	outfit = /datum/outfit/job/bos/f13seniorknight
 
-	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
-	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/bos,
@@ -758,6 +777,7 @@ Senior Knight
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93/rifle)
 
 /datum/outfit/job/bos/f13seniorknight
 	name = "Senior Knight"
@@ -804,7 +824,7 @@ Senior Knight
 /datum/outfit/loadout/sknightc
 	name = "Recon"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/r93=1,
+		/obj/item/gun/ballistic/automatic/r93/rifle=1,
 		/obj/item/ammo_box/magazine/m556/rifle=2,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
@@ -847,8 +867,8 @@ Knight
 
 	outfit = /datum/outfit/job/bos/f13knight
 
-	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
-	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/bos,
@@ -989,8 +1009,8 @@ Initiate
 
 	outfit = /datum/outfit/job/bos/f13initiate
 
-	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
-	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/bos,
@@ -1055,8 +1075,8 @@ Off-Duty
 	roleplay_exclusive_notify = 1
 	exp_requirements = 300
 	outfit = /datum/outfit/job/bos/f13offdutybos
-	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
-	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
+	minimal_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_BOS_CIVILIAN, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 
 /datum/outfit/job/bos/f13offdutybos
 	name = "BoS Off-Duty"

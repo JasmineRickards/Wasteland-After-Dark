@@ -40,7 +40,7 @@
 /obj/item/projectile/kinetic/premium
 	name = "kinetic force"
 	icon_state = null
-	damage = 50
+	damage = 18
 	damage_type = BRUTE
 	flag = "bomb"
 	range = 4
@@ -217,7 +217,7 @@
 /obj/item/projectile/kinetic
 	name = "kinetic force"
 	icon_state = null
-	damage = 40
+	damage = 15
 	damage_type = BRUTE
 	flag = "bomb"
 	range = 3
@@ -362,7 +362,7 @@
 /obj/item/borg/upgrade/modkit/damage
 	name = "damage increase"
 	desc = "Increases the damage of kinetic accelerator when installed."
-	modifier = 10
+	modifier = 5
 
 /obj/item/borg/upgrade/modkit/damage/modify_projectile(obj/item/projectile/kinetic/K)
 	K.damage += modifier

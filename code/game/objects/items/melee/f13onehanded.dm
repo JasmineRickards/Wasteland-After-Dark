@@ -96,6 +96,14 @@
 	force = 37
 	block_chance = 15
 
+/obj/item/melee/onehanded/machete/scrapsabre/khan
+	name = "honed scrap sabre"
+	desc = "Made from materials found in the wastes, a skilled blacksmith has turned it into a thing of deadly beauty. This appears to have the unique Khan emblem on the hilt."
+	icon_state = "scrapsabre"
+	item_state = "scrapsabre"
+	force = 35
+	block_chance = 25
+
 /obj/item/throwing_star/spear
 	name = "throwing spear"
 	desc = "An heavy hefty ancient weapon used to this day, due to its ease of lodging itself into its victim's body parts."
@@ -658,25 +666,9 @@
 	if(!unarmed_adjusted)
 		mob_overlay_icon = lefthand_file
 	if(ishuman(user) && slot == SLOT_GLOVES)
-		ADD_TRAIT(user, TRAIT_UNARMED_WEAPON, "glove")
-		if(HAS_TRAIT(user, TRAIT_UNARMED_WEAPON))
-			H.dna.species.punchdamagehigh = force + 8 //The +8 damage is what brings up your punch damage to the unarmed weapon's force fully
-			H.dna.species.punchdamagelow = force + 8
-			H.dna.species.attack_sound = hitsound
-			if(sharpness == SHARP_POINTY || sharpness ==  SHARP_EDGED)
-				H.dna.species.attack_verb = pick("slash","slice","rip","tear","cut","dice")
-			if(sharpness == SHARP_NONE)
-				H.dna.species.attack_verb = pick("punch","jab","whack")
+		ADD_TRAIT(user, TRAIT_UNARMED_WEAPON, "glove") //Wasteland after Dark edit: Code moved to species.dm because whoever coded this was clueless
 	if(ishuman(user) && slot != SLOT_GLOVES && !H.gloves)
 		REMOVE_TRAIT(user, TRAIT_UNARMED_WEAPON, "glove")
-		if(!HAS_TRAIT(user, TRAIT_UNARMED_WEAPON))
-			H.dna.species.punchdamagehigh = 1
-			H.dna.species.punchdamagelow = 10
-		if(HAS_TRAIT(user, TRAIT_IRONFIST))
-			H.dna.species.punchdamagehigh = 4
-			H.dna.species.punchdamagelow = 11
-		H.dna.species.attack_sound = 'sound/weapons/punch1.ogg'
-		H.dna.species.attack_verb = "punch"
 
 /obj/item/melee/unarmed/examine(mob/user)
 	. = ..()

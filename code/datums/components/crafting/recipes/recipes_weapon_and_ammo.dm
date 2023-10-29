@@ -209,6 +209,20 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+/datum/crafting_recipe/shotgunammops
+	name = "12g Pulse box"
+	result = /obj/item/ammo_box/shotgun/pulse
+	reqs = list(/obj/item/stack/crafting/metalparts = 2,
+	/obj/item/stack/cable_coil = 10,
+	/obj/item/stack/crafting/electronicparts = 2,
+	/obj/item/stack/ore/blackpowder = 1
+	)
+	tools = list(TOOL_AWORKBENCH)
+	time = 5
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+
 
 /datum/crafting_recipe/m22
 	name = ".22 Long Rifle ammo box"
@@ -261,7 +275,16 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
-
+/datum/crafting_recipe/greaseplusmag
+	name = "drum magazine for the upgraded grease gun"
+	result = /obj/item/ammo_box/magazine/greasedrum
+	reqs = list(/obj/item/stack/crafting/metalparts = 3,
+				/obj/item/ammo_box/magazine/tommygunm45 = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 40
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+	always_available = TRUE
 
 /datum/crafting_recipe/c38boxincin
 	name = ".38 incendiary-tipped ammo box"
@@ -760,6 +783,90 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
+
+//micro uzi
+/datum/crafting_recipe/microuzi
+	name = "Micro-Uzi"
+	result = /obj/item/gun/ballistic/automatic/smg/micro_uzi
+	reqs = list(/obj/item/stack/crafting/metalparts = 5,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/stack/crafting/goodparts = 2,
+				/obj/item/gun/ballistic/automatic/smg/mini_uzi = 1)
+	tools = list(TOOL_AWORKBENCH)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_available = TRUE
+
+//upgraded m3a1
+/datum/crafting_recipe/greaseplus
+	name = "Upgraded 9mm SMG"
+	result = /obj/item/gun/ballistic/automatic/smg/greasegun/upgraded
+	reqs = list(/obj/item/stack/crafting/metalparts = 10,
+				/obj/item/suppressor = 1,
+				/obj/item/stack/crafting/goodparts = 6,
+				/obj/item/ammo_box/magazine/greasedrum = 1,
+				/obj/item/gun/ballistic/automatic/smg/greasegun = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_available = TRUE
+
+//m1928
+/datum/crafting_recipe/typewriter
+	name = "Thompson M1928"
+	result = /obj/item/gun/ballistic/automatic/smg/tommygun/chicago
+	reqs = list(/obj/item/stack/crafting/metalparts = 15,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/obj/item/stack/crafting/goodparts = 5,
+				/obj/item/attachments/recoil_decrease = 1,
+				/obj/item/gun/ballistic/automatic/smg/tommygun = 1)
+	tools = list(TOOL_AWORKBENCH)
+	time = 600
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_available = TRUE
+
+//pardner shotgun
+/datum/crafting_recipe/singleshotty
+	name = "Pardner 77 single shotgun"
+	result = /obj/item/gun/ballistic/revolver/singleshotgun
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/stack/crafting/metalparts = 5,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/obj/item/stack/sheet/metal = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_available = TRUE
+
+/datum/crafting_recipe/shotgunaxe
+	name = "Pardner 77 axe modification"
+	result = /obj/item/gun/ballistic/revolver/singleshotgun/axe
+	reqs = list(/obj/item/gun/ballistic/revolver/singleshotgun = 1,
+				/obj/item/stack/crafting/metalparts = 5,
+				/obj/item/twohanded/fireaxe = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 50
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_available = TRUE
+
+/datum/crafting_recipe/chainpistol
+	name = "Colt Conversion Chain-pistol"
+	result = /obj/item/gun/ballistic/revolver/colt357/conversion
+	reqs = list(/obj/item/gun/ballistic/revolver/colt357 = 2,
+				/obj/item/ammo_box/magazine/mm762 = 1,
+				/obj/item/stack/crafting/metalparts = 15,
+				/obj/item/advanced_crafting_components/alloys = 1)
+	tools = list(TOOL_AWORKBENCH)
+	time = 600
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_available = TRUE
 
 //varmint rifle
 /datum/crafting_recipe/varmintrifle
@@ -1517,6 +1624,37 @@
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/obj/item/stack/sheet/plastic = 5,
 				/obj/item/stack/crafting/goodparts = 5
+				)
+	tools = list(TOOL_AWORKBENCH)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_available = FALSE
+
+/datum/crafting_recipe/R93/rifle
+	name = "R93-A Carbine"
+	result = /obj/item/gun/ballistic/automatic/r93/rifle
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/obj/item/stack/sheet/plastic = 5,
+				/obj/item/stack/crafting/goodparts = 6
+				)
+	tools = list(TOOL_AWORKBENCH)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_available = FALSE
+
+/datum/crafting_recipe/m60
+	name = "M-60 LMG"
+	result = /obj/item/gun/ballistic/automatic/m60
+	reqs = list(/obj/item/stack/sheet/metal = 15,
+				/obj/item/advanced_crafting_components/assembly = 2,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/obj/item/stack/sheet/plastic = 15,
+				/obj/item/stack/crafting/goodparts = 10,
+				/obj/item/advanced_crafting_components/alloys = 3,
 				)
 	tools = list(TOOL_AWORKBENCH)
 	time = 120

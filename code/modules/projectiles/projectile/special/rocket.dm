@@ -45,7 +45,7 @@
 	damage = 65
 	armour_penetration = 0.15
 	ricochets_max = 0 //it's a MISSILE
-	shrapnel_magnitude = 12
+	shrapnel_magnitude = 2
 
 /obj/item/projectile/bullet/rocket/a84mm_he/on_hit(atom/target, blocked=0)
 	..()
@@ -60,7 +60,7 @@
 	damage = 85
 	armour_penetration = 0.25
 	ricochets_max = 0 //it's a MISSILE
-	shrapnel_magnitude = 24
+	shrapnel_magnitude = 4
 
 /obj/item/projectile/bullet/rocket/a84mm_he_big/on_hit(atom/target, blocked=0)
 	..()

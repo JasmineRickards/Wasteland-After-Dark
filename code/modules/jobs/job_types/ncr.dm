@@ -236,7 +236,10 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	display_order = JOB_DISPLAY_ORDER_LIEUTENANT
 	outfit = /datum/outfit/job/ncr/f13lieutenant
 	exp_requirements = 1250
-
+	loadout_options = list( // ALL: PA setup, Deagle
+		/datum/outfit/loadout/lieutenantsierra,
+		/datum/outfit/loadout/lieutenantdeagle,
+		)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/ncr,
@@ -284,6 +287,26 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
 		H.mind.AddSpell(S)
 
+/datum/outfit/loadout/lieutenantsierra
+	name = "Field Commander"
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t45d
+	backpack_contents = list(
+		/obj/item/melee/onehanded/knife/bowie = 1,
+		/obj/item/flashlight/seclite = 1,
+		/obj/item/book/granter/trait/pa_wear = 1
+		)
+
+/datum/outfit/loadout/lieutenantdeagle
+	name = "Backline Commander"
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/deagle = 1,
+		/obj/item/ammo_box/magazine/d12g = 3,
+		/obj/item/melee/onehanded/knife/bowie = 1,
+		/obj/item/flashlight/seclite = 1,
+		/obj/item/gun/ballistic/automatic/marksman/sniper/sniperranger = 1,
+		)
+
 
 // SERGEANT
 
@@ -302,7 +325,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 	loadout_options = list( // ALL: Bayonet, M1911 sidearm
 		/datum/outfit/loadout/sergeantrifleman,	// Worn Assault Carbine
-		/datum/outfit/loadout/sergeantrecon, // Scout Carbine, Trekking
+		/datum/outfit/loadout/sergeantrecon, // XL70, Trekking
 		/datum/outfit/loadout/sergeantcqc, // Trench Shotgun, Gas mask, Smoke bombs, Trench knife, Big leagues
 		)
 
@@ -354,7 +377,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/loadout/sergeantrecon
 	name = "Recon Squad Leader"
-	suit_store = /obj/item/gun/ballistic/automatic/service/carbine
+	suit_store = /obj/item/gun/ballistic/automatic/lsw
 	head = /obj/item/clothing/head/f13/ncr
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle = 2,
@@ -810,7 +833,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/outfit/loadout/shockht
 	name = "Infantry Support Heavy Trooper"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/bar/glowie = 1,
+		/obj/item/gun/ballistic/automatic/bar = 1,
 		/obj/item/ammo_box/magazine/m762/ext = 2,
 		/obj/item/melee/onehanded/knife/trench = 1,
 		)
@@ -1060,7 +1083,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_requirements = 90
 
 	loadout_options = list(
-		/datum/outfit/loadout/corporaldesignatedmarksman,	 // Marksman Carbine, 9mm sidearm
+		/datum/outfit/loadout/corporaldesignatedmarksman,	 // M1 Garand, 9mm sidearm
 		/datum/outfit/loadout/corporalrifleman,				 // R82, trekking
 		/datum/outfit/loadout/corporalcommand,				 // Intel and backline support
 		)
@@ -1092,9 +1115,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	head = /obj/item/clothing/head/f13/ncr/steelpot_bandolier
 	neck = /obj/item/storage/belt/holster/legholster
-	suit_store = /obj/item/gun/ballistic/automatic/marksman
+	suit_store = /obj/item/gun/ballistic/automatic/m1garand
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle = 2,
+		/obj/item/ammo_box/magazine/garand308 = 4,
 		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
 		/obj/item/ammo_box/magazine/m9mmds = 1,
 		/obj/item/storage/box/ration/menu_two = 1,

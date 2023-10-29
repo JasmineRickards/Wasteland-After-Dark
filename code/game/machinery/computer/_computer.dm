@@ -28,6 +28,14 @@
 		circuit = C
 		C.moveToNullspace()
 
+/obj/machinery/computer/interact(mob/user) // Welcome to being unable to use anything.
+	..()
+	if(HAS_TRAIT(user,TRAIT_FEV) || HAS_TRAIT(user,TRAIT_FEVII)) //We do a little trolling.
+		to_chat(user,span_warning("Your hands aren't small enough to use this!"))
+		return FALSE
+	else
+		return TRUE
+
 /obj/machinery/computer/Destroy()
 	QDEL_NULL(circuit)
 	for(var/obj/machinery/computer/pickComputer in range(1, src))

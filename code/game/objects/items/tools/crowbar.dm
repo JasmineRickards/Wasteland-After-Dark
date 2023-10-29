@@ -71,6 +71,14 @@
 	force = 15
 	toolspeed = 0.25
 
+/obj/item/crowbar/power/cyborg
+	name = "jaws of life"
+	desc = "A set of jaws of life, compressed through the magic of science. It's fitted with a prying head."
+	icon_state = "jaws_pry"
+	item_state = "jawsoflife"
+	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+
 /obj/item/crowbar/power/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is putting [user.p_their()] head in [src], it looks like [user.p_theyre()] trying to commit suicide!</span>")
 	playsound(loc, 'sound/items/jaws_pry.ogg', 50, 1, -1)

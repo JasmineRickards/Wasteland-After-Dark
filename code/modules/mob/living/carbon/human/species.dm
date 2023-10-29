@@ -206,7 +206,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 
 	var/should_have_brain = TRUE
 	var/should_have_heart = TRUE
-	var/should_have_lungs = !(TRAIT_NOBREATH in inherent_traits)
+	//var/should_have_lungs = !(TRAIT_NOBREATH in inherent_traits)
 	var/should_have_appendix = !(TRAIT_NOHUNGER in inherent_traits)
 	var/should_have_eyes = TRUE
 	var/should_have_ears = TRUE
@@ -230,10 +230,10 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		heart = new mutant_heart()
 		heart.Insert(C)
 
-	if(lungs && (!should_have_lungs || replace_current))
+	if(lungs && replace_current)
 		lungs.Remove(TRUE)
 		QDEL_NULL(lungs)
-	if(should_have_lungs && !lungs)
+	if(!lungs)
 		if(mutantlungs)
 			lungs = new mutantlungs()
 		else
@@ -1010,13 +1010,13 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		return move_trail */
 
 /datum/species/proc/spec_life(mob/living/carbon/human/H)
-	if(HAS_TRAIT(H, TRAIT_NOBREATH))
+	/*if(HAS_TRAIT(H, TRAIT_NOBREATH))
 		H.setOxyLoss(0)
 		H.losebreath = 0
 
 		var/takes_crit_damage = !HAS_TRAIT(H, TRAIT_NOCRITDAMAGE)
 		if((H.health < H.crit_threshold) && takes_crit_damage)
-			H.adjustBruteLoss(1)
+			H.adjustBruteLoss(1)*/
 
 /datum/species/proc/spec_death(gibbed, mob/living/carbon/human/H)
 	if(H)
@@ -1406,29 +1406,36 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 /datum/species/proc/handle_mutations_and_radiation(mob/living/carbon/human/H)
 	. = FALSE
 	var/radiation = H.radiation
-
-	if(HAS_TRAIT(H, TRAIT_RADIMMUNE))
+	if(HAS_TRAIT(H, TRAIT_RADIMMUNE)) //Runs before FEV check so you can make supermutants that AREN'T slowed by rads.
 		return TRUE
-
+	if(HAS_TRAIT(H, TRAIT_FEV) || HAS_TRAIT(H, TRAIT_FEVII)) //Makes rads slow FEV mutants down. This can also be applied to other races, e.g ghouls. 
+		switch(radiation)
+			if(1000 to 2000)
+				H.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, TRUE, multiplicative_slowdown = 1)
+			if(2000 to 3000)
+				H.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, TRUE, multiplicative_slowdown = 1.5)
+			if(3000 to INFINITY)
+				H.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, TRUE, multiplicative_slowdown = 2.5)	
+		return TRUE
 	if(radiation > RAD_MOB_KNOCKDOWN && prob(RAD_MOB_KNOCKDOWN_PROB))
 		if(CHECK_MOBILITY(H, MOBILITY_STAND))
 			H.emote("collapse")
 		H.DefaultCombatKnockdown(RAD_MOB_KNOCKDOWN_AMOUNT)
-		to_chat(H, "<span class='danger'>You feel weak.</span>")
+		to_chat(H, span_danger("You feel weak."))
 
 	if(radiation > RAD_MOB_VOMIT && prob(RAD_MOB_VOMIT_PROB))
 		H.vomit(10, TRUE)
 
 	if(radiation > RAD_MOB_MUTATE)
 		if(prob(1))
-			to_chat(H, "<span class='danger'>You mutate!</span>")
+			to_chat(H, span_danger("You mutate!"))
 			H.easy_randmut(NEGATIVE+MINOR_NEGATIVE)
 			H.emote("gasp")
 			H.domutcheck()
 
 	if(radiation > RAD_MOB_HAIRLOSS)
 		if(prob(15) && !(H.hair_style == "Bald") && (HAIR in species_traits))
-			to_chat(H, "<span class='danger'>Your hair starts to fall out in clumps...</span>")
+			to_chat(H, span_danger("Your hair starts to fall out in clumps..."))
 			addtimer(CALLBACK(src, .proc/go_bald, H), 50)
 
 /datum/species/proc/go_bald(mob/living/carbon/human/H)
@@ -1455,15 +1462,17 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			log_combat(user, target, "shaked")
 		return 1
 	else
-		var/we_breathe = !HAS_TRAIT(user, TRAIT_NOBREATH)
+		//var/we_breathe = !HAS_TRAIT(user, TRAIT_NOBREATH)
 		var/we_lung = user.getorganslot(ORGAN_SLOT_LUNGS)
 
-		if(we_breathe && we_lung)
+		if(we_lung)
 			user.do_cpr(target)
+		/*
 		else if(we_breathe && !we_lung)
 			to_chat(user, "<span class='warning'>You have no lungs to breathe with, so you cannot peform CPR.</span>")
+		*/
 		else
-			to_chat(user, "<span class='notice'>You do not breathe, so you cannot perform CPR.</span>")
+			to_chat(user, "<span class='notice'>You need lungs to give CPR!</span>")
 
 /datum/species/proc/grab(mob/living/carbon/human/user, mob/living/carbon/human/target, datum/martial_art/attacker_style)
 	if(target.check_martial_melee_block())
@@ -1515,6 +1524,9 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		var/damage = rand(user.dna.species.punchdamagelow, user.dna.species.punchdamagehigh)
 		if(HAS_TRAIT(user, TRAIT_PERFECT_ATTACKER)) // unit test no-miss trait
 			damage = user.dna.species.punchdamagehigh
+		if(HAS_TRAIT(user, TRAIT_UNARMED_WEAPON))
+			if(user.gloves.force >= 5)
+				damage = user.dna.species.punchdamagehigh + (user.gloves.force/1.2) //WASTELAND AFTER DARK EDIT: I FUC- Ahem. Fixes a bug where you could get infinite damage. Now a 24 damage weapon does 20 when worn
 		var/punchedstam = target.getStaminaLoss()
 		var/punchedbrute = target.getBruteLoss()
 

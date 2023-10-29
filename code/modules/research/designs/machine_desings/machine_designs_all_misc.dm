@@ -99,6 +99,14 @@
 	category = list ("Misc. Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_ALL
 
+/datum/design/board/fc_charger
+	name = "Machine Design (Fusion core Charger Board)"
+	desc = "The circuit board for a nuclear cell charger."
+	id = "fc_charger"
+	build_path = /obj/item/circuitboard/machine/fc_charger
+	category = list ("Misc. Machinery")
+	departmental_flags = DEPARTMENTAL_FLAG_ALL
+
 /datum/design/board/vr_sleeper
 	name = "Machine Design (VR Sleeper Board)"
 	desc = "The circuit board for a VR sleeper."

@@ -125,6 +125,20 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 	//Variants
+
+/obj/item/clothing/suit/storage/fluff/modernfedcoat/stranger
+	allowed = list(
+		/obj/item/flashlight, /obj/item/analyzer,
+		/obj/item/radio, /obj/item/tank/internals/emergency_oxygen,
+		/obj/item/reagent_containers/hypospray, /obj/item/healthanalyzer,/obj/item/reagent_containers/syringe,
+		/obj/item/reagent_containers/glass/bottle/vial,/obj/item/reagent_containers/glass/beaker,
+		/obj/item/reagent_containers/pill,/obj/item/storage/pill_bottle, /obj/item/restraints/handcuffs,/obj/item/hypospray,
+		/obj/item/gun
+		)
+	armor = list("melee" = 95, "bullet" = 95, "laser" = 95,"energy" = 95, "bomb" = 95, "bio" = 95, "rad" = 95, "fire" = 95, "acid" = 95)
+	name = "Pristine jacket"
+	desc = "A modern uniform jacket from the United Federation."
+
 /obj/item/clothing/suit/storage/fluff/modernfedcoat/medsci
 	icon_state = "fedmodernblue"
 	item_state = "fedmodernblue"
@@ -162,6 +176,11 @@
 /obj/item/clothing/head/caphat/formal/fedcover/black
 		icon_state = "fedcapblack"
 		item_state = "fedcapblack"
+
+/obj/item/clothing/head/caphat/formal/fedcover/black/stranger
+	name = "Pristine officer cap"
+	armor = list("melee" = 95, "bullet" = 95, "laser" = 95,"energy" = 95, "bomb" = 95, "bio" = 95, "rad" = 95, "fire" = 95, "acid" = 95)
+	desc = "An officer's cap that demands discipline from the one who wears it."
 
 //orvilike caps
 /obj/item/clothing/head/kepi/orvi

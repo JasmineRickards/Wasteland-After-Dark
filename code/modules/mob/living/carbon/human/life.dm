@@ -278,14 +278,11 @@
 		HM.on_life(src)
 
 /mob/living/carbon/human/proc/handle_heart()
-	var/we_breath = !HAS_TRAIT_FROM(src, TRAIT_NOBREATH, SPECIES_TRAIT)
-
 	if(!undergoing_cardiac_arrest())
 		return
 
-	if(we_breath)
-		adjustOxyLoss(8)
-		Unconscious(80)
+	adjustOxyLoss(8)
+	Unconscious(80)
 	// Tissues die without blood circulation
 	adjustBruteLoss(2)
 

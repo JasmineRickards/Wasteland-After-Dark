@@ -221,7 +221,7 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
 	layer = MOB_UPPER_LAYER
 	wound_bonus = 20
-	block_chance = 15
+	block_chance = 20
 
 /obj/item/melee/smith/sword/spatha
 	name = "spatha"
@@ -236,9 +236,9 @@
 	item_state = "sabre_smith"
 	overlay_state = "hilt_sabre"
 	block_parry_data = /datum/block_parry_data/smithsaber
-	armour_penetration = 0.2
+	armour_penetration = 0.15
 	force = 24
-	block_chance = 25
+	block_chance = 45
 
 /datum/block_parry_data/smith_generic
 	parry_stamina_cost = 12
@@ -297,12 +297,13 @@
 	force = 24
 	sharpness = SHARP_EDGED
 	wound_bonus = 30
-	block_chance = 20
+	block_chance = 30
 
 /obj/item/melee/smith/machete/gladius
 	name = "gladius"
 	icon_state = "gladius_smith"
 	overlay_state = "hilt_gladius"
+	block_chance = 35
 
 /obj/item/melee/smith/machete/reforged
 	name = "reforged machete"
@@ -318,7 +319,7 @@
 	item_flags = NEEDS_PERMIT | ITEM_CAN_PARRY
 	block_parry_data = /datum/block_parry_data/waki
 	hitsound = 'sound/weapons/rapierhit.ogg'
-	block_chance = 5
+	block_chance = 15
 	wound_bonus = 15
 	bare_wound_bonus = 30
 
@@ -370,7 +371,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
 	layer = MOB_UPPER_LAYER
-	block_chance = 30
+	block_chance = 40
 	wound_bonus = 25
 	bare_wound_bonus = 40
 
@@ -387,7 +388,7 @@
 	parry_efficiency_to_counterattack = 100
 	parry_efficiency_considered_successful = 120
 	parry_efficiency_perfect = 120
-	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 0.6)
+	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 2)
 
 // Heavy axe, 2H focused chopper 27/54. Can be worn on your back.
 /obj/item/melee/smith/twohand/axe
@@ -402,8 +403,10 @@
 	slot_flags = ITEM_SLOT_BACK
 	layer = MOB_UPPER_LAYER
 	block_parry_data = /datum/block_parry_data/smith_generic
-	wound_bonus = 10
-	bare_wound_bonus = 10
+	wound_bonus = 40
+	bare_wound_bonus = 25
+	block_chance = 20
+	armour_penetration = 0.3
 
 /obj/item/melee/smith/twohand/axe/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
@@ -423,6 +426,10 @@
 	icon_state = "warhoned_smith"
 	icon_prefix = "warhoned_smith"
 	overlay_state = "shaft_warhoned"
+	wound_bonus = 45						//The craftsmanship is simply unrivaled
+	bare_wound_bonus = 30
+	block_chance = 25
+	armour_penetration = 0.4
 
 /obj/item/melee/smith/twohand/axe/warhoned/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
@@ -480,7 +487,7 @@
 
 
 // Good throwing, thats about it (27, 40)
-/obj/item/melee/smith/javelin 
+/obj/item/melee/smith/javelin
 	name = "javelin"
 	icon_state = "javelin_smith"
 	overlay_state = "shaft_javelin"
@@ -488,7 +495,7 @@
 	sharpness = SHARP_POINTY
 	embedding = list("pain_mult" = 2, "embed_chance" = 60, "fall_chance" = 20, "ignore_throwspeed_threshold" = TRUE)
 	force = 15
-	armour_penetration = 0.10
+	armour_penetration = 0.3
 
 // Smaller weaker javelin, easier to store/carry, less effective
 /obj/item/melee/smith/throwingknife
@@ -497,9 +504,9 @@
 	overlay_state = "handle_throwing"
 	item_state = "dagger_smith"
 	embedding = list("pain_mult" = 2, "embed_chance" = 50, "fall_chance" = 20, "ignore_throwspeed_threshold" = TRUE)
-	force = 14
+	force = 12
 	w_class = WEIGHT_CLASS_SMALL
-
+	armour_penetration = 0.15
 
 // TG stuff
 

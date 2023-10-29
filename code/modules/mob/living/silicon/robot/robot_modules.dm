@@ -755,7 +755,7 @@
 	basic_modules = list(
 		/obj/item/assembly/flash/cyborg,
 		/obj/item/extinguisher/mini,
-		/obj/item/crowbar/cyborg,
+		/obj/item/crowbar/power/cyborg,
 		/obj/item/melee/transforming/energy/sword/cyborg,
 		/obj/item/gun/energy/printer,
 		/obj/item/gun/ballistic/revolver/grenadelauncher/cyborg,

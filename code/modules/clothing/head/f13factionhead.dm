@@ -723,7 +723,7 @@
 	desc = "An old combat helmet, out of use around the time of the war."
 	icon_state = "ranger"
 	item_state = "ranger"
-	armor = list("melee" = 40, "bullet" = 50, "laser" = 40, "energy" = 15, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20, "wound" = 55)
+	armor = list("melee" = 35, "bullet" = 55, "laser" = 45, "energy" = 35, "bomb" = 55, "bio" = 60, "rad" = 60, "fire" = 90, "acid" = 20, "wound" = 55)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE|HIDESNOUT
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
@@ -785,14 +785,14 @@
 	desc = "An improved combat helmet, bearing the symbol of a Senior Knight."
 	icon_state = "brotherhood_helmet_senior"
 	item_state = "brotherhood_helmet_senior"
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 55, "energy" = 50, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
+	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 50, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/captain
 	name = "brotherhood head knight helmet"
 	desc = "An improved combat helmet, bearing the symbol of the Head Knight."
 	icon_state = "brotherhood_helmet_captain"
 	item_state = "brotherhood_helmet_captain"
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 55, "energy" = 50, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
+	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 50, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate
 	name = "initiate helmet"
@@ -805,7 +805,7 @@
 	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms, repainted to the colour scheme of the Brotherhood of Steel."
 	icon_state = "brotherhood_helmet"
 	item_state = "brotherhood_helmet"
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 55, "energy" = 50, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
+	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 50, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/outcast
 	name = "brotherhood helmet"
@@ -1154,7 +1154,7 @@
 	name = "PLA field cap"
 	desc = "A People's Liberation Army cap, worn by enlisted and non-commissioned officers."
 	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	mob_overlay_icon = 'icons/mob/clothing/head.dmi'
 	icon_state = "chinese_soldier"
 	item_state = "chinese_soldier"
 	armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 30)
@@ -1163,7 +1163,7 @@
 	name = "PLA officer's cap"
 	desc = "A People's Liberation Army peaked cap, worn by officers."
 	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	mob_overlay_icon = 'icons/mob/clothing/head.dmi'
 	icon_state = "chinese_officer"
 	item_state = "chinese_officer"
 

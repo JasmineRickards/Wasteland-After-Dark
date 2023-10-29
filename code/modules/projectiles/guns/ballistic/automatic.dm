@@ -290,6 +290,8 @@
 	update_icon()
 	return
 
+
+
 /obj/item/gun/ballistic/automatic/smg/greasegun/worn
 	name = "beat up 9mm submachine gun"
 	desc = "What was once an inexpensive, but reliable submachine gun is now an inexpensive piece of shit. It's impressive this thing still fires at all."
@@ -320,6 +322,21 @@
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
 	return
+
+/obj/item/gun/ballistic/automatic/smg/greasegun/upgraded
+	name = "upgraded 9mm submachine gun"
+	desc = "An inexpensive submachine gun with added parts, chambered in 9mm. It has a higher rate of fire and uses a suppressor. It seems the magwell only accepts special drum magazines."
+	icon_state = "greaseplus"
+	item_state = "smg9mm"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_prefix = "greaseplus"
+	mag_type = /obj/item/ammo_box/magazine/greasedrum
+	spread = 13
+	slowdown = 0.35
+	autofire_shot_delay = 1.85
+	can_attachments = FALSE
+	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
+	extra_damage = -4
 
 //10mm SMG			Keywords: 10mm, Automatic, 12/24 rounds
 /obj/item/gun/ballistic/automatic/smg/smg10mm
@@ -418,6 +435,26 @@
 	update_icon()
 	return
 
+/obj/item/gun/ballistic/automatic/smg/micro_uzi
+	name = "Micro-Uzi"
+	desc = "An even more lightweight version of the Uzi. It shoots fast and it's extremely inaccurate. Handle with care."
+	icon_state = "micro"
+	item_state = "uzi"
+	mag_type = /obj/item/ammo_box/magazine/uzim9mm
+	fire_delay = 3
+	recoil = 4
+	burst_shot_delay = 2.2
+	is_automatic = TRUE
+	automatic = 1
+	slowdown = 0.2
+	autofire_shot_delay = 1
+	spread = 24
+	can_suppress = FALSE
+	can_attachments = TRUE
+	extra_damage = -4
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_prefix = "micro"
+
 
 //Carl Gustaf			Keywords: 10mm, Automatic, 36 rounds
 /obj/item/gun/ballistic/automatic/smg/cg45
@@ -480,6 +517,20 @@
 	init_mag_type = /obj/item/ammo_box/magazine/tommygunm45/stick
 	fire_delay = 3.75
 	spread = 19
+
+//M1928
+/obj/item/gun/ballistic/automatic/smg/tommygun/chicago
+	name = "M1928 Chicago Typewriter"
+	desc = "A powerful submachinegun chambered in .45 ACP, this weapon fires at a blistering rate with a heavy pistol cartridge, popular for its use by gangs of the Old World. This model was more expensive and stopped being produced."
+	mag_type = /obj/item/ammo_box/magazine/tommygunm45
+	init_mag_type = /obj/item/ammo_box/magazine/tommygunm45
+	autofire_shot_delay = 1.25
+	spread = 28		// RATTLE 'EM, BOYS!
+	slowdown = 0.6	//Higher
+	icon_state = "typewriter"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_prefix = "typewriter"
+	extra_damage = -5
 
 //P90				Keywords: 10mm, Automatic, 50 rounds. Special modifiers: damage +1
 /obj/item/gun/ballistic/automatic/smg/p90
@@ -753,18 +804,20 @@
 //Combat Rifle		Keywords: .45 Caliber Rifle, BoS rifle
 /obj/item/gun/ballistic/automatic/combat
 	name = "Combat Rifle"
-	desc = "A .45 semi-automatic combat rifle, produced pre-war for National Guard forces."
+	desc = "A .45 automatic combat rifle, produced pre-war for National Guard forces."
 	icon_state = "combat_rifle"
 	item_state = "combatrifle"
 	icon_prefix = "combatrifle"
 	mag_type = /obj/item/ammo_box/magazine/tommygunm45/stick
-	fire_delay = 3
+	fire_delay = 1
+	autofire_shot_delay = 2
+	automatic = TRUE
 	burst_size = 1
 	spread = 1
 	slowdown = 0.25
 	extra_penetration = 0.1
-	automatic_burst_overlay = FALSE
-	semi_auto = TRUE
+	automatic_burst_overlay = TRUE
+	semi_auto = FALSE
 	fire_sound = 'sound/f13weapons/combatrifle.ogg'
 
 //Service rifle			Keywords: NCR, 5.56mm, Semi-auto, 20 (10-50) round magazine, 25dmg
@@ -778,10 +831,12 @@
 	slowdown = 0.15
 	fire_delay = 1
 	burst_size = 1
+	autofire_shot_delay = 3
 	spread = 1
 	can_attachments = TRUE
-	automatic_burst_overlay = FALSE
-	semi_auto = TRUE
+	automatic_burst_overlay = TRUE
+	automatic = TRUE
+	semi_auto = FALSE
 	can_bayonet = TRUE
 	bayonet_state = "bayonet"
 	knife_x_offset = 22
@@ -803,6 +858,23 @@
 	suppressor_y_offset = 28
 	extra_damage = -3
 
+//Khan Police rifle			Keywords: KHANS, 5.56mm, Semi-auto, 20 (10-50) round magazine
+/obj/item/gun/ballistic/automatic/marksman/policerifle_khans
+	name = "Kit Bashed Rifle"
+	desc = "A pre-war Rifle that has been constantly repaired and rebuilt by local Khan gunsmiths. Somehow, you feel safer holding this."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_prefix = "assault_carbine"
+	icon_state = "rifle-police"
+	item_state = "assault_carbine"
+	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
+	spread = 1.1
+	fire_delay = 2.5
+	extra_damage = 6
+	can_suppress = FALSE
+	can_scope = TRUE
+	zoomable = FALSE
 
 //Police rifle			Keywords: OASIS, 5.56mm, Semi-auto, 20 (10-50) round magazine
 /obj/item/gun/ballistic/automatic/marksman/policerifle
@@ -949,6 +1021,7 @@
 	scope_y_offset = 14
 	auto_eject_sound = 'sound/f13weapons/garand_ping.ogg'
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+	extra_penetration = 0.15
 
 /obj/item/gun/ballistic/automatic/m1garand/update_icon()
 	..()
@@ -964,6 +1037,7 @@
 	name = "Old Glory"
 	desc = "This Machine kills communists!"
 	icon_state = "oldglory"
+	extra_damage = 10
 
 //Republics Pride			Keywords: UNIQUE, 7.62mm, Semi-auto, 8 rounds internal, Scoped, Damage +8, Penetration +0.1
 /obj/item/gun/ballistic/automatic/m1garand/republicspride
@@ -976,6 +1050,8 @@
 	zoom_out_amt = 13
 	fire_delay = 0.5
 	can_scope = FALSE
+	extra_damage = 8
+	extra_penetration = 0.25
 
 //HT battle rifle
 /obj/item/gun/ballistic/automatic/bar/glowie
@@ -1015,6 +1091,33 @@
 	scope_y_offset = 12
 	auto_eject_sound = 'sound/weapons/magout.ogg'
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+
+//Mosin Avtomat
+/obj/item/gun/ballistic/automatic/avtomat
+	name = "Mosin-Nagant Assultus"
+	desc = "A pre-war Mosin-Nagant 91/30 rifle was modified into a makeshift machine gun, with a high rate of fire, gas-driven receiver, and increased internal magazine. It feeds from a chain-like stripper clip, and Legion bull has been branded into its wooden stock."
+	icon_state = "avtomat"
+	item_state = "rifle"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_prefix = "avtomat"
+	force = 20
+	slowdown = 0.5
+	mag_type = /obj/item/ammo_box/magazine/avtomat
+	fire_delay = 1
+	burst_size = 3
+	spread = 3
+	is_automatic = TRUE
+	automatic = 1
+	autofire_shot_delay = 2
+	can_attachments = TRUE
+	can_bayonet = TRUE
+	bayonet_state = "bayonet"
+	knife_x_offset = 22
+	knife_y_offset = 21
+	can_scope = FALSE
+	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+	recoil = 4
+	extra_damage = -5
 
 
 //DKS 501 sniper rifle				Keywords: .308, Semi-auto, 7 round magazine, Scoped, Extra speed +500, Fire delay +1, 43dmg
@@ -1059,8 +1162,8 @@
 	zoom_out_amt = 14
 
 /obj/item/gun/ballistic/automatic/marksman/sniper/snipervenator
-	name = "explorer sniper rifle"
-	desc = "The customized sniper rifle, fitted with a telescopic sight for extreme accuracy and chambered for a high-ballistic performance centerfire cartridge. It is a superior version of the regular sniper rifle and is decorated with the flag of the bull and tokens of a hunt."
+	name = "venator sniper rifle"
+	desc = "A customized DKS-501 sniper rifle, fitted with a telescopic sight for extreme accuracy and chambered for a high-ballistic performance centerfire cartridge. It is a superior version of the regular sniper rifle and is decorated with the flag of the bull and tokens of a hunt."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
@@ -1071,6 +1174,8 @@
 	slowdown = 0.12
 	zoom_amt = 15
 	zoom_out_amt = 17
+	extra_damage = 15 //~39 to 50 damage
+	extra_penetration = 0.3 //Slightly less than medicine stick
 
 /obj/item/gun/ballistic/automatic/marksman/sniper/sniperranger
 	name = "compact sniper rifle"
@@ -1159,7 +1264,7 @@
 //R93 PDW		Keywords: 5.56mm, Semi-Automatic, 20 (10-50) round magazine, Pistol grip
 /obj/item/gun/ballistic/automatic/r93
 	name = "R93 PDW"
-	desc = "A lightweight assault rifle manufactured by the Brotherhood of Steel with a folding stock, based on weapons from the R-series platforms. It is generally issued to Brotherhood Knights for scouting missions."
+	desc = "A lightweight PDW manufactured by the Brotherhood of Steel with a folding stock, based on weapons from the R-series platforms. It is generally issued to Brotherhood Knights for scouting missions."
 	icon_state = "r93"
 	item_state = "r93"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
@@ -1167,8 +1272,9 @@
 	spread = 1
 	burst_size = 1
 	can_attachments = FALSE
-	semi_auto = TRUE
-	automatic_burst_overlay = FALSE
+	automatic = TRUE
+	semi_auto = FALSE
+	automatic_burst_overlay = TRUE
 	can_scope = FALSE
 	zoomable = TRUE
 	zoom_amt = 6
@@ -1176,6 +1282,20 @@
 	can_bayonet = TRUE
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 	slowdown = 0.15
+
+
+/obj/item/gun/ballistic/automatic/r93/rifle
+	name = "R93-A Carbine"
+	desc = "A lightweight carbine manufactured by the Brotherhood of Steel with a folding stock and longer barrel, based on weapons from the R-series platforms and re-chambered for 5mm. It is generally issued to marksmen and squad leaders."
+	fire_delay = 1
+	autofire_shot_delay = 2
+	can_attachments = TRUE
+	can_scope = FALSE
+	can_bayonet = FALSE
+	mag_type = /obj/item/ammo_box/magazine/m5mm
+	slowdown = 0.3
+	extra_damage = 6
+	extra_penetration = 0.05
 
 //Type 93 Chinese rifle				Keywords: 5.56mm, Automatic, 20 (10-50) round magazine, 26dmg
 /obj/item/gun/ballistic/automatic/type93
@@ -1317,13 +1437,14 @@
 	automatic = 1
 	mag_type = /obj/item/ammo_box/magazine/m762/ext
 	force = 24 //club
-	slowdown = 1.5 //really goddamn big
+	slowdown = 1.15 //Previously 1.5... Heavier than the M1919 for some reason?
 	autofire_shot_delay = 1.7
 	spread = 10
 	recoil = 0.85
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/automaticrifle_BAR.ogg'
 	extra_penetration = 0.25
+	extra_damage = -4 // This gives it 30 damage total with high AP!
 
 //H&K G11				Keywords: 4.73mm, Automatic, 50 round magazine
 /obj/item/gun/ballistic/automatic/g11
@@ -1481,7 +1602,76 @@
 		return
 	..()
 
+/obj/item/gun/ballistic/automatic/m60
+	name = "US Ordnance M60"
+	desc = "The M60 is a staple of the Midwestern Brotherhood, seen in the hands of Paladins of the Chicago chapter. It's as cruel to it's targets as the one who wields it."
+	icon_state = "m60"
+	item_state = "m60"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_prefix = "m60"
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	slot_flags = 0
+	slowdown = 1.15
+	mag_type = /obj/item/ammo_box/magazine/mm762
+	burst_shot_delay = 1.5
+	is_automatic = TRUE
+	automatic = 1
+	autofire_shot_delay = 1.1
+	fire_delay = 2
+	spread = 10
+	can_attachments = FALSE
+	var/cover_open = FALSE
+	var/require_twohands = FALSE
+	actions_types = null
+	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 
+/obj/item/gun/ballistic/automatic/m60/update_icon()
+	icon_state = "m60[cover_open ? "open" : "closed"][magazine ? CEILING(get_ammo(0)/20, 1)*20 : "-empty"]"
+	item_state = "m60[cover_open ? "open" : "closed"][magazine ? "mag" : "nomag"]"
+
+/obj/item/gun/ballistic/automatic/m60/examine(mob/user)
+	. = ..()
+	if(cover_open && magazine)
+		. += "<span class='notice'>It seems like you could use an <b>empty hand</b> to remove the magazine.</span>"
+
+/obj/item/gun/ballistic/automatic/m60/attack_self(mob/user)
+	cover_open = !cover_open
+	to_chat(user, "<span class='notice'>You [cover_open ? "open" : "close"] [src]'s cover.</span>")
+	if(cover_open)
+		playsound(user, 'sound/weapons/sawopen.ogg', 60, 1)
+	else
+		playsound(user, 'sound/weapons/sawclose.ogg', 60, 1)
+	update_icon()
+
+/obj/item/gun/ballistic/automatic/m60/afterattack(atom/target as mob|obj|turf, mob/living/user as mob|obj, flag, params)
+	if(cover_open)
+		to_chat(user, "<span class='warning'>[src]'s cover is open! Close it before firing!</span>")
+	else
+		. = ..()
+		update_icon()
+
+/obj/item/gun/ballistic/automatic/m60/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+	if(loc != user)
+		..()
+		return	//let them pick it up
+	if(!cover_open || (cover_open && !magazine))
+		..()
+	else if(cover_open && magazine)
+		//drop the mag
+		magazine.update_icon()
+		magazine.forceMove(drop_location())
+		user.put_in_hands(magazine)
+		magazine = null
+		update_icon()
+		to_chat(user, "<span class='notice'>You remove the magazine from [src].</span>")
+		playsound(user, 'sound/weapons/magout.ogg', 60, 1)
+
+/obj/item/gun/ballistic/automatic/m60/attackby(obj/item/A, mob/user, params)
+	if(!cover_open && istype(A, mag_type))
+		to_chat(user, "<span class='warning'>[src]'s cover is closed! You can't insert a new mag.</span>")
+		return
+	..()
 
 ////////
 //MISC//

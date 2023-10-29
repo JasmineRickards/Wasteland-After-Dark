@@ -195,7 +195,7 @@
 	icon = 'icons/obj/clothing/suits.dmi'
 	icon_state = "combat_armor_mk2"
 	item_state = "combat_armor_mk2"
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 22, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 20)
+	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 22, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 20)
 	slowdown = 0.15
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 
@@ -272,7 +272,7 @@
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 20)
 	salvage_tool_behavior = TOOL_WELDER
 	/// Cell that is currently installed in the suit
-	var/obj/item/stock_parts/cell/cell = /obj/item/stock_parts/cell/high
+	var/obj/item/stock_parts/fc = /obj/item/stock_parts/fc
 	/// How much power the cell consumes each process tick
 	var/usage_cost = 5 // With high-capacity cell it'd run out of charge in ~33 minutes
 	/// If TRUE - suit has ran out of charge and is currently affected by slowdown from it
@@ -287,6 +287,10 @@
 	var/powered = TRUE
 	/// If TRUE - the suit has been recently affected by EMP blast
 	var/emped = FALSE
+	/// Adjusts the bonus HP the suit gives you.
+	var/hpboost = 40 //Default HP amount
+	/// Handles if its equipped
+	var/isequipped = FALSE
 	/// Path of item that this set of armor gets salvaged into
 	var/obj/item/salvaged_type = null
 	/// Used to track next tool required to salvage the suit
@@ -294,8 +298,8 @@
 
 /obj/item/clothing/suit/armor/f13/power_armor/Initialize()
 	. = ..()
-	if(ispath(cell))
-		cell = new cell(src)
+	if(ispath(fc))
+		fc = new fc(src)
 
 /obj/item/clothing/suit/armor/f13/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
 	var/mob/living/carbon/human/H = user
@@ -319,8 +323,17 @@
 		return
 	ADD_TRAIT(user, TRAIT_STUNIMMUNE, "PA_stun_immunity")
 	ADD_TRAIT(user, TRAIT_PUSHIMMUNE, "PA_push_immunity")
+	ADD_TRAIT(user, TRAIT_NOSLIPALL,  "PA_push_immunity")
 	ADD_TRAIT(user, SPREAD_CONTROL, "PA_spreadcontrol")
 	ADD_TRAIT(user, TRAIT_POWER_ARMOR, "PA_worn_trait") // General effects from being in PA
+	ADD_TRAIT(user, TRAIT_PIERCEIMMUNE, "PA_worn_trait") // Nuh uh to shrapnel
+	if(isliving(user))
+		if(!isequipped)
+			var/mob/living/carbon/human/H = user
+			to_chat(H, "<span class='notice'>You feel secure in steel, likely able to shrug off far more damage.</span>")
+			H.maxHealth += hpboost
+			H.health += hpboost
+			isequipped = TRUE
 
 /obj/item/clothing/suit/armor/f13/power_armor/dropped(mob/user)
 	..()
@@ -331,8 +344,17 @@
 /obj/item/clothing/suit/armor/f13/power_armor/proc/remove_traits(mob/user)
 	REMOVE_TRAIT(user, TRAIT_STUNIMMUNE, "PA_stun_immunity")
 	REMOVE_TRAIT(user, TRAIT_PUSHIMMUNE, "PA_push_immunity")
+	REMOVE_TRAIT(user, TRAIT_NOSLIPALL, "PA_push_immunity") //You have to be kidding me.
 	REMOVE_TRAIT(user, SPREAD_CONTROL, "PA_spreadcontrol")
 	REMOVE_TRAIT(user, TRAIT_POWER_ARMOR, "PA_worn_trait")
+	REMOVE_TRAIT(user, TRAIT_PIERCEIMMUNE, "PA_worn_trait") //Nuh uh to shrapnel
+	if(isliving(user))
+		if(isequipped)
+			var/mob/living/carbon/human/H = user
+			to_chat(H, "<span class='notice'>You feel less safe and secure, and more vulnerable.</span>")
+			H.maxHealth -= hpboost
+			H.health -= hpboost
+			isequipped = FALSE
 
 /obj/item/clothing/suit/armor/f13/power_armor/Destroy()
 	. = ..()
@@ -342,7 +364,7 @@
 	var/mob/living/carbon/human/user = src.loc
 	if(!user || !ishuman(user) || (user.wear_suit != src))
 		return
-	if((!cell || !cell?.use(usage_cost) || (salvage_step > 1))) // No cell, ran out of charge or we're in the process of being salvaged
+	if((!fc|| !fc?.use(usage_cost) || (salvage_step > 1))) // No cell, ran out of charge or we're in the process of being salvaged
 		if(!no_power)
 			remove_power(user)
 		return
@@ -368,13 +390,13 @@
 	user.update_equipment_speed_mods()
 
 /obj/item/clothing/suit/armor/f13/power_armor/attackby(obj/item/I, mob/living/carbon/human/user, params)
-	if(powered && istype(I, /obj/item/stock_parts/cell))
-		if(cell)
-			to_chat(user, "<span class='warning'>\The [src] already has a cell installed.</span>")
+	if(powered && istype(I, /obj/item/stock_parts/fc))
+		if(fc)
+			to_chat(user, "<span class='warning'>\The [src] already has a core installed.</span>")
 			return
 		if(user.transferItemToLoc(I, src))
-			cell = I
-			to_chat(user, "<span class='notice'>You successfully install \the [cell] into [src].</span>")
+			fc = I
+			to_chat(user, "<span class='notice'>You successfully install \the [fc] into [src].</span>")
 		return
 
 	if(ispath(salvaged_type))
@@ -480,33 +502,33 @@
 
 /obj/item/clothing/suit/armor/f13/power_armor/attack_self(mob/living/user)
 	if(powered)
-		toggle_cell(user)
+		toggle_fc(user)
 	return ..()
 
 /obj/item/clothing/suit/armor/f13/power_armor/AltClick(mob/living/user)
 	if(!user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		return ..()
 	if(powered)
-		toggle_cell(user)
+		toggle_fc(user)
 	return
 
-/obj/item/clothing/suit/armor/f13/power_armor/proc/toggle_cell(mob/living/user)
-	if(cell)
-		user.visible_message("<span class='notice'>[user] removes \the [cell] from [src]!</span>", \
-			"<span class='notice'>You remove [cell].</span>")
-		cell.add_fingerprint(user)
-		user.put_in_hands(cell)
-		cell = null
+/obj/item/clothing/suit/armor/f13/power_armor/proc/toggle_fc(mob/living/user)
+	if(fc)
+		user.visible_message("<span class='notice'>[user] removes \the [fc] from [src]!</span>", \
+			"<span class='notice'>You remove [fc].</span>")
+		fc.add_fingerprint(user)
+		user.put_in_hands(fc)
+		fc = null
 	else
-		to_chat(user, "<span class='warning'>[src] has no cell installed.</span>")
+		to_chat(user, "<span class='warning'>[src] has no core installed.</span>")
 
 /obj/item/clothing/suit/armor/f13/power_armor/examine(mob/user)
 	. = ..()
 	if(powered && (in_range(src, user) || isobserver(user)))
-		if(cell)
-			. += "The power meter shows [round(cell.percent(), 0.1)]% charge remaining."
+		if(fc)
+//			. += "The power meter shows [round(fc.percent(), 0.1)]% charge remaining."
 		else
-			. += "The power cell slot is currently empty."
+			. += "The power core slot is currently empty."
 	if(ispath(salvaged_type))
 		. += salvage_hint()
 
@@ -529,8 +551,8 @@
 		return
 	if(!powered)
 		return
-	if(cell)
-		cell.emp_act(severity)
+	if(fc)
+		fc.emp_act(severity)
 	if(!emped)
 		if(isliving(loc))
 			var/mob/living/L = loc
@@ -600,8 +622,8 @@
 //////
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/Knightcommander
-	name = "Knight-Commander's T-45d Power Armour"
-	desc = "A classic set of T-45d Power Armour only to be used in armed combat, it signifies the Knight-Commander and their place in the Brotherhood. A leader, and a beacon of structure in a place where chaos reigns. All must rally to his call, for he is the Knight-Commander  and your safety is his duty."
+	name = "Knight-Commander's Midwestern power armor"
+	desc = "A lightly decorated set of Midwestern power armor, it signifies the Knight-Commander and their place in the Brotherhood. A leader, and a beacon of structure in a place where chaos reigns. All must rally to their call, for they are the Knight-Commander and your safety is their duty."
 	icon_state = "t45dkc"
 	item_state = "t45dkc"
 	slowdown = 0.16
@@ -627,6 +649,7 @@
 	armor = list("melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 25)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t51b
+	hpboost = 50
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51green
 	name = "Hardened T-51b power armor"
@@ -637,16 +660,17 @@
 	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 32, "bomb" = 64, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
 
 /obj/item/clothing/suit/armor/f13/power_armor/midwest
-	name = "Midwestern T-51b power armor"
+	name = "Midwestern power armor"
 	desc = "This set of power armor belongs to the Midwestern branch of the Brotherhood of Steel."
 	icon_state = "midwestgrey_pa"
 	item_state = "midwestgrey_pa"
 	slowdown = 0.20 //+0.05 from helmet = total 0.255
 	armor = list("melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/midwest
+	hpboost = 50
 
 /obj/item/clothing/suit/armor/f13/power_armor/midwest/hardened
-	name = "Hardened midwestern  T-51b power armor"
+	name = "Midwestern advanced power armor"
 	desc = "This set of power armor belongs to the Midwestern branch of the Brotherhood of Steel. This particular one has gone through a chemical hardening process, increasing its armor capabilities."
 	icon_state = "midwestpa"
 	item_state = "midwestpa"
@@ -666,6 +690,7 @@
 	icon_state = "t60powerarmor"
 	item_state = "t60powerarmor"
 	slowdown = 0.2
+	hpboost = 60
 	armor = list("melee" = 80, "bullet" = 70, "laser" = 80, "energy" = 30, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 50, "wound" = 50)
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 30)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t60
@@ -678,6 +703,7 @@
 
 /obj/item/clothing/suit/armor/f13/power_armor/excavator
 	name = "excavator power armor"
+	hpboost = 20 //Its pretty bad otherwise.
 	desc = "Developed by Garrahan Mining Co. in collaboration with West Tek, the Excavator-class power armor was designed to protect miners from rockfalls and airborne contaminants while increasing the speed at which they could work. "
 	icon_state = "excavator"
 	item_state = "excavator"
@@ -689,6 +715,7 @@
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for its user's comfort."
 	icon_state = "advpowerarmor1"
 	item_state = "advpowerarmor1"
+	hpboost = 60
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 85, "energy" = 35, "bomb" = 72, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 50)
 
 //Enclave armor adjust as needed
@@ -698,6 +725,7 @@
 	icon_state = "advanced"
 	item_state = "advanced"
 	slowdown = 0.3//Worst slowdown of all combat sets.
+	hpboost = 60
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 85, "energy" = 85, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 50)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/x02 // Oh the misery
 
@@ -707,6 +735,7 @@
 	icon_state = "tesla"
 	item_state = "tesla"
 	slowdown = 0.25//Worst slowdown of all combat sets.
+	hpboost = 60
 	armor = list("melee" = 75, "bullet" = 75, "laser" = 95, "energy" = 95, "bomb" = 70, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 50, "wound" = 50)
 	var/hit_reflect_chance = 35
 
@@ -720,11 +749,13 @@
 /obj/item/clothing/suit/armor/f13/power_armor/x02/eastcoast
 	name = "X-02 power armor"
 	desc = "A very rare suit of X-02 power armor."
+	hpboost = 70 //DOES NOT SPAWN OUTSIDE OF ADMIN INTERVENTION
 	icon_state = "PA_x02"
 	item_state = "PA_x02"
 
 /obj/item/clothing/suit/armor/f13/power_armor/tesla/eastcoast
 	name = "X-02 tesla armor"
+	hpboost = 70 //DOES NOT SPAWN OUTSIDE OF ADMIN INTERVENTION
 	desc = "A very rare suit of X-02 power armor. This one has been fitted with extra electronics and tesla attraction coils to be used with energy-based weapons."
 	icon_state = "PA_x02tesla"
 	item_state = "PA_x02tesla"

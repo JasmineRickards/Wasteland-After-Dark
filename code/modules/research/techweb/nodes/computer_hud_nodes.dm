@@ -45,7 +45,7 @@
 	design_ids = list("health_hud", "security_hud", "scigoggles", "health_hud_prescription", "security_hud_prescription")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1500)
 
-/*
+
 /datum/techweb_node/NVGtech
 	id = "NVGtech"
 	display_name = "Night Vision Technology"
@@ -53,7 +53,7 @@
 	prereq_ids = list("integrated_HUDs", "adv_engi", "emp_adv")
 	design_ids = list("health_hud_night", "security_hud_night", "diagnostic_hud_night", "night_visision_goggles", "nvgmesons", "night_visision_goggles_glasses")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
-*/
+
 
 /datum/techweb_node/computer_board_gaming
 	id = "computer_board_gaming"
