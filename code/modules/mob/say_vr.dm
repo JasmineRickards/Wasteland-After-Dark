@@ -71,10 +71,9 @@
 	var/list/ghosties = list()
 	// Exclude ghosts from the initial message if its a subtler, lets be *discrete*
 	if(subtler)
-		for(var/mob/ghost in GLOB.dead_mob_list)
-			if(ghost.client && !check_rights_for(ghost.client, R_ADMIN))
-				continue
-			ghosties |= ghost
+		for(var/mob/dead/observer in GLOB.dead_mob_list)
+			if(ghost.client)
+				ghosties += ghost
 
 	// Everyone in range can see it
 	user.visible_message(
