@@ -769,7 +769,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 /datum/outfit/loadout/expauto
 	name = "Pursuer"
 	glasses = /obj/item/clothing/glasses/sunglasses/big
-	suit_store = /obj/item/gun/ballistic/rifle/avtomat
+	suit_store = /obj/item/gun/ballistic/rifle/mosin/avtomat
 	backpack_contents = list(
 		/obj/item/ammo_box/a762box = 1,
 		)
