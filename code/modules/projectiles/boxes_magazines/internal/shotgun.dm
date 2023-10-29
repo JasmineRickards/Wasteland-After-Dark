@@ -103,7 +103,7 @@
 	ammo_type = /obj/item/ammo_casing/caseless/plasmacaster
 	caliber = "plasmacaster"
 
-/obj/item/ammo_box/magazine/shot/internal/avtomat
+/obj/item/ammo_box/magazine/internal/shot/avtomat
 	ammo_type = /obj/item/ammo_casing/a762
 	caliber = "a762"
 	max_ammo = 15
