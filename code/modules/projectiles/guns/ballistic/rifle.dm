@@ -278,7 +278,7 @@
 	extra_damage = -5
 	pump_stam_cost = 0
 
-/obj/item/gun/ballistic/rifle/avtomat/shoot_live_shot(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
+/obj/item/gun/ballistic/rifle/mosin/avtomat/shoot_live_shot(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
 	..()
 	src.pump(user)
 
