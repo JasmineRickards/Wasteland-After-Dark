@@ -103,6 +103,12 @@
 	ammo_type = /obj/item/ammo_casing/caseless/plasmacaster
 	caliber = "plasmacaster"
 
+/obj/item/ammo_box/magazine/internal/avtomat
+	ammo_type = /obj/item/ammo_casing/a762
+	caliber = "a762"
+	max_ammo = 15
+	multiload = 1
+
 /obj/item/ammo_box/magazine/internal/shot/pardner
 	name = "single shotgun internal tube"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
