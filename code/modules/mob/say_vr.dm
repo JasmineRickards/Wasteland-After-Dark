@@ -40,7 +40,7 @@
 
 /datum/emote/living/subtle/proc/check_invalid(mob/user, input)
 	if(stop_bad_mime.Find(input, 1, 1))
-		to_chat(user, span_danger("Invalid emote."))
+		to_chat(user, "<span class='danger'>Invalid emote.</span>")
 		return TRUE
 	return FALSE
 
@@ -65,29 +65,26 @@
 	if(!can_run_emote(user))
 		return FALSE
 
-	user.log_message(message, subtler ? LOG_SUBTLER : LOG_SUBTLE)
-	var/msg_check = user.say_narrate_replace(message, user)
-	if(msg_check)
-		message = span_subtle("<i>[msg_check]</i>")
-	else
-		message = span_subtle("<b>[user]</b> " + "<i>[user.say_emphasis(message)]</i>")
+	user.log_message(message, LOG_EMOTE)
+	message = span_subtle("<b>[user]</b> " + "<i>[user.say_emphasis(message)]</i>")
 
-	var/list/non_admin_ghosts
+	var/list/ghosties = list()
 	// Exclude ghosts from the initial message if its a subtler, lets be *discrete*
 	if(subtler)
-		non_admin_ghosts = GLOB.dead_mob_list.Copy()
-		for(var/mob/ghostie in GLOB.dead_mob_list)
-			if(ghostie.client && check_rights_for(ghostie.client, R_ADMIN))
-				non_admin_ghosts.Remove(ghostie)
+		for(var/mob/ghost in GLOB.dead_mob_list)
+			if(ghost.client && !check_rights_for(ghost.client, R_ADMIN))
+				continue
+			ghosties |= ghost
+
 	// Everyone in range can see it
 	user.visible_message(
 		message = message,
 		blind_message = message,
 		self_message = message,
 		vision_distance = 1,
-		ignored_mobs = non_admin_ghosts)
+		ignored_mobs = ghosties)
 
-	//broadcast to ghosts, if they have a client, are dead, arent in the lobby, allow ghostsight, and, if subtler, are admemes
+	//broadcast to ghosts, if they have a client, are dead, arent in the lobby, allow ghostsight,
 	user.emote_for_ghost_sight(message, subtler)
 
 
