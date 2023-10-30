@@ -67,7 +67,7 @@
 	category = list ("Hydroponics Machinery")
 
 /datum/design/board/induschem
-	name = "Machine Design (Portable industrial botanical Dispenser Board)"
+	name = "Machine Design (Portable industrial chemical Dispenser Board)"
 	desc = "The circuit board for a portable chem dispenser."
 	id = "medicalindus"
 	build_path = /obj/item/circuitboard/machine/induschem
