@@ -912,6 +912,15 @@
 	traitname = "hitting things"
 	remarks = list("Grognak hit the Death Knight only once, but that was enough.", "Grognak is surprisingly agile, never committing too heavily on an attack, dancing between his enemies.", "Grognak isn't good at talking, but he knows it has its place. He has friends to talk for him.", "Other barbarians might change their weapons, but Grognak could never leave his beloved axe.")
 
+/obj/item/book/granter/trait/sciencebook
+	name = "Research Consoles and You"
+	desc = "A 'simple' guide to using research equipment."
+	oneuse = TRUE
+	granted_trait = TRAIT_RESEARCHER
+	traitname = "researching things"
+	remarks = list("So THATS how you press buttons...", "Never research useless tech before parts...", "Don't mess with cloning...", "Don't lose that disk!")
+
+
 /obj/item/book/granter/trait/lowsurgery
 	name = "First Aid Pamphlet"
 	desc = "A flimsy collection of vital tips and tricks for the average American with a sudden injury."
@@ -992,8 +1001,8 @@
 	granted_trait = TRAIT_ADVANCED_EXPLOSIVE_CRAFTING
 	traitname = "advanced explosive crafting"
 	remarks = list("Is this actually a legal chess move...?", "If you hook electronic parts up to a flux capacitor-oh, that makes a lot of sense, actually.", "Radium? What would you use radium f-oh no.", "Why would anyone actually publish this?")
-	crafting_recipe_types = list(/datum/crafting_recipe/incendiary, /datum/crafting_recipe/concussion, /datum/crafting_recipe/radgrenade, /datum/crafting_recipe/empgrenade, /datum/crafting_recipe/incendiaryrocket, /datum/crafting_recipe/strongrocket, /datum/crafting_recipe/frag_shrapnel, /datum/crafting_recipe/stinger, /datum/crafting_recipe/flashbang,
-/datum/crafting_recipe/smokebomb, /datum/crafting_recipe/rocket_base, /datum/crafting_recipe/weakrocket)
+	crafting_recipe_types = list(/datum/crafting_recipe/incendiary, /datum/crafting_recipe/concussion, /datum/crafting_recipe/radgrenade, /datum/crafting_recipe/empgrenade, /datum/crafting_recipe/incendiaryrocket, /datum/crafting_recipe/frag_shrapnel, /datum/crafting_recipe/stinger, /datum/crafting_recipe/flashbang,
+/datum/crafting_recipe/smokebomb, /datum/crafting_recipe/rocket_base, /datum/crafting_recipe/weakrocket) //Removes HHE rocket crafting due to balance concerns.
 
 /obj/item/book/granter/trait/gunslinger
 	name = "Tycho: Life of a Lawman"
@@ -1104,18 +1113,18 @@
 			if("Pugilist")
 				granted_trait = TRAIT_IRONFIST
 				traitname = "using your fists"
-			if("Padded Feet")
-				granted_trait = TRAIT_LIGHT_STEP
-				traitname = "treading carefully"
-			if("Veteran Table Climber")
-				granted_trait = TRAIT_FREERUNNING
-				traitname = "....climbing tables"
-			if("Desert Affinity")
-				granted_trait = TRAIT_HARD_YARDS
-				traitname = "trekking"
+			if("Firestick Training")
+				granted_trait = TRAIT_FAST_PUMP
+				traitname = "shooting fast"
+			if("Fireant Rituals")
+				granted_trait = TRAIT_IGNOREDAMAGESLOWDOWN //Does not increase HP, just reduces the slowdown from injuries
+				traitname = "...pain resistance"
+			if("Fisting Expert") //ORIGINAL: TRAIT-HARD-YARDS. TRIBALS FUCKING SPAWN WITH THIS RAH!! STOP GIVING THEM CHOICES THAT SELF-GRIEF
+				granted_trait = TRAIT_PERFECT_ATTACKER //Makes all punches do maximum damage, where-as Iron-fist buffs the raw damage you do. Does not stack.
+				traitname = "fistfighting"
 			if("Spiritual Mending")
-				granted_trait = TRAIT_SURGERY_LOW
-				traitname = "minor surgery"
+				granted_trait = TRAIT_SURGERY_MID //This was very useless before.
+				traitname = "medium surgery"
 		return ..()
 
 /obj/item/book/granter/trait/selection/tribal/Initialize()
@@ -1173,4 +1182,3 @@
 	name = "M-60 LMG blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/m60)
-

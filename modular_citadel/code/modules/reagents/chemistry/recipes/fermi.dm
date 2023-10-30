@@ -163,7 +163,7 @@
 	FermiExplode 			= TRUE
 	PurityMin 				= 0.25
 
-
+/*
 /datum/chemical_reaction/fermi/enthrall //check this
 	name = "MKUltra"
 	id = /datum/reagent/fermi/enthrall
@@ -234,7 +234,7 @@
 /datum/chemical_reaction/fermi/enthrall/FermiExplode(datum/reagents/R0, atom/my_atom, volume, temp, pH)
 	R0.clear_reagents()
 	..()
-
+*/
 //FOR INSTANT REACTIONS - DO NOT MULTIPLY LIMIT BY 10.
 //There's a weird rounding error or something ugh.
 
