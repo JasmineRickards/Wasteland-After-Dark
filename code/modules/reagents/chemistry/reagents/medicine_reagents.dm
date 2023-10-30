@@ -149,14 +149,13 @@
 	..()
 
 /datum/reagent/medicine/cryoxadone
-	name = "Restructuring stimfluid"
-	description = "A chemical mixture with almost magical healing powers."
+	name = "Restructuring Stimfluid"
+	description = "A semi-fast-acting fluid that restructures bodily injuries far better than regular stims, at the cost of healing power."
 	color = "#0000C8"
 	taste_description = "sludge"
 	pH = 11
 	value = REAGENT_VALUE_COMMON
 	ghoulfriendly = TRUE
-	overdose_threshold = 30
 
 /datum/reagent/medicine/cryoxadone/on_mob_life(mob/living/carbon/M)
 	var/power = -0.00003 * (M.bodytemperature ** 2) + 3
@@ -174,16 +173,9 @@
 	metabolization_rate = REAGENTS_METABOLISM * (0.00001 * (M.bodytemperature ** 2) + 0.5)
 	..()
 
-/datum/reagent/medicine/cryoxadone/overdose_process(mob/living/M)
-	M.adjustToxLoss(3, 0)
-	M.Dizzy(5)
-	M.Jitter(5)
-	..()
-	. = 1
-
 /datum/reagent/medicine/clonexadone
-	name = "Clonexadone"
-	description = "A chemical that derives from Cryoxadone. It specializes in healing clone damage, but nothing else. Requires very cold temperatures to properly metabolize, and metabolizes quicker than cryoxadone."
+	name = "Super Restructuring Stimfluid"
+	description = "A chemical that derives from Restructuring Stimfluid. It specializes in healing cellular damage, but nothing else. Requires a high dose to properly metabolize, and metabolizes quicker than Restructuring Stimfluid."
 	color = "#0000C8"
 	taste_description = "muscle"
 	metabolization_rate = 1.5 * REAGENTS_METABOLISM
@@ -1096,7 +1088,7 @@
 
 /datum/reagent/medicine/stimulants
 	name = "Stimulants"
-	description = "Increases stun resistance and movement speed in addition to restoring minor damage and weakness. Overdose causes weakness and toxin damage."
+	description = "Increases stun resistance in addition to restoring minor damage and weakness. Overdose causes weakness and toxin damage."
 	color = "#78008C"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 60
@@ -1105,11 +1097,11 @@
 
 /datum/reagent/medicine/stimulants/on_mob_metabolize(mob/living/L)
 	..()
-	L.add_movespeed_modifier(/datum/movespeed_modifier/reagent/stimulants)
+//	L.add_movespeed_modifier(/datum/movespeed_modifier/reagent/stimulants)
 	ADD_TRAIT(L, TRAIT_TASED_RESISTANCE, type)
 
 /datum/reagent/medicine/stimulants/on_mob_end_metabolize(mob/living/L)
-	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/stimulants)
+//	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/stimulants)
 	REMOVE_TRAIT(L, TRAIT_TASED_RESISTANCE, type)
 	..()
 
@@ -1477,10 +1469,10 @@
 
 /datum/reagent/medicine/changelinghaste/on_mob_metabolize(mob/living/L)
 	..()
-	L.add_movespeed_modifier(/datum/movespeed_modifier/reagent/changelinghaste)
+	//L.add_movespeed_modifier(/datum/movespeed_modifier/reagent/changelinghaste)
 
 /datum/reagent/medicine/changelinghaste/on_mob_end_metabolize(mob/living/L)
-	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/changelinghaste)
+	//L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/changelinghaste)
 	..()
 
 /datum/reagent/medicine/changelinghaste/on_mob_life(mob/living/carbon/M)
