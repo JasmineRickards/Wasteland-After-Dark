@@ -156,6 +156,7 @@
 	pH = 11
 	value = REAGENT_VALUE_COMMON
 	ghoulfriendly = TRUE
+	overdose_threshold = 30
 
 /datum/reagent/medicine/cryoxadone/on_mob_life(mob/living/carbon/M)
 	var/power = -0.00003 * (M.bodytemperature ** 2) + 3
@@ -172,6 +173,13 @@
 		. = 1
 	metabolization_rate = REAGENTS_METABOLISM * (0.00001 * (M.bodytemperature ** 2) + 0.5)
 	..()
+
+/datum/reagent/medicine/cryoxadone/overdose_process(mob/living/M)
+	M.adjustToxLoss(3, 0)
+	M.Dizzy(5)
+	M.Jitter(5)
+	..()
+	. = 1
 
 /datum/reagent/medicine/clonexadone
 	name = "Super Restructuring Stimfluid"
