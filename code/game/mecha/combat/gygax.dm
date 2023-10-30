@@ -19,6 +19,7 @@
 	leg_overload_coeff = 300
 	smashcooldown = 8
 	canstrafe = TRUE
+//	base_color = "#837A43"
 
 /obj/mecha/combat/gygax/dark // Adminus mech.
 	name = "\improper Dark Gygax"

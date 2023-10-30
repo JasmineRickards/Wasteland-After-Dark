@@ -216,6 +216,24 @@
 			welder_salvage += part
 			parts -= part
 
+/obj/structure/mecha_wreckage/mw112mdd
+	name = "\improper MW mw-112mdd wreckage"
+	icon_state = "mw112mdd-broken"
+
+/obj/structure/mecha_wreckage/mw112mdd/Initialize()
+	. = ..()
+	var/list/parts = list(
+								/obj/item/mecha_parts/part/mw112mdd_torso,
+								/obj/item/mecha_parts/part/mw112mdd_head,
+								/obj/item/mecha_parts/part/mw112mdd_left_arm,
+								/obj/item/mecha_parts/part/mw112mdd_right_arm,
+								/obj/item/mecha_parts/part/mw112mdd_left_leg,
+								/obj/item/mecha_parts/part/mw112mdd_right_leg)
+	for(var/i = 0; i < 2; i++)
+		if(parts.len && prob(40))
+			var/part = pick(parts)
+			welder_salvage += part
+			parts -= part
 
 /obj/structure/mecha_wreckage/phazon
 	name = "\improper Phazon wreckage"
