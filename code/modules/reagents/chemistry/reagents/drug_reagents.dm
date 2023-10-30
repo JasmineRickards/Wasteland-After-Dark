@@ -215,11 +215,11 @@
 
 /datum/reagent/drug/methamphetamine/on_mob_metabolize(mob/living/L)
 	..()
-	L.ignore_slowdown(type)
+	//L.ignore_slowdown(type)
 	ADD_TRAIT(L, TRAIT_TASED_RESISTANCE, type)
 
 /datum/reagent/drug/methamphetamine/on_mob_end_metabolize(mob/living/L)
-	L.unignore_slowdown(type)
+	//L.unignore_slowdown(type)
 	REMOVE_TRAIT(L, TRAIT_TASED_RESISTANCE, type)
 	..()
 
@@ -232,8 +232,8 @@
 	M.adjustStaminaLoss(-7.5 * REM, 0)
 	if(jitter)
 		M.Jitter(2)
-	if(brain_damage)
-		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, rand(1,4))
+//	if(brain_damage) //-Removes braindamage from meth to account for removal of anti-slowdown. Note: Still does braindamage on addiction & overdose
+//		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, rand(1,4))
 	M.heal_overall_damage(2, 2)
 	if(prob(5))
 		M.emote(pick("twitch", "shiver"))
