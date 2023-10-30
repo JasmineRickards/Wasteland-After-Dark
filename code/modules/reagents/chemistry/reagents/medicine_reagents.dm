@@ -149,8 +149,8 @@
 	..()
 
 /datum/reagent/medicine/cryoxadone
-	name = "Cryoxadone"
-	description = "A chemical mixture with almost magical healing powers. Its main limitation is that the patient's body temperature must be under 270K for it to metabolise correctly."
+	name = "Restructuring stimfluid"
+	description = "A chemical mixture with almost magical healing powers."
 	color = "#0000C8"
 	taste_description = "sludge"
 	pH = 11
