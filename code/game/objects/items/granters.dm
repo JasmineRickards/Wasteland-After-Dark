@@ -1101,7 +1101,7 @@
 		desc = "A compendium of knowledge passed down from the elders. It looks to be in poor condition."
 
 /obj/item/book/granter/trait/selection/tribal/attack_self(mob/user)
-	var/list/choices = list("Hit Them With Sticks","Pugilist","Padded Feet","Veteran Table Climber","Desert Affinity","Spiritual Mending")
+	var/list/choices = list("Hit Them With Sticks","Pugilist","Firestick Training","Fireant Rituals","Fisting Expert","Spiritual Mending")
 	if(granted_trait == null)
 		var/choice = input("Choose a trait:") in choices
 		switch(choice)
