@@ -41460,10 +41460,8 @@
 	},
 /area/f13/wasteland/museum)
 "mPq" = (
-/obj/machinery/chem_dispenser/drinks/fullupgrade{
-	pixel_y = 10
-	},
 /obj/structure/table/wood/bar,
+/obj/machinery/chem_dispenser/drinks,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "mPL" = (
@@ -44154,9 +44152,7 @@
 	},
 /area/f13/wasteland/bighornbunker)
 "osy" = (
-/obj/structure/junk/jukebox{
-	pixel_y = -5
-	},
+/obj/machinery/jukebox,
 /turf/closed/wall/mineral/wood,
 /area/f13/building)
 "osA" = (
@@ -46457,10 +46453,8 @@
 	},
 /area/f13/brotherhood/leisure)
 "pKF" = (
-/obj/machinery/chem_dispenser/drinks/beer/fullupgrade{
-	pixel_y = 10
-	},
 /obj/structure/table/wood/bar,
+/obj/machinery/chem_dispenser/drinks/beer,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "pKL" = (
