@@ -814,7 +814,7 @@
 	always_available = TRUE
 
 //tommy gun
-/datum/crafting_recipe/typewriter
+/datum/crafting_recipe/tommygun
 	name = "Thompson SMG"
 	result = /obj/item/gun/ballistic/automatic/smg/tommygun
 	reqs = list(/obj/item/stack/crafting/metalparts = 5,

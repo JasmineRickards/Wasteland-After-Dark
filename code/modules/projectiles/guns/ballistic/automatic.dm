@@ -810,7 +810,7 @@
 	icon_prefix = "combatrifle"
 	mag_type = /obj/item/ammo_box/magazine/tommygunm45/stick
 	fire_delay = 1
-	autofire_shot_delay = 2
+	autofire_shot_delay = 2.2
 	automatic = TRUE
 	burst_size = 1
 	spread = 1
@@ -1589,7 +1589,7 @@
 	burst_shot_delay = 1.5
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 1.1
+	autofire_shot_delay = 2
 	fire_delay = 2
 	spread = 10
 	can_attachments = FALSE
