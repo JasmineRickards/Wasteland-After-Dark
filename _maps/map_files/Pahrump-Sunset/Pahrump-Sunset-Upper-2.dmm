@@ -35,6 +35,22 @@
 "ed" = (
 /obj/structure/table/wood,
 /obj/machinery/light,
+/obj/item/radio/headset/headset_town,
+/obj/item/radio/headset/headset_town,
+/obj/item/radio/headset/headset_town,
+/obj/item/radio/headset/headset_town,
+/obj/item/radio/headset/headset_town,
+/obj/item/radio/headset/headset_town,
+/obj/item/radio/headset/headset_town,
+/obj/item/radio/headset/headset_town,
+/obj/item/radio/headset/headset_town,
+/obj/item/radio/headset/headset_town,
+/obj/item/radio/headset/headset_town,
+/obj/item/radio/headset/headset_town,
+/obj/item/encryptionkey/headset_town,
+/obj/item/encryptionkey/headset_town,
+/obj/item/encryptionkey/headset_town,
+/obj/item/encryptionkey/headset_town,
 /turf/open/floor/wood/wood_mosaic,
 /area/f13/city/bighorn)
 "eH" = (
@@ -500,6 +516,14 @@
 /area/f13/city/bighorn)
 "Uy" = (
 /turf/open/floor/carpet/green,
+/area/f13/city/bighorn)
+"UE" = (
+/obj/structure/table/wood,
+/obj/item/card/id/dogtag/town,
+/obj/item/card/id/dogtag/town,
+/obj/item/card/id/dogtag/town,
+/obj/item/card/id/dogtag/town,
+/turf/open/floor/wood/wood_mosaic,
 /area/f13/city/bighorn)
 "UT" = (
 /obj/machinery/vending/cigarette,
@@ -3621,7 +3645,7 @@ oV
 iW
 Mx
 Mx
-LN
+UE
 SP
 YA
 YA
