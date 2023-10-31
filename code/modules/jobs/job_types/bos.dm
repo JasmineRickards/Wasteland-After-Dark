@@ -42,6 +42,7 @@ Main doors: ACCESS_CAPTAIN 20
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/boscombathelmet)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/boscombatarmormk2)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/boscombathelmetmk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatrifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/bos)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_bos)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_bosciv)

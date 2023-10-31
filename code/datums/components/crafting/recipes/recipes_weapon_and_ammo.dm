@@ -813,6 +813,22 @@
 	subcategory = CAT_WEAPON
 	always_available = TRUE
 
+//tommy gun
+/datum/crafting_recipe/typewriter
+	name = "Thompson SMG"
+	result = /obj/item/gun/ballistic/automatic/smg/tommygun
+	reqs = list(/obj/item/stack/crafting/metalparts = 5,
+				/obj/item/stack/sheet/mineral/wood = 5,
+				/obj/item/advanced_crafting_components/assembly = 1,
+				/obj/item/advanced_crafting_components/receiver = 1,
+				/obj/item/stack/crafting/goodparts = 5
+				)
+	tools = list(TOOL_AWORKBENCH)
+	time = 400
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_available = FALSE
+
 //m1928
 /datum/crafting_recipe/typewriter
 	name = "Thompson M1928"

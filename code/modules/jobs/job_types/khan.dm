@@ -35,12 +35,12 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/varmintrifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatrifle)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/typewriter)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_khanate)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/scrapsabre_khan)
-	
+
 /datum/job/khan/smith
 	title = "Khan Smith"
 	flag = F13KHANSMITH
@@ -60,7 +60,7 @@
 	loadout_options = list(
 		/datum/outfit/loadout/smith
 		)
-	
+
 /datum/job/khan/senior_enforcer
 	title = "Khan Senior Enforcer"
 	flag = F13KHANSEN
@@ -130,7 +130,7 @@
 	gunsmith_two = TRUE
 	gunsmith_three = TRUE
 	gunsmith_four = TRUE
-	
+
 /datum/outfit/job/khan/senior_enforcer
 	jobtype = /datum/job/khan/senior_enforcer
 
@@ -156,7 +156,7 @@
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle = 3,
 		/obj/item/book/granter/trait/trekking = 1)
-		
+
 //CHEMIST =================================================================
 
 /datum/outfit/loadout/chemist
@@ -205,7 +205,7 @@
 	if(H.mind)
 		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
 		H.mind.AddSpell(S)
-		
+
 //SMITH =================================================================
 
 /datum/outfit/loadout/smith
@@ -242,4 +242,3 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/empgrenade)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalwar/xbow)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalwar/cheaparrow)
-	

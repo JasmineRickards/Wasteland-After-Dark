@@ -1186,7 +1186,7 @@
 	icon_state = "assault_rifle"
 	item_state = "fnfal"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	fire_delay = 2.5
+	fire_delay = 2.3
 	slowdown = 0.35
 	spread = 10
 	recoil = 0.1
