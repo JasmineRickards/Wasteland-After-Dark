@@ -1589,7 +1589,7 @@
 	burst_shot_delay = 1.5
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 2
+	autofire_shot_delay = 1.8
 	fire_delay = 2
 	spread = 10
 	can_attachments = FALSE
