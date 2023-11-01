@@ -1570,6 +1570,15 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/brotherhood)
+"bqU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small,
+/obj/structure/railing{
+	color = "#A47449";
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/city/bighorn)
 "brv" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/f13/wood,
@@ -1826,6 +1835,15 @@
 /obj/structure/weightmachine/weightlifter,
 /turf/open/floor/wood/wood_worn,
 /area/f13/city/bighorn)
+"bOK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/railing/corner{
+	dir = 4;
+	color = "#A47449";
+	pixel_x = -2
+	},
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/city/bighorn)
 "bPq" = (
 /obj/effect/decal/cleanable/generic,
 /obj/effect/decal/cleanable/dirt,
@@ -1921,6 +1939,14 @@
 	color = "#b2b2b2"
 	},
 /area/f13/building/mall)
+"cbA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/railing{
+	color = "#A47449";
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/city/bighorn)
 "cbD" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -13255,6 +13281,14 @@
 	icon_state = "bluecorner"
 	},
 /area/f13/followers)
+"xGf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/railing{
+	color = "#A47449";
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/city/bighorn)
 "xGw" = (
 /obj/machinery/hydroponics/constructable,
 /obj/structure/window/reinforced{
@@ -28418,8 +28452,8 @@ bHY
 bHY
 nxV
 csj
-smQ
-smQ
+cbA
+bOK
 csj
 aKa
 oez
@@ -28676,7 +28710,7 @@ ojS
 pyk
 csj
 xdm
-smQ
+xGf
 csj
 aKa
 oez
@@ -28933,7 +28967,7 @@ ojS
 csj
 csj
 fvQ
-jKt
+bqU
 csj
 aKa
 oez

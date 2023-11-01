@@ -8145,8 +8145,10 @@
 "dWc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/f13/armor/tier3,
-/obj/effect/spawner/lootdrop/f13/armor/tier3,
+/obj/item/gun/ballistic/automatic/r93/rifle,
+/obj/item/gun/ballistic/automatic/r93/rifle,
+/obj/item/gun/ballistic/automatic/r93/rifle,
+/obj/item/gun/ballistic/automatic/r93/rifle,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -17076,6 +17078,12 @@
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/f13/blueprintMid,
 /obj/effect/spawner/lootdrop/f13/blueprintMid,
+/obj/effect/spawner/lootdrop/f13/blueprintVHighBallistics,
+/obj/effect/spawner/lootdrop/f13/blueprintVHighBallistics,
+/obj/effect/spawner/lootdrop/f13/blueprintVHigh,
+/obj/effect/spawner/lootdrop/f13/blueprintVHigh,
+/obj/effect/spawner/lootdrop/f13/blueprintVHigh,
+/obj/effect/spawner/lootdrop/f13/blueprintVHigh,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -17662,7 +17670,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/unique,
+/obj/item/gun/ballistic/automatic/r93,
+/obj/item/gun/ballistic/automatic/r93,
+/obj/item/gun/ballistic/automatic/r93,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -21818,6 +21828,10 @@
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier5,
+/obj/effect/spawner/lootdrop/f13/weapon/melee/tier5,
+/obj/effect/spawner/lootdrop/f13/weapon/melee/tier5,
+/obj/effect/spawner/lootdrop/f13/weapon/melee/tier4,
+/obj/effect/spawner/lootdrop/f13/weapon/melee/tier4,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -25195,6 +25209,7 @@
 	network = list("BoS");
 	pixel_x = -1
 	},
+/obj/effect/spawner/lootdrop/f13/armor/bos_vault_armor,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -26182,7 +26197,9 @@
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/mid,
+/obj/effect/spawner/lootdrop/f13/armor/tier4,
+/obj/effect/spawner/lootdrop/f13/armor/tier4,
+/obj/effect/spawner/lootdrop/f13/armor/tier4,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -26802,9 +26819,7 @@
 "yeS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/lowmid,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/lowmid,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/lowmid,
+/obj/effect/spawner/lootdrop/f13/armor/tier5,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},

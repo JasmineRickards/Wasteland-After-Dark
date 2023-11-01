@@ -21242,6 +21242,10 @@
 	color = "#A47449";
 	dir = 5
 	},
+/obj/structure/railing/corner{
+	color = "#A47449";
+	dir = 8
+	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/valley)
 "bOz" = (
@@ -22348,6 +22352,14 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/building/massfusion)
+"cfs" = (
+/obj/effect/turf_decal/weather/dirt,
+/obj/structure/railing{
+	color = "#A47449";
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland/valley)
 "cfz" = (
 /obj/structure/stone_tile/slab/cracked,
 /obj/effect/decal/cleanable/dirt,
@@ -23600,6 +23612,13 @@
 /obj/item/pda,
 /turf/open/floor/plasteel/f13,
 /area/f13/building/museum)
+"cul" = (
+/obj/effect/decal/cleanable/generic,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superhigh,
+/turf/open/floor/plasteel/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/building/massfusion)
 "cuu" = (
 /mob/living/simple_animal/hostile/cazador,
 /turf/open/indestructible/ground/outside/desert,
@@ -27066,6 +27085,22 @@
 	},
 /turf/closed/wall/f13/tentwall,
 /area/f13/building)
+"evY" = (
+/obj/structure/flora/grass/wasteland{
+	icon_state = "tall_grass_4"
+	},
+/obj/effect/turf_decal/weather/dirt{
+	dir = 8
+	},
+/obj/structure/railing/corner{
+	color = "#A47449";
+	dir = 4
+	},
+/obj/structure/railing{
+	color = "#A47449"
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland/valley)
 "evZ" = (
 /obj/structure/fence,
 /turf/open/indestructible/ground/outside/dirt{
@@ -28349,6 +28384,10 @@
 /obj/structure/railing{
 	color = "#A47449";
 	dir = 4
+	},
+/obj/structure/railing{
+	color = "#A47449";
+	dir = 8
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/valley)
@@ -31160,6 +31199,14 @@
 	destination_z = 9
 	},
 /area/f13/tunnel/southeast)
+"gPJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/waste,
+/mob/living/simple_animal/hostile/ghoul/glowing,
+/turf/open/floor/plasteel/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/building/massfusion)
 "gQf" = (
 /obj/machinery/computer/shuttle/bos{
 	dir = 8;
@@ -33265,6 +33312,15 @@
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/caves)
+"ihT" = (
+/obj/structure/railing/corner{
+	color = "#A47449";
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/graveldirt{
+	dir = 4
+	},
+/area/f13/wasteland/valley)
 "iig" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack,
@@ -46366,6 +46422,17 @@
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland/west)
+"pGC" = (
+/obj/machinery/teleport/station{
+	name = "power unit"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/mirelurk/hunter,
+/turf/open/floor/plasteel/f13{
+	icon_state = "darkrustysolid"
+	},
+/area/f13/building/massfusion)
 "pGE" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 8
@@ -59916,6 +59983,14 @@
 /obj/item/clothing/glasses/regular/jamjar,
 /turf/open/floor/carpet,
 /area/f13/building/mall)
+"xvK" = (
+/obj/structure/railing{
+	layer = 4.1
+	},
+/turf/open/floor/f13{
+	icon_state = "darkrustysolid"
+	},
+/area/f13/brotherhood/leisure)
 "xvO" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -114352,7 +114427,7 @@ aae
 wPK
 aof
 bpp
-acU
+gPJ
 rUR
 mFy
 vVo
@@ -115900,7 +115975,7 @@ aaR
 bae
 vVo
 oJI
-axs
+pGC
 axs
 adh
 vVo
@@ -116163,7 +116238,7 @@ jAS
 vVo
 fpe
 bpp
-uqJ
+cul
 lxJ
 vVo
 abH
@@ -117183,7 +117258,7 @@ aae
 aae
 aaB
 abt
-lTe
+rXA
 afn
 aae
 aae
@@ -118183,7 +118258,7 @@ kQj
 uab
 uab
 uab
-kQj
+xvK
 vmr
 cXF
 aae
@@ -118440,7 +118515,7 @@ kQj
 cxl
 cxl
 cxl
-kQj
+xvK
 vmr
 cXF
 aae
@@ -118697,7 +118772,7 @@ kQj
 cxl
 jxt
 cxl
-kQj
+xvK
 vmr
 cXF
 aae
@@ -118954,7 +119029,7 @@ kQj
 cxl
 cxl
 cxl
-kQj
+xvK
 vmr
 cXF
 aae
@@ -119211,7 +119286,7 @@ kQj
 uab
 uab
 uab
-kQj
+xvK
 vmr
 cXF
 aae
@@ -120996,10 +121071,10 @@ szc
 jPh
 jPh
 bvG
-mQj
+evY
 lVW
 wAK
-jVJ
+hxC
 jVJ
 sTF
 aae
@@ -121255,8 +121330,8 @@ gZC
 gZC
 bOm
 fjD
-nfr
-jVJ
+cfs
+ihT
 jVJ
 sTF
 aae
