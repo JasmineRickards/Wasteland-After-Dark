@@ -1,6 +1,9 @@
 GLOBAL_LIST_INIT(fish_rates, list(
 	/obj/item/fishy/carp		=15,
-	/obj/item/fishy/salmon		=15
+	/obj/item/fishy/salmon		=15,
+	/obj/item/fishy/lobster		=15,
+	/obj/item/fishy/shrimp		=15
+
 ))
 //I have tried to have variables be highly influential so that customization can happen
 //customization, maybe some rods are better than others ;)
@@ -28,7 +31,7 @@ GLOBAL_LIST_INIT(fish_rates, list(
 	var/current_waitfail = 0
 	//customization, some rods catch trash better than others, if you really want that I guess
 	//default is 40, which is 40 percent chance
-	var/trash_chance = 40
+	var/trash_chance = 30
 
 /obj/item/fishingrod/equipped(mob/user, slot)
 	. = ..()
@@ -94,7 +97,7 @@ GLOBAL_LIST_INIT(fish_rates, list(
 				new /obj/item/salvage/low(current_turf)
 				if(prob(5))
 					new /obj/item/salvage/high(current_turf)
-				return 1			
+				return 1
 			return 2
 		if(TRUE)
 			var/pick_fish = pickweight(GLOB.fish_rates) //add your in the global list
