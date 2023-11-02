@@ -1402,7 +1402,7 @@
 	weapon_weight = WEAPON_HEAVY
 
 /obj/item/gun/ballistic/automatic/assault_carbine/smg
-	name = "5mm machine pistol"
+	name = "\improper 5mm machine pistol"
 	desc = "A German-made armor piercing PDW chambered for 5mm. It has the markings of the Brotherhood of Steel on its receiver."
 	icon_state = "mp7"
 	item_state = "uzi"
@@ -1494,7 +1494,7 @@
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 
 /obj/item/gun/ballistic/automatic/g11/g11e/smg
-	name = "4.7mm machine pistol"
+	name = "\improper 4.7mm machine pistol"
 	desc = "An especially developed and modified machine pistol chambered for 4.73 caseless munitions, equipped with a West-Tek Marksman™ optic. It's loaded using helical magazines.
 	icon_state = "mp7m"
 	item_state = "uzi"
@@ -1511,6 +1511,7 @@
 	extra_speed = -50
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_HEAVY
+
 
 ////////////////
 //MACHINE-GUNS//
