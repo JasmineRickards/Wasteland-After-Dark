@@ -142,6 +142,24 @@
 /obj/item/ammo_box/magazine/smg14/stacked/empty
 	start_empty = 1
 
+/obj/item/ammo_box/magazine/mp7
+	name = "5mm machine pistol magazine"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "mp7"
+	ammo_type = /obj/item/ammo_casing/m5mm
+	caliber = "m5mm"
+	max_ammo = 20
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/mp7m
+	name = "4.7mm machine pistol magazine"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "mp7m"
+	caliber = "473mm"
+	ammo_type = /obj/item/ammo_casing/caseless/g11
+	max_ammo = 35
+	multiple_sprites = 2
+
 /obj/item/ammo_box/magazine/m10mm_p90
 	name = "toploader magazine (10mm)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
