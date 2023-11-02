@@ -2985,7 +2985,7 @@
 "alh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/railing{
-	dir = 1
+	layer = 4.1
 	},
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland/bighorn)
@@ -21889,7 +21889,7 @@
 /area/f13/wasteland/bighorn)
 "bYI" = (
 /obj/structure/railing{
-	dir = 1
+	layer = 4.1
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 1;
