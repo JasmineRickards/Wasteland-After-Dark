@@ -36367,6 +36367,11 @@
 	icon_state = "outerborder"
 	},
 /area/f13/wasteland/east)
+"jPH" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/jukebox,
+/turf/open/floor/wood/wood_common,
+/area/f13/city/bighorn)
 "jPK" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt{
@@ -72732,7 +72737,7 @@ bmI
 kPo
 bul
 lUX
-blj
+jPH
 aTw
 fuK
 qoX
