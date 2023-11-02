@@ -465,13 +465,33 @@
 	roleplay_exclusive_notify = 1
 	exp_requirements = 1000
 	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE_COMMAND, ACCESS_SECURITY, ACCESS_AI_UPLOAD)
+	loadout_options = list(
+		/datum/outfit/loadout/pilotbackup,			//OA-93 compact assault carbine
+		/datum/outfit/loadout/pilotemergency,			//4.7mm SMG
+		)
+
+/datum/outfit/loadout/pilotbackup
+	name = "The Backup"
+	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine/olympic
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m5mm = 1,
+		/obj/item/grenade/f13/plasma = 1,
+		)
+
+/datum/outfit/loadout/pilotemergency
+	name = "Pilot's Extended-Range Survival Kit"
+	suit_store = /obj/item/gun/ballistic/automatic/g11/g11e/smg
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m473 = 1,
+		/obj/item/grenade/smokebomb = 2,
+		)
 
 /datum/outfit/job/enclave/noncombat/enclavepilot
 	name = "Enclave Pilot Officer"
 	jobtype = /datum/job/enclave/enclavepilot
-	head = /obj/item/clothing/head/helmet/f13/enclave/usmcriot/armypilot//TEMP UNTIL WE GET A PROPER PILOT UNIFORM
+	head = /obj/item/clothing/head/helmet/f13/enclave/usmcriot/armypilot	//TEMP UNTIL WE GET A PROPER PILOT UNIFORM
 	uniform = /obj/item/clothing/under/f13/enclave/officer
-	suit = /obj/item/clothing/suit/armor/f13/usmcriot/armypilot//TEMP UNTIL WE GET A PROPER PILOT UNIFORM
+	suit = /obj/item/clothing/suit/armor/f13/usmcriot/armypilot		//TEMP UNTIL WE GET A PROPER PILOT UNIFORM
 	accessory = /obj/item/clothing/accessory/enclave/second_lieutenant
 	id = /obj/item/card/id/dogtag/enclave/officer
 	ears = /obj/item/radio/headset/headset_enclave/command

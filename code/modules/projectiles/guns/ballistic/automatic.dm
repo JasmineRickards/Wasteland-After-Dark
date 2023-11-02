@@ -727,7 +727,6 @@
 	fire_delay = 3.5
 	burst_size = 1
 	spread = 0
-
 	can_bayonet = FALSE
 	semi_auto = TRUE
 	automatic_burst_overlay = FALSE
@@ -740,6 +739,7 @@
 	suppressor_y_offset = 31
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 	can_scope = TRUE
+	extra_damage = 4
 
 //De Lisle carbine							Keywords: Pre-war, 9mm, Long barrel, Suppressed
 /obj/item/gun/ballistic/automatic/delisle
@@ -778,7 +778,6 @@
 	desc = "Legends are told of the \"Ratslayer\", a custom-made souped-up varmint rifle with a sick paintjob. This is a pale imitation, made of chopped-up bits of other guns."
 	icon_state = "verminrifle"
 	item_state = "ratslayer"
-
 	suppressed = 1
 	zoomable = TRUE
 	zoom_amt = 10
@@ -800,6 +799,7 @@
 	zoom_out_amt = 13
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 	extra_penetration = 0.15
+	extra_damage = 8
 
 //Combat Rifle		Keywords: .45 Caliber Rifle, BoS rifle
 /obj/item/gun/ballistic/automatic/combat
@@ -921,6 +921,7 @@
 	suppressor_x_offset = 31
 	suppressor_y_offset = 15
 	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
+	extra_damage = 4
 	extra_penetration = 0.2
 
 /obj/item/gun/ballistic/automatic/marksman/policerifle
@@ -964,6 +965,7 @@
 	scope_x_offset = 4
 	scope_y_offset = 11
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+	extra_damage = 5
 
 
 // Enfield SLR				Keywords: 7.62mm, Semi-auto, 10/20 round magazine
@@ -1380,6 +1382,43 @@
 	burst_shot_delay = 2.2
 	spread = 18
 
+/obj/item/gun/ballistic/automatic/assault_carbine/olympic
+	name = "OA-93 machine pistol"
+	desc = "A pistol-sized Colt assault carbine chambered for 5mm made by Olympic Arms, issued to Vertibird pilots. It's lighter, concealable and boasts a higher rate of fire - though the short barrel and lack of a buttstock make it a very poor choice for anything but boarding encounters."
+	icon_state = "olympic"
+	item_state = "assault_carbine"
+	icon_prefix = "olympic"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	slowdown = 0.15
+	mag_type = /obj/item/ammo_box/magazine/m5mm
+	autofire_shot_delay = 0.9
+	spread = 30 //almost unusable
+	extra_damage = -2
+	can_attachments = FALSE
+	can_suppress = FALSE
+	can_flashlight = FALSE
+	recoil = 2
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_HEAVY
+
+/obj/item/gun/ballistic/automatic/assault_carbine/smg
+	name = "\improper 5mm machine pistol"
+	desc = "A German-made armor piercing PDW chambered for 5mm. It has the markings of the Brotherhood of Steel on its receiver."
+	icon_state = "mp7"
+	item_state = "uzi"
+	icon_prefix = "mp7"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	slowdown = 0.12
+	autofire_shot_delay = 1.2
+	spread = 18
+	can_attachments = FALSE
+	can_suppress = FALSE
+	can_flashlight = FALSE
+	extra_penetration = -0.15
+	extra_damage = -2
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_HEAVY
+
 //FN-FAL				Keywords: 7.62mm, Automatic, 10/20 round magazine
 /obj/item/gun/ballistic/automatic/fnfal
 	name = "FN FAL"
@@ -1453,6 +1492,26 @@
 	can_unsuppress = FALSE
 	suppressed = 1
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
+
+/obj/item/gun/ballistic/automatic/g11/g11e/smg
+	name = "\improper 4.7mm machine pistol"
+	desc = "An especially developed and modified machine pistol chambered for 4.73 caseless munitions, equipped with a West-Tek Marksman™ optic. It's loaded using helical magazines."
+	icon_state = "mp7m"
+	item_state = "uzi"
+	icon_prefix = "mp7m"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	spread = 18
+	can_attachments = FALSE
+	recoil = 0.5 //No big frame to hold onto
+	autofire_shot_delay = 1.2
+	burst_shot_delay = 1.2
+	zoom_amt = 6
+	zoom_out_amt = 9
+	extra_damage = -9
+	extra_speed = -50
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_HEAVY
+
 
 ////////////////
 //MACHINE-GUNS//
