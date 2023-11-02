@@ -1495,7 +1495,7 @@
 
 /obj/item/gun/ballistic/automatic/g11/g11e/smg
 	name = "\improper 4.7mm machine pistol"
-	desc = "An especially developed and modified machine pistol chambered for 4.73 caseless munitions, equipped with a West-Tek Marksman™ optic. It's loaded using helical magazines.
+	desc = "An especially developed and modified machine pistol chambered for 4.73 caseless munitions, equipped with a West-Tek Marksman™ optic. It's loaded using helical magazines."
 	icon_state = "mp7m"
 	item_state = "uzi"
 	icon_prefix = "mp7m"
