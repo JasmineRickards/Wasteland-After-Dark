@@ -748,7 +748,7 @@ Senior Knight
 
 	loadout_options = list(
 	/datum/outfit/loadout/sknighta, //AER9
-	/datum/outfit/loadout/sknightb, //Police Shotgun
+	/datum/outfit/loadout/sknightb, //5mm SMG
 	/datum/outfit/loadout/sknightc, //R93 Rifle
 	/datum/outfit/loadout/sknightd,
 	)
@@ -814,10 +814,10 @@ Senior Knight
 		)
 
 /datum/outfit/loadout/sknightb
-	name = "Knight-Defender"
+	name = "Senior Knight-Defender"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/shotgun/police=1,
-		/obj/item/ammo_box/shotgun/buck=2,
+		/obj/item/gun/ballistic/automatic/assault_carbine/smg=1,
+		/obj/item/ammo_box/magazine/m5mm=2,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		)
