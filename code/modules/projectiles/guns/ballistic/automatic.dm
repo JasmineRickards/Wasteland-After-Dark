@@ -1391,7 +1391,7 @@
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	slowdown = 0.15
 	mag_type = /obj/item/ammo_box/magazine/m5mm
-	autofire_shot_delay = 2.2
+	autofire_shot_delay = 1.65 //0.10 faster than the assault carbine
 	spread = 10
 	extra_damage = -2
 	can_attachments = FALSE
@@ -1408,9 +1408,10 @@
 	item_state = "uzi"
 	icon_prefix = "mp7"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	mag_type = /obj/item/ammo_box/magazine/mp7
 	slowdown = 0.12
-	autofire_shot_delay = 2.2
-	spread = 0
+	autofire_shot_delay = 1.6
+	spread = 8
 	can_attachments = FALSE
 	can_suppress = FALSE
 	can_flashlight = FALSE
@@ -1505,6 +1506,7 @@
 	recoil = 0.5 //No big frame to hold onto
 	autofire_shot_delay = 1.2
 	burst_shot_delay = 1.2
+	mag_type = /obj/item/ammo_box/magazine/mp7m
 	zoom_amt = 6
 	zoom_out_amt = 9
 	extra_damage = -9
