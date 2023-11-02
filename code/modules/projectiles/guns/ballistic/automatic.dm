@@ -1283,7 +1283,7 @@
 	spread = 10
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 3
+	autofire_shot_delay = 2.2
 	recoil = 0.1
 	can_suppress = TRUE
 	suppressor_state = "rifle_suppressor"
@@ -1391,8 +1391,8 @@
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	slowdown = 0.15
 	mag_type = /obj/item/ammo_box/magazine/m5mm
-	autofire_shot_delay = 0.9
-	spread = 30 //almost unusable
+	autofire_shot_delay = 2.2
+	spread = 10
 	extra_damage = -2
 	can_attachments = FALSE
 	can_suppress = FALSE
@@ -1409,8 +1409,8 @@
 	icon_prefix = "mp7"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	slowdown = 0.12
-	autofire_shot_delay = 1.2
-	spread = 18
+	autofire_shot_delay = 2.2
+	spread = 0
 	can_attachments = FALSE
 	can_suppress = FALSE
 	can_flashlight = FALSE
