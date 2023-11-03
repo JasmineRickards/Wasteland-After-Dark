@@ -289,7 +289,7 @@
 /datum/crafting_recipe/mp7mag
 	name = "fashion 5mm machine pistol magazine"
 	result = /obj/item/ammo_box/magazine/mp7
-	reqs = list(/obj/item/stack/crafting/metalparts = 3
+	reqs = list(/obj/item/stack/crafting/metalparts = 3,
 				/obj/item/ammo_box/magazine/smg14 = 1)
 	tools = list(TOOL_AWORKBENCH)
 	time = 25
@@ -300,7 +300,7 @@
 /datum/crafting_recipe/mp7mmag
 	name = "fashion 4.7mm machine pistol magazine"
 	result = /obj/item/ammo_box/magazine/mp7m
-	reqs = list(/obj/item/stack/crafting/metalparts = 3
+	reqs = list(/obj/item/stack/crafting/metalparts = 3,
 				/obj/item/ammo_box/magazine/m473 = 1)
 	tools = list(TOOL_AWORKBENCH)
 	time = 30
