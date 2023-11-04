@@ -1173,8 +1173,9 @@
 	is_automatic = TRUE
 	slowdown = 0.3
 	automatic = 1
-	autofire_shot_delay = 3
-	spread = 10
+	extra_damage = 4
+	autofire_shot_delay = 2.9
+	spread = 8
 	can_suppress = TRUE
 	suppressor_state = "rifle_suppressor"
 	suppressor_x_offset = 27
@@ -1263,6 +1264,7 @@
 	desc = "A lightweight carbine manufactured by the Brotherhood of Steel with a folding stock and longer barrel, based on weapons from the R-series platforms and re-chambered for 5mm. It is generally issued to marksmen and squad leaders."
 	fire_delay = 1
 	autofire_shot_delay = 2
+	spread = 6
 	can_attachments = TRUE
 	can_scope = FALSE
 	can_bayonet = FALSE
