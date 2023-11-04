@@ -6031,6 +6031,9 @@
 	pixel_y = -6
 	},
 /obj/machinery/light/floor,
+/obj/item/book/manual/bos/codex{
+	name = "The mid-west Chapters Codex"
+	},
 /turf/open/floor/plasteel/darkpurple,
 /area/f13/brotherhood/rnd)
 "cgC" = (
@@ -8832,6 +8835,9 @@
 /obj/structure/table/wood/fancy/black,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small,
+/obj/item/book/manual/bos/codex{
+	name = "The mid-west Chapters Codex"
+	},
 /turf/open/floor/carpet/black,
 /area/f13/brotherhood/offices2nd)
 "eDK" = (
@@ -10101,6 +10107,9 @@
 	density = 1
 	},
 /obj/structure/lattice/catwalk,
+/obj/item/book/manual/bos/codex{
+	name = "The mid-west Chapters Codex"
+	},
 /turf/open/floor/plating/tunnel,
 /area/f13/brotherhood/archives)
 "ghG" = (
@@ -11374,6 +11383,14 @@
 /obj/structure/simple_door/bunker,
 /turf/open/floor/plasteel/floorgrime,
 /area/f13/followers)
+"hBi" = (
+/obj/structure/table/reinforced,
+/obj/structure/barricade/bars,
+/obj/item/book/manual/bos/codex{
+	name = "The mid-west Chapters Codex"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
+/area/f13/brotherhood)
 "hCb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/floor,
@@ -11683,6 +11700,9 @@
 /area/f13/building/museum)
 "hQj" = (
 /obj/structure/table/wood/settler,
+/obj/item/book/manual/bos/codex{
+	name = "The mid-west Chapters Codex"
+	},
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -23243,6 +23263,9 @@
 "ueK" = (
 /obj/structure/table/wood/settler,
 /obj/item/storage/box/drinkingglasses,
+/obj/item/book/manual/bos/codex{
+	name = "The mid-west Chapters Codex"
+	},
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -79145,7 +79168,7 @@ oVq
 xEX
 bEX
 bEX
-bEX
+hBi
 oVq
 oVq
 oVq

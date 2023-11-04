@@ -869,7 +869,13 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Superconductor Coils",				/obj/item/advanced_crafting_components/conductors,					200),
 		new /datum/data/wasteland_equipment("Focused crystal lenses",			/obj/item/advanced_crafting_components/lenses,						200),
 		new /datum/data/wasteland_equipment("Flux capacitator",					/obj/item/advanced_crafting_components/flux,						200),
-		new /datum/data/wasteland_equipment("Superlight Alloys",				/obj/item/advanced_crafting_components/alloys,						200)
+		new /datum/data/wasteland_equipment("Superlight Alloys",				/obj/item/advanced_crafting_components/alloys,						200),
+		new /datum/data/wasteland_equipment("Advanced Matter Bin",				/obj/item/stock_parts/matter_bin/adv,								50),
+		new /datum/data/wasteland_equipment("nano manipulator",				/obj/item/stock_parts/manipulator/nano,									75),
+		new /datum/data/wasteland_equipment("Advanced capacitor",				/obj/item/stock_parts/capacitor/adv,								75),
+		new /datum/data/wasteland_equipment("Autolathe circuitry",				/obj/item/circuitboard/machine/autolathe,							200),
+		new /datum/data/wasteland_equipment("Ammo bench circuitry",				/obj/item/circuitboard/machine/autolathe/ammo,						200)
+
 		)
 	highpop_list = list(
 		new /datum/data/wasteland_equipment("Advanced Modular Receiver",		/obj/item/advanced_crafting_components/receiver,					200),
@@ -877,7 +883,12 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Superconductor Coils",				/obj/item/advanced_crafting_components/conductors,					200),
 		new /datum/data/wasteland_equipment("Focused crystal lenses",			/obj/item/advanced_crafting_components/lenses,						200),
 		new /datum/data/wasteland_equipment("Flux capacitator",					/obj/item/advanced_crafting_components/flux,						200),
-		new /datum/data/wasteland_equipment("Superlight Alloys",				/obj/item/advanced_crafting_components/alloys,						200)
+		new /datum/data/wasteland_equipment("Superlight Alloys",				/obj/item/advanced_crafting_components/alloys,						200),
+		new /datum/data/wasteland_equipment("Advanced Matter Bin",				/obj/item/stock_parts/matter_bin/adv,								50),
+		new /datum/data/wasteland_equipment("nano manipulator",				/obj/item/stock_parts/manipulator/nano,									75),
+		new /datum/data/wasteland_equipment("Advanced capacitor",				/obj/item/stock_parts/capacitor/adv,								75),
+		new /datum/data/wasteland_equipment("Autolathe circuitry",				/obj/item/circuitboard/machine/autolathe,							200),
+		new /datum/data/wasteland_equipment("Ammo bench circuitry",				/obj/item/circuitboard/machine/autolathe/ammo,						200)
 		)
 
 /obj/machinery/mineral/wasteland_vendor/attachments
@@ -898,6 +909,9 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	name = "Wasteland Vending Machine - Crafting"
 	icon_state = "generic_idle"
 	prize_list = list(
+		new /datum/data/wasteland_equipment("Basic salvage",				/obj/item/salvage/low,												25),
+		new /datum/data/wasteland_equipment("Advanced salvage",				/obj/item/salvage/high,												125),
+		new /datum/data/wasteland_equipment("Tool salvage",					/obj/item/salvage/tool,												350),
 		new /datum/data/wasteland_equipment("High Quality Parts",				/obj/item/stack/crafting/goodparts,									25),
 		new /datum/data/wasteland_equipment("Metal Parts",						/obj/item/stack/crafting/metalparts,								10),
 		new /datum/data/wasteland_equipment("Electronic Parts",					/obj/item/stack/crafting/electronicparts,							5),
@@ -909,6 +923,9 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Dean's Electronics",				/obj/item/book/granter/trait/techno,									600),
 		)
 	highpop_list = list(
+		new /datum/data/wasteland_equipment("Basic salvage",				/obj/item/salvage/low,												25),
+		new /datum/data/wasteland_equipment("Advanced salvage",				/obj/item/salvage/high,												125),
+		new /datum/data/wasteland_equipment("Tool salvage",					/obj/item/salvage/tool,												350),
 		new /datum/data/wasteland_equipment("High Quality Parts",				/obj/item/stack/crafting/goodparts,									25),
 		new /datum/data/wasteland_equipment("Metal Parts",						/obj/item/stack/crafting/metalparts,								10),
 		new /datum/data/wasteland_equipment("Electronic Parts",					/obj/item/stack/crafting/electronicparts,							5),
