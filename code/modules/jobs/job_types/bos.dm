@@ -398,6 +398,7 @@ Star Paladin
 		/datum/outfit/loadout/spaladind, //Sledge + Powerfist
 		/datum/outfit/loadout/spaladine, //L30, no powerfist given strength of weapon.
 		/datum/outfit/loadout/spalading, //M60 LMG, no powerfist given strength of weapon. Alternative of laser minigun.
+		/datum/outfit/loadout/spaladinmg, // Standard minigun, replaces laser gat
 		)
 
 	outfit = /datum/outfit/job/bos/f13seniorpaladin
@@ -481,6 +482,12 @@ Star Paladin
 	name = "Heavy Gunner Head Paladin"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/m60 = 1,
+	)
+
+/datum/outfit/loadout/spaladinmg
+	name = "Heavy minigunner Head Paladin"
+	backpack_contents = list(
+		/obj/item/minigunpackbal5mm = 1,
 	)
 /*
 Paladin
