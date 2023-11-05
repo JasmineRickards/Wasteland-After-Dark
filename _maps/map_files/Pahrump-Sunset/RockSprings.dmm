@@ -2135,6 +2135,7 @@
 "bZq" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/gun/energy/laser/ultra_rifle,
 /turf/open/floor/carpet/black,
 /area/f13/legion)
 "bZJ" = (

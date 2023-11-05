@@ -329,6 +329,16 @@
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
+/datum/design/ultrarifle
+	name = "Ultracite rifle"
+	desc = "Not quite as menacing as it sounds"
+	id = "ultracite_laser"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/gold = 5000, /datum/material/uranium = 4000, /datum/material/iron = 5000, /datum/material/titanium = 2000, /datum/material/bluespace = 2000)
+	build_path = /obj/item/gun/energy/laser/ultra_rifle
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
 /*
 /datum/design/xray
 	name = "X-ray Laser Gun"
@@ -552,6 +562,15 @@
 	build_type = PROTOLATHE
 	materials = list(/datum/material/iron = 10000, /datum/material/glass = 2000, /datum/material/diamond = 2000)
 	build_path = /obj/item/stock_parts/cell/ammo/ecp
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/ultracitecell
+	name = "Ultracite recharging cell"
+	id = "ucp"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 10000, /datum/material/glass = 2000, /datum/material/diamond = 2000, /datum/material/uranium = 1000)
+	build_path = /obj/item/stock_parts/cell/ammo/ultracite
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 

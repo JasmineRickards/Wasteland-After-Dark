@@ -371,6 +371,11 @@
 /obj/structure/table,
 /turf/open/floor/wood/wood_common,
 /area/f13/city)
+"eK" = (
+/obj/structure/table,
+/obj/item/gun/energy/laser/ultra_rifle,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/ncr)
 "eL" = (
 /obj/structure/table,
 /obj/machinery/computer/terminal{
@@ -32667,7 +32672,7 @@ sC
 sC
 sC
 JO
-sI
+eK
 lo
 lo
 lo

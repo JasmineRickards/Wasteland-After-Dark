@@ -432,10 +432,10 @@
 //Ultracite Laser rifle
 /obj/item/gun/energy/laser/ultra_rifle
 	name = "\improper Ultracite laser rifle"
-	desc = "A sturdy and advanced military grade pre-war service laser rifle, now enhanced with ultracite"
+	desc = "A sturdy and advanced military grade pre-war service laser rifle, now enhanced with ultracite by the brotherhood of steel."
 	icon_state = "ultra_rifle"
 	item_state = "laser-rifle9"
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun)
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/aer12/hitscan)
 	cell_type = /obj/item/stock_parts/cell/ammo/ultracite
 	fire_delay = 3
 	zoomable = TRUE

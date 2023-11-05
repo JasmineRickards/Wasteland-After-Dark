@@ -466,9 +466,10 @@
 
 /obj/item/stock_parts/cell/ammo/ultracite
 	name = "ultracite cell"
-	desc = "An advanced ultracite cell, used as ammunition for special energy weapons."
+	desc = "An advanced ultracite cell, used as ammunition for special energy weapons. Includes a small uranium RTG for passive charging."
 	icon = 'icons/fallout/objects/powercells.dmi'
 	icon_state = "ultracite"
+	self_recharge = 1
 	maxcharge = 2000
 
 // Energy cell - small energy weapons

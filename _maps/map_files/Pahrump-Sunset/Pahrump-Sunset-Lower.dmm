@@ -630,6 +630,11 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/unique,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
+"akD" = (
+/obj/structure/table/wood,
+/obj/item/gun/energy/laser/ultra_rifle,
+/turf/open/floor/f13/wood,
+/area/f13/tunnel/bighorn)
 "akK" = (
 /obj/structure/railing/corner,
 /obj/effect/decal/cleanable/dirt,
@@ -19300,6 +19305,7 @@
 	layer = 2.7;
 	pixel_y = 17
 	},
+/obj/item/gun/energy/laser/ultra_rifle,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -44459,7 +44465,7 @@ uXv
 uXv
 uXv
 uXv
-anq
+akD
 rgl
 rgl
 aZt
