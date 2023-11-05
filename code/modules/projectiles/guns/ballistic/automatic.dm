@@ -1238,7 +1238,7 @@
 
 //R93 PDW		Keywords: 5.56mm, Semi-Automatic, 20 (10-50) round magazine, Pistol grip
 /obj/item/gun/ballistic/automatic/r93
-	name = "R93 PDW"
+	name = "R93 DMR"
 	desc = "A lightweight PDW manufactured by the Brotherhood of Steel with a folding stock, based on weapons from the R-series platforms. It is generally issued to Brotherhood Knights for scouting missions."
 	icon_state = "r93"
 	item_state = "r93"
@@ -1260,11 +1260,11 @@
 
 
 /obj/item/gun/ballistic/automatic/r93/rifle
-	name = "R93-A Carbine"
+	name = "R94-A Carbine"
 	desc = "A lightweight carbine manufactured by the Brotherhood of Steel with a folding stock and longer barrel, based on weapons from the R-series platforms and re-chambered for 5mm. It is generally issued to marksmen and squad leaders."
 	fire_delay = 1
 	autofire_shot_delay = 2
-	spread = 6
+	spread = 3
 	can_attachments = TRUE
 	can_scope = FALSE
 	can_bayonet = FALSE
@@ -1272,6 +1272,20 @@
 	slowdown = 0.3
 	extra_damage = 6
 	extra_penetration = 0.05
+
+/obj/item/gun/ballistic/automatic/r93/sniper //Possible baron gun, gotta find how to balance and/or sprite it.
+	name = "R95-H Caroline"
+	desc = "A lightweight carbine manufactured by the Brotherhood of Steel with a folding stock and longer barrel, based on weapons from the R-series platforms and re-chambered for 5mm. It is generally issued to marksmen and squad leaders."
+	fire_delay = 1
+	autofire_shot_delay = 1.5
+	spread = 2
+	can_attachments = TRUE
+	can_scope = FALSE
+	can_bayonet = FALSE
+	mag_type = /obj/item/ammo_box/magazine/m5mm
+	slowdown = 0.3
+	extra_damage = 12
+	extra_penetration = 0.15
 
 //Type 93 Chinese rifle				Keywords: 5.56mm, Automatic, 20 (10-50) round magazine, 26dmg
 /obj/item/gun/ballistic/automatic/type93
