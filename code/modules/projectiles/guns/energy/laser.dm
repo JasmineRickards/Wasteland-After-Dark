@@ -443,6 +443,19 @@
 	zoom_out_amt = 13
 	equipsound = 'sound/f13weapons/equipsounds/aer9equip.ogg'
 
+/obj/item/gun/energy/laser/ultra_riflebaron //To be worked on.
+	name = "\improper BAER"
+	desc = "A balistics assisted energy rifle, a testamant to the enginuity of the mid-west. It fires a high speed projectile, assisted by superheated energy bolts."
+	icon_state = "ultra_rifle"
+	item_state = "laser-rifle9"
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/aer14/hitscan)
+	cell_type = /obj/item/stock_parts/cell/ammo/ultracite
+	fire_delay = 3
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
+	equipsound = 'sound/f13weapons/equipsounds/aer9equip.ogg'
+
 
 //Tribeam Laser rifle
 /obj/item/gun/energy/laser/scatter

@@ -213,6 +213,7 @@
 	build_type = AUTOLATHE
 	materials = list(/datum/material/iron = 10, /datum/material/glass = 20)
 	build_path = /obj/item/reagent_containers/syringe
+	maxstack = 50
 	category = list("initial", "Medical")
 
 /datum/design/health_sensor
