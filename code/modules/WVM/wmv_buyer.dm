@@ -36,6 +36,7 @@
 								/obj/item/reagent_containers/hypospray/medipen/psycho = 20,
 								/obj/item/reagent_containers/hypospray/medipen/medx = 75,
 								/obj/item/reagent_containers/pill/patch/healpoultice = 50,
+								/obj/item/export/box/bulk = 1500,
 								/obj/item/export/bottle/gin = 25,
 								/obj/item/export/bottle/wine = 25,
 								/obj/item/export/bottle/whiskey = 25,

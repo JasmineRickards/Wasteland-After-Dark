@@ -55,6 +55,13 @@
 	time = 100
 	category = CAT_MEDICAL
 
+/datum/crafting_recipe/exportpackss
+	name = "Export box"
+	result = /obj/item/export/box/bulk
+	reqs = list(/obj/item/reagent_containers/pill/patch/healingpowder = 50)
+	tools = list(TOOL_WORKBENCH)
+	time = 20
+	category = CAT_MEDICAL
 
 /datum/crafting_recipe/bitterdrink
 	name = "Bottle bitterdrink"
@@ -200,6 +207,14 @@
 	time = 100
 	category = CAT_MEDICAL
 
+/datum/crafting_recipe/exportpackss
+	name = "Export box"
+	result = /obj/item/export/box/bulk
+	reqs = list(/obj/item/reagent_containers/hypospray/medipen/stimpak = 42)
+	tools = list(TOOL_WORKBENCH)
+	time = 20
+	category = CAT_MEDICAL
+
 
 /datum/crafting_recipe/superstimpak
 	name = "Super Stimpak"
@@ -229,6 +244,14 @@
 				/obj/item/reagent_containers/food/snacks/grown/mutfruit = 100)
 	tools = list(TOOL_WORKBENCH)
 	time = 140
+	category = CAT_MEDICAL
+
+/datum/crafting_recipe/exportpackss
+	name = "Export box"
+	result = /obj/item/export/box/bulk
+	reqs = list(/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 20)
+	tools = list(TOOL_WORKBENCH)
+	time = 20
 	category = CAT_MEDICAL
 
 

@@ -320,3 +320,8 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 				/obj/item/advanced_crafting_components/flux,
 				/obj/item/blueprint/research)
 
+/obj/item/export/box/bulk
+	name = "Export box"
+	desc = "A box full of pre-packaged medicine for sales."
+	icon = 'icons/fallout/objects/storage.dmi'
+	icon_state = "medicinebox_simple"
