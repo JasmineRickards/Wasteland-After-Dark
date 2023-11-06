@@ -7338,6 +7338,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/wood_common,
 /area/f13/tunnel/bighorn)
+"dcE" = (
+/obj/structure/simple_door/metal/vaultreinforced,
+/turf/open/floor/plasteel/dark,
+/area/f13/brotherhood/offices2nd)
 "ddo" = (
 /obj/machinery/camera/autoname{
 	dir = 10;
@@ -15076,6 +15080,7 @@
 "lwl" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/minigunpack,
+/obj/item/minigunpack,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel/bighorn)
 "lym" = (
@@ -18277,6 +18282,16 @@
 /obj/structure/closet/locker,
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/brotherhood/offices2nd)
+"peV" = (
+/obj/structure/kitchenspike_frame{
+	anchored = 1;
+	desc = "A robust, thick metal frame used to hold power armor upright during maintenance.";
+	name = "Trader power armor frame"
+	},
+/obj/item/clothing/suit/armor/f13/power_armor/t60/bosBaron,
+/obj/item/clothing/head/helmet/f13/power_armor/t60,
+/turf/open/floor/plasteel/dark,
+/area/f13/brotherhood/offices2nd)
 "pft" = (
 /obj/effect/spawner/lootdrop/f13/junkspawners,
 /obj/effect/decal/cleanable/dirt,
@@ -18649,6 +18664,7 @@
 /area/f13/brotherhood/operations)
 "pvU" = (
 /obj/structure/rack/shelf_metal,
+/obj/item/minigunpackbal5mm,
 /obj/item/minigunpackbal5mm,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel/bighorn)
@@ -19187,6 +19203,12 @@
 	},
 /turf/open/water,
 /area/f13/brotherhood)
+"pWO" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plasteel/dark,
+/area/f13/brotherhood/offices2nd)
 "pXb" = (
 /obj/machinery/rnd/production/protolathe,
 /turf/open/floor/plasteel/darkpurple,
@@ -23808,6 +23830,12 @@
 	pixel_y = 35
 	},
 /turf/open/floor/carpet/black,
+/area/f13/brotherhood/offices2nd)
+"uMr" = (
+/obj/structure/rack,
+/obj/item/encminigunpack,
+/obj/item/minigunpackbal5mm,
+/turf/open/floor/plasteel/dark,
 /area/f13/brotherhood/offices2nd)
 "uMN" = (
 /obj/effect/spawner/lootdrop/f13/alcoholspawner,
@@ -89712,10 +89740,10 @@ aae
 aae
 aae
 aaa
-aaa
-aaa
-aaa
-aaa
+sPA
+sPA
+sPA
+sPA
 sPA
 kkk
 vyv
@@ -89968,12 +89996,12 @@ aae
 aae
 aae
 aae
-aae
-aae
-aae
-aae
 aaa
 sPA
+peV
+krX
+krX
+dcE
 kBv
 kBv
 cZL
@@ -90225,11 +90253,11 @@ aak
 aae
 aae
 aae
-aae
-aae
-aae
-aae
 aaa
+sPA
+pWO
+krX
+krX
 sPA
 vMH
 kBv
@@ -90482,11 +90510,11 @@ aak
 aae
 aae
 aae
-aae
-aae
-aae
-aae
 aaa
+sPA
+uMr
+krX
+krX
 sPA
 sPA
 reU
@@ -90739,11 +90767,11 @@ aak
 khl
 khl
 khl
-khl
-khl
-khl
-aae
 aaa
+sPA
+sPA
+sPA
+sPA
 sPA
 sBv
 hJO
@@ -90996,10 +91024,10 @@ hOa
 hOa
 khl
 khl
-khl
-khl
-khl
-aae
+aaa
+aaa
+aaa
+aaa
 aaa
 sPA
 sBv

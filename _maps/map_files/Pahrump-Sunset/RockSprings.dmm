@@ -2324,6 +2324,11 @@
 /obj/structure/flora/junglebush/c,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/rocksprings)
+"ckQ" = (
+/obj/structure/rack,
+/obj/item/gun/ballistic/automatic/varmint/verminkiller,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legion)
 "ckR" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalleftborderleft0"
@@ -6178,6 +6183,11 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/building)
+"fXK" = (
+/obj/structure/rack,
+/obj/item/gun/ballistic/automatic/varmint/ratslayer,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legion)
 "fYd" = (
 /obj/structure/chair/right{
 	dir = 1
@@ -16751,6 +16761,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"qJJ" = (
+/obj/structure/rack,
+/obj/item/gun/ballistic/revolver/grenadelauncher,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legion)
 "qJO" = (
 /obj/machinery/light/small,
 /obj/structure/rack,
@@ -41900,7 +41915,7 @@ jLa
 kEh
 fts
 gtX
-hAL
+fXK
 jLa
 jLa
 snB
@@ -42928,7 +42943,7 @@ gtX
 gtX
 gtX
 gtX
-hAL
+ckQ
 jLa
 rPW
 rPW
@@ -43182,7 +43197,7 @@ gXG
 dnA
 gXG
 hDv
-hAL
+qJJ
 ofa
 gtX
 rFl

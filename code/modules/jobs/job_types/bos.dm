@@ -1112,6 +1112,6 @@ Off-Duty
 	id = 			/obj/item/card/id/dogtag
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1,
-		/obj/item/encryptionkey/headset_bos=1,
+//		/obj/item/encryptionkey/headset_bos=1,
 		/obj/item/melee/onehanded/knife/survival=1
 		)

@@ -2786,6 +2786,9 @@
 /obj/item/gun/ballistic/automatic/service,
 /obj/item/gun/ballistic/automatic/service,
 /obj/item/gun/ballistic/automatic/service,
+/obj/item/gun/ballistic/automatic/fnfal,
+/obj/item/gun/ballistic/automatic/fnfal,
+/obj/item/gun/ballistic/automatic/fnfal,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/ncr)
 "FA" = (
