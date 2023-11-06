@@ -60,7 +60,7 @@ Elder
 	req_admin_notify = 1
 	roleplay_exclusive_notify = 1
 
-	exp_requirements = 3000
+	exp_requirements = 6000
 
 	total_positions = 1
 	spawn_positions = 1
@@ -93,13 +93,23 @@ Elder
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		/obj/item/gun/energy/laser/wattz/recharger/Walker = 1,
-		/obj/item/stock_parts/cell/ammo/mfc = 3,
+		/obj/item/stock_parts/cell/ammo/ultracite = 3,
 		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
 		/obj/item/ammo_box/magazine/m10mm_adv/simple = 2,
 		/obj/item/minigunpackbal5mm = 1,
 		/obj/item/clothing/suit/armor/f13/power_armor/t60/bosBaron = 1,
-		/obj/item/clothing/head/helmet/f13/power_armor/t60 = 1,
+		/obj/item/clothing/head/helmet/f13/power_armor/t60 = 1
+	)
 
+/datum/outfit/loadout/forwardleader
+	name = "Grand combative Baron"
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/t60/bosBaron
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t60
+	backpack_contents = list(
+		/obj/item/stock_parts/cell/ammo/ultracite = 3,
+		/obj/item/minigunpackbal5mm = 1,
+		/obj/item/clothing/suit/armor/f13/power_armor/t60/bosBaron = 1,
+		/obj/item/clothing/head/helmet/f13/power_armor/t60 = 1
 	)
 
 /*
