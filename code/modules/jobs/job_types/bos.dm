@@ -87,7 +87,7 @@ Elder
 	suit =	/obj/item/clothing/suit/f13/elder
 	glasses =	/obj/item/clothing/glasses/night
 	accessory =	/obj/item/clothing/accessory/bos/elder
-	suit_store = /obj/item/gun/energy/laser/laer
+	suit_store = /obj/item/gun/energy/laser/ultra_riflebaron
 	neck =	/obj/item/clothing/neck/mantle/bos/right
 	ears = /obj/item/radio/headset/headset_bos/command
 	backpack_contents = list(
@@ -96,6 +96,10 @@ Elder
 		/obj/item/stock_parts/cell/ammo/mfc = 3,
 		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
 		/obj/item/ammo_box/magazine/m10mm_adv/simple = 2,
+		/obj/item/minigunpackbal5mm = 1,
+		/obj/item/clothing/suit/armor/f13/power_armor/t60/bosBaron = 1,
+		/obj/item/clothing/head/helmet/f13/power_armor/t60 = 1,
+
 	)
 
 /*

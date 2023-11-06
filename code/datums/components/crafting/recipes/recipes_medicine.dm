@@ -55,7 +55,7 @@
 	time = 100
 	category = CAT_MEDICAL
 
-/datum/crafting_recipe/exportpackss
+/datum/crafting_recipe/exportpackpow
 	name = "Export box"
 	result = /obj/item/export/box/bulk
 	reqs = list(/obj/item/reagent_containers/pill/patch/healingpowder = 50)
@@ -207,7 +207,7 @@
 	time = 100
 	category = CAT_MEDICAL
 
-/datum/crafting_recipe/exportpackss
+/datum/crafting_recipe/exportpacksp
 	name = "Export box"
 	result = /obj/item/export/box/bulk
 	reqs = list(/obj/item/reagent_containers/hypospray/medipen/stimpak = 42)
