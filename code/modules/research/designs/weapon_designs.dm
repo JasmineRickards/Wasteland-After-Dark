@@ -339,6 +339,16 @@
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
+/datum/design/ultrapistol
+	name = "Ultracite pistol"
+	desc = "Not quite as menacing as it sounds"
+	id = "ultracite_laserp"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/gold = 2000, /datum/material/uranium = 2000, /datum/material/iron = 3000, /datum/material/titanium = 1000, /datum/material/bluespace = 1000)
+	build_path = /obj/item/gun/energy/laser/ultra_pistol
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
 /*
 /datum/design/xray
 	name = "X-ray Laser Gun"

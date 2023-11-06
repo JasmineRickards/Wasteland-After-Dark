@@ -363,8 +363,8 @@
 	fire_delay = 2
 	scope_x_offset = 7
 	scope_y_offset = 22
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/ultra_pistol)
-	cell_type = /obj/item/stock_parts/cell/ammo/ec
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/solar/hitscan)
+	cell_type = /obj/item/stock_parts/cell/ammo/ultracite
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 
 
@@ -433,6 +433,20 @@
 /obj/item/gun/energy/laser/ultra_rifle
 	name = "\improper Ultracite laser rifle"
 	desc = "A sturdy and advanced military grade pre-war service laser rifle, now enhanced with ultracite by the brotherhood of steel."
+	icon_state = "ultra_rifle"
+	item_state = "laser-rifle9"
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/aer12/hitscan)
+	cell_type = /obj/item/stock_parts/cell/ammo/ultracite
+	fire_delay = 3
+	zoomable = TRUE
+	zoom_amt = 6
+	zoom_out_amt = 13
+	equipsound = 'sound/f13weapons/equipsounds/aer9equip.ogg'
+
+//Ultracite Laser rifle
+/obj/item/gun/energy/laser/ultra_rifleprewar
+	name = "\improper pre-war Ultracite laser rifle"
+	desc = "A sturdy and advanced military grade pre-war service laser rifle, now enhanced with ultracite by companies long gone."
 	icon_state = "ultra_rifle"
 	item_state = "laser-rifle9"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/aer12/hitscan)

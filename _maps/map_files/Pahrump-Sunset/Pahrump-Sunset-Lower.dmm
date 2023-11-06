@@ -630,11 +630,6 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/unique,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
-"akD" = (
-/obj/structure/table/wood,
-/obj/item/gun/energy/laser/ultra_rifle,
-/turf/open/floor/f13/wood,
-/area/f13/tunnel/bighorn)
 "akK" = (
 /obj/structure/railing/corner,
 /obj/effect/decal/cleanable/dirt,
@@ -12479,10 +12474,21 @@
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 10
 	},
-/obj/structure/closet/crate/bin,
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/closet/crate{
+	anchored = 1
+	},
+/obj/item/gun/energy/laser/ultra_rifle,
+/obj/item/gun/energy/laser/ultra_rifle,
+/obj/item/gun/energy/laser/ultra_rifle,
+/obj/item/stock_parts/cell/ammo/ultracite,
+/obj/item/stock_parts/cell/ammo/ultracite,
+/obj/item/stock_parts/cell/ammo/ultracite,
+/obj/item/stock_parts/cell/ammo/ultracite,
+/obj/item/stock_parts/cell/ammo/ultracite,
+/obj/item/stock_parts/cell/ammo/ultracite,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -19327,7 +19333,6 @@
 	layer = 2.7;
 	pixel_y = 17
 	},
-/obj/item/gun/energy/laser/ultra_rifle,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -44493,7 +44498,7 @@ uXv
 uXv
 uXv
 uXv
-akD
+anq
 rgl
 rgl
 aZt
