@@ -646,7 +646,7 @@
 	icon_state = "t51bpowerarmor"
 	item_state = "t51bpowerarmor"
 	slowdown = 0.20 //+0.05 from helmet = total 0.255
-	armor = list("melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
+	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 25)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t51b
 	hpboost = 50
@@ -657,7 +657,7 @@
 	icon_state = "t51green"
 	item_state = "t51green"
 	slowdown = 0.20 //+0.05 from helmet = total 0.255
-	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 32, "bomb" = 64, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
+	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 32, "bomb" = 64, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
 
 /obj/item/clothing/suit/armor/f13/power_armor/midwest
 	name = "Midwestern power armor"
@@ -665,7 +665,7 @@
 	icon_state = "midwestgrey_pa"
 	item_state = "midwestgrey_pa"
 	slowdown = 0.20 //+0.05 from helmet = total 0.255
-	armor = list("melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
+	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/midwest
 	hpboost = 50
 
@@ -675,7 +675,7 @@
 	icon_state = "midwestpa"
 	item_state = "midwestpa"
 	slowdown = 0.20 //+0.05 from helmet = total 0.255
-	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 32, "bomb" = 64, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
+	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 32, "bomb" = 64, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/midwest/hardened
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b/bos

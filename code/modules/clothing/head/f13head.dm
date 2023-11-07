@@ -424,7 +424,7 @@
 	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
 	icon_state = "t51bhelmet0"
 	item_state = "t51bhelmet0"
-	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 27, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 70)
+	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 27, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 70)
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b
 
@@ -445,7 +445,7 @@
 	desc = "The T-60 powered helmet, equipped with targetting software suite, Friend-or-Foe identifiers, dynamic HuD, and an internal music player."
 	icon_state = "t60helmet0"
 	item_state = "t60helmet0"
-	armor = list("melee" = 80, "bullet" = 70, "laser" = 80, "energy" = 30, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 50, "wound" = 80)
+	armor = list("melee" = 85, "bullet" = 85, "laser" = 85, "energy" = 45, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 50, "wound" = 80)
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t60
 
@@ -466,7 +466,7 @@
 	item_state = "midwestgrey_helm"
 	icon = 'icons/mob/clothing/head.dmi'
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
-	armor = list("melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 72)
+	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 72)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/midwest
 
 /obj/item/clothing/head/helmet/f13/power_armor/midwest/hardened
@@ -476,7 +476,7 @@
 	item_state = "midwestpa_helm"
 	icon = 'icons/mob/clothing/head.dmi'
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
-	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 27, "bomb" = 64, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 75)
+	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 27, "bomb" = 64, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 75)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/midwest/hardened
 
 /obj/item/clothing/head/helmet/f13/power_armor/excavator
