@@ -11807,16 +11807,14 @@
 	},
 /turf/open/water,
 /area/f13/brotherhood)
-"hWd" = (
-/obj/machinery/button/ignition/incinerator{
-	id = "burn";
-	pixel_x = 32
-	},
-/turf/open/floor/plasteel/f13/vault_floor/plating,
-/area/f13/brotherhood/medical)
 "hYg" = (
 /obj/structure/bodycontainer/crematorium{
-	id = "burn"
+	id = "enc_crem"
+	},
+/obj/machinery/button/crematorium{
+	id = "enc_crem";
+	pixel_x = 6;
+	pixel_y = 26
 	},
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/brotherhood/medical)
@@ -84633,7 +84631,7 @@ iKf
 gPb
 gqF
 eIw
-hWd
+ldv
 gUG
 gPb
 wUV
