@@ -679,7 +679,7 @@
 //	flags_1 = NODECONSTRUCT_1
 
 	dispensable_reagents = list(
-		/datum/reagent/toxin/mutagen,
+//		/datum/reagent/toxin/mutagen,
 		/datum/reagent/saltpetre,
 		/datum/reagent/plantnutriment/eznutriment,
 		/datum/reagent/plantnutriment/left4zednutriment,

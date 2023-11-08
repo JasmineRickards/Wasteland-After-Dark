@@ -2717,6 +2717,11 @@
 	smooth = 1
 	},
 /area/f13/city/bighorn)
+"dvM" = (
+/obj/structure/table/reinforced,
+/obj/item/shovel/spade,
+/turf/open/floor/f13/wood,
+/area/f13/building)
 "dwd" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -3406,6 +3411,11 @@
 	icon_state = "whitegreenrustychess"
 	},
 /area/f13/building/mall)
+"eXY" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/bag/plants/portaseeder,
+/turf/open/floor/f13/wood,
+/area/f13/building)
 "eZg" = (
 /obj/structure/railing{
 	dir = 6
@@ -3861,6 +3871,11 @@
 	icon_state = "plating"
 	},
 /area/f13/building/hospital)
+"gdt" = (
+/obj/structure/table/reinforced,
+/obj/item/cultivator,
+/turf/open/floor/f13/wood,
+/area/f13/building)
 "ges" = (
 /obj/structure/simple_door/dirtyglass,
 /turf/open/floor/f13/wood,
@@ -5128,6 +5143,11 @@
 	},
 /turf/open/floor/wood/wood_worn,
 /area/f13/city/bighorn)
+"ixG" = (
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/glass/bucket,
+/turf/open/floor/f13/wood,
+/area/f13/building)
 "ixJ" = (
 /obj/structure/table/reinforced,
 /obj/item/clipboard{
@@ -6498,6 +6518,10 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/city/bighorn)
+"lhV" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/f13/wood,
+/area/f13/building)
 "lhW" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
@@ -66353,7 +66377,7 @@ oez
 oez
 rIS
 jFs
-wXn
+lhV
 ikp
 wXn
 ieL
@@ -66610,8 +66634,8 @@ oez
 oez
 fin
 dZW
-wXn
-wXn
+ixG
+eXY
 wXn
 adL
 fin
@@ -66867,8 +66891,8 @@ oez
 oez
 rIS
 jFs
-wXn
-wXn
+gdt
+dvM
 wXn
 fko
 fin
@@ -67640,8 +67664,8 @@ fin
 nMA
 vGq
 vGq
-wXn
-wXn
+vYg
+dWG
 fin
 omP
 abv
@@ -67897,8 +67921,8 @@ rIS
 jFs
 wXn
 wXn
-vYg
-dWG
+wyj
+syu
 fin
 omP
 abv
@@ -68411,8 +68435,8 @@ rIS
 jFs
 wXn
 wXn
-wyj
-syu
+wXn
+wXn
 fin
 omP
 abv
