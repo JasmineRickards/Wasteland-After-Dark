@@ -41462,7 +41462,7 @@
 /turf/closed/wall/f13/tunnel,
 /area/f13/tunnel/southeast)
 "mMV" = (
-/obj/structure/punching_bag,
+/obj/structure/stairs/east,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "mMX" = (
@@ -115645,7 +115645,7 @@ jJv
 jWe
 gDx
 xyU
-xyU
+nZU
 abP
 aaa
 aae
