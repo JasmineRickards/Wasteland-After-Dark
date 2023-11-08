@@ -109,10 +109,10 @@
 
 	handle_gravity()
 
-/*	if(machine)
+	if(machine)
 		machine.check_eye(src)
 	return TRUE
-*/
+
 /mob/living/proc/handle_breathing(times_fired)
 	return
 
