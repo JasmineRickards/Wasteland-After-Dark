@@ -2975,6 +2975,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/building/mall)
+"dZW" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/f13/wood,
+/area/f13/building)
 "eav" = (
 /obj/structure/bed/roller,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
@@ -7479,6 +7485,15 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"mOc" = (
+/obj/machinery/light/small{
+	light_color = "red";
+	bulb_colour = "#DE3163";
+	bulb_emergency_colour = "#DE3163";
+	nightshift_light_color = "#DE3163"
+	},
+/turf/open/floor/f13/wood,
+/area/f13/building)
 "mPd" = (
 /obj/structure/junk/jukebox{
 	pixel_y = 20
@@ -7982,6 +7997,13 @@
 	icon_state = "rubbleplate"
 	},
 /area/f13/building/mall)
+"nMA" = (
+/obj/machinery/hydroponics/constructable,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/f13/wood,
+/area/f13/building)
 "nMD" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -9857,6 +9879,12 @@
 	},
 /turf/closed/wall/mineral/wood,
 /area/f13/building)
+"raS" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/f13/wood,
+/area/f13/building)
 "rbw" = (
 /obj/structure/simple_door/metal/dirtystore{
 	name = "Security Office"
@@ -11374,6 +11402,12 @@
 "tLU" = (
 /obj/structure/railing{
 	dir = 4
+	},
+/obj/machinery/light/small{
+	light_color = "red";
+	bulb_colour = "#DE3163";
+	bulb_emergency_colour = "#DE3163";
+	nightshift_light_color = "#DE3163"
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
@@ -65803,7 +65837,7 @@ rIS
 jFs
 sYe
 sbx
-wXn
+raS
 cAU
 fin
 abv
@@ -66571,11 +66605,11 @@ oez
 oez
 oez
 fin
+dZW
 wXn
 wXn
 wXn
-wXn
-wXn
+adL
 fin
 omP
 beJ
@@ -67599,7 +67633,7 @@ oez
 oez
 oez
 fin
-vGq
+nMA
 vGq
 vGq
 wXn
@@ -68632,7 +68666,7 @@ vGq
 vGq
 wXn
 wXn
-wXn
+mOc
 qet
 abv
 abv
@@ -68884,7 +68918,7 @@ oez
 oez
 oez
 fin
-wXn
+dZW
 wXn
 wXn
 wXn
