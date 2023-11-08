@@ -21,7 +21,7 @@ GLOBAL_LIST_INIT(auxtools_atmos_initialized,FALSE)
 // So that this auxmos proc shows up properly in profiling.
 /datum/gas_mixture/proc/gasmixture_register_wrapper()
 	__gasmixture_register()
-
+/*
 /datum/gas_mixture/New(volume)
 	if (!isnull(volume))
 		initial_volume = volume
@@ -53,7 +53,7 @@ GLOBAL_LIST_INIT(auxtools_atmos_initialized,FALSE)
 		dummy["VOLUME"] = return_volume()
 		dummy["THERMAL ENERGY"] = thermal_energy()
 		return debug_variable("gases (READ ONLY)", dummy, 0, src)
-
+*/
 /datum/gas_mixture/vv_get_dropdown()
 	. = ..()
 	VV_DROPDOWN_OPTION("", "---")

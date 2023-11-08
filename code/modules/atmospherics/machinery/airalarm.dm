@@ -728,7 +728,7 @@
 	var/datum/tlv/cur_tlv
 
 	var/datum/gas_mixture/environment = location.return_air()
-	var/partial_pressure = R_IDEAL_GAS_EQUATION * environment.return_temperature() / environment.return_volume()
+//	var/partial_pressure = R_IDEAL_GAS_EQUATION * environment.return_temperature() / environment.return_volume()
 
 	cur_tlv = TLV["pressure"]
 	var/environment_pressure = environment.return_pressure()
@@ -742,7 +742,7 @@
 		if(!(gas_id in TLV)) // We're not interested in this gas, it seems.
 			continue
 		cur_tlv = TLV[gas_id]
-		gas_dangerlevel = max(gas_dangerlevel, cur_tlv.get_danger_level(environment.get_moles(gas_id) * partial_pressure))
+//		gas_dangerlevel = max(gas_dangerlevel, cur_tlv.get_danger_level(environment.get_moles(gas_id) * partial_pressure))
 
 	var/old_danger_level = danger_level
 	danger_level = max(pressure_dangerlevel, temperature_dangerlevel, gas_dangerlevel)
