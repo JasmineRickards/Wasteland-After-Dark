@@ -1658,6 +1658,12 @@
 /turf/open/floor/f13/wood,
 /area/f13/city/bighorn)
 "bxS" = (
+/obj/machinery/light/small{
+	light_color = "red";
+	bulb_colour = "#DE3163";
+	bulb_emergency_colour = "#DE3163";
+	nightshift_light_color = "#DE3163"
+	},
 /obj/machinery/chem_dispenser/indusmutagensaltpeter,
 /turf/open/floor/f13/wood,
 /area/f13/building)
@@ -2929,6 +2935,12 @@
 "dWp" = (
 /obj/structure/railing{
 	color = "#A47449";
+	dir = 4
+	},
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"dWG" = (
+/obj/structure/railing{
 	dir = 4
 	},
 /turf/open/floor/f13/wood,
@@ -11400,16 +11412,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/building/mall)
 "tLU" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	light_color = "red";
-	bulb_colour = "#DE3163";
-	bulb_emergency_colour = "#DE3163";
-	nightshift_light_color = "#DE3163"
-	},
-/turf/open/floor/f13/wood,
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/f13/wood/house,
 /area/f13/building)
 "tMo" = (
 /obj/structure/chair/stool,
@@ -66866,8 +66870,8 @@ jFs
 wXn
 wXn
 wXn
-wXn
 fko
+fin
 omP
 abv
 abv
@@ -67123,8 +67127,8 @@ jFs
 wXn
 wXn
 wXn
-wXn
 vEN
+fin
 omP
 abv
 abv
@@ -67380,8 +67384,8 @@ jFs
 wXn
 wXn
 wXn
-wXn
 bxS
+fin
 qet
 abv
 abv
@@ -67638,7 +67642,7 @@ vGq
 vGq
 wXn
 wXn
-wXn
+fin
 omP
 abv
 abv
@@ -67893,9 +67897,9 @@ rIS
 jFs
 wXn
 wXn
-wXn
 vYg
-tLU
+dWG
+fin
 omP
 abv
 abv
@@ -68150,9 +68154,9 @@ rIS
 wYn
 vGq
 vGq
-wXn
 wyj
 syu
+fin
 omP
 abv
 abv
@@ -68407,9 +68411,9 @@ rIS
 jFs
 wXn
 wXn
-wXn
 wyj
 syu
+fin
 omP
 abv
 abv
@@ -68666,7 +68670,7 @@ vGq
 vGq
 wXn
 wXn
-mOc
+fin
 qet
 abv
 abv
@@ -68922,8 +68926,8 @@ dZW
 wXn
 wXn
 wXn
-wXn
-pbj
+mOc
+tLU
 qet
 abv
 abv
@@ -69180,7 +69184,7 @@ vGq
 vGq
 vGq
 wXn
-wXn
+fin
 omP
 abv
 abv
