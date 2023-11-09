@@ -3333,9 +3333,7 @@
 /turf/open/floor/carpet,
 /area/f13/building)
 "dhu" = (
-/obj/structure/mortar/fixed{
-	dir = 4
-	},
+/obj/item/mortar_kit,
 /turf/open/indestructible/ground/outside/desert/harsh,
 /area/f13/wasteland/rocksprings)
 "dhO" = (

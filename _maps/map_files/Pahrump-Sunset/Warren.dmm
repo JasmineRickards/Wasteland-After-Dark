@@ -6122,9 +6122,7 @@
 	},
 /area/f13/wasteland/warren)
 "fCs" = (
-/obj/structure/mortar/fixed{
-	dir = 8
-	},
+/obj/item/mortar_kit,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland/ncr)
 "fCH" = (
