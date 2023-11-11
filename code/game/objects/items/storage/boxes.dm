@@ -1455,12 +1455,20 @@ list(/obj/item/stack/sheet/metal = 20,
 		new randomgun(src)
 
 /obj/item/storage/box/pa/refurb
-	name = "Refurbished kit"
+	name = "Refurbished power armor kit"
 	w_class = 4
 
 /obj/item/storage/box/pa/refurb/PopulateContents()
 	new /obj/item/clothing/suit/armor/f13/power_armor/t45d/refurb(src)
 	new /obj/item/clothing/head/helmet/f13/power_armor/t45d/refurb(src)
+
+/obj/item/storage/box/pa/raider
+	name = "Raider power arrmor kit"
+	w_class = 4
+
+/obj/item/storage/box/pa/refurb/PopulateContents()
+	new /obj/item/clothing/head/helmet/f13/power_armor/t45b/raider(src)
+	new /obj/item/clothing/suit/armor/f13/power_armor/t45b/raider(src)
 
 
 

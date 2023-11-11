@@ -7,7 +7,7 @@
 	reagent_state = LIQUID
 	color = "#eb0000"
 	taste_description = "grossness"
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	metabolization_rate = 0.2 * REAGENTS_METABOLISM
 	overdose_threshold = 35
 	addiction_threshold = 25
 	value = REAGENT_VALUE_RARE
@@ -99,6 +99,7 @@
 	reagent_state = LIQUID
 	color = "#FFA500"
 	ghoulfriendly = TRUE
+	metabolization_rate = 0.2 * REAGENTS_METABOLISM
 
 /datum/reagent/medicine/stimpakimitation/on_mob_life(mob/living/carbon/M)
 	for(var/thing in M.all_wounds)
@@ -125,7 +126,7 @@
 	description = "Chemicals found in pre-war stimpaks."
 	reagent_state = LIQUID
 	color = "#e50d0d"
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	metabolization_rate = 0.3 * REAGENTS_METABOLISM
 	overdose_threshold = 25
 	addiction_threshold = 16
 	value = REAGENT_VALUE_VERY_RARE

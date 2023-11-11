@@ -362,6 +362,7 @@
 	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 22, "bomb" = 55, "bio" = 65, "rad" = 55, "fire" = 85, "acid" = 0, "wound" = 40)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b
 
+
 /obj/item/clothing/head/helmet/f13/power_armor/t45d
 	name = "T-45d power helmet"
 	desc = "An old pre-War power armor helmet. It's pretty hot inside of it."
@@ -381,6 +382,17 @@
 	armor = list("melee" = 60, "bullet" = 60, "laser" = 60, "energy" = 25, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
 	salvaged_type = null
 	requires_training = FALSE
+
+/obj/item/clothing/head/helmet/f13/power_armor/t45b/raider
+	name = "raider T-45b power helmet"
+	desc = "a raider's attempt to duplicate a power armor helmet. The result is a fuzed mass of metal and ceramic that nonetheless provides protection"
+	icon_state = "raiderpa_helm"
+	item_state = "raiderpa_helm"
+	armor = list("melee" = 60, "bullet" = 60, "laser" = 50, "energy" = 15, "bomb" = 40, "bio" = 55, "rad" = 25, "fire" = 55, "acid" = 15, "wound" = 25)
+//	slowdown = 0.05
+	flags_inv = HIDEFACIALHAIR|HIDEFACE|HIDEEYES|HIDEEARS|HIDEHAIR|HIDESNOUT
+	requires_training = FALSE
+
 
 //////
 // Sheriff's Suit
