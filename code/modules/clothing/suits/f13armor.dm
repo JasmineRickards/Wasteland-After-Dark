@@ -603,10 +603,13 @@
 //Fluff Suit
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/refurb
 	name = "Refurbished T-45d power armor"
-	desc = "An old, beat up suit of T-45d. This appears to have been refurbished time and again, with pockmarks all over the chasis."
-	armor = list("melee" = 65, "bullet" = 65, "laser" = 65, "energy" = 25, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
+	desc = "An old, beat up suit of T-45d. This appears to have been refurbished time and again, with pockmarks all over the chasis, and various patch-jobs"
+	armor = list("melee" = 60, "bullet" = 60, "laser" = 60, "energy" = 25, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
 	salvaged_type = null
-
+	slowdown = 0.3
+	hpboost = 25
+	deflect_damage = 14
+	requires_training = FALSE
 //////
 // Sheriff's Suit
 //////

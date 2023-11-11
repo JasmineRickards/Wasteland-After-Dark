@@ -852,6 +852,7 @@
 	slowdown = 0.3
 	requires_training = FALSE
 	powered = FALSE
+	hpboost = 35
 
 
 //Vault

@@ -152,3 +152,8 @@
 /datum/gear/hands/lipstickblack
 	name = "black lipstick"
 	path = /obj/item/lipstick/black
+
+/datum/gear/hands/paboxrefurb
+	name = "refurbished Power Armor"
+	path =/obj/item/storage/box/pa/refurb
+	cost = 8
