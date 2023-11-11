@@ -220,7 +220,7 @@
 	heat_protection = HEAD
 	ispowerarmor = 1 //TRUE
 	strip_delay = 200
-	equip_delay_self = 20
+	equip_delay_self = 5
 	slowdown = 0.05
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK|HIDEJUMPSUIT|HIDESNOUT
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
