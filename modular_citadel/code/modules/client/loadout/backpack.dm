@@ -83,3 +83,8 @@
 	name = "Havanian cigar case"
 	path = /obj/item/storage/fancy/cigarettes/cigars/havana
 	cost = 2
+
+/datum/gear/backpack/chestrig
+	name = "Chest rig"
+	path = /obj/item/storage/belt/military/alt
+	cost = 2
