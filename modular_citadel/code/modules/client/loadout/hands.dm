@@ -159,6 +159,6 @@
 	cost = 8
 
 /datum/gear/hands/paboxraider
-	name = "refurbished Power Armor"
+	name = "refurbished raider Power Armor"
 	path =/obj/item/storage/box/pa/raider
 	cost = 8
