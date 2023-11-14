@@ -320,6 +320,20 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 				/obj/item/advanced_crafting_components/flux,
 				/obj/item/blueprint/research)
 
+/obj/item/salvage/stockparts
+	name = "Advanced pre-war industrial salvage"
+	desc = "Some advanced pre-war salvage, it could contain some useful parts if dissasembled using a workbench..."
+	icon_state = "goodsalvage"
+	Loot = list(/obj/item/stock_parts/manipulator/pico,
+				/obj/item/stock_parts/micro_laser/ultra,
+				/obj/item/stock_parts/capacitor/super,
+				/obj/item/stock_parts/matter_bin/super,
+				/obj/item/stock_parts/scanning_module/phasic,
+				/obj/item/salvage/high,
+				/obj/item/salvage/high,
+				/obj/item/salvage/high)
+
+
 /obj/item/export/box/bulk
 	name = "Export box"
 	desc = "A box full of pre-packaged medicine for sales."
