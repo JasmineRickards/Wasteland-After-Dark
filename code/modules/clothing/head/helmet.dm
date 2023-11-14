@@ -264,7 +264,8 @@
 	desc = "A classic metal helmet worn by all ranks of knights and horsemen of the Old Era."
 	icon_state = "knight_green"
 	item_state = "knight_green"
-	armor = list("melee" = 55, "bullet" = 30, "laser" = 30, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10)
+	armor = list("melee" = 70, "bullet" = 20, "laser" = 10,"energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10)
+
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDESNOUT
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 80
