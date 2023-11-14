@@ -509,7 +509,7 @@
 	id = "rifleassault5mm"
 	materials = list(/datum/material/iron = 8000)
 	build_path = /obj/item/ammo_box/magazine/m5mm/empty
-	category = list("initial", "Intermediate Ammo"
+	category = list("initial", "Intermediate Ammo")
 
 
 /*/datum/design/ammolathe/a45op
