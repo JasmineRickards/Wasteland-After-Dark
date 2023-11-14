@@ -1359,7 +1359,7 @@
 	is_automatic = TRUE
 	automatic = 1
 	autofire_shot_delay = 1.75
-	spread = 18 //high-velocity
+	spread = 9 //high-velocity
 	can_attachments = TRUE
 	can_scope = FALSE
 	scope_state = "scope_short"
@@ -1396,7 +1396,7 @@
 	icon_state = "assault_carbine"
 	fire_delay = 3.5
 	burst_shot_delay = 2.2
-	spread = 18
+	spread = 12
 
 /obj/item/gun/ballistic/automatic/assault_carbine/olympic
 	name = "OA-93 machine pistol"
