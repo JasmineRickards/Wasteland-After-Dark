@@ -497,6 +497,21 @@
 	materials = list(/datum/material/iron = 15000, /datum/material/blackpowder = 2000)
 	category = list("initial", "Intermediate Ammo")
 
+/datum/design/ammolathe/rifleassault556
+	name = "empty 30rd rifle magazine (5.56mm)"
+	id = "rifleassault556"
+	materials = list(/datum/material/iron = 8000)
+	build_path = /obj/item/ammo_box/magazine/m556/rifle/assault/empty
+	category = list("initial", "Intermediate Ammo")
+
+/datum/design/ammolathe/rifleassault5mm
+	name = "empty 30rd rifle magazine (5mm)"
+	id = "rifleassault5mm"
+	materials = list(/datum/material/iron = 8000)
+	build_path = /obj/item/ammo_box/magazine/m5mm/empty
+	category = list("initial", "Intermediate Ammo"
+
+
 /*/datum/design/ammolathe/a45op
 	name = ".45 ACP +P ammo box"
 	id = "a45op"
@@ -520,20 +535,6 @@
 	build_path = /obj/item/ammo_box/magazine/smg14/stacked/empty
 	category = list("initial", "Advanced Magazines")
 
-/datum/design/ammolathe/rifleassault556
-	name = "empty 30rd rifle magazine (5.56mm)"
-	id = "rifleassault556"
-	materials = list(/datum/material/iron = 8000)
-	build_path = /obj/item/ammo_box/magazine/m556/rifle/assault/empty
-	category = list("initial", "Advanced Magazines")
-
-/datum/design/ammolathe/rifleassault5mm
-	name = "empty 30rd rifle magazine (5mm)"
-	id = "rifleassault5mm"
-	materials = list(/datum/material/iron = 8000)
-	build_path = /obj/item/ammo_box/magazine/m5mm/empty
-	category = list("initial", "Advanced Magazines")
-
 /datum/design/ammolathe/cz535mm
 	name = "empty 240rd cz53 pack (5mm)"
 	id = "cz535mm"
@@ -541,14 +542,14 @@
 	build_path = /obj/item/ammo_box/magazine/cz53/empty
 	category = list("initial", "Advanced Magazines")
 
-/*
+
 /datum/design/ammolathe/m556_rifle_extended
 	name = "empty extended rifle magazine (5.56mm)"
 	id = "m556_rifle_extended"
-	materials = list(/datum/material/iron = 8000)
+	materials = list(/datum/material/iron = 15000)
 	build_path = /obj/item/ammo_box/magazine/m556/rifle/extended/empty
 	category = list("initial", "Advanced Magazines")
-*/
+
 /datum/design/ammolathe/m473
 	name = "empty g11 magazine (4.73mm)"
 	id = "m473"

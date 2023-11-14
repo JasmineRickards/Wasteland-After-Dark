@@ -42,7 +42,7 @@
 	icon_state = "r80"
 	ammo_type = /obj/item/ammo_casing/a556
 	caliber = "a556"
-	max_ammo = 60
+	max_ammo = 80
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/lmg/empty
