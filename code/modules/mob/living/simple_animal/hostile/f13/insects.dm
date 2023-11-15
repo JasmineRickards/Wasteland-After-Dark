@@ -183,8 +183,8 @@
 	icon_dead = "radscorpion_dead"
 
 	speed = 1.25
-	maxHealth = 150
-	health = 150
+	maxHealth = 120
+	health = 120
 	harm_intent_damage = 8
 	obj_damage = 20
 	melee_damage_lower = 35
@@ -241,8 +241,8 @@
 	icon_living = "radscorpion_black"
 	icon_dead = "radscorpion_black_d"
 	speed = 1.2
-	maxHealth = 160
-	health = 160
+	maxHealth = 150
+	health = 150
 	melee_damage_lower = 10
 	melee_damage_upper = 30
 	move_to_delay = 4
@@ -258,8 +258,8 @@
 	icon_dead = "radscorpion_blue_d"
 	icon_gib = "radscorpion_blue_gib"
 	speed = 1.35
-	maxHealth = 140
-	health = 140
+	maxHealth = 120
+	health = 120
 	move_to_delay = 4
 	footstep_type = FOOTSTEP_MOB_CLAW
 
