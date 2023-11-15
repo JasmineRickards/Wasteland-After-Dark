@@ -2,4 +2,4 @@
 
 <h1>Welcome to Sunset Wasteland!</h1>
 <br>
-One of the furry friendly fallout servers. We're based on the fallout tactics version of brotherhood, along with the bull and bear gimmick! Be sure to read up about things in the discord, and learn with us!<br>
+One of the furry friendly fallout servers. We're based on the fallout tactics version of brotherhood, along with the bull and bear gimmick! Be sure to read up about things in the discord, and learn with us! If you run into repeated errors or chait fails, consider downgrading to byond version 514.1589<br>
