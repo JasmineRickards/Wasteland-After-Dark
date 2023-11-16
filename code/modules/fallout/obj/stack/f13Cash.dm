@@ -5,6 +5,7 @@
 #define CASH_AUR 100 /* 100 caps to 1 AUR */
 #define CASH_DEN 4 /* 4 caps to 1 DEN */
 #define CASH_NCR 0.4 /* $100 to 40 caps */
+//#define CASH_bos 1.2	// 1.2 caps per mid-west scrip
 
 /* value of coins to spawn, use as-is for caps */
 /* LOW_MIN / AUR = amount in AUR */

@@ -502,14 +502,14 @@
 	id = "rifleassault556"
 	materials = list(/datum/material/iron = 8000)
 	build_path = /obj/item/ammo_box/magazine/m556/rifle/assault/empty
-	category = list("initial", "Intermediate Ammo")
+	category = list("initial", "Advanced Magazines")
 
 /datum/design/ammolathe/rifleassault5mm
 	name = "empty 30rd rifle magazine (5mm)"
 	id = "rifleassault5mm"
 	materials = list(/datum/material/iron = 8000)
 	build_path = /obj/item/ammo_box/magazine/m5mm/empty
-	category = list("initial", "Intermediate Ammo")
+	category = list("initial", "Advanced Magazines")
 
 
 /*/datum/design/ammolathe/a45op
