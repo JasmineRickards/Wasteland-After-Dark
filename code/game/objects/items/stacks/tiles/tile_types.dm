@@ -640,8 +640,8 @@
 
 //Plasteel (normal)
 /obj/item/stack/tile/plasteel
-	name = "floor tile"
-	singular_name = "floor tile"
+	name = "plasteel floor tile"
+	singular_name = "plasteel floor tile"
 	desc = "The ground you walk on."
 	icon_state = "tile"
 	force = 6
