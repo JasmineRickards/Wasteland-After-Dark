@@ -20867,7 +20867,7 @@
 /turf/open/indestructible/ground/outside/water,
 /area/f13/wasteland/rocksprings)
 "uGn" = (
-/obj/structure/table,
+/obj/machinery/mineral/wasteland_vendor/pipboy,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "uGN" = (
