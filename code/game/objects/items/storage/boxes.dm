@@ -1466,7 +1466,7 @@ list(/obj/item/stack/sheet/metal = 20,
 	name = "Raider power arrmor kit"
 	w_class = 4
 
-/obj/item/storage/box/pa/refurb/PopulateContents()
+/obj/item/storage/box/pa/raider/PopulateContents()
 	new /obj/item/clothing/head/helmet/f13/power_armor/t45b/raider(src)
 	new /obj/item/clothing/suit/armor/f13/power_armor/t45b/raider(src)
 
