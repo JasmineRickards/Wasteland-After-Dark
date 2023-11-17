@@ -1329,7 +1329,7 @@
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	is_automatic = TRUE
 	automatic = 1
-	autofire_shot_delay = 2
+	autofire_shot_delay = 2.5
 	burst_shot_delay = 1.5
 	fire_delay = 3
 	spread = 8
@@ -1341,7 +1341,8 @@
 	can_scope = FALSE
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/bozar_fire.ogg'
-	extra_damage = -3
+	extra_damage = 6
+	extra_penetration = 0.15
 
 
 //Assault Carbine				Keywords: 5mm, Automatic, 30 round magazine, Flashlight, 20dmg/0.50AP
@@ -1555,7 +1556,7 @@
 	can_attachments = FALSE
 	actions_types = null
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
-	extra_damage = -5
+	extra_damage = -3
 
 //LSW Squad Support Weapon				Keywords: 5.56mm, Automatic, 20 (10-50) round magazine, Scoped, Damage decrease (bullethose)
 /obj/item/gun/ballistic/automatic/lsw
@@ -1579,6 +1580,7 @@
 	zoom_out_amt = 13
 	can_attachments = TRUE
 	can_scope = FALSE
+	extra_damage = 2
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 
