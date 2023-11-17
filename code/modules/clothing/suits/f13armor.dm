@@ -605,7 +605,7 @@
 	name = "Refurbished T-45d power armor"
 	desc = "An old, beat up suit of T-45d. This appears to have been refurbished time and again, with pockmarks all over the chasis, and various patch-jobs"
 	armor = list("melee" = 50, "bullet" = 60, "laser" = 60, "energy" = 25, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 50)
-	salvaged_type = null
+//	salvaged_type = null
 	slowdown = 0.3
 	hpboost = 25
 	deflect_damage = 14
@@ -613,11 +613,13 @@
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t45d
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45b/raider
-	name = "salvaged raider power armor"
+	name = "Refurbished raider power armor"
+	icon = 'icons/fallout/clothing/armored_heavy.dmi'
 	desc = "A destroyed T-45b power armor has been brought back to life with the help of a welder and lots of scrap metal."
 	icon_state = "raider_salvaged"
 	item_state = "raider_salvaged"
 	deflect_damage = 14
+	requires_training = FALSE
 	slowdown = 0.3
 	armor = list("melee" = 60, "bullet" = 50, "laser" = 50, "energy" = 15, "bomb" = 40, "bio" = 55, "rad" = 25, "fire" = 55, "acid" = 15, "wound" = 20)
 	salvaged_type = /obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b/raider
