@@ -113,6 +113,12 @@
 	results = list(/datum/reagent/consumable/ethanol/whiskey_cola = 3)
 	required_reagents = list(/datum/reagent/consumable/ethanol/whiskey = 2, /datum/reagent/consumable/space_cola = 1)
 
+/datum/chemical_reaction/brandy_cola
+	name = "Whiskey Cola"
+	id = /datum/reagent/consumable/ethanol/brandy_cola
+	results = list(/datum/reagent/consumable/ethanol/brandy_cola = 3)
+	required_reagents = list(/datum/reagent/consumable/ethanol/brandy = 1, /datum/reagent/consumable/space_cola = 1)
+
 /datum/chemical_reaction/screwdriver
 	name = "Screwdriver"
 	id = /datum/reagent/consumable/ethanol/screwdrivercocktail

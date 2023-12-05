@@ -183,6 +183,19 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	shot_glass_icon_state = "shotglassbrown"
 	pH = 4.5
 
+/datum/reagent/consumable/ethanol/brandy
+	name = "Brandy"
+	description = "A superb, well-aged and distilled wine."
+	color = "#664300" // rgb: 102, 67, 0
+	boozepwr = 75
+	taste_description = "smooth oaky sweetness."
+	glass_icon_state = "whiskeyglass"
+	glass_name = "glass of Brandy"
+	glass_desc = "The darkened, aged wine glimmers with a golden light."
+	shot_glass_icon_state = "shotglassbrown"
+	pH = 4.5
+
+
 /datum/reagent/consumable/ethanol/thirteenloko
 	name = "Thirteen Loko"
 	description = "A potent mixture of caffeine and alcohol."
@@ -513,6 +526,18 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_icon_state = "whiskeycolaglass"
 	glass_name = "whiskey cola"
 	glass_desc = "An innocent-looking mixture of cola and Whiskey. Delicious."
+
+/datum/reagent/consumable/ethanol/brandy_cola
+	name = "Whiskey Cola"
+	description = "Brandy, mixed with cola. Surprisingly tasty."
+	color = "#3E1B00" // rgb: 62, 27, 0
+	boozepwr = 70
+	quality = DRINK_NICE
+	taste_description = "oaky cola"
+	glass_icon_state = "whiskeycolaglass"
+	glass_name = "Brandy cola"
+	glass_desc = "An innocent-looking mixture of cola and Brandy. Delicious."
+
 
 /datum/reagent/consumable/ethanol/martini
 	name = "Classic Martini"
@@ -2241,7 +2266,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	M.set_drugginess(50)
 	M.adjustStaminaLoss(-2)
 	return ..()
-	
+
 /datum/reagent/consumable/ethanol/rotgut
 	name = "Rotgut"
 	description = "The folks out west started outfitting their vehicles with rot gut engines to get around. A waste of a tasty drink if you ask me"
