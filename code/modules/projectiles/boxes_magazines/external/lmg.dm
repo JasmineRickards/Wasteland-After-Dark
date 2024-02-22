@@ -39,7 +39,7 @@
 
 /obj/item/ammo_box/magazine/lmg
 	name = "ammo box (5.56)"
-	icon_state = "r80"
+	icon_state = "r60"
 	ammo_type = /obj/item/ammo_casing/a556
 	caliber = "a556"
 	max_ammo = 80

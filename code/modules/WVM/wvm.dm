@@ -912,7 +912,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Basic salvage",				/obj/item/salvage/low,												25),
 		new /datum/data/wasteland_equipment("Advanced salvage",				/obj/item/salvage/high,												125),
 		new /datum/data/wasteland_equipment("Tool salvage",					/obj/item/salvage/tool,												350),
-		new /datum/data/wasteland_equipment("Industrial salvage",			/obj/item/salvage/stockparts,												750),
+		new /datum/data/wasteland_equipment("Industrial salvage",			/obj/item/salvage/stockparts,												250),
 		new /datum/data/wasteland_equipment("High Quality Parts",				/obj/item/stack/crafting/goodparts,									25),
 		new /datum/data/wasteland_equipment("Metal Parts",						/obj/item/stack/crafting/metalparts,								10),
 		new /datum/data/wasteland_equipment("Electronic Parts",					/obj/item/stack/crafting/electronicparts,							5),
